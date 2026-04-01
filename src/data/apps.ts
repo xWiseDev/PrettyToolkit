@@ -202,7 +202,7 @@ export const apps: App[] = [
         {
           heading: "Contact",
           content:
-            "If you have questions about this privacy policy, please contact us at support@prettytoolkit.com or visit our support page.",
+            "If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.",
         },
       ],
     },
