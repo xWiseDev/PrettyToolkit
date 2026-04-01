@@ -99,34 +99,44 @@ export const apps: App[] = [
     order: 1,
     faqs: [
       {
-        question: "What QR and barcode formats does Luxira support?",
+        question: "What is Luxira and how does it scan QR codes on iPhone?",
         answer:
-          "Luxira supports all standard QR code formats plus 9 barcode types: EAN-8, EAN-13, UPC-E, Code 39, Code 128, PDF 417, Aztec, Data Matrix, and ISBN. It automatically detects URLs, Wi-Fi networks, contacts, phone numbers, email addresses, calendar events, and more.",
+          "Luxira is a QR and barcode scanner app for iPhone that reads codes instantly using your camera. Point your camera at any QR code or barcode and Luxira detects it in real time — no button press needed. It supports all standard QR formats plus 9 barcode types including EAN-8, EAN-13, UPC-E, Code 39, Code 128, PDF 417, Aztec, Data Matrix, and ISBN. Luxira automatically recognizes URLs, Wi-Fi networks, contacts, phone numbers, email addresses, and calendar events.",
       },
       {
-        question: "Does Luxira work offline?",
+        question: "Is Luxira free to download?",
         answer:
-          "Yes. All scanning, QR code creation, and history features work entirely on your device with no internet connection. Only sharing features require connectivity.",
+          "Yes, Luxira is free to download from the App Store. Core features including QR code scanning, barcode reading, and scan history are available at no cost. An optional premium upgrade unlocks additional features like custom QR code creation with style templates, colors, gradients, and logo badges.",
       },
       {
-        question: "How do I create a QR code?",
+        question: "Does Luxira work without internet or offline?",
         answer:
-          "Tap the Create tab and choose from 16 content types — including URL, text, Wi-Fi, contact, and 12 social platforms like Instagram, TikTok, and YouTube. Enter your details, customize the style with templates, colors, gradients, or a logo badge, then save or share.",
+          "Yes, Luxira works fully offline. All scanning, QR code creation, scan history, and favorites are processed and stored entirely on your device with no internet connection required. The only features that need connectivity are sharing scans via the system share sheet and downloading your premium subscription.",
       },
       {
-        question: "Is my scan data private?",
+        question: "How do I create a custom QR code with Luxira?",
         answer:
-          "Absolutely. All scan data is stored locally on your device. Luxira has no tracking, no third-party analytics SDKs, and collects no personal data — verified by our Apple Privacy Manifest.",
+          "Open Luxira and tap the Create tab. Choose from 16 content types including URL, plain text, Wi-Fi network, contact card, and 12 social media platforms like Instagram, TikTok, YouTube, and Snapchat. Enter your details, then customize the appearance with style templates, foreground and background colors, gradients, or add a logo badge. Save the finished QR code to your photo library or share it directly.",
       },
       {
-        question: "How much does Luxira cost?",
+        question: "Is Luxira safe? How does it handle my data and privacy?",
         answer:
-          "Luxira is free to download with core features. An optional premium upgrade is available through the App Store for access to additional features.",
+          "Luxira is designed with privacy at its core. All scan data is stored locally on your iPhone and never uploaded to any server. The app contains no tracking, no third-party analytics SDKs, and collects no personal data — this is verified by Apple through the app's Privacy Manifest. Camera data is processed on-device in real time and never recorded or stored.",
       },
       {
-        question: "Can I scan codes from photos?",
+        question: "Can I scan a QR code from a photo or screenshot on iPhone?",
         answer:
-          "Yes. Tap the gallery icon in the scanner to pick a photo from your library. Luxira will detect and read any QR code or barcode in the image.",
+          "Yes. Tap the gallery icon inside the Luxira scanner to select any photo or screenshot from your library. Luxira will detect and read any QR code or barcode in the image. This is useful for scanning codes shared in messages, emails, or saved screenshots without needing to display them on a second screen.",
+      },
+      {
+        question: "What barcode formats does Luxira support?",
+        answer:
+          "Luxira supports 9 barcode formats: EAN-8, EAN-13, UPC-E, Code 39, Code 128, PDF 417, Aztec, Data Matrix, and ISBN. It also reads all standard QR code formats. Each scanned code is automatically categorized by type and content, making it easy to find in your scan history later.",
+      },
+      {
+        question: "Does Luxira support dark mode and accessibility features?",
+        answer:
+          "Yes. Luxira includes both light and dark modes with a warm dusty-rose color palette. The app fully supports Dynamic Type for adjustable text sizes, VoiceOver for screen reader users, and haptic feedback for scan confirmations. Every feature is designed to be accessible regardless of how you use your iPhone.",
       },
     ],
     privacy: {

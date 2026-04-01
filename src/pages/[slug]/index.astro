@@ -439,3 +439,18 @@ const featureIcons: Record<string, string> = {
   },
   ...(app.appStoreUrl ? { "url": app.appStoreUrl } : {}),
 })} />
+
+{app.faqs && app.faqs.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": app.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  })} />
+)}

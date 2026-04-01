@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prettytoolkit.com/sitemap-index.xml

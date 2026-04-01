@@ -48,6 +48,17 @@ const ogImageUrl = new URL(ogImage, siteUrl).toString();
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
+    <!-- Organization Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pretty Toolkit",
+      "url": "https://prettytoolkit.com",
+      "logo": new URL('/favicon.svg', siteUrl).toString(),
+      "description": "A curated collection of premium utility apps designed with intention.",
+      "sameAs": []
+    })} />
+
     <!-- Font preloads -->
     <link
       rel="preload"
