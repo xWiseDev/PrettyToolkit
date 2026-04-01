@@ -1,0 +1,81 @@
+---
+interface Props {
+  faqs: Array<{ question: string; answer: string }>;
+}
+
+const { faqs } = Astro.props;
+---
+
+<div class="faq-list">
+  {faqs.map((faq) => (
+    <details class="faq-item">
+      <summary>{faq.question}</summary>
+      <div class="faq-answer">
+        <p>{faq.answer}</p>
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .faq-item summary {
+    padding: 20px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    transition: background var(--duration-fast) var(--ease-standard);
+  }
+
+  .faq-item summary:hover {
+    background: color-mix(in srgb, var(--dusty-rose) 6%, transparent);
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+    transition: transform var(--duration-fast) var(--ease-standard);
+  }
+
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+
+  .faq-answer {
+    padding: 0 24px 20px;
+  }
+
+  .faq-answer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+</style>

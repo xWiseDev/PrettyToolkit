@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+---
+
+<BaseLayout
+  title="About — Pretty Toolkit"
+  description="We craft apps that are as beautiful as they are useful. Every tool in our collection is designed with care."
+>
+  <section class="about-hero grain-overlay">
+    <div class="about-content section-choreography visible">
+      <h1 class="about-headline choreo-headline">
+        <em>About Pretty Toolkit</em>
+      </h1>
+    </div>
+  </section>
+
+  <section class="about-story">
+    <div class="story-inner reveal section-choreography">
+      <p class="story-text choreo-headline">
+        We craft apps that are as beautiful as they are useful.
+      </p>
+      <p class="story-body choreo-subtitle">
+        Every tool in our collection is designed with care, because we believe your everyday apps should bring a little joy. No clutter, no compromise — just thoughtfully designed tools that feel right.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-principles">
+    <div class="principles-inner">
+      <div class="principle reveal">
+        <h3 class="principle-title">Intentional Design</h3>
+        <p class="principle-desc">Every detail earns its place. From the whitespace to the micro-interactions, nothing is accidental.</p>
+      </div>
+      <div class="principle reveal">
+        <h3 class="principle-title">Warmth First</h3>
+        <p class="principle-desc">Technology should feel welcoming. Our apps are crafted with warmth, not cold efficiency.</p>
+      </div>
+      <div class="principle reveal">
+        <h3 class="principle-title">Refined Simplicity</h3>
+        <p class="principle-desc">We strip away everything that doesn't serve you. What remains is polished until it shines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-social reveal section-choreography">
+    <h2 class="social-heading choreo-headline">Follow the journey</h2>
+    <div class="social-icons choreo-content">
+      <SocialLinks size="md" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-headline {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .about-story {
+    padding: 120px 24px;
+    background: var(--off-white);
+  }
+  .story-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .story-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+  .story-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .about-principles {
+    padding: 120px 24px;
+    background: var(--section-warm);
+  }
+  .principles-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+  .principle {
+    text-align: center;
+  }
+  .principle-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+  .principle-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .about-social {
+    text-align: center;
+    padding: 120px 24px;
+    background: var(--off-white);
+  }
+  .social-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 32px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .about-hero { padding: 80px 24px 60px; }
+    .about-story { padding: 80px 24px; }
+    .about-principles { padding: 80px 24px; }
+    .principles-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .about-social { padding: 80px 24px; }
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+const redirectUrl = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service — Pretty Toolkit</title>
+    <meta name="description" content="Terms of service for Pretty Toolkit iOS applications — Apple Standard EULA" />
+    <meta http-equiv="refresh" content={`0; url=${redirectUrl}`} />
+    <link rel="canonical" href={redirectUrl} />
+  </head>
+  <body>
+    <script define:vars={{ redirectUrl }}>
+      window.location.replace(redirectUrl);
+    </script>
+    <p>Redirecting to <a href={redirectUrl}>Terms of Service</a>...</p>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+
+const generalFaqs = [
+  {
+    question: "How do I cancel my subscription?",
+    answer: "Open the Settings app on your iPhone, tap your name at the top, then tap Subscriptions. Find the Pretty Toolkit app and tap Cancel Subscription.",
+  },
+  {
+    question: "How do I restore my purchases?",
+    answer: "Open the app and go to Settings or the premium section. Tap Restore Purchases. Make sure you're signed in with the same Apple ID used for the original purchase.",
+  },
+  {
+    question: "Can I get a refund?",
+    answer: "Refunds for App Store purchases are handled by Apple. Visit reportaproblem.apple.com to request a refund.",
+  },
+  {
+    question: "The app isn't working correctly. What should I do?",
+    answer: "Try closing and reopening the app, or restarting your device. Make sure you're running the latest version from the App Store. If the issue persists, contact us at support@prettytoolkit.com with a description of the problem.",
+  },
+  {
+    question: "Is my data private?",
+    answer: "Yes. All app data is stored locally on your device. We don't upload personal data to external servers. Read our full Privacy Policy at /privacy for details.",
+  },
+];
+---
+
+<BaseLayout
+  title="Support — Pretty Toolkit"
+  description="Get help with Pretty Toolkit apps. Contact us, manage subscriptions, and find answers to common questions."
+>
+  <article class="support-page">
+    <h1 class="support-heading reveal-headline">Support</h1>
+    <p class="support-subtitle reveal">
+      We're here to help. Find answers below or reach out directly.
+    </p>
+
+    <!-- Contact -->
+    <section class="support-contact reveal">
+      <h2>Contact Us</h2>
+      <p>
+        For questions, feedback, or issues, email us at<br />
+        <a href="mailto:support@prettytoolkit.com" class="support-email">support@prettytoolkit.com</a>
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="support-faq reveal">
+      <h2>Frequently Asked Questions</h2>
+      <FaqAccordion faqs={generalFaqs} />
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .support-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 24px 160px;
+  }
+  .support-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 12px;
+  }
+  .support-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    margin-bottom: 64px;
+    line-height: 1.7;
+  }
+  .support-contact,
+  .support-faq {
+    margin-bottom: 64px;
+  }
+  .support-contact h2,
+  .support-faq h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  .support-contact p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .support-email {
+    color: var(--text-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+  .support-email:hover {
+    color: var(--deeper-rose);
+  }
+
+  @media (max-width: 768px) {
+    .support-page { padding: 80px 24px 120px; }
+  }
+</style>

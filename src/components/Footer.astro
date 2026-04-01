@@ -1,0 +1,139 @@
+---
+import { apps } from '../data/apps';
+import SocialLinks from './SocialLinks.astro';
+
+const currentYear = new Date().getFullYear();
+const sortedApps = [...apps].sort((a, b) => a.order - b.order);
+---
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <!-- App icon row for cross-promotion -->
+    <div class="footer-app-icons">
+      {sortedApps.map((app) => (
+        <a href={`/${app.slug}`} title={app.name}>
+          <div class="footer-icon-placeholder" style={`background: ${app.accentColor};`}>
+            <span>{app.name.charAt(0)}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <SocialLinks size="md" />
+    </div>
+
+    <!-- Links -->
+    <div class="footer-links">
+      <a href="/#apps">Apps</a>
+      <a href="https://blog.prettytoolkit.com" target="_blank" rel="noopener">Blog</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/support">Support</a>
+    </div>
+
+    <!-- Brand -->
+    <p class="footer-brand">
+      <span class="brand-name">Pretty Toolkit</span>
+    </p>
+    <p class="footer-tagline">Everyday apps, unexpectedly beautiful.</p>
+
+    <!-- Copyright -->
+    <p class="footer-copyright">
+      &copy; {currentYear} Pretty Toolkit. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 80px 0 40px;
+    background: var(--section-warm);
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .footer-app-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .footer-app-icons a {
+    text-decoration: none;
+  }
+  .footer-icon-placeholder {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--duration-fast) var(--ease-bounce);
+  }
+  .footer-icon-placeholder span {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: white;
+  }
+  .footer-icon-placeholder:hover {
+    transform: scale(1.1);
+  }
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+  .footer-links a:hover {
+    color: var(--text-accent);
+  }
+  .footer-brand {
+    margin-bottom: 4px;
+  }
+  .brand-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+  }
+  .footer-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+  .footer-copyright {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-icon-placeholder,
+    .footer-links a {
+      transition: none !important;
+    }
+  }
+</style>

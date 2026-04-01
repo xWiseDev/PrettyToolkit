@@ -1,0 +1,202 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="brand-name">Pretty Toolkit</a>
+    <nav class="desktop-nav">
+      <a href="/#apps">Apps</a>
+      <a href="https://blog.prettytoolkit.com" target="_blank" rel="noopener">Blog</a>
+      <a href="/about">About</a>
+      <a href="/support">Support</a>
+      <span class="nav-divider"></span>
+      <SocialLinks size="sm" />
+    </nav>
+    <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu-overlay" aria-hidden="true">
+  <div class="mobile-menu-panel">
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <nav class="mobile-nav">
+      <a href="/#apps">Apps</a>
+      <a href="https://blog.prettytoolkit.com" target="_blank" rel="noopener">Blog</a>
+      <a href="/about">About</a>
+      <a href="/support">Support</a>
+    </nav>
+    <div class="mobile-social">
+      <SocialLinks size="md" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 251, 248, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(232, 178, 174, 0.1);
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .desktop-nav {
+    display: flex;
+    gap: 32px;
+  }
+  .desktop-nav a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+  .desktop-nav a:hover {
+    color: var(--text-accent);
+  }
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: transform var(--duration-fast) var(--ease-standard);
+  }
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: rgba(44, 24, 16, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-normal) var(--ease-standard),
+                visibility var(--duration-normal) var(--ease-standard);
+  }
+  .mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .mobile-menu-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    background: var(--off-white);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform var(--duration-normal) var(--ease-decelerate);
+  }
+  .mobile-menu-overlay.open .mobile-menu-panel {
+    transform: translateX(0);
+  }
+  .mobile-menu-close {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    margin-left: auto;
+    padding: 4px;
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .mobile-nav a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .nav-divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(44, 24, 16, 0.12);
+    align-self: center;
+  }
+  .mobile-social {
+    margin-top: auto;
+    padding-top: 32px;
+  }
+
+  @media (max-width: 768px) {
+    .desktop-nav { display: none; }
+    .mobile-menu-toggle { display: flex; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hamburger-line,
+    .mobile-menu-overlay,
+    .mobile-menu-panel,
+    .desktop-nav a {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const overlay = document.querySelector('.mobile-menu-overlay');
+  const close = document.querySelector('.mobile-menu-close');
+  const links = document.querySelectorAll('.mobile-nav a');
+
+  function openMenu() {
+    overlay?.classList.add('open');
+    overlay?.setAttribute('aria-hidden', 'false');
+    toggle?.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    overlay?.classList.remove('open');
+    overlay?.setAttribute('aria-hidden', 'true');
+    toggle?.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle?.addEventListener('click', openMenu);
+  close?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+  links.forEach((link) => link.addEventListener('click', closeMenu));
+</script>

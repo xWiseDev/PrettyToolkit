@@ -1,0 +1,102 @@
+---
+import type { App } from '../data/apps';
+import { categories } from '../data/apps';
+
+interface Props {
+  app: App;
+}
+
+const { app } = Astro.props;
+---
+
+<a href={`/${app.slug}`} class="app-card">
+  <div class="app-icon-wrapper">
+    <div class="app-icon-placeholder" style={`background: ${app.accentColor};`}>
+      <span>{app.name.charAt(0)}</span>
+    </div>
+  </div>
+  <span class="category-badge">{categories[app.category]}</span>
+  <h3 class="app-name">{app.name}</h3>
+  <p class="app-tagline">{app.tagline}</p>
+  {app.status === "live" && app.appStoreUrl ? (
+    <span class="btn-primary card-cta">Download</span>
+  ) : (
+    <span class="coming-soon-badge">Coming Soon</span>
+  )}
+</a>
+
+<style>
+  .app-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--duration-normal) var(--ease-standard),
+                box-shadow var(--duration-normal) var(--ease-standard);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .app-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-md);
+  }
+  .app-icon-wrapper {
+    margin-bottom: 4px;
+  }
+  .app-icon-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .app-icon-placeholder span {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: white;
+  }
+  .category-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .app-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .app-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .card-cta {
+    margin-top: 8px;
+    padding: 10px 24px;
+    font-size: 0.875rem;
+  }
+  .coming-soon-badge {
+    margin-top: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    background: var(--section-warm);
+    padding: 6px 16px;
+    border-radius: 100px;
+  }
+</style>

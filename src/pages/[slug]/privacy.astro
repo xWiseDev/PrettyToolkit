@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { apps } from '../../data/apps';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return apps
+    .filter((app) => app.privacy)
+    .map((app) => ({
+      params: { slug: app.slug },
+      props: { app },
+    }));
+};
+
+const { app } = Astro.props;
+const privacy = app.privacy!;
+---
+
+<BaseLayout
+  title={`Privacy Policy — ${app.name} | Pretty Toolkit`}
+  description={`Privacy policy for ${app.name} by Pretty Toolkit.`}
+>
+  <article class="legal-page">
+    <h1 class="legal-heading reveal-headline">{app.name} Privacy Policy</h1>
+    <p class="legal-updated">Last updated: {privacy.lastUpdated}</p>
+
+    <div class="legal-content reveal">
+      <p>{privacy.intro}</p>
+
+      {privacy.sections.map((section) => (
+        <div>
+          <h2>{section.heading}</h2>
+          <p>{section.content}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="legal-footer reveal">
+      <p>
+        This policy applies specifically to {app.name}. For our general company privacy policy, see
+        <a href="/privacy">Pretty Toolkit Privacy Policy</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 24px 160px;
+  }
+  .legal-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 8px;
+  }
+  .legal-updated {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-bottom: 48px;
+  }
+  .legal-content h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  .legal-content p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .legal-content a {
+    color: var(--text-accent);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+  .legal-content a:hover {
+    color: var(--deeper-rose);
+  }
+  .legal-footer {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid color-mix(in srgb, var(--dusty-rose) 15%, transparent);
+  }
+  .legal-footer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .legal-footer a {
+    color: var(--text-accent);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+  .legal-footer a:hover {
+    color: var(--deeper-rose);
+  }
+
+  @media (max-width: 768px) {
+    .legal-page { padding: 80px 24px 120px; }
+  }
+</style>

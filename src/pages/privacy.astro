@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { apps } from '../data/apps';
+
+const appsWithPrivacy = apps.filter((app) => app.privacy);
+---
+
+<BaseLayout
+  title="Privacy Policy — Pretty Toolkit"
+  description="Privacy policy for Pretty Toolkit and all our iOS applications."
+>
+  <article class="legal-page">
+    <h1 class="legal-heading reveal-headline">Privacy Policy</h1>
+    <p class="legal-updated">Last updated: March 2026</p>
+
+    <div class="legal-content reveal">
+      <p>
+        This is the general privacy policy for Pretty Toolkit ("we", "us", or "our").
+        Each of our apps also has its own detailed privacy policy covering app-specific data practices.
+      </p>
+
+      {appsWithPrivacy.length > 0 && (
+        <div class="app-policies">
+          <h2>App Privacy Policies</h2>
+          <ul>
+            {appsWithPrivacy.map((app) => (
+              <li>
+                <a href={`/${app.slug}/privacy`}>{app.name} Privacy Policy</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <h2>General Principles</h2>
+      <p>
+        All Pretty Toolkit apps are designed with privacy in mind. We believe your data belongs to you.
+        Our apps store data locally on your device whenever possible and collect only minimal,
+        anonymous analytics to improve the experience.
+      </p>
+
+      <h2>Information We Collect</h2>
+      <p>
+        Across our apps, we may collect:
+      </p>
+      <ul>
+        <li><strong>Anonymous Usage Analytics:</strong> Aggregated, non-identifiable data about feature usage to help us improve our apps.</li>
+      </ul>
+      <p>We do not collect, store, or share personal information unless explicitly stated in an app's individual privacy policy.</p>
+
+      <h2>Data Storage</h2>
+      <p>
+        All app data is stored locally on your device. We do not upload your personal data to external servers.
+      </p>
+
+      <h2>Third-Party Services</h2>
+      <p>
+        Our apps may use Apple's frameworks and services (e.g., StoreKit for subscriptions,
+        AVFoundation for device features). These are governed by
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+        We do not integrate third-party advertising or tracking SDKs.
+      </p>
+
+      <h2>Subscriptions</h2>
+      <p>
+        Some apps offer optional subscriptions managed through the Apple App Store.
+        Payment processing is handled entirely by Apple. We do not have access to your
+        payment information.
+      </p>
+
+      <h2>Children's Privacy</h2>
+      <p>
+        Our apps are not directed at children under 13. We do not knowingly collect
+        personal information from children.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this policy from time to time. Changes will be posted on this page
+        with an updated revision date.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have questions about this privacy policy, please contact us at
+        <a href="/support">our support page</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 24px 160px;
+  }
+  .legal-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 8px;
+  }
+  .legal-updated {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-bottom: 48px;
+  }
+  .app-policies {
+    background: var(--section-warm);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin: 24px 0 32px;
+  }
+  .app-policies h2 {
+    margin-top: 0 !important;
+  }
+  .app-policies ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  .app-policies li {
+    margin-bottom: 8px;
+  }
+  .app-policies a {
+    font-weight: 500;
+  }
+  .legal-content h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  .legal-content p,
+  .legal-content li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .legal-content ul {
+    padding-left: 24px;
+    margin-bottom: 12px;
+  }
+  .legal-content a {
+    color: var(--text-accent);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+  .legal-content a:hover {
+    color: var(--deeper-rose);
+  }
+
+  @media (max-width: 768px) {
+    .legal-page { padding: 80px 24px 120px; }
+  }
+</style>
