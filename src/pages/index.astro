@@ -54,12 +54,11 @@ const luxira = apps[0];
           <div class="m-t" style="--d: 0.02s; --fd: 5.8s; --bg: linear-gradient(135deg, #EEC8C4, #E8B4B8);"></div>
           <div class="m-t" style="--d: 0.16s; --fd: 4.4s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
         </div>
-        <!-- Row 4: 4 tiles — bottom point -->
-        <div class="m-row">
+        <!-- Row 4: 3 tiles — bottom point, centered -->
+        <div class="m-row m-row-center">
           <div class="m-t" style="--d: 0.08s; --fd: 5.6s; --bg: linear-gradient(135deg, #E8B2AE, #F2D0CD);"></div>
           <div class="m-t" style="--d: 0.12s; --fd: 4.7s; --bg: linear-gradient(135deg, #F5DCD0, #E8B4B8);"></div>
           <div class="m-t" style="--d: 0.16s; --fd: 5.3s; --bg: linear-gradient(135deg, #E8B4B8, #EEC8C4);"></div>
-          <div class="m-t" style="--d: 0.06s; --fd: 4.9s; --bg: linear-gradient(135deg, #F2D0CD, #F5DCD0);"></div>
         </div>
       </div>
     </div>
@@ -218,6 +217,9 @@ const luxira = apps[0];
   }
   .m-row:nth-child(even) {
     transform: translateX(56px);
+  }
+  .m-row-center {
+    transform: none !important;
   }
   .m-t {
     width: 96px;
