@@ -29,6 +29,19 @@ const luxira = apps[0];
     </div>
   </section>
 
+  <!-- ===== INTRO ===== -->
+  <section class="intro-section">
+    <div class="intro-inner reveal section-choreography">
+      <h2 class="intro-heading choreo-headline">Premium iOS utility apps, designed with intention.</h2>
+      <p class="intro-body choreo-subtitle">
+        Pretty Toolkit is a curated collection of utility apps for iPhone. We take the tools you reach for every day — scanners, converters, organizers — and rebuild them from the ground up with care, clarity, and warmth. No ads, no clutter, no data harvesting. Just beautifully crafted apps that respect your time and your privacy.
+      </p>
+      <p class="intro-body choreo-content">
+        Every app in the collection is built with the same philosophy: thoughtful design, offline-first functionality, and full accessibility support including VoiceOver and Dynamic Type. We believe utility apps deserve the same level of polish as the apps you show off to your friends.
+      </p>
+    </div>
+  </section>
+
   <!-- ===== FEATURED: LUXIRA ===== -->
   <section class="spotlight-section">
     <div class="spotlight reveal section-choreography">
@@ -43,6 +56,9 @@ const luxira = apps[0];
       <h2 class="spotlight-name choreo-subtitle">{luxira.name}</h2>
       <p class="spotlight-tagline choreo-content">{luxira.tagline}</p>
       <p class="spotlight-description choreo-meta">{luxira.description}</p>
+      <p class="spotlight-features choreo-cta-text">
+        Instant QR and barcode scanning. Custom QR code creation with style templates and logo badges. Scan history, favorites, and gallery scanning — all processed on-device, fully offline, with zero tracking.
+      </p>
       <div class="choreo-cta">
         {luxira.status === 'live' && luxira.appStoreUrl ? (
           <a href={luxira.appStoreUrl} class="btn-primary" target="_blank" rel="noopener">
@@ -75,7 +91,26 @@ const luxira = apps[0];
         Everyday tools deserve extraordinary design.
       </h2>
       <div class="brand-story-body choreo-subtitle">
-        <p>Every app in our collection is crafted with intention — because the details matter.</p>
+        <p>Every app in our collection is crafted with intention — because the details matter. The rounded corners, the haptic feedback, the way a screen transitions. These are the things that turn a utility into something you actually enjoy using.</p>
+        <p>We sweat the small stuff so you don't have to think about it. You just open the app, do what you came to do, and move on — with a little more joy than you expected.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE CARE ABOUT ===== -->
+  <section class="values-section">
+    <div class="values-inner">
+      <div class="value-item reveal">
+        <h3 class="value-title">Privacy by default</h3>
+        <p class="value-desc">Your data stays on your device. No tracking, no analytics SDKs, no accounts required. Every Pretty Toolkit app is built offline-first and verified through Apple's Privacy Manifests.</p>
+      </div>
+      <div class="value-item reveal">
+        <h3 class="value-title">Accessible to everyone</h3>
+        <p class="value-desc">Full VoiceOver support, Dynamic Type, and haptic feedback in every app. Great design means everyone can use it, regardless of how they interact with their iPhone.</p>
+      </div>
+      <div class="value-item reveal">
+        <h3 class="value-title">No ads. Ever.</h3>
+        <p class="value-desc">We don't sell your attention. Our apps are supported by optional premium upgrades — not by advertising, data sales, or dark patterns.</p>
       </div>
     </div>
   </section>
@@ -142,6 +177,28 @@ const luxira = apps[0];
     animation: pulse-down 2s var(--ease-standard) infinite;
   }
 
+  /* ===== INTRO ===== */
+  .intro-section {
+    padding: 120px 24px;
+    background: var(--off-white);
+  }
+  .intro-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .intro-heading {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: 24px;
+  }
+  .intro-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
   /* ===== SPOTLIGHT ===== */
   .spotlight-section {
     padding: 120px 24px;
@@ -187,7 +244,16 @@ const luxira = apps[0];
     color: var(--text-secondary);
     line-height: 1.7;
     max-width: 480px;
+    margin: 0 auto 16px;
+  }
+  .spotlight-features {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 480px;
     margin: 0 auto 32px;
+    opacity: 0.85;
   }
   .coming-soon-badge {
     display: inline-block;
@@ -250,6 +316,35 @@ const luxira = apps[0];
     line-height: 1.7;
   }
 
+  /* ===== VALUES ===== */
+  .values-section {
+    padding: 120px 24px;
+    background: var(--off-white);
+  }
+  .values-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+  .value-item {
+    text-align: center;
+  }
+  .value-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+  .value-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
   /* ===== SOCIAL CTA ===== */
   .social-cta-section {
     text-align: center;
@@ -273,9 +368,15 @@ const luxira = apps[0];
   }
 
   @media (max-width: 768px) {
+    .intro-section { padding: 80px 24px; }
     .spotlight-section { padding: 80px 24px; }
     .apps-section { padding: 80px 0; }
     .brand-story-section { padding: 80px 24px; }
+    .values-section { padding: 80px 24px; }
+    .values-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
     .social-cta-section { padding: 80px 24px; }
   }
 </style>

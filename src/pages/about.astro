@@ -21,7 +21,22 @@ import SocialLinks from '../components/SocialLinks.astro';
         We craft apps that are as beautiful as they are useful.
       </p>
       <p class="story-body choreo-subtitle">
-        Every tool in our collection is designed with care, because we believe your everyday apps should bring a little joy. No clutter, no compromise — just thoughtfully designed tools that feel right.
+        Pretty Toolkit is a small, independent studio building premium utility apps for iPhone. We take the everyday tools most people settle for — scanners, converters, organizers — and redesign them from scratch with the care and polish they deserve.
+      </p>
+      <p class="story-body choreo-content">
+        We believe your utility apps should feel just as considered as the rest of your phone. That means no ads, no clutter, no dark patterns — just clean, purposeful design that respects your time and your privacy.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-approach">
+    <div class="approach-inner reveal section-choreography">
+      <h2 class="approach-heading choreo-headline">How we build</h2>
+      <p class="approach-body choreo-subtitle">
+        Every app starts with a simple question: what would this tool look like if someone actually cared? We obsess over the details — the transitions, the typography, the way a button feels when you tap it. We test with real people, iterate until it's right, and only ship when we're proud of every screen.
+      </p>
+      <p class="approach-body choreo-content">
+        Our apps are built offline-first, so they work without an internet connection. Your data stays on your device — we don't collect it, track it, or sell it. Every app includes full accessibility support with VoiceOver, Dynamic Type, and haptic feedback, because great tools should work for everyone.
       </p>
     </div>
   </section>
@@ -29,22 +44,35 @@ import SocialLinks from '../components/SocialLinks.astro';
   <section class="about-principles">
     <div class="principles-inner">
       <div class="principle reveal">
-        <h2 class="principle-title">Intentional Design</h3>
-        <p class="principle-desc">Every detail earns its place. From the whitespace to the micro-interactions, nothing is accidental.</p>
+        <h2 class="principle-title">Intentional Design</h2>
+        <p class="principle-desc">Every detail earns its place. From the whitespace to the micro-interactions, nothing is accidental. We design with purpose so the app stays out of your way and lets you focus on what you came to do.</p>
       </div>
       <div class="principle reveal">
-        <h2 class="principle-title">Warmth First</h3>
-        <p class="principle-desc">Technology should feel welcoming. Our apps are crafted with warmth, not cold efficiency.</p>
+        <h2 class="principle-title">Warmth First</h2>
+        <p class="principle-desc">Technology should feel welcoming, not sterile. Our apps use warm color palettes, smooth animations, and friendly copy — because even a barcode scanner can make you smile.</p>
       </div>
       <div class="principle reveal">
-        <h2 class="principle-title">Refined Simplicity</h3>
-        <p class="principle-desc">We strip away everything that doesn't serve you. What remains is polished until it shines.</p>
+        <h2 class="principle-title">Refined Simplicity</h2>
+        <p class="principle-desc">We strip away everything that doesn't serve you. No feature bloat, no settings buried five menus deep. What remains is polished until it shines — fewer features, done better.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="about-apps">
+    <div class="about-apps-inner reveal section-choreography">
+      <h2 class="about-apps-heading choreo-headline">What we've built so far</h2>
+      <p class="about-apps-body choreo-subtitle">
+        Our first app, <a href="/luxira">Luxira</a>, is a QR and barcode scanner for iPhone that supports all standard QR formats plus 9 barcode types. It includes custom QR code creation, scan history with full-text search, gallery scanning, and share functionality — all with zero data collection and full offline support. Luxira is free to download on the App Store.
+      </p>
+      <p class="about-apps-body choreo-content">
+        More apps are on the way. Each one will follow the same principles: premium design, privacy by default, and accessibility for everyone. We're building a collection of everyday tools that you'll actually look forward to using.
+      </p>
     </div>
   </section>
 
   <section class="about-social reveal section-choreography">
     <h2 class="social-heading choreo-headline">Follow the journey</h2>
+    <p class="social-subtitle choreo-subtitle">New apps, behind the scenes, and updates from the studio.</p>
     <div class="social-icons choreo-content">
       <SocialLinks size="md" />
     </div>
@@ -92,9 +120,30 @@ import SocialLinks from '../components/SocialLinks.astro';
     line-height: 1.7;
   }
 
-  .about-principles {
+  .about-approach {
     padding: 120px 24px;
     background: var(--section-warm);
+  }
+  .approach-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .approach-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 24px;
+  }
+  .approach-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .about-principles {
+    padding: 120px 24px;
+    background: var(--off-white);
   }
   .principles-inner {
     max-width: 1000px;
@@ -121,6 +170,35 @@ import SocialLinks from '../components/SocialLinks.astro';
     line-height: 1.7;
   }
 
+  .about-apps {
+    padding: 120px 24px;
+    background: var(--section-warm);
+  }
+  .about-apps-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about-apps-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 24px;
+  }
+  .about-apps-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .about-apps-body a {
+    color: var(--text-accent);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+  .about-apps-body a:hover {
+    color: var(--deeper-rose);
+  }
+
   .about-social {
     text-align: center;
     padding: 120px 24px;
@@ -128,6 +206,13 @@ import SocialLinks from '../components/SocialLinks.astro';
   }
   .social-heading {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 12px;
+  }
+  .social-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
     margin-bottom: 32px;
   }
   .social-icons {
@@ -138,11 +223,13 @@ import SocialLinks from '../components/SocialLinks.astro';
   @media (max-width: 768px) {
     .about-hero { padding: 80px 24px 60px; }
     .about-story { padding: 80px 24px; }
+    .about-approach { padding: 80px 24px; }
     .about-principles { padding: 80px 24px; }
     .principles-inner {
       grid-template-columns: 1fr;
       gap: 40px;
     }
+    .about-apps { padding: 80px 24px; }
     .about-social { padding: 80px 24px; }
   }
 </style>
