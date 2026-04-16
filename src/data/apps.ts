@@ -140,69 +140,69 @@ export const apps: App[] = [
       },
     ],
     privacy: {
-      lastUpdated: "March 2026",
+      lastUpdated: "April 2026",
       intro:
         'This privacy policy explains how Luxira: QR & Barcode Scanner ("Luxira", "the app") collects, uses, and protects your information. Luxira is published by Pretty Toolkit.',
       sections: [
         {
           heading: "Camera Access",
           content:
-            "Luxira requires access to your device's camera to scan QR codes and barcodes. Camera data is processed entirely on-device in real time. No images or video from your camera are stored, uploaded, or transmitted to any server.",
+            "<p>Luxira requires access to your device's camera to scan QR codes and barcodes. Camera data is processed entirely on-device in real time. No images or video from your camera are stored, uploaded, or transmitted to any server.</p>",
         },
         {
           heading: "Photo Library",
           content:
-            "Luxira requests save-only access to your photo library when you choose to save a created QR code. The app cannot read or browse your existing photos. Gallery scanning uses the system photo picker, which requires no permission.",
+            "<p>Luxira requests save-only access to your photo library when you choose to save a created QR code. The app cannot read or browse your existing photos. Gallery scanning uses the system photo picker, which requires no permission.</p>",
         },
         {
           heading: "Scan History",
           content:
-            "When you scan a code, the result is saved to your scan history. All scan history data is stored locally on your device using on-device storage. We do not have access to your scan history, and it is never uploaded to external servers.",
+            "<p>When you scan a code, the result is saved to your scan history. All scan history data is stored locally on your device using on-device storage. We do not have access to your scan history, and it is never uploaded to external servers.</p>",
         },
         {
           heading: "QR Code Creation",
           content:
-            "When you create a QR code, the content you enter (URLs, text, contacts, Wi-Fi credentials, social media links) is processed entirely on your device. This data is not sent to any server.",
+            "<p>When you create a QR code, the content you enter (URLs, text, contacts, Wi-Fi credentials, social media links) is processed entirely on your device. This data is not sent to any server.</p>",
         },
         {
           heading: "Notifications",
           content:
-            "Luxira may request permission to send you notifications with feature tips and updates. Notification permission is entirely optional and can be revoked at any time in your device Settings. Premium users receive no notifications.",
+            "<p>Luxira may request permission to send you notifications with feature tips and updates. Notification permission is entirely optional and can be revoked at any time in your device Settings. Premium users receive no notifications.</p>",
         },
         {
           heading: "Data Collection",
           content:
-            "Luxira does not collect any personal data. Our Apple Privacy Manifest confirms: no user tracking, no tracking domains, and no collected data types. The only system API accessed is UserDefaults for storing your app preferences.",
+            '<p>Luxira does not collect any personally identifiable information (name, email address, phone number, or precise location). The app does collect limited anonymous data to help us understand how the app is used and improve your experience:</p><ul><li><strong>Product Interaction</strong> — Anonymous usage events such as scans completed, QR codes created, and features viewed. These events contain no personal content (we never see what you scan or create).</li><li><strong>Device Identifier</strong> — An anonymous, randomly generated identifier used to distinguish unique app installations. This ID is not linked to your Apple ID, name, or any personal information.</li><li><strong>Purchase History</strong> — Your subscription status (free or premium) is checked locally via Apple StoreKit to unlock premium features. We do not see your payment details.</li><li><strong>Crash Data</strong> — Basic crash and performance diagnostics to help us fix bugs and improve reliability.</li></ul><p>None of this data is linked to your identity. Your scan content, QR code content, photos, and camera data never leave your device.</p>',
         },
         {
           heading: "Subscriptions & Payments",
           content:
-            "Luxira offers optional premium features through a subscription managed via the Apple App Store. All payment processing is handled entirely by Apple. We do not have access to your payment information, credit card details, or Apple ID.",
+            "<p>Luxira offers optional premium features through a subscription managed via the Apple App Store. All payment processing is handled entirely by Apple. We do not have access to your payment information, credit card details, or Apple ID.</p>",
         },
         {
           heading: "Third-Party Services",
           content:
-            "Luxira uses Apple's frameworks (StoreKit for subscriptions, AVFoundation for camera, Vision for barcode detection). These are governed by Apple's Privacy Policy. Luxira does not integrate any third-party advertising, tracking, or analytics SDKs.",
+            '<p>Luxira uses the following services:</p><ul><li><strong>Apple Frameworks</strong> — StoreKit (subscriptions), AVFoundation (camera), and Vision (barcode detection), governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>.</li><li><strong>Mixpanel</strong> — An analytics service used to collect the anonymous usage data described above. Mixpanel receives no personal information and cannot identify you. For details, see <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel\'s Privacy Policy</a>.</li></ul><p>Luxira does not integrate any advertising SDKs or data brokers.</p>',
         },
         {
           heading: "Data Sharing",
           content:
-            "We do not sell, rent, or share your personal data with third parties. When you use the share or export feature, data is shared only through the system share sheet to the destination you choose.",
+            "<p>We do not sell, rent, or share your personal data with third parties. Anonymous analytics data is processed by Mixpanel solely on our behalf to improve the app. When you use the share or export feature, data is shared only through the system share sheet to the destination you choose.</p>",
         },
         {
           heading: "Children's Privacy",
           content:
-            "Luxira is not directed at children under 13. We do not knowingly collect personal information from children.",
+            "<p>Luxira is not directed at children under 13. We do not knowingly collect personal information from children.</p>",
         },
         {
           heading: "Changes to This Policy",
           content:
-            "We may update this policy from time to time. Changes will be posted on this page with an updated revision date.",
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
         },
         {
           heading: "Contact",
           content:
-            "If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.",
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
         },
       ],
     },

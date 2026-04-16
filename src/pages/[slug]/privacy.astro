@@ -30,7 +30,7 @@ const privacy = app.privacy!;
       {privacy.sections.map((section) => (
         <div>
           <h2>{section.heading}</h2>
-          <p>{section.content}</p>
+          <Fragment set:html={section.content} />
         </div>
       ))}
     </div>
@@ -74,6 +74,26 @@ const privacy = app.privacy!;
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 12px;
+  }
+  .legal-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 16px 0;
+  }
+  .legal-content li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 12px;
+  }
+  .legal-content li::before {
+    content: '•';
+    position: absolute;
+    left: 4px;
+    color: var(--dusty-rose);
   }
   .legal-content a {
     color: var(--text-accent);
