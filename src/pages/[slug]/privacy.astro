@@ -21,10 +21,10 @@ const privacy = app.privacy!;
   description={`Privacy policy for ${app.name} by Pretty Toolkit.`}
 >
   <article class="legal-page">
-    <h1 class="legal-heading reveal-headline">{app.name} Privacy Policy</h1>
+    <h1 class="legal-heading">{app.name} Privacy Policy</h1>
     <p class="legal-updated">Last updated: {privacy.lastUpdated}</p>
 
-    <div class="legal-content reveal">
+    <div class="legal-content">
       <p>{privacy.intro}</p>
 
       {privacy.sections.map((section) => (
@@ -35,7 +35,7 @@ const privacy = app.privacy!;
       ))}
     </div>
 
-    <div class="legal-footer reveal">
+    <div class="legal-footer">
       <p>
         This policy applies specifically to {app.name}. For our general company privacy policy, see
         <a href="/privacy">Pretty Toolkit Privacy Policy</a>.
