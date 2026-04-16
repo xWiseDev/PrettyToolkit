@@ -35,12 +35,13 @@ const featureIcons: Record<string, string> = {
   >
     <div class="app-hero-content section-choreography visible">
       <div class="app-hero-icon choreo-headline">
-        <div
-          class="app-hero-icon-placeholder"
-          style={`background: ${app.accentColor};`}
-        >
-          <span>{app.name.charAt(0)}</span>
-        </div>
+        <img
+          class="app-hero-icon-img"
+          src={app.icon}
+          alt={`${app.name} app icon`}
+          width="140"
+          height="140"
+        />
       </div>
       <h1 class="app-hero-name choreo-subtitle">{app.name}</h1>
       <p class="app-hero-tagline choreo-content">{app.description}</p>
@@ -119,12 +120,14 @@ const featureIcons: Record<string, string> = {
   <!-- ===== DOWNLOAD CTA ===== -->
   <section class="download-cta reveal section-choreography">
     <div class="download-icon choreo-headline">
-      <div
-        class="cta-icon-placeholder"
-        style={`background: ${app.accentColor};`}
-      >
-        <span>{app.name.charAt(0)}</span>
-      </div>
+      <img
+        class="cta-icon-img"
+        src={app.icon}
+        alt={`${app.name} app icon`}
+        width="72"
+        height="72"
+        loading="lazy"
+      />
     </div>
     <h2 class="download-heading choreo-subtitle">Ready to try {app.name}?</h2>
     <div class="choreo-cta">
@@ -177,21 +180,13 @@ const featureIcons: Record<string, string> = {
   .app-hero-icon {
     margin-bottom: 32px;
   }
-  .app-hero-icon-placeholder {
+  .app-hero-icon-img {
     width: 140px;
     height: 140px;
     border-radius: 32px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     box-shadow: var(--shadow-lg);
-  }
-  .app-hero-icon-placeholder span {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 3.5rem;
-    color: white;
   }
   .app-hero-name {
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -336,21 +331,13 @@ const featureIcons: Record<string, string> = {
   .download-icon {
     margin-bottom: 24px;
   }
-  .cta-icon-placeholder {
+  .cta-icon-img {
     width: 72px;
     height: 72px;
     border-radius: 16px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     box-shadow: var(--shadow-md);
-  }
-  .cta-icon-placeholder span {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 1.75rem;
-    color: white;
   }
   .download-heading {
     font-size: clamp(1.75rem, 4vw, 2.5rem);

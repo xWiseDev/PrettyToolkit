@@ -12,9 +12,14 @@ const sortedApps = [...apps].sort((a, b) => a.order - b.order);
     <div class="footer-app-icons">
       {sortedApps.map((app) => (
         <a href={`/${app.slug}`} title={app.name}>
-          <div class="footer-icon-placeholder" style={`background: ${app.accentColor};`}>
-            <span>{app.name.charAt(0)}</span>
-          </div>
+          <img
+            class="footer-icon-img"
+            src={app.icon}
+            alt={`${app.name} app icon`}
+            width="44"
+            height="44"
+            loading="lazy"
+          />
         </a>
       ))}
     </div>
@@ -68,23 +73,15 @@ const sortedApps = [...apps].sort((a, b) => a.order - b.order);
   .footer-app-icons a {
     text-decoration: none;
   }
-  .footer-icon-placeholder {
+  .footer-icon-img {
     width: 44px;
     height: 44px;
     border-radius: 10px;
     box-shadow: var(--shadow-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     transition: transform var(--duration-fast) var(--ease-bounce);
   }
-  .footer-icon-placeholder span {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: white;
-  }
-  .footer-icon-placeholder:hover {
+  .footer-icon-img:hover {
     transform: scale(1.1);
   }
   .footer-social {
@@ -131,7 +128,7 @@ const sortedApps = [...apps].sort((a, b) => a.order - b.order);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .footer-icon-placeholder,
+    .footer-icon-img,
     .footer-links a {
       transition: none !important;
     }

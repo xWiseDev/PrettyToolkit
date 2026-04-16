@@ -90,12 +90,14 @@ const luxira = apps[0];
   <section class="spotlight-section">
     <div class="spotlight reveal section-choreography">
       <div class="spotlight-icon choreo-headline">
-        <div
-          class="app-icon-placeholder"
-          style={`background: ${luxira.accentColor};`}
-        >
-          <span>{luxira.name.charAt(0)}</span>
-        </div>
+        <img
+          class="app-icon-img"
+          src={luxira.icon}
+          alt={`${luxira.name} app icon`}
+          width="88"
+          height="88"
+          loading="lazy"
+        />
       </div>
       <h2 class="spotlight-name choreo-subtitle">{luxira.name}</h2>
       <p class="spotlight-tagline choreo-content">{luxira.tagline}</p>
@@ -297,20 +299,12 @@ const luxira = apps[0];
   .spotlight-icon {
     margin-bottom: 24px;
   }
-  .app-icon-placeholder {
+  .app-icon-img {
     width: 88px;
     height: 88px;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .app-icon-placeholder span {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 2rem;
-    color: white;
+    display: inline-block;
   }
   .spotlight-name {
     font-size: clamp(1.75rem, 4vw, 2.5rem);

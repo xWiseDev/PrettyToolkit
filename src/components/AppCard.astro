@@ -11,9 +11,14 @@ const { app } = Astro.props;
 
 <a href={`/${app.slug}`} class="app-card">
   <div class="app-icon-wrapper">
-    <div class="app-icon-placeholder" style={`background: ${app.accentColor};`}>
-      <span>{app.name.charAt(0)}</span>
-    </div>
+    <img
+      class="app-icon-img"
+      src={app.icon}
+      alt={`${app.name} app icon`}
+      width="80"
+      height="80"
+      loading="lazy"
+    />
   </div>
   <span class="category-badge">{categories[app.category]}</span>
   <h3 class="app-name">{app.name}</h3>
@@ -48,20 +53,12 @@ const { app } = Astro.props;
   .app-icon-wrapper {
     margin-bottom: 4px;
   }
-  .app-icon-placeholder {
+  .app-icon-img {
     width: 80px;
     height: 80px;
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .app-icon-placeholder span {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 1.75rem;
-    color: white;
+    display: block;
   }
   .category-badge {
     font-family: 'DM Sans', sans-serif;
