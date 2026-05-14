@@ -47,6 +47,147 @@ export const categories: Record<Category, string> = {
 
 export const apps: App[] = [
   {
+    slug: "sincefy",
+    name: "Sincefy",
+    tagline: "Count down, beautifully.",
+    description:
+      "A countdown widget for every day that matters — birthdays, weddings, trips, milestones. Beautiful on your home screen, kept forever as a memory.",
+    category: "lifestyle",
+    icon: "/icons/sincefy.png",
+    appStoreUrl: "https://apps.apple.com/app/sincefy/id6767852202",
+    accentColor: "#D9A2A8",
+    features: [
+      {
+        icon: "history",
+        title: "Live countdowns",
+        description:
+          "Ticking countdown widgets that stay current on the home screen, lock screen, and StandBy. Pick any future date and watch it tick down to the second.",
+      },
+      {
+        icon: "palette",
+        title: "Themes to your taste",
+        description:
+          "Warm mauve themes, soft photo backgrounds, and per-event color treatments. The widget always belongs on your home screen — never the other way around.",
+      },
+      {
+        icon: "qr-create",
+        title: "Count up after",
+        description:
+          "Past events don't disappear. The day after the wedding, your countdown becomes a count-up — a keepsake that grows with you.",
+      },
+      {
+        icon: "barcode",
+        title: "Lock-screen widgets",
+        description:
+          "Rectangular and circular lock-screen widgets for the moments you don't want to miss. Glanceable at any time, with no need to unlock.",
+      },
+      {
+        icon: "share",
+        title: "Gentle reminders",
+        description:
+          "Opt-in notifications a month, a week, or an hour before. Mix and match per countdown. Reminders are always your choice — never on by default.",
+      },
+      {
+        icon: "scan",
+        title: "Designed with care",
+        description:
+          "Italic display numerals on a warm mauve gradient. Full Dynamic Type, VoiceOver, haptic feedback, and Reduce-Motion support throughout.",
+      },
+    ],
+    screenshots: [],
+    status: "live",
+    order: 1,
+    faqs: [
+      {
+        question: "What is Sincefy?",
+        answer:
+          "Sincefy is a countdown widget app for iPhone. Create beautiful, glanceable countdowns to any future date — birthdays, weddings, trips, exams, due dates, anniversaries — and pin them to your home screen, lock screen, or StandBy display. After the date arrives, your countdown becomes a count-up, so the moment is kept forever.",
+      },
+      {
+        question: "How do Sincefy widgets work?",
+        answer:
+          "Sincefy supports home-screen widgets in small, medium, and large sizes, plus lock-screen widgets in rectangular and circular formats. Long-press your home screen, add the Sincefy widget, then tap to choose which countdown each widget displays. Widgets update automatically as time passes and refresh instantly when you edit a countdown.",
+      },
+      {
+        question: "Does Sincefy work offline?",
+        answer:
+          "Yes. Sincefy is fully offline. Every countdown, theme, and photo background is stored on your device. No internet connection is required to create, edit, or display countdowns. The only features that need connectivity are sharing a countdown via the system share sheet and processing your subscription through the App Store.",
+      },
+      {
+        question: "Is Sincefy private?",
+        answer:
+          "Sincefy is built privacy-first. Countdown names, dates, and photos stay on your device — they are never uploaded. The app contains no advertising SDKs and no data brokers. Apple verifies our privacy posture through the app's Privacy Manifest. See the Sincefy privacy policy for full detail on what is and isn't collected.",
+      },
+      {
+        question: "Can countdowns become count-ups after the date arrives?",
+        answer:
+          "Yes — and that's a core idea behind Sincefy. When your target date passes, the countdown automatically switches to a count-up and moves into the Memories tab. The day after the wedding becomes \"1 day since\", then \"1 month since\", then \"1 year since\" — the moment stays with you instead of being deleted.",
+      },
+      {
+        question: "Which iPhones and iOS versions does Sincefy support?",
+        answer:
+          "Sincefy supports modern iPhones running recent versions of iOS. Lock-screen widgets, StandBy widgets, and Live Activities depend on iOS features available on supported devices. Check the App Store listing for the current minimum iOS requirement.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "May 2026",
+      intro:
+        'This privacy policy explains how Sincefy: Countdown Widget ("Sincefy", "the app") collects, uses, and protects your information. Sincefy is published by Pretty Toolkit.',
+      sections: [
+        {
+          heading: "Countdown Data",
+          content:
+            "<p>When you create a countdown, the event name, date, theme, and any attached photo background are stored locally on your device using on-device storage. Sincefy uses an App Group container so the host app and widget extension can share the same on-device database — nothing in this container leaves your device. We do not have access to your countdowns, and they are never uploaded to external servers.</p>",
+        },
+        {
+          heading: "Photo Library",
+          content:
+            "<p>Sincefy requests access to your photo library only when you choose to set a custom photo background on a countdown. The selected image is read once, optionally resized on-device for widget rendering, and stored within the app's local container. Sincefy does not browse, index, or upload any other photos in your library.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>Sincefy may request permission to send you reminders for individual countdowns (for example, one day before, one hour before). Notifications are entirely opt-in per countdown — never on by default — and can be revoked at any time in your device Settings. Premium users may schedule multi-stage reminders; free users receive single reminders. No reminder content leaves your device — all notifications are scheduled locally.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            '<p>Sincefy does not collect any personally identifiable information (name, email address, phone number, or precise location). The app does collect limited anonymous data to help us understand how the app is used and improve your experience:</p><ul><li><strong>Product Interaction</strong> — Anonymous usage events such as countdowns created, widget configurations, and features viewed. These events contain no personal content (we never see your countdown names, dates, or photos).</li><li><strong>Device Identifier</strong> — An anonymous, randomly generated identifier used to distinguish unique app installations. This ID is not linked to your Apple ID, name, or any personal information.</li><li><strong>Purchase History</strong> — Your subscription status is checked locally via Apple StoreKit to unlock premium features. We do not see your payment details.</li><li><strong>Crash Data</strong> — Basic crash and performance diagnostics to help us fix bugs and improve reliability.</li></ul><p>None of this data is linked to your identity. Your countdown content, photos, and reminder data never leave your device.</p>',
+        },
+        {
+          heading: "Subscriptions & Payments",
+          content:
+            "<p>Sincefy offers optional premium features through a subscription managed via the Apple App Store. All payment processing is handled entirely by Apple. We do not have access to your payment information, credit card details, or Apple ID.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Sincefy uses the following services:</p><ul><li><strong>Apple Frameworks</strong> — StoreKit (subscriptions), WidgetKit (home and lock-screen widgets), SwiftData (on-device storage), and PhotoKit (photo background selection), governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>.</li><li><strong>Mixpanel</strong> — An analytics service used to collect the anonymous usage data described above. Mixpanel receives no personal information and cannot identify you. For details, see <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel\'s Privacy Policy</a>.</li></ul><p>Sincefy does not integrate any advertising SDKs or data brokers.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with third parties. Anonymous analytics data is processed by Mixpanel solely on our behalf to improve the app. When you use the share feature on a countdown, data is shared only through the system share sheet to the destination you choose.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Sincefy is not directed at children under 13. We do not knowingly collect personal information from children.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
+  {
     slug: "luxira",
     name: "Luxira",
     tagline: "Scan beautifully.",
@@ -96,7 +237,7 @@ export const apps: App[] = [
     ],
     screenshots: [],
     status: "live",
-    order: 1,
+    order: 2,
     faqs: [
       {
         question: "What is Luxira and how does it scan QR codes on iPhone?",

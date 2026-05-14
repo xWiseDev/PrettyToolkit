@@ -5,12 +5,13 @@ import PlaceholderCard from '../components/PlaceholderCard.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import { apps } from '../data/apps';
 
-const luxira = apps[0];
+const sincefy = apps.find((a) => a.slug === 'sincefy')!;
+const luxira = apps.find((a) => a.slug === 'luxira')!;
 ---
 
 <BaseLayout
   title="Pretty Toolkit — Aesthetic Utility Apps for iPhone"
-  description="Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Luxira and more."
+  description="Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy, Luxira, and more."
 >
   <!-- ===== HERO ===== -->
   <section class="hero grain-overlay">
@@ -54,11 +55,11 @@ const luxira = apps[0];
           <div class="m-t" style="--d: 0.02s; --fd: 5.8s; --bg: linear-gradient(135deg, #EEC8C4, #E8B4B8);"></div>
           <div class="m-t" style="--d: 0.16s; --fd: 4.4s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
         </div>
-        <!-- Row 4: 3 tiles — bottom point, centered -->
+        <!-- Row 4: 3 tiles — bottom point, centered. Luxira + Sincefy flank a center gradient. -->
         <div class="m-row m-row-center">
-          <div class="m-t" style="--d: 0.08s; --fd: 5.6s; --bg: linear-gradient(135deg, #E8B2AE, #F2D0CD);"></div>
-          <div class="m-t m-t-icon" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></div>
-          <div class="m-t" style="--d: 0.16s; --fd: 5.3s; --bg: linear-gradient(135deg, #E8B4B8, #EEC8C4);"></div>
+          <div class="m-t m-t-icon" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></div>
+          <div class="m-t" style="--d: 0.12s; --fd: 4.7s; --bg: linear-gradient(135deg, #E8B2AE, #F2D0CD);"></div>
+          <div class="m-t m-t-icon" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></div>
         </div>
       </div>
     </div>
@@ -86,28 +87,28 @@ const luxira = apps[0];
     </div>
   </section>
 
-  <!-- ===== FEATURED: LUXIRA ===== -->
-  <section class="spotlight-section">
+  <!-- ===== FEATURED: SINCEFY ===== -->
+  <section class="spotlight-section" style={`--app-accent: ${sincefy.accentColor};`}>
     <div class="spotlight reveal section-choreography">
       <div class="spotlight-icon choreo-headline">
         <img
           class="app-icon-img"
-          src={luxira.icon}
-          alt={`${luxira.name} app icon`}
+          src={sincefy.icon}
+          alt={`${sincefy.name} app icon`}
           width="88"
           height="88"
           loading="lazy"
         />
       </div>
-      <h2 class="spotlight-name choreo-subtitle">{luxira.name}</h2>
-      <p class="spotlight-tagline choreo-content">{luxira.tagline}</p>
-      <p class="spotlight-description choreo-meta">{luxira.description}</p>
+      <h2 class="spotlight-name choreo-subtitle">{sincefy.name}</h2>
+      <p class="spotlight-tagline choreo-content">{sincefy.tagline}</p>
+      <p class="spotlight-description choreo-meta">{sincefy.description}</p>
       <p class="spotlight-features choreo-cta-text">
-        Instant QR and barcode scanning. Custom QR code creation with style templates and logo badges. Scan history, favorites, and gallery scanning — all processed on-device, fully offline, with zero tracking.
+        Ticking countdowns on the home screen, lock screen, and StandBy. Soft mauve themes and photo backgrounds. Past events become count-ups — kept forever as memories. All on-device, fully offline, with zero tracking.
       </p>
       <div class="choreo-cta">
-        {luxira.status === 'live' && luxira.appStoreUrl ? (
-          <a href={luxira.appStoreUrl} class="btn-primary" target="_blank" rel="noopener">
+        {sincefy.status === 'live' && sincefy.appStoreUrl ? (
+          <a href={sincefy.appStoreUrl} class="btn-primary" target="_blank" rel="noopener">
             Download on the App Store
           </a>
         ) : (
@@ -122,10 +123,10 @@ const luxira = apps[0];
     <div class="apps-section-inner">
       <h2 class="section-heading reveal-headline">Our Collection</h2>
       <div class="app-grid reveal-stagger">
+        <AppCard app={sincefy} />
         <AppCard app={luxira} />
         <PlaceholderCard index={0} />
         <PlaceholderCard index={1} />
-        <PlaceholderCard index={2} />
       </div>
     </div>
   </section>
