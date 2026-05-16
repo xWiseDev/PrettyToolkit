@@ -170,9 +170,19 @@ export const apps: App[] = [
             "<p>We do not sell, rent, or share your personal data with third parties. Anonymous analytics data is processed by Mixpanel solely on our behalf to improve the app. When you use the share feature on a countdown, data is shared only through the system share sheet to the destination you choose.</p>",
         },
         {
+          heading: "Tracking",
+          content:
+            "<p>Sincefy does not track you across apps and websites owned by other companies. We do not share your data with data brokers, advertising networks, or any third party for tracking purposes. The anonymous device identifier we generate is local to Sincefy and is not linked to your identity or to other apps. This matches the <code>NSPrivacyTracking = false</code> declaration in our App Store privacy manifest.</p>",
+        },
+        {
           heading: "Children's Privacy",
           content:
             "<p>Sincefy is not directed at children under 13. We do not knowingly collect personal information from children.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Sincefy stores your countdowns locally on your device, deleting the app removes all of your data from our reach permanently. To request deletion of analytics data tied to your device's anonymous identifier, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> with your request — we will delete the data within 30 days.</p><p>EU residents have additional rights under GDPR (access, correction, portability, restriction) and California residents have rights under the CCPA. Contact us at the same email to exercise these rights.</p>",
         },
         {
           heading: "Changes to This Policy",
