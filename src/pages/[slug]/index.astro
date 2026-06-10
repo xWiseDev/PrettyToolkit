@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AppCard from '../../components/AppCard.astro';
 import FaqAccordion from '../../components/FaqAccordion.astro';
 import PlaceholderCard from '../../components/PlaceholderCard.astro';
 import { apps } from '../../data/apps';
@@ -13,6 +14,11 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 const { app } = Astro.props;
+const crossPromoApps = apps
+  .filter((candidate) => candidate.slug !== app.slug)
+  .sort((a, b) => a.order - b.order)
+  .slice(0, 3);
+const placeholderCount = Math.max(0, 3 - crossPromoApps.length);
 
 const featureIcons: Record<string, string> = {
   scan: '<circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/>',
@@ -147,9 +153,12 @@ const featureIcons: Record<string, string> = {
       <h2 class="cross-promo-heading choreo-headline">More from Pretty Toolkit</h2>
       <p class="cross-promo-subtitle choreo-subtitle">More apps are on the way.</p>
       <div class="cross-promo-grid choreo-content">
-        <PlaceholderCard index={0} />
-        <PlaceholderCard index={1} />
-        <PlaceholderCard index={2} />
+        {crossPromoApps.map((crossPromoApp) => (
+          <AppCard app={crossPromoApp} />
+        ))}
+        {Array.from({ length: placeholderCount }).map((_, i) => (
+          <PlaceholderCard index={i} />
+        ))}
       </div>
     </div>
   </section>

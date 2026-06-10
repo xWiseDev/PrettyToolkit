@@ -198,6 +198,167 @@ export const apps: App[] = [
     },
   },
   {
+    slug: "sopora",
+    name: "Sopora",
+    tagline: "Sleep, simply logged.",
+    description:
+      "A calm sleep journal for the nights you want to understand. Log when you slept, how you felt, and what shaped the night — no microphone, no account, no guessing.",
+    category: "wellness",
+    icon: "/icons/sopora.png",
+    appStoreUrl: "",
+    accentColor: "#8F6F9F",
+    features: [
+      {
+        icon: "history",
+        title: "Manual sleep logging",
+        description:
+          "Add bedtime, wake time, and a simple rested rating in seconds. Sopora is typed by you, so it never invents sleep stages or guesses what happened overnight.",
+      },
+      {
+        icon: "qr-create",
+        title: "Always editable",
+        description:
+          "Fix a time, add a note, tag yesterday, or delete a night later. Your sleep journal stays flexible because real nights rarely fit a perfect template.",
+      },
+      {
+        icon: "palette",
+        title: "Lifestyle factors",
+        description:
+          "Tag the things that may have shaped your sleep — caffeine, stress, exercise, screens, travel, and more. Keep the context without turning bedtime into homework.",
+      },
+      {
+        icon: "barcode",
+        title: "Gentle patterns",
+        description:
+          "See duration, rested ratings, and factor correlations in a clear trends view. Useful enough to notice what helps, quiet enough to avoid fake precision.",
+      },
+      {
+        icon: "share",
+        title: "Your data, yours",
+        description:
+          "Export your sleep journal as CSV or JSON, and restore from a Sopora JSON backup. Your notes and nights are stored locally on your device.",
+      },
+      {
+        icon: "scan",
+        title: "Private by design",
+        description:
+          "No microphone recording, no forced account, no sleep-stage guessing. Optional reminders are scheduled locally, and the core journal works offline.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 3,
+    faqs: [
+      {
+        question: "What is Sopora?",
+        answer:
+          "Sopora is a simple sleep journal for iPhone. Instead of recording audio or guessing your sleep stages, it lets you manually log when you went to bed, when you woke up, how rested you felt, and which lifestyle factors may have shaped the night.",
+      },
+      {
+        question: "Does Sopora track sleep automatically?",
+        answer:
+          "No. Sopora is deliberately manual. You type the sleep window yourself, which keeps the app private, lightweight, and editable. There is no microphone recording, no snore detection, and no automatic REM or deep-sleep scoring.",
+      },
+      {
+        question: "Can I edit old sleep entries?",
+        answer:
+          "Yes. Every sleep entry can be edited later. You can correct bed or wake times, change your rested rating, add notes, update factor tags, or remove an entry if it was logged by mistake.",
+      },
+      {
+        question: "What are lifestyle factors?",
+        answer:
+          "Lifestyle factors are simple tags you can add to a night, such as caffeine, alcohol, exercise, stress, screen time, travel, a late meal, or feeling unwell. Sopora uses them to help you notice patterns without asking for medical-level tracking.",
+      },
+      {
+        question: "Is Sopora private?",
+        answer:
+          "Yes. Your sleep entries, notes, factors, and reminders are stored locally on your device. Sopora has no account system and does not upload your journal content to external servers.",
+      },
+      {
+        question: "Does Sopora offer reminders?",
+        answer:
+          "Sopora can schedule optional local reminders, including a morning nudge to log last night and a bedtime wind-down reminder. Reminders are opt-in and can be changed or turned off at any time in your device settings.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "June 2026",
+      intro:
+        'This privacy policy explains how Sopora: Sleep Journal ("Sopora", "the app") collects, uses, and protects your information. Sopora is published by Pretty Toolkit.',
+      sections: [
+        {
+          heading: "Sleep Journal Data",
+          content:
+            "<p>When you log a night in Sopora, your bed time, wake time, rested rating, notes, lifestyle factors, and timestamps are stored locally on your device using on-device storage. Sopora does not upload your sleep journal to external servers, and we do not have access to the content of your entries.</p>",
+        },
+        {
+          heading: "Lifestyle Factors and Notes",
+          content:
+            "<p>Lifestyle factors and free-text notes are part of your private journal. They are used on-device to help you review your nights and understand patterns. We never send factor names, note text, bed times, wake times, or individual sleep-entry content to analytics services.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>Sopora may request permission to send optional sleep reminders, such as a morning reminder to log last night or a bedtime wind-down reminder. These reminders are scheduled locally on your device, are opt-in, and can be changed or revoked at any time in the app or in iOS Settings. Reminder content is not uploaded to external servers.</p>",
+        },
+        {
+          heading: "Data Import and Export",
+          content:
+            "<p>Sopora may let you export your sleep journal as CSV or JSON files and import a Sopora JSON backup. Exports are created locally and shared only through the iOS share sheet or file destination you choose. Imports are processed on-device and do not upload your data to Pretty Toolkit.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            '<p>Sopora does not collect personally identifiable information such as your name, email address, phone number, precise location, or Apple ID. The app may collect limited anonymous data to help us understand and improve the experience:</p><ul><li><strong>Product Interaction</strong> — Anonymous usage events such as onboarding progress, entries logged or edited, reminder settings changed, exports started, and premium screens viewed. These events contain no personal journal content.</li><li><strong>Device Identifier</strong> — An anonymous identifier used to distinguish unique app installations. This identifier is not linked to your Apple ID, name, or contact information.</li><li><strong>Purchase History</strong> — Subscription status is checked via Apple StoreKit to unlock premium features. We do not see your payment details.</li><li><strong>Crash Data</strong> — Basic crash and performance diagnostics to help us fix bugs and improve reliability.</li></ul><p>None of this data is linked to your identity. Your sleep entries, notes, factor labels, and reminder details stay on your device.</p>',
+        },
+        {
+          heading: "Subscriptions & Payments",
+          content:
+            "<p>Sopora may offer optional premium features through subscriptions managed by the Apple App Store. All payment processing is handled by Apple. We do not have access to your credit card details, payment information, or Apple ID.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Sopora uses the following services:</p><ul><li><strong>Apple Frameworks</strong> — SwiftData (on-device storage), UserNotifications (local reminders), StoreKit (subscriptions), and system sharing/import tools, governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>.</li><li><strong>Mixpanel</strong> — An analytics service used to collect the anonymous usage data described above. Mixpanel receives no sleep-entry content, note text, factor names, or personal information. For details, see <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel\'s Privacy Policy</a>.</li></ul><p>Sopora does not integrate advertising SDKs or data brokers.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with third parties. Anonymous analytics data is processed by Mixpanel solely on our behalf to improve the app. When you export or share data, it is shared only through the system destination you choose.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Sopora does not track you across apps and websites owned by other companies. We do not share your data with data brokers, advertising networks, or third parties for tracking purposes.</p>",
+        },
+        {
+          heading: "Health and Wellness Disclaimer",
+          content:
+            "<p>Sopora is a personal sleep journal, not a medical device. It does not diagnose, treat, prevent, or monitor any medical condition. For health concerns, consult a qualified professional.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Sopora is not directed at children under 13. We do not knowingly collect personal information from children.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Sopora stores your sleep journal locally on your device, deleting the app removes your local journal data from our reach. To request deletion of analytics data tied to your anonymous app identifier, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> with your request, and we will delete the data within 30 days.</p><p>EU residents have additional rights under GDPR, and California residents have rights under the CCPA. Contact us at the same email to exercise these rights.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
+  {
     slug: "luxira",
     name: "Luxira",
     tagline: "Scan beautifully.",

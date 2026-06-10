@@ -7,11 +7,12 @@ import { apps } from '../data/apps';
 
 const sincefy = apps.find((a) => a.slug === 'sincefy')!;
 const luxira = apps.find((a) => a.slug === 'luxira')!;
+const sopora = apps.find((a) => a.slug === 'sopora')!;
 ---
 
 <BaseLayout
   title="Pretty Toolkit — Aesthetic Utility Apps for iPhone"
-  description="Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy, Luxira, and more."
+  description="Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy, Luxira, and discover Sopora."
 >
   <!-- ===== HERO ===== -->
   <section class="hero grain-overlay">
@@ -55,10 +56,10 @@ const luxira = apps.find((a) => a.slug === 'luxira')!;
           <div class="m-t" style="--d: 0.02s; --fd: 5.8s; --bg: linear-gradient(135deg, #EEC8C4, #E8B4B8);"></div>
           <div class="m-t" style="--d: 0.16s; --fd: 4.4s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
         </div>
-        <!-- Row 4: 3 tiles — bottom point, centered. Luxira + Sincefy flank a center gradient. -->
+        <!-- Row 4: 3 tiles — bottom point, centered. Luxira + Sopora + Sincefy. -->
         <div class="m-row m-row-center">
           <div class="m-t m-t-icon" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></div>
-          <div class="m-t" style="--d: 0.12s; --fd: 4.7s; --bg: linear-gradient(135deg, #E8B2AE, #F2D0CD);"></div>
+          <div class="m-t m-t-icon" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/sopora.png" alt="" width="96" height="96" /></div>
           <div class="m-t m-t-icon" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></div>
         </div>
       </div>
@@ -125,7 +126,7 @@ const luxira = apps.find((a) => a.slug === 'luxira')!;
       <div class="app-grid reveal-stagger">
         <AppCard app={sincefy} />
         <AppCard app={luxira} />
-        <PlaceholderCard index={0} />
+        <AppCard app={sopora} />
         <PlaceholderCard index={1} />
       </div>
     </div>
