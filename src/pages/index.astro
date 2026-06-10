@@ -17,7 +17,7 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
   <!-- ===== HERO ===== -->
   <section class="hero grain-overlay">
     <!-- Icon mosaic — inverted triangle, widest at top, tapering down -->
-    <div class="icon-mosaic" aria-hidden="true">
+    <div class="icon-mosaic">
       <div class="mosaic-pyramid">
         <!-- Row 1: 12 tiles — widest, partially hidden behind header -->
         <div class="m-row">
@@ -58,9 +58,9 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
         </div>
         <!-- Row 4: 3 tiles — bottom point, centered. Luxira + Sopora + Sincefy. -->
         <div class="m-row m-row-center">
-          <div class="m-t m-t-icon" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></div>
-          <div class="m-t m-t-icon" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/sopora.png" alt="" width="96" height="96" /></div>
-          <div class="m-t m-t-icon" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></div>
+          <a class="m-t m-t-icon m-t-link" href="/luxira" aria-label="Open Luxira" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></a>
+          <a class="m-t m-t-icon m-t-link" href="/sopora" aria-label="Open Sopora" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/sopora.png" alt="" width="96" height="96" /></a>
+          <a class="m-t m-t-icon m-t-link" href="/sincefy" aria-label="Open Sincefy" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></a>
         </div>
       </div>
     </div>
@@ -203,7 +203,6 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
     width: 100%;
     display: flex;
     justify-content: center;
-    pointer-events: none;
     margin-top: -30px;
     margin-bottom: 60px;
   }
@@ -241,6 +240,19 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
   .m-t-icon {
     background: none;
     overflow: hidden;
+  }
+  .m-t-link {
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow var(--duration-fast) var(--ease-standard);
+  }
+  .m-t-link:hover,
+  .m-t-link:focus-visible {
+    box-shadow: var(--shadow-lg);
+  }
+  .m-t-link:focus-visible {
+    outline: 2px solid var(--text-accent);
+    outline-offset: 4px;
   }
   .m-t-icon img {
     width: 100%;

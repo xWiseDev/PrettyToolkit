@@ -9,7 +9,7 @@ import SocialLinks from '../components/SocialLinks.astro';
 >
   <section class="about-hero grain-overlay">
     <!-- Icon mosaic — same inverted triangle as homepage -->
-    <div class="icon-mosaic" aria-hidden="true">
+    <div class="icon-mosaic">
       <div class="mosaic-pyramid">
         <div class="m-row">
           <div class="m-t" style="--d: 0.02s; --fd: 4.5s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
@@ -46,9 +46,9 @@ import SocialLinks from '../components/SocialLinks.astro';
           <div class="m-t" style="--d: 0.16s; --fd: 4.4s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
         </div>
         <div class="m-row m-row-center">
-          <div class="m-t m-t-icon" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></div>
-          <div class="m-t m-t-icon" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/sopora.png" alt="" width="96" height="96" /></div>
-          <div class="m-t m-t-icon" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></div>
+          <a class="m-t m-t-icon m-t-link" href="/luxira" aria-label="Open Luxira" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></a>
+          <a class="m-t m-t-icon m-t-link" href="/sopora" aria-label="Open Sopora" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/sopora.png" alt="" width="96" height="96" /></a>
+          <a class="m-t m-t-icon m-t-link" href="/sincefy" aria-label="Open Sincefy" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></a>
         </div>
       </div>
     </div>
@@ -152,7 +152,6 @@ import SocialLinks from '../components/SocialLinks.astro';
     width: 100%;
     display: flex;
     justify-content: center;
-    pointer-events: none;
     margin-top: -30px;
     margin-bottom: 60px;
   }
@@ -190,6 +189,19 @@ import SocialLinks from '../components/SocialLinks.astro';
   .m-t-icon {
     background: none;
     overflow: hidden;
+  }
+  .m-t-link {
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow var(--duration-fast) var(--ease-standard);
+  }
+  .m-t-link:hover,
+  .m-t-link:focus-visible {
+    box-shadow: var(--shadow-lg);
+  }
+  .m-t-link:focus-visible {
+    outline: 2px solid var(--text-accent);
+    outline-offset: 4px;
   }
   .m-t-icon img {
     width: 100%;
