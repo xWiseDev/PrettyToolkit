@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AppCard from '../components/AppCard.astro';
+import AppStoreBadge from '../components/AppStoreBadge.astro';
 import PlaceholderCard from '../components/PlaceholderCard.astro';
-import SocialLinks from '../components/SocialLinks.astro';
 import { apps } from '../data/apps';
 
 const sincefy = apps.find((a) => a.slug === 'sincefy')!;
@@ -72,6 +72,14 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
       <p class="hero-subtitle choreo-subtitle">
         Your phone deserves better tools.
       </p>
+      <div class="hero-actions choreo-content">
+        <a href="#apps" class="btn-primary">Explore the apps</a>
+        <p class="trust-row" aria-label="Pretty Toolkit trust signals">
+          <span>No ads</span>
+          <span>Offline-first</span>
+          <span>Private by design</span>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -91,30 +99,41 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
   <!-- ===== FEATURED: SINCEFY ===== -->
   <section class="spotlight-section" style={`--app-accent: ${sincefy.accentColor};`}>
     <div class="spotlight reveal section-choreography">
-      <div class="spotlight-icon choreo-headline">
-        <img
-          class="app-icon-img"
-          src={sincefy.icon}
-          alt={`${sincefy.name} app icon`}
-          width="88"
-          height="88"
-          loading="lazy"
-        />
+      <div class="spotlight-copy">
+        <div class="spotlight-icon choreo-headline">
+          <img
+            class="app-icon-img"
+            src={sincefy.icon}
+            alt={`${sincefy.name} app icon`}
+            width="88"
+            height="88"
+            loading="lazy"
+          />
+        </div>
+        <h2 class="spotlight-name choreo-subtitle">{sincefy.name}</h2>
+        <p class="spotlight-tagline choreo-content">{sincefy.tagline}</p>
+        <p class="spotlight-description choreo-meta">{sincefy.description}</p>
+        <p class="spotlight-features choreo-cta-text">
+          Home screen, lock screen, and StandBy countdowns for the moments you want to keep close.
+        </p>
+        <div class="spotlight-cta choreo-cta">
+          {sincefy.status === 'live' && sincefy.appStoreUrl ? (
+            <AppStoreBadge href={sincefy.appStoreUrl} />
+          ) : (
+            <span class="coming-soon-badge">Coming Soon</span>
+          )}
+          <p class="trust-row trust-row-compact" aria-label="Sincefy trust signals">
+            <span>No ads</span>
+            <span>Offline-first</span>
+            <span>Private by design</span>
+          </p>
+        </div>
       </div>
-      <h2 class="spotlight-name choreo-subtitle">{sincefy.name}</h2>
-      <p class="spotlight-tagline choreo-content">{sincefy.tagline}</p>
-      <p class="spotlight-description choreo-meta">{sincefy.description}</p>
-      <p class="spotlight-features choreo-cta-text">
-        Ticking countdowns on the home screen, lock screen, and StandBy. Soft mauve themes and photo backgrounds. Past events become count-ups — kept forever as memories. All on-device, fully offline, with no ads or cross-app tracking.
-      </p>
-      <div class="choreo-cta">
-        {sincefy.status === 'live' && sincefy.appStoreUrl ? (
-          <a href={sincefy.appStoreUrl} class="btn-primary" target="_blank" rel="noopener">
-            Download on the App Store
-          </a>
-        ) : (
-          <span class="coming-soon-badge">Coming Soon</span>
-        )}
+      <div class="spotlight-preview choreo-content" aria-hidden="true">
+        <picture>
+          <source srcset={sincefy.screenshots[0].replace(/\.(png|jpe?g)$/i, '.webp')} type="image/webp" />
+          <img src={sincefy.screenshots[0]} alt="" width="260" height="520" loading="lazy" />
+        </picture>
       </div>
     </div>
   </section>
@@ -160,15 +179,6 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
         <h3 class="value-title">No ads. Ever.</h3>
         <p class="value-desc">We don't sell your attention. Our apps are supported by optional premium upgrades — not by advertising, data sales, or dark patterns.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== SOCIAL CTA ===== -->
-  <section class="social-cta-section reveal section-choreography">
-    <h2 class="social-heading choreo-headline">Follow the journey</h2>
-    <p class="social-subtitle choreo-subtitle">New apps, behind the scenes, and pretty things.</p>
-    <div class="social-icons choreo-content">
-      <SocialLinks size="md" />
     </div>
   </section>
 </BaseLayout>
@@ -300,6 +310,40 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
     margin: 0 auto;
     line-height: 1.7;
   }
+  .hero-actions {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .trust-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .trust-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .trust-row span:not(:last-child)::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--text-accent);
+    opacity: 0.55;
+  }
   /* ===== INTRO ===== */
   .intro-section {
     padding: 120px 24px;
@@ -328,10 +372,14 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
     background: var(--section-warm);
   }
   .spotlight {
-    max-width: 640px;
+    max-width: 1040px;
     margin: 0 auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(240px, 0.75fr);
+    align-items: center;
+    gap: 64px;
   }
+  .spotlight-copy { text-align: left; }
   .spotlight-icon {
     margin-bottom: 24px;
   }
@@ -359,7 +407,7 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
     color: var(--text-secondary);
     line-height: 1.7;
     max-width: 480px;
-    margin: 0 auto 16px;
+    margin: 0 0 16px;
   }
   .spotlight-features {
     font-family: 'DM Sans', sans-serif;
@@ -367,8 +415,49 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
     color: var(--text-secondary);
     line-height: 1.7;
     max-width: 480px;
-    margin: 0 auto 32px;
+    margin: 0 0 28px;
     opacity: 0.85;
+  }
+  .spotlight-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .trust-row-compact {
+    justify-content: flex-start;
+    font-size: 0.75rem;
+  }
+  .spotlight-preview {
+    position: relative;
+    justify-self: center;
+    padding: 20px;
+    border-radius: 36px;
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--app-accent) 14%, transparent),
+        color-mix(in srgb, var(--warm-cream) 32%, transparent)
+      );
+    box-shadow: var(--shadow-sm);
+  }
+  .spotlight-preview::before {
+    content: '';
+    position: absolute;
+    inset: 16px;
+    border-radius: 32px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-lg);
+  }
+  .spotlight-preview picture,
+  .spotlight-preview img {
+    position: relative;
+    display: block;
+  }
+  .spotlight-preview img {
+    width: clamp(210px, 24vw, 280px);
+    height: auto;
+    border-radius: 28px;
   }
   .coming-soon-badge {
     display: inline-block;
@@ -460,42 +549,44 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
     line-height: 1.7;
   }
 
-  /* ===== SOCIAL CTA ===== */
-  .social-cta-section {
-    text-align: center;
-    padding: 120px 24px;
-    background: var(--off-white);
-  }
-  .social-heading {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: 12px;
-  }
-  .social-subtitle {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.0625rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 32px;
-  }
-  .social-icons {
-    display: flex;
-    justify-content: center;
-  }
-
   @media (max-width: 768px) {
     .hero {
-      padding-bottom: 60px;
+      padding-bottom: 56px;
     }
     .icon-mosaic {
       margin-top: -20px;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
     .mosaic-pyramid { gap: 8px; }
     .m-row { gap: 8px; }
     .m-row:nth-child(even) { transform: translateX(32px); }
     .m-t { width: 48px; height: 48px; border-radius: 12px; }
+    .hero-actions { margin-top: 24px; }
     .intro-section { padding: 80px 24px; }
     .spotlight-section { padding: 80px 24px; }
+    .spotlight {
+      grid-template-columns: 1fr;
+      gap: 44px;
+      text-align: center;
+    }
+    .spotlight-copy { text-align: center; }
+    .spotlight-description,
+    .spotlight-features {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .spotlight-cta {
+      align-items: center;
+    }
+    .trust-row-compact {
+      justify-content: center;
+    }
+    .spotlight-preview {
+      padding: 16px;
+    }
+    .spotlight-preview img {
+      width: min(72vw, 260px);
+    }
     .apps-section { padding: 80px 0; }
     .brand-story-section { padding: 80px 24px; }
     .values-section { padding: 80px 24px; }
@@ -503,6 +594,5 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
       grid-template-columns: 1fr;
       gap: 40px;
     }
-    .social-cta-section { padding: 80px 24px; }
   }
 </style>

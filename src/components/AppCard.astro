@@ -24,7 +24,7 @@ const { app } = Astro.props;
   <h3 class="app-name">{app.name}</h3>
   <p class="app-tagline">{app.tagline}</p>
   {app.status === "live" && app.appStoreUrl ? (
-    <span class="btn-primary card-cta">Download</span>
+    <span class="btn-primary card-cta">View app</span>
   ) : (
     <span class="coming-soon-badge">Coming Soon</span>
   )}

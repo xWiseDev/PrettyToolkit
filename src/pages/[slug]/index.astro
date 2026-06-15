@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppCard from '../../components/AppCard.astro';
+import AppStoreBadge from '../../components/AppStoreBadge.astro';
 import FaqAccordion from '../../components/FaqAccordion.astro';
 import PlaceholderCard from '../../components/PlaceholderCard.astro';
 import { apps, categories } from '../../data/apps';
@@ -34,6 +35,7 @@ const crossPromoApps = apps
   .sort((a, b) => a.order - b.order)
   .slice(0, 3);
 const placeholderCount = Math.max(0, 3 - crossPromoApps.length);
+const heroScreenshots = app.screenshots.slice(0, 2);
 
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
@@ -116,28 +118,46 @@ const webPageSchema = {
     class="app-hero grain-overlay"
     style={`--app-accent: ${app.accentColor};`}
   >
-    <div class="app-hero-content section-choreography visible">
-      <div class="app-hero-icon choreo-headline">
-        <img
-          class="app-hero-icon-img"
-          src={app.icon}
-          alt={`${app.name} app icon`}
-          width="140"
-          height="140"
-        />
+    <div class="app-hero-inner section-choreography visible">
+      <div class="app-hero-content">
+        <div class="app-hero-icon choreo-headline">
+          <img
+            class="app-hero-icon-img"
+            src={app.icon}
+            alt={`${app.name} app icon`}
+            width="140"
+            height="140"
+          />
+        </div>
+        <h1 class="app-hero-name choreo-subtitle">{app.name}</h1>
+        <p class="app-hero-tagline choreo-content">{app.description}</p>
+        <div class="app-hero-cta choreo-cta">
+          {app.status === "live" && app.appStoreUrl ? (
+            <AppStoreBadge href={app.appStoreUrl} />
+          ) : (
+            <span class="coming-soon-hero-badge">Coming Soon to the App Store</span>
+          )}
+        </div>
+        <p class="app-trust-row choreo-cta-text" aria-label={`${app.name} trust signals`}>
+          <span>No ads</span>
+          <span>Offline-first</span>
+          <span>Private by design</span>
+        </p>
       </div>
-      <h1 class="app-hero-name choreo-subtitle">{app.name}</h1>
-      <p class="app-hero-tagline choreo-content">{app.description}</p>
-      <div class="app-hero-cta choreo-cta">
-        {app.status === "live" && app.appStoreUrl ? (
-          <a href={app.appStoreUrl} class="btn-primary" target="_blank" rel="noopener">
-            Download on the App Store
-          </a>
-        ) : (
-          <span class="coming-soon-hero-badge">Coming Soon to the App Store</span>
+
+      {heroScreenshots.length > 0 && (
+        <div class="app-hero-preview choreo-content" aria-hidden="true">
+          {heroScreenshots.map((src, i) => (
+            <div class:list={['hero-device', i === 0 ? 'hero-device-primary' : 'hero-device-secondary']}>
+              <picture>
+                <source srcset={src.replace(/\.(png|jpe?g)$/i, '.webp')} type="image/webp" />
+                <img src={src} alt="" width="240" height="480" loading={i === 0 ? 'eager' : 'lazy'} />
+              </picture>
+            </div>
+          ))}
+        </div>
         )}
       </div>
-    </div>
   </section>
 
   {firstFaq && (
@@ -231,9 +251,7 @@ const webPageSchema = {
     <h2 class="download-heading choreo-subtitle">Ready to try {app.name}?</h2>
     <div class="choreo-cta">
       {app.status === "live" && app.appStoreUrl ? (
-        <a href={app.appStoreUrl} class="btn-primary" target="_blank" rel="noopener">
-          Download on the App Store
-        </a>
+        <AppStoreBadge href={app.appStoreUrl} />
       ) : (
         <span class="coming-soon-hero-badge">Coming Soon to the App Store</span>
       )}
@@ -260,12 +278,11 @@ const webPageSchema = {
 <style>
   /* ===== APP HERO ===== */
   .app-hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 0 24px;
+    padding: 96px 24px 88px;
     position: relative;
     overflow: hidden;
     background:
@@ -276,17 +293,26 @@ const webPageSchema = {
         transparent 100%
       );
   }
+  .app-hero-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.85fr);
+    align-items: center;
+    gap: 72px;
+  }
   .app-hero-content {
     max-width: 600px;
+    text-align: left;
   }
   .app-hero-icon {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
   .app-hero-icon-img {
     width: 140px;
     height: 140px;
     border-radius: 32px;
-    margin: 0 auto;
+    margin: 0;
     display: block;
     box-shadow: var(--shadow-lg);
   }
@@ -298,8 +324,85 @@ const webPageSchema = {
     font-family: 'DM Sans', sans-serif;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: var(--text-secondary);
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     line-height: 1.7;
+  }
+  .app-hero-cta {
+    display: flex;
+    align-items: center;
+  }
+  .app-trust-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin: 16px 0 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .app-trust-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .app-trust-row span:not(:last-child)::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--text-accent);
+    opacity: 0.55;
+  }
+  .app-hero-preview {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+  }
+  .app-hero-preview::before {
+    content: '';
+    position: absolute;
+    inset: 70px 16px 56px;
+    z-index: -1;
+    border-radius: 40px;
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--app-accent) 16%, transparent),
+        color-mix(in srgb, var(--warm-cream) 36%, transparent)
+      );
+    box-shadow: var(--shadow-sm);
+  }
+  .hero-device {
+    position: relative;
+    flex: 0 0 clamp(190px, 20vw, 250px);
+    padding: 8px;
+    border-radius: 30px;
+    background: color-mix(in srgb, var(--card-bg) 82%, var(--section-warm));
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-device picture,
+  .hero-device img {
+    display: block;
+  }
+  .hero-device img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+  }
+  .hero-device-primary {
+    z-index: 2;
+    transform: translateX(26px) rotate(-2deg);
+  }
+  .hero-device-secondary {
+    z-index: 1;
+    transform: translateX(-26px) translateY(34px) rotate(3deg) scale(0.92);
   }
   .coming-soon-hero-badge {
     font-family: 'DM Sans', sans-serif;
@@ -584,6 +687,46 @@ const webPageSchema = {
   }
 
   @media (max-width: 768px) {
+    .app-hero {
+      min-height: auto;
+      padding: 72px 24px 80px;
+    }
+    .app-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+    .app-hero-content {
+      max-width: 620px;
+      text-align: center;
+    }
+    .app-hero-icon-img {
+      margin: 0 auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+    }
+    .app-hero-cta,
+    .app-trust-row {
+      justify-content: center;
+    }
+    .app-hero-preview {
+      min-height: auto;
+      overflow: hidden;
+      padding: 12px 0 28px;
+    }
+    .app-hero-preview::before {
+      inset: 72px 8px 0;
+      border-radius: 32px;
+    }
+    .hero-device {
+      flex: 0 0 min(70vw, 270px);
+    }
+    .hero-device-primary {
+      transform: none;
+    }
+    .hero-device-secondary {
+      display: none;
+    }
     .gallery-section { padding: 80px 24px; }
     .gallery-grid-screenshots,
     .gallery-grid-placeholders {

@@ -1,6 +1,5 @@
 ---
 import { apps } from '../data/apps';
-import SocialLinks from './SocialLinks.astro';
 
 const currentYear = new Date().getFullYear();
 const sortedApps = [...apps].sort((a, b) => a.order - b.order);
@@ -22,11 +21,6 @@ const sortedApps = [...apps].sort((a, b) => a.order - b.order);
           />
         </a>
       ))}
-    </div>
-
-    <!-- Social -->
-    <div class="footer-social">
-      <SocialLinks size="md" />
     </div>
 
     <!-- Links -->
@@ -83,11 +77,6 @@ const sortedApps = [...apps].sort((a, b) => a.order - b.order);
   }
   .footer-icon-img:hover {
     transform: scale(1.1);
-  }
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
   }
   .footer-links {
     display: flex;

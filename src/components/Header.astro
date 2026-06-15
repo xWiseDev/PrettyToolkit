@@ -1,5 +1,4 @@
 ---
-import SocialLinks from './SocialLinks.astro';
 ---
 
 <header class="site-header">
@@ -10,8 +9,6 @@ import SocialLinks from './SocialLinks.astro';
       <a href="https://blog.prettytoolkit.com" target="_blank" rel="noopener">Blog</a>
       <a href="/about">About</a>
       <a href="/support">Support</a>
-      <span class="nav-divider"></span>
-      <SocialLinks size="sm" />
     </nav>
     <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
       <span class="hamburger-line"></span>
@@ -33,9 +30,6 @@ import SocialLinks from './SocialLinks.astro';
       <a href="/about">About</a>
       <a href="/support">Support</a>
     </nav>
-    <div class="mobile-social">
-      <SocialLinks size="md" />
-    </div>
   </div>
 </div>
 
@@ -100,6 +94,7 @@ import SocialLinks from './SocialLinks.astro';
     position: fixed;
     inset: 0;
     z-index: 150;
+    overflow: hidden;
     background: rgba(44, 24, 16, 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -148,17 +143,6 @@ import SocialLinks from './SocialLinks.astro';
     font-size: 1.125rem;
     color: var(--text-primary);
     text-decoration: none;
-  }
-
-  .nav-divider {
-    width: 1px;
-    height: 16px;
-    background: rgba(44, 24, 16, 0.12);
-    align-self: center;
-  }
-  .mobile-social {
-    margin-top: auto;
-    padding-top: 32px;
   }
 
   @media (max-width: 768px) {

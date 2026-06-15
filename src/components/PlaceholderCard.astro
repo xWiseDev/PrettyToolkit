@@ -23,6 +23,8 @@ const gradient = gradients[index % gradients.length];
   .placeholder-card {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    min-width: 0;
     background: var(--card-gradient);
     backdrop-filter: blur(12px);
     border-radius: 20px;
@@ -72,6 +74,12 @@ const gradient = gradients[index % gradients.length];
     .placeholder-shimmer {
       animation: none !important;
       background: transparent;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .placeholder-card {
+      min-height: 220px;
     }
   }
 </style>
