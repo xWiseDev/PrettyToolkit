@@ -26,6 +26,7 @@ Two apps are currently live on the App Store: Luxira (QR & Barcode Scanner) and 
 npm run dev        # Local dev server at http://localhost:4321
 npm run build      # Production build to dist/
 npm run preview    # Preview production build locally
+npm run optimize:images  # Optimize screenshots from assets/screenshots/ to public/screenshots/
 ```
 
 ## Architecture
@@ -66,6 +67,7 @@ The blog is external at `blog.prettytoolkit.com`.
 - `src/pages/[slug]/index.astro` owns the reusable app landing-page template, including `SoftwareApplication`, `BreadcrumbList`, `WebPage`, and `FAQPage` schema.
 - `src/pages/[slug]/privacy.astro` owns generated app privacy pages and their `BreadcrumbList` schema.
 - `public/og-image.png` is the 1200x630 branded Open Graph image referenced by `BaseLayout`.
+- `scripts/optimize-images.mjs` uses Sharp to turn source screenshots in `assets/screenshots/<slug>/` into optimized WebP and PNG fallback files in `public/screenshots/<slug>/`.
 
 ## Components
 

@@ -105,14 +105,6 @@ const webPageSchema = {
   },
 };
 
-const featureIcons: Record<string, string> = {
-  scan: '<circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/>',
-  barcode: '<path d="M3 5v14"/><path d="M8 5v14"/><path d="M12 5v14"/><path d="M17 5v14"/><path d="M21 5v14"/>',
-  history: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
-  'qr-create': '<rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="2" y="14" width="8" height="8" rx="1"/><rect x="14" y="14" width="4" height="4" rx="0.5"/><path d="M22 14h-4v4"/><path d="M22 22h-4v-4"/>',
-  share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>',
-  palette: '<circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.75 1.5-1.5 0-.39-.15-.74-.4-1.02a1.5 1.5 0 0 1 1.12-2.48H16c3.31 0 6-2.69 6-6 0-4.96-4.5-9-10-9z"/>',
-};
 ---
 
 <BaseLayout
@@ -182,41 +174,23 @@ const featureIcons: Record<string, string> = {
     </div>
   </section>
 
-  <!-- ===== FEATURE SHOWCASE ===== -->
-  {app.features.map((feature, i) => (
-    <section class={`feature-section ${i % 2 === 0 ? 'bg-warm' : 'bg-off-white'}`}>
-      <div class="feature-row reveal section-choreography" data-reversed={i % 2 !== 0 ? "true" : undefined}>
-        <div class="feature-text">
-          <div class="feature-icon-wrap choreo-headline" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={featureIcons[feature.icon] || featureIcons.scan} />
-          </div>
-          <h3 class="feature-title choreo-subtitle">{feature.title}</h3>
-          <p class="feature-desc choreo-content">{feature.description}</p>
-        </div>
-        <div class="feature-visual choreo-meta">
-          <div
-            class="feature-placeholder"
-            style={`background: linear-gradient(135deg, ${app.accentColor}18, ${app.accentColor}35);`}
-          />
-        </div>
-      </div>
-    </section>
-  ))}
-
   <!-- ===== SCREENSHOT GALLERY ===== -->
   <section class="gallery-section">
     <div class="gallery-container reveal">
       <h2 class="gallery-heading reveal-headline">See it in action.</h2>
       {app.screenshots.length > 0 ? (
-        <div class="gallery-grid">
+        <div class="gallery-grid gallery-grid-screenshots">
           {app.screenshots.slice(0, 5).map((src, i) => (
             <div class="gallery-device">
-              <img src={src} alt={`${app.name} screenshot ${i + 1}`} loading="lazy" />
+              <picture>
+                <source srcset={src.replace(/\.(png|jpe?g)$/i, '.webp')} type="image/webp" />
+                <img src={src} alt={`${app.name} screenshot ${i + 1}`} loading="lazy" />
+              </picture>
             </div>
           ))}
         </div>
       ) : (
-        <div class="gallery-grid">
+        <div class="gallery-grid gallery-grid-placeholders">
           {[0, 1, 2].map((i) => (
             <div
               class="gallery-placeholder"
@@ -437,59 +411,6 @@ const featureIcons: Record<string, string> = {
     padding: 24px 28px;
   }
 
-  /* ===== FEATURE SECTIONS ===== */
-  .feature-section {
-    padding: 100px 24px;
-  }
-  .bg-warm {
-    background: var(--section-warm);
-  }
-  .bg-off-white {
-    background: var(--off-white);
-  }
-  .feature-row {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
-  }
-  .feature-row[data-reversed="true"] .feature-text {
-    order: 2;
-  }
-  .feature-row[data-reversed="true"] .feature-visual {
-    order: 1;
-  }
-  .feature-icon-wrap {
-    color: var(--dusty-rose);
-    margin-bottom: 16px;
-  }
-  .feature-title {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 12px;
-  }
-  .feature-desc {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.0625rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-  }
-  .feature-visual {
-    display: flex;
-    justify-content: center;
-  }
-  .feature-placeholder {
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    max-width: 240px;
-    border-radius: 24px;
-    box-shadow: var(--shadow-md);
-  }
-
   /* ===== GALLERY ===== */
   .gallery-section {
     padding: 120px 24px;
@@ -497,19 +418,40 @@ const featureIcons: Record<string, string> = {
     overflow: hidden;
   }
   .gallery-container {
-    max-width: 900px;
+    max-width: 1120px;
     margin: 0 auto;
   }
   .gallery-heading {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 56px;
   }
   .gallery-grid {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
+  }
+  .gallery-grid-screenshots {
+    position: relative;
+    gap: 0;
+    min-height: 540px;
+    padding: 34px 18px 42px;
+    isolation: isolate;
+  }
+  .gallery-grid-screenshots::before {
+    content: '';
+    position: absolute;
+    inset: 90px 0 40px;
+    z-index: -1;
+    border-radius: 36px;
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--dusty-rose) 14%, transparent),
+        color-mix(in srgb, var(--warm-cream) 34%, transparent)
+      );
+    box-shadow: var(--shadow-sm);
   }
   .gallery-placeholder {
     width: 200px;
@@ -527,10 +469,52 @@ const featureIcons: Record<string, string> = {
     font-size: 0.875rem;
     color: var(--text-tertiary);
   }
+  .gallery-device picture,
   .gallery-device img {
-    width: 200px;
+    display: block;
+  }
+  .gallery-grid-screenshots .gallery-device {
+    position: relative;
+    flex: 0 0 clamp(160px, 18vw, 220px);
+    padding: 8px;
+    border-radius: 30px;
+    background: color-mix(in srgb, var(--card-bg) 82%, var(--section-warm));
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--duration-normal) var(--ease-standard),
+                box-shadow var(--duration-normal) var(--ease-standard);
+  }
+  .gallery-grid-screenshots .gallery-device:nth-child(1) {
+    transform: translateX(36px) translateY(28px) rotate(-4deg);
+    z-index: 1;
+  }
+  .gallery-grid-screenshots .gallery-device:nth-child(2) {
+    transform: translateX(18px) translateY(4px) rotate(-2deg);
+    z-index: 2;
+  }
+  .gallery-grid-screenshots .gallery-device:nth-child(3) {
+    transform: translateY(-24px) scale(1.05);
+    z-index: 5;
+  }
+  .gallery-grid-screenshots .gallery-device:nth-child(4) {
+    transform: translateX(-18px) translateY(4px) rotate(2deg);
+    z-index: 2;
+  }
+  .gallery-grid-screenshots .gallery-device:nth-child(5) {
+    transform: translateX(-36px) translateY(28px) rotate(4deg);
+    z-index: 1;
+  }
+  .gallery-grid-screenshots .gallery-device:hover {
+    transform: translateY(-32px) scale(1.06);
+    z-index: 8;
+    box-shadow: var(--shadow-lg);
+  }
+  .gallery-device img {
+    width: 100%;
     height: auto;
     border-radius: 24px;
+  }
+  .gallery-grid-placeholders .gallery-device img {
+    width: 200px;
     box-shadow: var(--shadow-md);
   }
 
@@ -600,29 +584,34 @@ const featureIcons: Record<string, string> = {
   }
 
   @media (max-width: 768px) {
-    .feature-section { padding: 80px 24px; }
-    .feature-row {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-    .feature-row[data-reversed="true"] .feature-text,
-    .feature-row[data-reversed="true"] .feature-visual {
-      order: unset;
-    }
-    .feature-placeholder {
-      max-width: 180px;
-    }
     .gallery-section { padding: 80px 24px; }
-    .gallery-grid {
+    .gallery-grid-screenshots,
+    .gallery-grid-placeholders {
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       justify-content: flex-start;
       padding: 0 16px;
     }
+    .gallery-grid-screenshots {
+      gap: 18px;
+      min-height: auto;
+      padding: 18px 16px 30px;
+    }
+    .gallery-grid-screenshots::before {
+      inset: 56px 0 24px;
+      border-radius: 28px;
+    }
     .gallery-placeholder,
     .gallery-device {
       scroll-snap-align: center;
+    }
+    .gallery-grid-screenshots .gallery-device,
+    .gallery-grid-screenshots .gallery-device:nth-child(n) {
+      flex: 0 0 clamp(220px, 72vw, 280px);
+      transform: none;
+    }
+    .gallery-grid-placeholders .gallery-device {
       flex: 0 0 180px;
     }
     .gallery-placeholder {

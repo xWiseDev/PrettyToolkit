@@ -94,7 +94,13 @@ export const apps: App[] = [
           "Italic display numerals on a warm mauve gradient. Full Dynamic Type, VoiceOver, haptic feedback, and Reduce-Motion support throughout.",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      "/screenshots/sincefy/01-birthday-countdown.png",
+      "/screenshots/sincefy/02-countdown-widget.png",
+      "/screenshots/sincefy/03-day-counter.png",
+      "/screenshots/sincefy/04-days-since.png",
+      "/screenshots/sincefy/05-lock-screen-widget.png",
+    ],
     status: "live",
     order: 1,
     faqs: [
@@ -245,7 +251,12 @@ export const apps: App[] = [
           "No microphone recording, no forced account, no sleep-stage guessing. Optional reminders are scheduled locally, and the core journal works offline.",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      "/screenshots/sopora/01-sleep-diary.png",
+      "/screenshots/sopora/02-sleep-log.png",
+      "/screenshots/sopora/03-sleep-notes.png",
+      "/screenshots/sopora/04-sleep-tracker.png",
+    ],
     status: "coming-soon",
     order: 3,
     faqs: [
@@ -406,7 +417,13 @@ export const apps: App[] = [
           "Warm dusty-rose palette with light and dark modes. Haptic feedback, Dynamic Type, and full VoiceOver support.",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      "/screenshots/luxira/01-scan-qr-code.png",
+      "/screenshots/luxira/02-barcode-scanner.png",
+      "/screenshots/luxira/03-custom-qr-template.png",
+      "/screenshots/luxira/04-qr-code-generator.png",
+      "/screenshots/luxira/05-qr-code-reader.png",
+    ],
     status: "live",
     order: 2,
     faqs: [
