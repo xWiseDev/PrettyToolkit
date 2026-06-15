@@ -14,6 +14,33 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 const { app } = Astro.props;
 const privacy = app.privacy!;
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
+const appUrl = new URL(`/${app.slug}/`, siteUrl).toString();
+const privacyUrl = new URL(`/${app.slug}/privacy/`, siteUrl).toString();
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pretty Toolkit",
+      "item": `${siteUrl}/`,
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": app.name,
+      "item": appUrl,
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": `${app.name} Privacy Policy`,
+      "item": privacyUrl,
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -43,6 +70,8 @@ const privacy = app.privacy!;
     </div>
   </article>
 </BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 <style>
   .legal-page {

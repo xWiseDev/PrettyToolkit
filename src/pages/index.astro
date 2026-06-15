@@ -78,12 +78,12 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
   <!-- ===== INTRO ===== -->
   <section class="intro-section">
     <div class="intro-inner reveal section-choreography">
-      <h2 class="intro-heading choreo-headline">Premium iOS utility apps, designed with intention.</h2>
+      <h2 class="intro-heading choreo-headline">What is Pretty Toolkit?</h2>
       <p class="intro-body choreo-subtitle">
-        Pretty Toolkit is a curated collection of utility apps for iPhone. We take the tools you reach for every day — scanners, converters, organizers — and rebuild them from the ground up with care, clarity, and warmth. No ads, no clutter, no data harvesting. Just beautifully crafted apps that respect your time and your privacy.
+        Pretty Toolkit is a curated collection of premium utility apps for iPhone. We take the tools you reach for every day — scanners, countdowns, journals, organizers — and rebuild them from the ground up with care, clarity, and warmth.
       </p>
       <p class="intro-body choreo-content">
-        Every app in the collection is built with the same philosophy: thoughtful design, offline-first functionality, and full accessibility support including VoiceOver and Dynamic Type. We believe utility apps deserve the same level of polish as the apps you show off to your friends.
+        Every app in the collection is built with the same philosophy: no ads, no clutter, offline-first functionality, and full accessibility support including VoiceOver and Dynamic Type. We believe utility apps deserve the same level of polish as the apps you show off to your friends.
       </p>
     </div>
   </section>
@@ -105,7 +105,7 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
       <p class="spotlight-tagline choreo-content">{sincefy.tagline}</p>
       <p class="spotlight-description choreo-meta">{sincefy.description}</p>
       <p class="spotlight-features choreo-cta-text">
-        Ticking countdowns on the home screen, lock screen, and StandBy. Soft mauve themes and photo backgrounds. Past events become count-ups — kept forever as memories. All on-device, fully offline, with zero tracking.
+        Ticking countdowns on the home screen, lock screen, and StandBy. Soft mauve themes and photo backgrounds. Past events become count-ups — kept forever as memories. All on-device, fully offline, with no ads or cross-app tracking.
       </p>
       <div class="choreo-cta">
         {sincefy.status === 'live' && sincefy.appStoreUrl ? (
@@ -150,7 +150,7 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
     <div class="values-inner">
       <div class="value-item reveal">
         <h3 class="value-title">Privacy by default</h3>
-        <p class="value-desc">Your data stays on your device. No tracking, no analytics SDKs, no accounts required. Every Pretty Toolkit app is built offline-first and verified through Apple's Privacy Manifests.</p>
+        <p class="value-desc">Your data stays on your device. No ads, no accounts, no cross-app tracking. When an app uses anonymous diagnostics or analytics, it is disclosed clearly and never includes your personal content.</p>
       </div>
       <div class="value-item reveal">
         <h3 class="value-title">Accessible to everyone</h3>
@@ -180,6 +180,18 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
   "name": "Pretty Toolkit",
   "url": "https://prettytoolkit.com",
   "description": "A curated collection of premium iOS utility apps designed with intention."
+})} />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Pretty Toolkit app collection",
+  "itemListElement": apps.map((app, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": app.name,
+    "url": `https://prettytoolkit.com/${app.slug}/`
+  }))
 })} />
 
 <style>

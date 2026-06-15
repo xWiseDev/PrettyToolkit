@@ -24,6 +24,46 @@ const generalFaqs = [
     answer: "Yes. All app data is stored locally on your device. We don't upload personal data to external servers. Read our full Privacy Policy at /privacy for details.",
   },
 ];
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
+const supportUrl = new URL('/support/', siteUrl).toString();
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Pretty Toolkit Support",
+  "description": "Support page for Pretty Toolkit iPhone apps, subscriptions, refunds, privacy, and troubleshooting.",
+  "url": supportUrl,
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Pretty Toolkit",
+    "url": siteUrl,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "aboyahyadev@icloud.com",
+      "contactType": "customer support",
+      "url": supportUrl,
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pretty Toolkit",
+      "item": `${siteUrl}/`,
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Support",
+      "item": supportUrl,
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -38,7 +78,7 @@ const generalFaqs = [
 
     <!-- Contact -->
     <section class="support-contact reveal">
-      <h2>Contact Us</h2>
+      <h2>How do I contact Pretty Toolkit support?</h2>
       <p>
         For questions, feedback, or issues, email us at<br />
         <a href="mailto:aboyahyadev@icloud.com?subject=Pretty%20Toolkit%20Support" class="support-email">aboyahyadev@icloud.com</a>
@@ -116,3 +156,6 @@ const generalFaqs = [
     }
   }))
 })} />
+
+<script type="application/ld+json" set:html={JSON.stringify(contactSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />

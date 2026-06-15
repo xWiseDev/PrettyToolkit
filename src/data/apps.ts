@@ -433,7 +433,7 @@ export const apps: App[] = [
       {
         question: "Is Luxira safe? How does it handle my data and privacy?",
         answer:
-          "Luxira is designed with privacy at its core. All scan data is stored locally on your iPhone and never uploaded to any server. The app contains no tracking, no third-party analytics SDKs, and collects no personal data — this is verified by Apple through the app's Privacy Manifest. Camera data is processed on-device in real time and never recorded or stored.",
+          "Luxira is designed with privacy at its core. All scan data is stored locally on your iPhone and never uploaded to any server. The app contains no advertising SDKs, no cross-app tracking, and no personal scan data collection — this is verified by Apple through the app's Privacy Manifest. Camera data is processed on-device in real time and never recorded or stored.",
       },
       {
         question: "Can I scan a QR code from a photo or screenshot on iPhone?",

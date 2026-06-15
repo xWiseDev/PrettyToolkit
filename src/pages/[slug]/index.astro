@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppCard from '../../components/AppCard.astro';
 import FaqAccordion from '../../components/FaqAccordion.astro';
 import PlaceholderCard from '../../components/PlaceholderCard.astro';
-import { apps } from '../../data/apps';
+import { apps, categories } from '../../data/apps';
 import type { GetStaticPaths } from 'astro';
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -14,11 +14,96 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 const { app } = Astro.props;
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
+const pageUrl = new URL(`/${app.slug}/`, siteUrl).toString();
+const privacyUrl = app.privacy ? new URL(`/${app.slug}/privacy/`, siteUrl).toString() : undefined;
+const appIconUrl = new URL(app.icon, siteUrl).toString();
+const firstFaq = app.faqs?.[0];
+const privacyFaq =
+  app.faqs?.find((faq) => /private|privacy|safe/i.test(faq.question)) ||
+  app.faqs?.find((faq) => /offline/i.test(faq.question));
+const appKeywords = [
+  app.name,
+  app.tagline,
+  categories[app.category],
+  `${categories[app.category]} app for iPhone`,
+  ...app.features.map((feature) => feature.title),
+];
 const crossPromoApps = apps
   .filter((candidate) => candidate.slug !== app.slug)
   .sort((a, b) => a.order - b.order)
   .slice(0, 3);
 const placeholderCount = Math.max(0, 3 - crossPromoApps.length);
+
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": app.name,
+  "description": app.description,
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": categories[app.category],
+  "operatingSystem": "iOS",
+  "url": pageUrl,
+  "image": appIconUrl,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pretty Toolkit",
+    "url": siteUrl,
+  },
+  "keywords": appKeywords.join(", "),
+  "featureList": app.features.map((feature) => feature.title),
+  "isAccessibleForFree": app.status === "live",
+  ...(privacyUrl ? { "privacyPolicy": privacyUrl } : {}),
+  ...(app.status === "live" && app.appStoreUrl ? {
+    "downloadUrl": app.appStoreUrl,
+    "installUrl": app.appStoreUrl,
+    "sameAs": [app.appStoreUrl],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+    },
+  } : {}),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pretty Toolkit",
+      "item": `${siteUrl}/`,
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": app.name,
+      "item": pageUrl,
+    },
+  ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": `${app.name} — ${app.tagline}`,
+  "description": app.description,
+  "url": pageUrl,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Pretty Toolkit",
+    "url": siteUrl,
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": app.name,
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "iOS",
+  },
+};
 
 const featureIcons: Record<string, string> = {
   scan: '<circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/>',
@@ -60,6 +145,40 @@ const featureIcons: Record<string, string> = {
           <span class="coming-soon-hero-badge">Coming Soon to the App Store</span>
         )}
       </div>
+    </div>
+  </section>
+
+  {firstFaq && (
+    <section class="answer-section">
+      <div class="answer-inner reveal section-choreography">
+        <p class="answer-label choreo-headline">{categories[app.category]} app for iPhone</p>
+        <h2 class="answer-heading choreo-subtitle">{firstFaq.question}</h2>
+        <p class="answer-copy choreo-content">{firstFaq.answer}</p>
+      </div>
+    </section>
+  )}
+
+  <section class="capabilities-section">
+    <div class="capabilities-inner reveal section-choreography">
+      <p class="capabilities-label choreo-headline">{app.name} features</p>
+      <h2 class="capabilities-heading choreo-subtitle">What can you do with {app.name}?</h2>
+      <p class="capabilities-intro choreo-content">
+        {app.name} is built for quick, focused utility on iPhone. These are the core things it helps you do, without clutter or extra setup.
+      </p>
+      <div class="capability-list choreo-meta">
+        {app.features.slice(0, 4).map((feature) => (
+          <article class="capability-item">
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
+          </article>
+        ))}
+      </div>
+      {privacyFaq && (
+        <div class="privacy-answer choreo-cta-text">
+          <h3>{privacyFaq.question}</h3>
+          <p>{privacyFaq.answer}</p>
+        </div>
+      )}
     </div>
   </section>
 
@@ -217,6 +336,105 @@ const featureIcons: Record<string, string> = {
     padding: 12px 28px;
     border-radius: 12px;
     display: inline-block;
+  }
+
+  /* ===== DIRECT ANSWER ===== */
+  .answer-section {
+    padding: 100px 24px;
+    background: var(--section-warm);
+  }
+  .answer-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .answer-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-accent);
+    margin-bottom: 14px;
+  }
+  .answer-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 18px;
+  }
+  .answer-copy {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* ===== CAPABILITIES ===== */
+  .capabilities-section {
+    padding: 110px 24px;
+    background: var(--off-white);
+  }
+  .capabilities-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .capabilities-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-accent);
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .capabilities-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .capabilities-intro {
+    max-width: 680px;
+    margin: 0 auto 44px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    text-align: center;
+  }
+  .capability-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .capability-item {
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+  }
+  .capability-item h3,
+  .privacy-answer h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+  }
+  .capability-item p,
+  .privacy-answer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .privacy-answer {
+    max-width: 760px;
+    margin: 28px auto 0;
+    background: color-mix(in srgb, var(--dusty-rose) 9%, transparent);
+    border-radius: 18px;
+    padding: 24px 28px;
   }
 
   /* ===== FEATURE SECTIONS ===== */
@@ -411,6 +629,11 @@ const featureIcons: Record<string, string> = {
       width: 180px;
       height: 360px;
     }
+    .answer-section { padding: 80px 24px; }
+    .capabilities-section { padding: 80px 24px; }
+    .capability-list {
+      grid-template-columns: 1fr;
+    }
     .faq-section { padding: 80px 24px; }
     .download-cta { padding: 80px 24px; }
     .cross-promo-section { padding: 80px 24px; }
@@ -421,20 +644,9 @@ const featureIcons: Record<string, string> = {
 </style>
 
 <!-- JSON-LD Structured Data -->
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": app.name,
-  "description": app.description,
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "iOS",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-  },
-  ...(app.appStoreUrl ? { "url": app.appStoreUrl } : {}),
-})} />
+<script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
 
 {app.faqs && app.faqs.length > 0 && (
   <script type="application/ld+json" set:html={JSON.stringify({
