@@ -8,6 +8,7 @@ import { apps } from '../data/apps';
 const sincefy = apps.find((a) => a.slug === 'sincefy')!;
 const luxira = apps.find((a) => a.slug === 'luxira')!;
 const sopora = apps.find((a) => a.slug === 'sopora')!;
+const logfd = apps.find((a) => a.slug === 'logfd')!;
 ---
 
 <BaseLayout
@@ -56,11 +57,12 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
           <div class="m-t" style="--d: 0.02s; --fd: 5.8s; --bg: linear-gradient(135deg, #EEC8C4, #E8B4B8);"></div>
           <div class="m-t" style="--d: 0.16s; --fd: 4.4s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
         </div>
-        <!-- Row 4: 3 tiles — bottom point, centered. Luxira + Sopora + Sincefy. -->
+        <!-- Row 4: public app icons, centered. -->
         <div class="m-row m-row-center">
           <a class="m-t m-t-icon m-t-link" href="/luxira" aria-label="Open Luxira" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></a>
           <a class="m-t m-t-icon m-t-link" href="/sopora" aria-label="Open Sopora" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/sopora.png" alt="" width="96" height="96" /></a>
           <a class="m-t m-t-icon m-t-link" href="/sincefy" aria-label="Open Sincefy" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></a>
+          <a class="m-t m-t-icon m-t-link" href="/logfd" aria-label="Open logfd" style="--d: 0.2s; --fd: 4.9s;"><img src="/icons/logfd.png" alt="" width="96" height="96" /></a>
         </div>
       </div>
     </div>
@@ -146,6 +148,7 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
         <AppCard app={sincefy} />
         <AppCard app={luxira} />
         <AppCard app={sopora} />
+        <AppCard app={logfd} />
         <PlaceholderCard index={1} />
       </div>
     </div>

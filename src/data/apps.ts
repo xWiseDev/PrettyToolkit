@@ -211,7 +211,7 @@ export const apps: App[] = [
       "A calm sleep journal for the nights you want to understand. Log when you slept, how you felt, and what shaped the night — no microphone, no account, no guessing.",
     category: "wellness",
     icon: "/icons/sopora.png",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/sleep-diary-journal-sopora/id6778006318",
     accentColor: "#8F6F9F",
     features: [
       {
@@ -257,7 +257,7 @@ export const apps: App[] = [
       "/screenshots/sopora/03-sleep-notes.png",
       "/screenshots/sopora/04-sleep-tracker.png",
     ],
-    status: "coming-soon",
+    status: "live",
     order: 3,
     faqs: [
       {
@@ -535,5 +535,84 @@ export const apps: App[] = [
         },
       ],
     },
+  },
+  {
+    slug: "logfd",
+    name: "logfd",
+    tagline: "Log it. Leave it there.",
+    description:
+      "A calm food and intake diary for the everyday details. Write what you ate, drank, or did, and let the rest stay simple.",
+    category: "daily-tools",
+    icon: "/icons/logfd.png",
+    appStoreUrl: "",
+    accentColor: "#E8A05C",
+    features: [
+      {
+        icon: "history",
+        title: "Quick, free-form logging",
+        description:
+          "Write down a meal, drink, supplement, medication, or workout in your own words. Every entry is timestamped automatically, with nothing extra to fill out.",
+      },
+      {
+        icon: "palette",
+        title: "Simple categories",
+        description:
+          "Keep the day clear with gentle Food, Drink, and Other groupings. Categories are optional, so logging never becomes a chore.",
+      },
+      {
+        icon: "history",
+        title: "Your day, in context",
+        description:
+          "Move through past days with a working calendar and revisit the small details when you need them.",
+      },
+      {
+        icon: "scan",
+        title: "Find what matters",
+        description:
+          "Search your history and filter entries when you want to look something up—without turning your diary into a spreadsheet.",
+      },
+      {
+        icon: "share",
+        title: "Export when needed",
+        description:
+          "Create clear PDF or CSV exports to keep for yourself or share with a professional you trust.",
+      },
+      {
+        icon: "barcode",
+        title: "Calm by design",
+        description:
+          "No calorie counting, no ads, and no judgment. Your diary stays focused, private, and easy to return to.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 4,
+    faqs: [
+      {
+        question: "What is logfd?",
+        answer:
+          "logfd is a simple food and intake diary for iPhone. It gives you one quiet place to note what you ate, drank, took, or did, with a timestamp and optional category. There are no calorie targets, food databases, or judgment—just your own words, kept clearly.",
+      },
+      {
+        question: "What can I log in logfd?",
+        answer:
+          "You can log food, drinks, supplements, medication, and exercise. Start with a short note and let the app timestamp it for you. Optional Food, Drink, and Other categories help keep a day organized without getting in the way.",
+      },
+      {
+        question: "Does logfd count calories or track weight?",
+        answer:
+          "No. logfd is deliberately a free-form diary, not a calorie counter or weight tracker. It is made for recording the details you want to remember without scores, targets, or pressure.",
+      },
+      {
+        question: "Can I search or export my diary?",
+        answer:
+          "Yes. logfd is being built with search, calendar history, and clear PDF and CSV export tools, so you can find past entries or share a record when it is useful.",
+      },
+      {
+        question: "Is logfd private?",
+        answer:
+          "Your diary is designed to stay on your device. logfd has no ads and does not turn your meals or personal notes into a profile. A full privacy policy will be available before the app launches.",
+      },
+    ],
   },
 ];
