@@ -614,5 +614,82 @@ export const apps: App[] = [
           "Your diary is designed to stay on your device. logfd has no ads and does not turn your meals or personal notes into a profile. A full privacy policy will be available before the app launches.",
       },
     ],
+    privacy: {
+      lastUpdated: "June 2026",
+      intro:
+        'This privacy policy explains how logfd: Food & Intake Diary ("logfd", "the app") collects, uses, and protects your information. logfd is published by Pretty Toolkit.',
+      sections: [
+        {
+          heading: "Diary Data",
+          content:
+            "<p>When you create an entry in logfd, the text you write, category, date, creation time, modification time, and deletion state are stored locally on your device using on-device storage. logfd does not upload your diary entries to Pretty Toolkit servers, and we do not have access to the content of your entries.</p>",
+        },
+        {
+          heading: "Categories and Search",
+          content:
+            "<p>Food, Drink, and Other categories are stored with your entries on your device. Search and filtering are performed on-device. We do not send entry text, categories, dates, or search terms to analytics services.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>logfd may request permission to send optional meal or intake reminders. Reminders are off by default, scheduled locally on your device, and can be changed or revoked at any time in the app or in iOS Settings. Reminder settings such as enabled state, time, and mode are stored on your device using UserDefaults. Reminder content is not uploaded to external servers.</p>",
+        },
+        {
+          heading: "Data Export, Backup, and Restore",
+          content:
+            "<p>logfd may let you export diary entries as PDF or CSV files, create a JSON backup, and restore from a backup file. Exports and backups are generated locally and shared only through the iOS share sheet or file destination you choose, such as Files, iCloud Drive, email, or AirDrop. Restores are processed on-device and do not upload your diary to Pretty Toolkit.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            '<p>logfd does not collect personally identifiable information such as your name, email address, phone number, precise location, Apple ID, or diary content. The app may collect limited anonymous data to help us understand and improve the experience:</p><ul><li><strong>Product Interaction</strong> — Anonymous usage events such as onboarding progress, entries created or edited, reminder settings changed, exports started, backups created, restores completed, paywall screens viewed, and features used. These events contain no diary text, dates, categories, search terms, or exported file content.</li><li><strong>Device Identifier</strong> — An anonymous identifier used to distinguish unique app installations. This identifier is not linked to your Apple ID, name, email address, or contact information.</li><li><strong>Purchase History</strong> — Subscription status is checked via Apple StoreKit to unlock premium features. We do not see your payment details.</li></ul><p>None of this data is linked to your identity. Your diary entries, reminders, exports, backups, and imported files stay under your control.</p>',
+        },
+        {
+          heading: "Subscriptions & Payments",
+          content:
+            "<p>logfd may offer optional premium features through subscriptions managed by the Apple App Store. All payment processing is handled by Apple. We do not have access to your credit card details, payment information, or Apple ID.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>logfd uses the following services:</p><ul><li><strong>Apple Frameworks</strong> — SwiftData (on-device storage), UserDefaults (preferences and local state), UserNotifications (local reminders), StoreKit (subscriptions), and system sharing/import tools, governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>.</li><li><strong>Mixpanel</strong> — An analytics service used to collect the anonymous usage data described above. Mixpanel receives no diary entry content, category details, search terms, exported files, backup files, or personal information. For details, see <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel\'s Privacy Policy</a>.</li></ul><p>logfd does not integrate data brokers or cross-app tracking tools.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with third parties. Anonymous analytics data is processed by Mixpanel solely on our behalf to improve the app. When you export, back up, restore, or share data, it is handled only through the system destination or file you choose.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>logfd does not track you across apps and websites owned by other companies. We do not share your data with data brokers, advertising networks, or third parties for tracking purposes. The app's privacy manifest declares that tracking is not used.</p>",
+        },
+        {
+          heading: "Health and Wellness Disclaimer",
+          content:
+            "<p>logfd is a personal diary, not a medical device, nutrition program, calorie counter, or treatment tool. It does not diagnose, treat, prevent, or monitor any medical condition. For health concerns, consult a qualified professional.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>logfd is not directed at children under 13. We do not knowingly collect personal information from children.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because logfd stores your diary locally on your device, deleting the app removes your local diary data from our reach. Entries that you delete inside the app may be kept briefly on your device to support undo and data safety before being purged. To request deletion of analytics data tied to your anonymous app identifier, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> with your request, and we will delete the data within 30 days.</p><p>EU residents have additional rights under GDPR, and California residents have rights under the CCPA. Contact us at the same email to exercise these rights.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
   },
 ];
