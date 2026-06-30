@@ -4,7 +4,18 @@ import AppCard from '../../components/AppCard.astro';
 import AppStoreBadge from '../../components/AppStoreBadge.astro';
 import FaqAccordion from '../../components/FaqAccordion.astro';
 import PlaceholderCard from '../../components/PlaceholderCard.astro';
-import { apps, categories } from '../../data/apps';
+import { apps } from '../../data/apps';
+import {
+  categoryLabels,
+  defaultLocale,
+  getLocalizedApp,
+  getLocalizedApps,
+  localizedAlternates,
+  localizedAppPath,
+  localizedPrivacyPath,
+  type Locale,
+  ui,
+} from '../../i18n';
 import type { GetStaticPaths } from 'astro';
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -15,35 +26,42 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 const { app } = Astro.props;
+const locale = (Astro.props.locale ?? defaultLocale) as Locale;
+const localizedApp = getLocalizedApp(app, locale);
+const localizedApps = getLocalizedApps(locale);
+const copy = ui[locale];
+const categoryName = categoryLabels[locale][localizedApp.category];
+const canonicalPath = localizedAppPath(locale, localizedApp.slug);
+const alternatePaths = localizedAlternates(`/${localizedApp.slug}`);
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
-const pageUrl = new URL(`/${app.slug}/`, siteUrl).toString();
-const privacyUrl = app.privacy ? new URL(`/${app.slug}/privacy/`, siteUrl).toString() : undefined;
-const appIconUrl = new URL(app.icon, siteUrl).toString();
-const firstFaq = app.faqs?.[0];
+const pageUrl = new URL(canonicalPath, siteUrl).toString();
+const privacyUrl = localizedApp.privacy ? new URL(localizedPrivacyPath(locale, localizedApp.slug), siteUrl).toString() : undefined;
+const appIconUrl = new URL(localizedApp.icon, siteUrl).toString();
+const firstFaq = localizedApp.faqs?.[0];
 const privacyFaq =
-  app.faqs?.find((faq) => /private|privacy|safe/i.test(faq.question)) ||
-  app.faqs?.find((faq) => /offline/i.test(faq.question));
+  localizedApp.faqs?.find((faq) => /private|privacy|safe|prive|privacidad|privat|datenschutz/i.test(faq.question)) ||
+  localizedApp.faqs?.find((faq) => /offline|hors ligne|sin internet/i.test(faq.question));
 const appKeywords = [
-  app.name,
-  app.tagline,
-  categories[app.category],
-  `${categories[app.category]} app for iPhone`,
-  ...app.features.map((feature) => feature.title),
+  localizedApp.name,
+  localizedApp.tagline,
+  categoryName,
+  `${categoryName} ${copy.appPage.categorySuffix}`,
+  ...localizedApp.features.map((feature) => feature.title),
 ];
-const crossPromoApps = apps
-  .filter((candidate) => candidate.slug !== app.slug)
+const crossPromoApps = localizedApps
+  .filter((candidate) => candidate.slug !== localizedApp.slug)
   .sort((a, b) => a.order - b.order)
   .slice(0, 3);
 const placeholderCount = Math.max(0, 3 - crossPromoApps.length);
-const heroScreenshots = app.screenshots.slice(0, 2);
+const heroScreenshots = localizedApp.screenshots.slice(0, 2);
 
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": app.name,
-  "description": app.description,
+  "name": localizedApp.name,
+  "description": localizedApp.description,
   "applicationCategory": "UtilitiesApplication",
-  "applicationSubCategory": categories[app.category],
+  "applicationSubCategory": categoryName,
   "operatingSystem": "iOS",
   "url": pageUrl,
   "image": appIconUrl,
@@ -53,13 +71,14 @@ const softwareApplicationSchema = {
     "url": siteUrl,
   },
   "keywords": appKeywords.join(", "),
-  "featureList": app.features.map((feature) => feature.title),
-  "isAccessibleForFree": app.status === "live",
+  "featureList": localizedApp.features.map((feature) => feature.title),
+  "isAccessibleForFree": localizedApp.status === "live",
+  "inLanguage": locale,
   ...(privacyUrl ? { "privacyPolicy": privacyUrl } : {}),
-  ...(app.status === "live" && app.appStoreUrl ? {
-    "downloadUrl": app.appStoreUrl,
-    "installUrl": app.appStoreUrl,
-    "sameAs": [app.appStoreUrl],
+  ...(localizedApp.status === "live" && localizedApp.appStoreUrl ? {
+    "downloadUrl": localizedApp.appStoreUrl,
+    "installUrl": localizedApp.appStoreUrl,
+    "sameAs": [localizedApp.appStoreUrl],
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -77,12 +96,12 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Pretty Toolkit",
-      "item": `${siteUrl}/`,
+      "item": new URL(locale === 'en' ? '/' : `/${locale}/`, siteUrl).toString(),
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": app.name,
+      "name": localizedApp.name,
       "item": pageUrl,
     },
   ],
@@ -91,9 +110,10 @@ const breadcrumbSchema = {
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": `${app.name} — ${app.tagline}`,
-  "description": app.description,
+  "name": `${localizedApp.name} — ${localizedApp.tagline}`,
+  "description": localizedApp.description,
   "url": pageUrl,
+  "inLanguage": locale,
   "isPartOf": {
     "@type": "WebSite",
     "name": "Pretty Toolkit",
@@ -101,7 +121,7 @@ const webPageSchema = {
   },
   "about": {
     "@type": "SoftwareApplication",
-    "name": app.name,
+    "name": localizedApp.name,
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "iOS",
   },
@@ -110,38 +130,39 @@ const webPageSchema = {
 ---
 
 <BaseLayout
-  title={`${app.name} — ${app.tagline} | Pretty Toolkit`}
-  description={app.description}
+  title={`${localizedApp.name} — ${localizedApp.tagline} | Pretty Toolkit`}
+  description={localizedApp.description}
+  locale={locale}
+  canonicalPath={canonicalPath}
+  alternatePaths={alternatePaths}
 >
   <!-- ===== APP HERO ===== -->
   <section
     class="app-hero grain-overlay"
-    style={`--app-accent: ${app.accentColor};`}
+    style={`--app-accent: ${localizedApp.accentColor};`}
   >
     <div class="app-hero-inner section-choreography visible">
       <div class="app-hero-content">
         <div class="app-hero-icon choreo-headline">
           <img
             class="app-hero-icon-img"
-            src={app.icon}
-            alt={`${app.name} app icon`}
+            src={localizedApp.icon}
+            alt={copy.appPage.appIconAlt(localizedApp.name)}
             width="140"
             height="140"
           />
         </div>
-        <h1 class="app-hero-name choreo-subtitle">{app.name}</h1>
-        <p class="app-hero-tagline choreo-content">{app.description}</p>
+        <h1 class="app-hero-name choreo-subtitle">{localizedApp.name}</h1>
+        <p class="app-hero-tagline choreo-content">{localizedApp.description}</p>
         <div class="app-hero-cta choreo-cta">
-          {app.status === "live" && app.appStoreUrl ? (
-            <AppStoreBadge href={app.appStoreUrl} />
+          {localizedApp.status === "live" && localizedApp.appStoreUrl ? (
+            <AppStoreBadge href={localizedApp.appStoreUrl} />
           ) : (
-            <span class="coming-soon-hero-badge">Coming Soon to the App Store</span>
+            <span class="coming-soon-hero-badge">{copy.appPage.comingSoon}</span>
           )}
         </div>
-        <p class="app-trust-row choreo-cta-text" aria-label={`${app.name} trust signals`}>
-          <span>No ads</span>
-          <span>Offline-first</span>
-          <span>Private by design</span>
+        <p class="app-trust-row choreo-cta-text" aria-label={`${localizedApp.name} trust signals`}>
+          {copy.brand.trust.map((item) => <span>{item}</span>)}
         </p>
       </div>
 
@@ -163,7 +184,7 @@ const webPageSchema = {
   {firstFaq && (
     <section class="answer-section">
       <div class="answer-inner reveal section-choreography">
-        <p class="answer-label choreo-headline">{categories[app.category]} app for iPhone</p>
+        <p class="answer-label choreo-headline">{categoryName} {copy.appPage.categorySuffix}</p>
         <h2 class="answer-heading choreo-subtitle">{firstFaq.question}</h2>
         <p class="answer-copy choreo-content">{firstFaq.answer}</p>
       </div>
@@ -172,13 +193,13 @@ const webPageSchema = {
 
   <section class="capabilities-section">
     <div class="capabilities-inner reveal section-choreography">
-      <p class="capabilities-label choreo-headline">{app.name} features</p>
-      <h2 class="capabilities-heading choreo-subtitle">What can you do with {app.name}?</h2>
+      <p class="capabilities-label choreo-headline">{copy.appPage.featuresLabel(localizedApp.name)}</p>
+      <h2 class="capabilities-heading choreo-subtitle">{copy.appPage.capabilitiesHeading(localizedApp.name)}</h2>
       <p class="capabilities-intro choreo-content">
-        {app.name} is built for quick, focused utility on iPhone. These are the core things it helps you do, without clutter or extra setup.
+        {copy.appPage.capabilitiesIntro(localizedApp.name)}
       </p>
       <div class="capability-list choreo-meta">
-        {app.features.slice(0, 4).map((feature) => (
+        {localizedApp.features.slice(0, 4).map((feature) => (
           <article class="capability-item">
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>
@@ -197,14 +218,14 @@ const webPageSchema = {
   <!-- ===== SCREENSHOT GALLERY ===== -->
   <section class="gallery-section">
     <div class="gallery-container reveal">
-      <h2 class="gallery-heading reveal-headline">See it in action.</h2>
-      {app.screenshots.length > 0 ? (
+      <h2 class="gallery-heading reveal-headline">{copy.appPage.gallery}</h2>
+      {localizedApp.screenshots.length > 0 ? (
         <div class="gallery-grid gallery-grid-screenshots">
-          {app.screenshots.slice(0, 5).map((src, i) => (
+          {localizedApp.screenshots.slice(0, 5).map((src, i) => (
             <div class="gallery-device">
               <picture>
                 <source srcset={src.replace(/\.(png|jpe?g)$/i, '.webp')} type="image/webp" />
-                <img src={src} alt={`${app.name} screenshot ${i + 1}`} loading="lazy" />
+                <img src={src} alt={copy.appPage.screenshotAlt(localizedApp.name, i + 1)} loading="lazy" />
               </picture>
             </div>
           ))}
@@ -214,9 +235,9 @@ const webPageSchema = {
           {[0, 1, 2].map((i) => (
             <div
               class="gallery-placeholder"
-              style={`background: linear-gradient(135deg, ${app.accentColor}15, ${app.accentColor}30);`}
+              style={`background: linear-gradient(135deg, ${localizedApp.accentColor}15, ${localizedApp.accentColor}30);`}
             >
-              <span>{app.name}</span>
+              <span>{localizedApp.name}</span>
             </div>
           ))}
         </div>
@@ -225,12 +246,12 @@ const webPageSchema = {
   </section>
 
   <!-- ===== FAQ ===== -->
-  {app.faqs && app.faqs.length > 0 && (
+  {localizedApp.faqs && localizedApp.faqs.length > 0 && (
     <section class="faq-section">
       <div class="faq-inner reveal section-choreography">
-        <h2 class="faq-heading choreo-headline">Questions? Answers.</h2>
+        <h2 class="faq-heading choreo-headline">{copy.appPage.faq}</h2>
         <div class="choreo-content">
-          <FaqAccordion faqs={app.faqs} />
+          <FaqAccordion faqs={localizedApp.faqs} />
         </div>
       </div>
     </section>
@@ -241,19 +262,19 @@ const webPageSchema = {
     <div class="download-icon choreo-headline">
       <img
         class="cta-icon-img"
-        src={app.icon}
-        alt={`${app.name} app icon`}
+        src={localizedApp.icon}
+        alt={copy.appPage.appIconAlt(localizedApp.name)}
         width="72"
         height="72"
         loading="lazy"
       />
     </div>
-    <h2 class="download-heading choreo-subtitle">Ready to try {app.name}?</h2>
+    <h2 class="download-heading choreo-subtitle">{copy.appPage.downloadHeading(localizedApp.name)}</h2>
     <div class="choreo-cta">
-      {app.status === "live" && app.appStoreUrl ? (
-        <AppStoreBadge href={app.appStoreUrl} />
+      {localizedApp.status === "live" && localizedApp.appStoreUrl ? (
+        <AppStoreBadge href={localizedApp.appStoreUrl} />
       ) : (
-        <span class="coming-soon-hero-badge">Coming Soon to the App Store</span>
+        <span class="coming-soon-hero-badge">{copy.appPage.comingSoon}</span>
       )}
     </div>
   </section>
@@ -261,14 +282,14 @@ const webPageSchema = {
   <!-- ===== CROSS PROMO ===== -->
   <section class="cross-promo-section">
     <div class="cross-promo-inner reveal section-choreography">
-      <h2 class="cross-promo-heading choreo-headline">More from Pretty Toolkit</h2>
-      <p class="cross-promo-subtitle choreo-subtitle">More apps are on the way.</p>
+      <h2 class="cross-promo-heading choreo-headline">{copy.appPage.crossPromoHeading}</h2>
+      <p class="cross-promo-subtitle choreo-subtitle">{copy.appPage.crossPromoSubtitle}</p>
       <div class="cross-promo-grid choreo-content">
         {crossPromoApps.map((crossPromoApp) => (
-          <AppCard app={crossPromoApp} />
+          <AppCard app={crossPromoApp} locale={locale} />
         ))}
         {Array.from({ length: placeholderCount }).map((_, i) => (
-          <PlaceholderCard index={i} />
+          <PlaceholderCard index={i} locale={locale} />
         ))}
       </div>
     </div>
@@ -780,11 +801,12 @@ const webPageSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
 
-{app.faqs && app.faqs.length > 0 && (
+{localizedApp.faqs && localizedApp.faqs.length > 0 && (
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": app.faqs.map(faq => ({
+    "inLanguage": locale,
+    "mainEntity": localizedApp.faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {

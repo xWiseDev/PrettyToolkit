@@ -1,32 +1,34 @@
 ---
 import type { App } from '../data/apps';
-import { categories } from '../data/apps';
+import { categoryLabels, defaultLocale, localizedAppPath, type Locale, ui } from '../i18n';
 
 interface Props {
   app: App;
+  locale?: Locale;
 }
 
-const { app } = Astro.props;
+const { app, locale = defaultLocale } = Astro.props;
+const copy = ui[locale];
 ---
 
-<a href={`/${app.slug}`} class="app-card">
+<a href={localizedAppPath(locale, app.slug)} class="app-card">
   <div class="app-icon-wrapper">
     <img
       class="app-icon-img"
       src={app.icon}
-      alt={`${app.name} app icon`}
+      alt={copy.appPage.appIconAlt(app.name)}
       width="80"
       height="80"
       loading="lazy"
     />
   </div>
-  <span class="category-badge">{categories[app.category]}</span>
+  <span class="category-badge">{categoryLabels[locale][app.category]}</span>
   <h3 class="app-name">{app.name}</h3>
   <p class="app-tagline">{app.tagline}</p>
   {app.status === "live" && app.appStoreUrl ? (
-    <span class="btn-primary card-cta">View app</span>
+    <span class="btn-primary card-cta">{copy.appCard.view}</span>
   ) : (
-    <span class="coming-soon-badge">Coming Soon</span>
+    <span class="coming-soon-badge">{copy.appCard.comingSoon}</span>
   )}
 </a>
 

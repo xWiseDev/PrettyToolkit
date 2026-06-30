@@ -1,8 +1,24 @@
 ---
 import { apps } from '../data/apps';
+import {
+  defaultLocale,
+  localizedAlternates,
+  localizedAppPath,
+  localizedPath,
+  type Locale,
+  ui,
+} from '../i18n';
 
+interface Props {
+  locale?: Locale;
+  currentPath?: string;
+  alternatePaths?: Record<Locale, string>;
+}
+
+const { locale = defaultLocale, currentPath = '/', alternatePaths = localizedAlternates(currentPath) } = Astro.props;
 const currentYear = new Date().getFullYear();
 const sortedApps = [...apps].sort((a, b) => a.order - b.order);
+const copy = ui[locale];
 ---
 
 <footer class="site-footer">
@@ -10,11 +26,11 @@ const sortedApps = [...apps].sort((a, b) => a.order - b.order);
     <!-- App icon row for cross-promotion -->
     <div class="footer-app-icons">
       {sortedApps.map((app) => (
-        <a href={`/${app.slug}`} title={app.name}>
+        <a href={localizedAppPath(locale, app.slug)} title={app.name}>
           <img
             class="footer-icon-img"
             src={app.icon}
-            alt={`${app.name} app icon`}
+            alt={copy.appPage.appIconAlt(app.name)}
             width="44"
             height="44"
             loading="lazy"
@@ -25,19 +41,19 @@ const sortedApps = [...apps].sort((a, b) => a.order - b.order);
 
     <!-- Links -->
     <div class="footer-links">
-      <a href="/#apps">Apps</a>
-      <a href="https://blog.prettytoolkit.com" target="_blank" rel="noopener">Blog</a>
-      <a href="/about">About</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="/support">Support</a>
+      <a href={`${localizedPath(locale, '/')}#apps`}>{copy.nav.apps}</a>
+      <a href="https://blog.prettytoolkit.com" target="_blank" rel="noopener">{copy.nav.blog}</a>
+      <a href={localizedPath(locale, '/about')}>{copy.nav.about}</a>
+      <a href={localizedPath(locale, '/privacy')}>{copy.nav.privacy}</a>
+      <a href="/terms">{copy.nav.terms}</a>
+      <a href={localizedPath(locale, '/support')}>{copy.nav.support}</a>
     </div>
 
     <!-- Brand -->
     <p class="footer-brand">
       <span class="brand-name">Pretty Toolkit</span>
     </p>
-    <p class="footer-tagline">Everyday apps, unexpectedly beautiful.</p>
+    <p class="footer-tagline">{copy.brand.tagline}</p>
 
     <!-- Copyright -->
     <p class="footer-copyright">

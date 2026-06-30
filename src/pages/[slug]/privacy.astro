@@ -1,6 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { apps } from '../../data/apps';
+import {
+  defaultLocale,
+  getLocalizedApp,
+  localizedAlternates,
+  localizedAppPath,
+  localizedPrivacyPath,
+  type Locale,
+  ui,
+} from '../../i18n';
 import type { GetStaticPaths } from 'astro';
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -13,30 +22,36 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 const { app } = Astro.props;
-const privacy = app.privacy!;
+const locale = (Astro.props.locale ?? defaultLocale) as Locale;
+const localizedApp = getLocalizedApp(app, locale);
+const copy = ui[locale];
+const privacy = localizedApp.privacy!;
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
-const appUrl = new URL(`/${app.slug}/`, siteUrl).toString();
-const privacyUrl = new URL(`/${app.slug}/privacy/`, siteUrl).toString();
+const canonicalPath = localizedPrivacyPath(locale, localizedApp.slug);
+const alternatePaths = localizedAlternates(`/${localizedApp.slug}/privacy`);
+const appUrl = new URL(localizedAppPath(locale, localizedApp.slug), siteUrl).toString();
+const privacyUrl = new URL(canonicalPath, siteUrl).toString();
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "inLanguage": locale,
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "Pretty Toolkit",
-      "item": `${siteUrl}/`,
+      "item": new URL(locale === 'en' ? '/' : `/${locale}/`, siteUrl).toString(),
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": app.name,
+      "name": localizedApp.name,
       "item": appUrl,
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": `${app.name} Privacy Policy`,
+      "name": copy.privacy.appHeading(localizedApp.name),
       "item": privacyUrl,
     },
   ],
@@ -44,12 +59,15 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`Privacy Policy — ${app.name} | Pretty Toolkit`}
-  description={`Privacy policy for ${app.name} by Pretty Toolkit.`}
+  title={copy.privacy.appTitle(localizedApp.name)}
+  description={copy.privacy.appDescription(localizedApp.name)}
+  locale={locale}
+  canonicalPath={canonicalPath}
+  alternatePaths={alternatePaths}
 >
   <article class="legal-page">
-    <h1 class="legal-heading">{app.name} Privacy Policy</h1>
-    <p class="legal-updated">Last updated: {privacy.lastUpdated}</p>
+    <h1 class="legal-heading">{copy.privacy.appHeading(localizedApp.name)}</h1>
+    <p class="legal-updated">{copy.privacy.lastUpdated(privacy.lastUpdated)}</p>
 
     <div class="legal-content">
       <p>{privacy.intro}</p>
@@ -64,8 +82,8 @@ const breadcrumbSchema = {
 
     <div class="legal-footer">
       <p>
-        This policy applies specifically to {app.name}. For our general company privacy policy, see
-        <a href="/privacy">Pretty Toolkit Privacy Policy</a>.
+        {copy.privacy.appFooter(localizedApp.name)}
+        <a href={localizedPrivacyPath(locale)}>{copy.privacy.generalLink}</a>.
       </p>
     </div>
   </article>

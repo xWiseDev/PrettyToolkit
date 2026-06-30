@@ -1,38 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FaqAccordion from '../components/FaqAccordion.astro';
+import {
+  defaultLocale,
+  getSupportFaqs,
+  localizedAlternates,
+  localizedPath,
+  type Locale,
+  ui,
+} from '../i18n';
 
-const generalFaqs = [
-  {
-    question: "How do I cancel my subscription?",
-    answer: "Open the Settings app on your iPhone, tap your name at the top, then tap Subscriptions. Find the Pretty Toolkit app and tap Cancel Subscription.",
-  },
-  {
-    question: "How do I restore my purchases?",
-    answer: "Open the app and go to Settings or the premium section. Tap Restore Purchases. Make sure you're signed in with the same Apple ID used for the original purchase.",
-  },
-  {
-    question: "Can I get a refund?",
-    answer: "Refunds for App Store purchases are handled by Apple. Visit reportaproblem.apple.com to request a refund.",
-  },
-  {
-    question: "The app isn't working correctly. What should I do?",
-    answer: "Try closing and reopening the app, or restarting your device. Make sure you're running the latest version from the App Store. If the issue persists, contact us at aboyahyadev@icloud.com with a description of the problem.",
-  },
-  {
-    question: "Is my data private?",
-    answer: "Yes. All app data is stored locally on your device. We don't upload personal data to external servers. Read our full Privacy Policy at /privacy for details.",
-  },
-];
+interface Props {
+  locale?: Locale;
+}
 
+const { locale = defaultLocale } = Astro.props;
+const copy = ui[locale];
+const generalFaqs = getSupportFaqs(locale);
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
-const supportUrl = new URL('/support/', siteUrl).toString();
+const canonicalPath = localizedPath(locale, '/support');
+const alternatePaths = localizedAlternates('/support');
+const supportUrl = new URL(canonicalPath, siteUrl).toString();
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "name": "Pretty Toolkit Support",
-  "description": "Support page for Pretty Toolkit iPhone apps, subscriptions, refunds, privacy, and troubleshooting.",
+  "name": copy.support.title,
+  "description": copy.support.schemaDescription,
   "url": supportUrl,
+  "inLanguage": locale,
   "mainEntity": {
     "@type": "Organization",
     "name": "Pretty Toolkit",
@@ -40,7 +35,7 @@ const contactSchema = {
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "aboyahyadev@icloud.com",
-      "contactType": "customer support",
+      "contactType": copy.brand.supportContactType,
       "url": supportUrl,
     },
   },
@@ -49,17 +44,18 @@ const contactSchema = {
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "inLanguage": locale,
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "Pretty Toolkit",
-      "item": `${siteUrl}/`,
+      "item": new URL(locale === 'en' ? '/' : `/${locale}/`, siteUrl).toString(),
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Support",
+      "name": copy.nav.support,
       "item": supportUrl,
     },
   ],
@@ -67,27 +63,30 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title="Support — Pretty Toolkit"
-  description="Get help with Pretty Toolkit apps. Contact us, manage subscriptions, and find answers to common questions."
+  title={copy.support.title}
+  description={copy.support.description}
+  locale={locale}
+  canonicalPath={canonicalPath}
+  alternatePaths={alternatePaths}
 >
   <article class="support-page">
-    <h1 class="support-heading reveal-headline">Support</h1>
+    <h1 class="support-heading reveal-headline">{copy.support.heading}</h1>
     <p class="support-subtitle reveal">
-      We're here to help. Find answers below or reach out directly.
+      {copy.support.subtitle}
     </p>
 
     <!-- Contact -->
     <section class="support-contact reveal">
-      <h2>How do I contact Pretty Toolkit support?</h2>
+      <h2>{copy.support.contactHeading}</h2>
       <p>
-        For questions, feedback, or issues, email us at<br />
+        {copy.support.contactCopy}<br />
         <a href="mailto:aboyahyadev@icloud.com?subject=Pretty%20Toolkit%20Support" class="support-email">aboyahyadev@icloud.com</a>
       </p>
     </section>
 
     <!-- FAQ -->
     <section class="support-faq reveal">
-      <h2>Frequently Asked Questions</h2>
+      <h2>{copy.support.faqHeading}</h2>
       <FaqAccordion faqs={generalFaqs} />
     </section>
   </article>
@@ -147,6 +146,7 @@ const breadcrumbSchema = {
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "inLanguage": locale,
   "mainEntity": generalFaqs.map(faq => ({
     "@type": "Question",
     "name": faq.question,

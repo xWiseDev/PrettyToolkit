@@ -1,9 +1,12 @@
 ---
+import { defaultLocale, type Locale, ui } from '../i18n';
+
 interface Props {
   index: number;
+  locale?: Locale;
 }
 
-const { index } = Astro.props;
+const { index, locale = defaultLocale } = Astro.props;
 
 const gradients = [
   'linear-gradient(135deg, rgba(245, 220, 208, 0.5), rgba(238, 200, 196, 0.3))',
@@ -12,11 +15,12 @@ const gradients = [
 ];
 
 const gradient = gradients[index % gradients.length];
+const copy = ui[locale].placeholder;
 ---
 
 <div class="placeholder-card" style={`--card-gradient: ${gradient};`}>
   <div class="placeholder-shimmer"></div>
-  <span class="coming-soon-pill">Coming Soon</span>
+  <span class="coming-soon-pill">{copy.eyebrow}</span>
 </div>
 
 <style>
