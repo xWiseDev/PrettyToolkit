@@ -2,7 +2,6 @@
 import { apps } from '../data/apps';
 import {
   defaultLocale,
-  localizedAlternates,
   localizedAppPath,
   localizedPath,
   type Locale,
@@ -15,7 +14,7 @@ interface Props {
   alternatePaths?: Record<Locale, string>;
 }
 
-const { locale = defaultLocale, currentPath = '/', alternatePaths = localizedAlternates(currentPath) } = Astro.props;
+const { locale = defaultLocale } = Astro.props;
 const currentYear = new Date().getFullYear();
 const sortedApps = [...apps].sort((a, b) => a.order - b.order);
 const copy = ui[locale];
@@ -136,6 +135,12 @@ const copy = ui[locale];
     .footer-icon-img,
     .footer-links a {
       transition: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .site-footer {
+      padding: 72px 0 36px;
     }
   }
 </style>

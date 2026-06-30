@@ -39,41 +39,46 @@ const languageLabel: Record<Locale, string> = {
       <a href={localizedPath(locale, '/about')}>{copy.nav.about}</a>
       <a href={localizedPath(locale, '/support')}>{copy.nav.support}</a>
     </nav>
-    <details class="language-menu">
-      <summary aria-label={languageLabel[locale]}>
-        <span class="language-globe" aria-hidden="true">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M2 12h20"></path>
-            <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
-            <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
-          </svg>
-        </span>
-        <span>{localeShortLabels[locale]}</span>
-        <svg class="language-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="m6 9 6 6 6-6"></path>
+    <div class="header-actions">
+      <button class="language-dialog-toggle" aria-label={languageLabel[locale]} type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M2 12h20"></path>
+          <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+          <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
         </svg>
-      </summary>
-      <div class="language-panel" role="listbox" aria-label={languageLabel[locale]}>
-        {locales.map((item) => (
-          <a
-            href={alternatePaths[item]}
-            class:list={['language-option', item === locale && 'active']}
-            aria-current={item === locale ? 'page' : undefined}
-          >
-            <span class="language-option-name">{localeLabels[item]}</span>
-            <span class="language-option-code">{localeShortLabels[item]}</span>
-          </a>
-        ))}
-      </div>
-    </details>
-    <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
+        <span>{localeShortLabels[locale]}</span>
+      </button>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
   </div>
 </header>
+
+<dialog class="language-dialog" aria-labelledby="language-dialog-title">
+  <div class="language-dialog-inner">
+    <button class="language-dialog-close" aria-label="Close language menu" type="button">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <p class="language-dialog-kicker">{languageLabel[locale]}</p>
+    <h2 id="language-dialog-title">Pretty Toolkit</h2>
+    <div class="language-dialog-options">
+      {locales.map((item) => (
+        <a
+          href={alternatePaths[item]}
+          class:list={['language-dialog-option', item === locale && 'active']}
+          aria-current={item === locale ? 'page' : undefined}
+        >
+          <span>{localeLabels[item]}</span>
+          <span>{localeShortLabels[item]}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</dialog>
 
 <!-- Mobile menu overlay -->
 <div class="mobile-menu-overlay" aria-hidden="true">
@@ -86,21 +91,6 @@ const languageLabel: Record<Locale, string> = {
       <a href="https://blog.prettytoolkit.com" target="_blank" rel="noopener">{copy.nav.blog}</a>
       <a href={localizedPath(locale, '/about')}>{copy.nav.about}</a>
       <a href={localizedPath(locale, '/support')}>{copy.nav.support}</a>
-      <div class="mobile-language-block">
-        <p class="mobile-language-label">{languageLabel[locale]}</p>
-        <div class="mobile-language-options" aria-label={languageLabel[locale]}>
-          {locales.map((item) => (
-            <a
-              href={alternatePaths[item]}
-              class:list={['mobile-language-option', item === locale && 'active']}
-              aria-current={item === locale ? 'page' : undefined}
-            >
-              <span>{localeLabels[item]}</span>
-              <span>{localeShortLabels[item]}</span>
-            </a>
-          ))}
-        </div>
-      </div>
     </nav>
   </div>
 </div>
@@ -145,110 +135,40 @@ const languageLabel: Record<Locale, string> = {
   .desktop-nav a:hover {
     color: var(--text-accent);
   }
-  .language-menu {
-    position: relative;
-  }
-  .language-menu summary {
-    min-height: 38px;
-    display: inline-flex;
+  .header-actions {
+    display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 11px;
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--off-white) 82%, var(--dusty-rose) 18%);
-    box-shadow: var(--shadow-sm);
-    color: var(--text-primary);
-    cursor: pointer;
-    list-style: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    transition: transform var(--duration-fast) var(--ease-standard),
-                background var(--duration-fast) var(--ease-standard),
-                box-shadow var(--duration-fast) var(--ease-standard);
+    gap: 12px;
   }
-  .language-menu summary::-webkit-details-marker {
-    display: none;
-  }
-  .language-menu summary:hover,
-  .language-menu[open] summary {
-    transform: translateY(-1px);
-    background: color-mix(in srgb, var(--off-white) 72%, var(--dusty-rose) 28%);
-    box-shadow: var(--shadow-md);
-  }
-  .language-menu summary:focus-visible {
-    outline: 2px solid var(--text-accent);
-    outline-offset: 4px;
-  }
-  .language-globe {
-    width: 22px;
-    height: 22px;
+  .language-dialog-toggle {
+    min-width: 44px;
+    min-height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border: none;
     border-radius: 999px;
-    background: color-mix(in srgb, var(--warm-cream) 72%, var(--off-white) 28%);
-    color: var(--text-accent);
-  }
-  .language-chevron {
+    background: color-mix(in srgb, var(--dusty-rose) 10%, transparent);
     color: var(--text-secondary);
-    transition: transform var(--duration-fast) var(--ease-standard);
-  }
-  .language-menu[open] .language-chevron {
-    transform: rotate(180deg);
-  }
-  .language-panel {
-    position: absolute;
-    top: calc(100% + 12px);
-    right: 0;
-    width: 190px;
-    padding: 8px;
-    border-radius: 18px;
-    background: color-mix(in srgb, var(--off-white) 88%, var(--section-warm) 12%);
-    box-shadow: var(--shadow-lg);
-    z-index: 200;
-  }
-  .language-panel::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    right: 22px;
-    width: 12px;
-    height: 12px;
-    background: inherit;
-    transform: rotate(45deg);
-  }
-  .language-option {
-    position: relative;
-    z-index: 1;
-    min-height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 12px;
-    border-radius: 12px;
-    color: var(--text-secondary);
-    text-decoration: none;
+    cursor: pointer;
     font-family: 'DM Sans', sans-serif;
-    transition: color var(--duration-fast) var(--ease-standard),
-                background var(--duration-fast) var(--ease-standard);
-  }
-  .language-option:hover,
-  .language-option.active {
-    color: var(--text-primary);
-    background: color-mix(in srgb, var(--dusty-rose) 13%, transparent);
-  }
-  .language-option-name {
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  .language-option-code {
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     font-weight: 800;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
+    transition: color var(--duration-fast) var(--ease-standard),
+                background var(--duration-fast) var(--ease-standard),
+                transform var(--duration-fast) var(--ease-standard);
+  }
+  .language-dialog-toggle:hover {
     color: var(--text-accent);
+    background: color-mix(in srgb, var(--dusty-rose) 16%, transparent);
+    transform: translateY(-1px);
+  }
+  .language-dialog-toggle:focus-visible {
+    outline: 2px solid var(--text-accent);
+    outline-offset: 4px;
   }
   .mobile-menu-toggle {
     display: none;
@@ -266,6 +186,85 @@ const languageLabel: Record<Locale, string> = {
     background: var(--text-primary);
     border-radius: 2px;
     transition: transform var(--duration-fast) var(--ease-standard);
+  }
+  .language-dialog {
+    width: min(360px, calc(100vw - 40px));
+    padding: 0;
+    border: none;
+    border-radius: 22px;
+    background: var(--off-white);
+    box-shadow: var(--shadow-lg);
+    color: var(--text-primary);
+  }
+  .language-dialog::backdrop {
+    background: color-mix(in srgb, var(--charcoal) 32%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .language-dialog-inner {
+    position: relative;
+    padding: 28px;
+  }
+  .language-dialog-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--dusty-rose) 10%, transparent);
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+  .language-dialog-kicker {
+    margin: 0 44px 6px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+  .language-dialog h2 {
+    margin: 0 44px 22px 0;
+    font-size: 1.55rem;
+  }
+  .language-dialog-options {
+    display: grid;
+    gap: 8px;
+  }
+  .language-dialog-option {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--section-warm) 62%, transparent);
+    color: var(--text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard),
+                background var(--duration-fast) var(--ease-standard),
+                transform var(--duration-fast) var(--ease-standard);
+  }
+  .language-dialog-option span:last-child {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--text-accent);
+  }
+  .language-dialog-option:hover,
+  .language-dialog-option.active {
+    color: var(--text-primary);
+    background: color-mix(in srgb, var(--dusty-rose) 15%, transparent);
+    transform: translateY(-1px);
   }
   .mobile-menu-overlay {
     position: fixed;
@@ -321,65 +320,31 @@ const languageLabel: Record<Locale, string> = {
     color: var(--text-primary);
     text-decoration: none;
   }
-  .mobile-language-block {
-    margin-top: 12px;
-    padding-top: 24px;
-    border-top: 1px solid color-mix(in srgb, var(--dusty-rose) 18%, transparent);
-  }
-  .mobile-language-label {
-    margin: 0 0 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-tertiary);
-  }
-  .mobile-language-options {
-    display: grid;
-    gap: 8px;
-  }
-  .mobile-nav .mobile-language-option {
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 12px;
-    border-radius: 14px;
-    background: color-mix(in srgb, var(--section-warm) 70%, transparent);
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color var(--duration-fast) var(--ease-standard),
-                background var(--duration-fast) var(--ease-standard);
-  }
-  .mobile-nav .mobile-language-option span:last-child {
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    color: var(--text-accent);
-  }
-  .mobile-nav .mobile-language-option:hover,
-  .mobile-nav .mobile-language-option.active {
-    color: var(--text-primary);
-    background: color-mix(in srgb, var(--dusty-rose) 14%, transparent);
-  }
-
   @media (max-width: 768px) {
     .desktop-nav { display: none; }
-    .language-menu { display: none; }
+    .language-dialog-toggle {
+      width: 42px;
+      height: 42px;
+      padding: 0;
+    }
+    .language-dialog-toggle span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
     .mobile-menu-toggle { display: flex; }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .hamburger-line,
+    .language-dialog-toggle,
+    .language-dialog-option,
     .mobile-menu-overlay,
     .mobile-menu-panel,
-    .desktop-nav a,
-    .language-menu summary,
-    .language-chevron,
-    .language-option,
-    .mobile-language-option {
+    .desktop-nav a {
       transition: none !important;
     }
   }
@@ -390,7 +355,9 @@ const languageLabel: Record<Locale, string> = {
   const overlay = document.querySelector('.mobile-menu-overlay');
   const close = document.querySelector('.mobile-menu-close');
   const links = document.querySelectorAll('.mobile-nav a');
-  const languageMenus = document.querySelectorAll('.language-menu');
+  const languageToggle = document.querySelector('.language-dialog-toggle');
+  const languageDialog = document.querySelector('.language-dialog');
+  const languageClose = document.querySelector('.language-dialog-close');
 
   function openMenu() {
     overlay?.classList.add('open');
@@ -409,18 +376,21 @@ const languageLabel: Record<Locale, string> = {
     if (e.target === overlay) closeMenu();
   });
   links.forEach((link) => link.addEventListener('click', closeMenu));
-
-  document.addEventListener('click', (event) => {
-    languageMenus.forEach((menu) => {
-      if (!menu.contains(event.target)) {
-        menu.removeAttribute('open');
-      }
-    });
+  languageToggle?.addEventListener('click', () => {
+    closeMenu();
+    languageDialog?.showModal();
+  });
+  languageClose?.addEventListener('click', () => {
+    languageDialog?.close();
+  });
+  languageDialog?.addEventListener('click', (event) => {
+    if (event.target === languageDialog) {
+      languageDialog.close();
+    }
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      languageMenus.forEach((menu) => menu.removeAttribute('open'));
       closeMenu();
     }
   });
