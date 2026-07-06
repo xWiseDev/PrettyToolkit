@@ -60,6 +60,14 @@ Currently Sincefy, Luxira, and Sopora are in the `apps` array with `status: "liv
 
 Blog is external (blog.prettytoolkit.com on Blogger) — only linked, not part of this codebase.
 
+### Internationalization (i18n)
+
+The site ships in **4 locales: `en` (default), `fr`, `es`, `de`** — see `src/i18n.ts` (the single source of truth for locale list, labels, translation strings, and path helpers).
+
+- **`src/i18n.ts`** — exports `locales`, `defaultLocale` (`en`), `localeLabels`/`localeShortLabels` (for the language picker), the full translation dictionary, and path helpers: `localizedPath()`, `localizedAppPath()`, `localizedPrivacyPath()`, `localizedAlternates()` (builds the hreflang map), and the `isLocale()` guard. Many strings are functions taking `name`/`date`/`index` for interpolation.
+- **Routing:** the default locale (`en`) is served at the root paths (`/`, `/luxira`, `/privacy`, …). Non-default locales are served under a prefix (`/fr/…`, `/es/…`, `/de/…`) via the parallel `src/pages/[locale]/` route tree, which mirrors the root pages (`index`, `about`, `privacy`, `support`, `[slug]/index`, `[slug]/privacy`) and uses `getStaticPaths` over `locales`.
+- When adding or restructuring pages, update **both** the root page and its `[locale]/` counterpart, and add any new copy as translated strings in `src/i18n.ts` for all 4 locales — never hardcode user-facing English in the `[locale]` templates.
+
 ### Key Files
 
 - `brief.md` — Full product/brand brief (17KB). Reference for brand voice, positioning, and design rationale.

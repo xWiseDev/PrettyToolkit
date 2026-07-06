@@ -581,7 +581,7 @@ export const apps: App[] = [
         icon: "barcode",
         title: "Calm by design",
         description:
-          "No calorie counting, no ads, and no judgment. Your diary stays focused, private, and easy to return to.",
+          "No calorie counting and no judgment. Your diary stays focused, private, and easy to return to.",
       },
     ],
     screenshots: [],
@@ -611,7 +611,7 @@ export const apps: App[] = [
       {
         question: "Is logfd private?",
         answer:
-          "Your diary is designed to stay on your device. logfd has no ads and does not turn your meals or personal notes into a profile. A full privacy policy will be available before the app launches.",
+          "Your diary is designed to stay on your device. logfd does not turn your meals or personal notes into a profile. A full privacy policy will be available before the app launches.",
       },
     ],
     privacy: {

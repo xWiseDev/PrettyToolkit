@@ -73,7 +73,7 @@ export const ui = {
       tagline: 'Everyday apps, unexpectedly beautiful.',
       organizationDescription: 'A curated collection of premium utility apps designed with intention.',
       supportContactType: 'customer support',
-      trust: ['No ads', 'Offline-first', 'Private by design'],
+      trust: ['Crafted with care', 'Offline-first', 'Private by design'],
     },
     appCard: { view: 'View app', comingSoon: 'Coming Soon' },
     placeholder: {
@@ -107,7 +107,7 @@ export const ui = {
       introBody:
         'Pretty Toolkit is a curated collection of premium utility apps for iPhone. We take the tools you reach for every day — scanners, countdowns, journals, organizers — and rebuild them from the ground up with care, clarity, and warmth.',
       introBody2:
-        'Every app in the collection is built with the same philosophy: no ads, no clutter, offline-first functionality, and full accessibility support including VoiceOver and Dynamic Type. We believe utility apps deserve the same level of polish as the apps you show off to your friends.',
+        'Every app in the collection is built with the same philosophy: no clutter, offline-first functionality, and full accessibility support including VoiceOver and Dynamic Type. We believe utility apps deserve the same level of polish as the apps you show off to your friends.',
       spotlightFeatures: 'Home screen, lock screen, and StandBy countdowns for the moments you want to keep close.',
       collectionHeading: 'Our Collection',
       brandHeading: 'Everyday tools deserve extraordinary design.',
@@ -118,15 +118,15 @@ export const ui = {
       values: [
         {
           title: 'Privacy by default',
-          copy: 'Your data stays on your device. No ads, no accounts, no cross-app tracking. When an app uses anonymous diagnostics or analytics, it is disclosed clearly and never includes your personal content.',
+          copy: 'Your data stays on your device. No accounts, no cross-app tracking. When an app uses anonymous diagnostics or analytics, it is disclosed clearly and never includes your personal content.',
         },
         {
           title: 'Accessible to everyone',
           copy: 'Full VoiceOver support, Dynamic Type, and haptic feedback in every app. Great design means everyone can use it, regardless of how they interact with their iPhone.',
         },
         {
-          title: 'No ads. Ever.',
-          copy: "We don't sell your attention. Our apps are supported by optional premium upgrades — not by advertising, data sales, or dark patterns.",
+          title: 'Offline-first',
+          copy: 'Every app works without a connection. Your content stays on your device and stays available, whether or not you have signal.',
         },
       ],
       websiteSchemaDescription: 'A curated collection of premium iOS utility apps designed with intention.',
@@ -141,7 +141,7 @@ export const ui = {
       body1:
         'Pretty Toolkit is a small, independent studio building premium utility apps for iPhone. We take the everyday tools most people settle for — scanners, converters, organizers — and redesign them from scratch with the care and polish they deserve.',
       body2:
-        "We believe your utility apps should feel just as considered as the rest of your phone. That means no ads, no clutter, no dark patterns — just clean, purposeful design that respects your time and your privacy.",
+        "We believe your utility apps should feel just as considered as the rest of your phone. That means no clutter, no dark patterns — just clean, purposeful design that respects your time and your privacy.",
       approachHeading: 'How we build',
       approach1:
         'Every app starts with a simple question: what would this tool look like if someone actually cared? We obsess over the details — the transitions, the typography, the way a button feels when you tap it. We test with real people, iterate until it is right, and only ship when we are proud of every screen.',
@@ -187,7 +187,7 @@ export const ui = {
         ['General Principles', 'All Pretty Toolkit apps are designed with privacy in mind. We believe your data belongs to you. Our apps store data locally whenever possible and collect only minimal, anonymous analytics to improve the experience.'],
         ['Information We Collect', 'Across our apps, we may collect anonymous usage analytics: aggregated, non-identifiable data about feature usage to help us improve our apps. We do not collect, store, or share personal information unless explicitly stated in an app-specific privacy policy.'],
         ['Data Storage', 'All app data is stored locally on your device. We do not upload your personal data to external servers.'],
-        ['Third-Party Services', "Our apps may use Apple's frameworks and services, such as StoreKit for subscriptions or device frameworks for app features. We do not integrate third-party advertising or tracking SDKs."],
+        ['Third-Party Services', "Our apps may use Apple's frameworks and services, such as StoreKit for subscriptions or device frameworks for app features. We do not integrate third-party tracking SDKs."],
         ['Subscriptions', 'Some apps offer optional subscriptions managed through the Apple App Store. Payment processing is handled entirely by Apple. We do not have access to your payment information.'],
         ["Children's Privacy", 'Our apps are not directed at children under 13. We do not knowingly collect personal information from children.'],
         ['Changes to This Policy', 'We may update this policy from time to time. Changes will be posted on this page with an updated revision date.'],
@@ -207,7 +207,7 @@ export const ui = {
       tagline: 'Des apps du quotidien, etonnement belles.',
       organizationDescription: 'Une collection choisie d apps utilitaires premium, pensees avec soin.',
       supportContactType: 'support client',
-      trust: ['Sans pub', 'Hors ligne', 'Prive par design'],
+      trust: ['Fait avec soin', 'Hors ligne', 'Prive par design'],
     },
     appCard: { view: 'Voir l app', comingSoon: 'Bientot' },
     placeholder: {
@@ -241,7 +241,7 @@ export const ui = {
       introBody:
         'Pretty Toolkit est une collection d apps utilitaires premium pour iPhone. Nous reprenons les outils du quotidien — scanners, comptes a rebours, journaux, organisateurs — et les reconstruisons avec clarte, chaleur et attention.',
       introBody2:
-        'Chaque app suit la meme philosophie : pas de publicite, pas de surcharge, un fonctionnement hors ligne et une accessibilite soignee avec VoiceOver et Dynamic Type.',
+        'Chaque app suit la meme philosophie : pas de surcharge, un fonctionnement hors ligne et une accessibilite soignee avec VoiceOver et Dynamic Type.',
       spotlightFeatures: 'Des comptes a rebours pour l ecran d accueil, l ecran verrouille et StandBy.',
       collectionHeading: 'Notre collection',
       brandHeading: 'Les outils du quotidien meritent un design exceptionnel.',
@@ -250,9 +250,9 @@ export const ui = {
       brandCopy2:
         'Nous soignons les petites choses pour que vous n ayez pas a y penser. Ouvrez l app, faites ce que vous aviez a faire, et repartez avec un peu plus de plaisir.',
       values: [
-        { title: 'Confidentialite par defaut', copy: 'Vos donnees restent sur votre appareil. Pas de pub, pas de comptes forces, pas de suivi entre apps.' },
+        { title: 'Confidentialite par defaut', copy: 'Vos donnees restent sur votre appareil. Pas de comptes forces, pas de suivi entre apps.' },
         { title: 'Accessible a tous', copy: 'VoiceOver, Dynamic Type et retours haptiques sont pris en compte dans chaque app.' },
-        { title: 'Jamais de publicite', copy: 'Nous ne vendons pas votre attention. Nos apps vivent grace a des options premium, pas grace aux donnees.' },
+        { title: 'Hors ligne d abord', copy: 'Chaque app fonctionne sans connexion. Vos contenus restent sur votre appareil, disponibles a tout moment.' },
       ],
       websiteSchemaDescription: 'Une collection choisie d apps iOS premium concues avec soin.',
       itemListName: 'Collection d apps Pretty Toolkit',
@@ -265,7 +265,7 @@ export const ui = {
       body1:
         'Pretty Toolkit est un petit studio independant qui construit des apps utilitaires premium pour iPhone. Nous reprenons les outils que l on accepte souvent par defaut et les redessinons avec soin.',
       body2:
-        'Vos apps utilitaires devraient etre aussi soignees que le reste de votre telephone : sans pub, sans encombrement, sans pieges.',
+        'Vos apps utilitaires devraient etre aussi soignees que le reste de votre telephone : sans encombrement, sans pieges.',
       approachHeading: 'Notre facon de construire',
       approach1:
         'Chaque app commence par une question simple : a quoi ressemblerait cet outil si quelqu un s en souciait vraiment ? Nous peaufinons les details et ne publions que lorsque chaque ecran nous rend fiers.',
@@ -311,7 +311,7 @@ export const ui = {
         ['Principes generaux', 'Les apps Pretty Toolkit sont concues avec la confidentialite au centre. Vos donnees vous appartiennent et restent localement lorsque c est possible.'],
         ['Informations collectees', 'Nous pouvons collecter des statistiques anonymes et agregees sur l utilisation des fonctionnalites afin d ameliorer les apps.'],
         ['Stockage des donnees', 'Les donnees des apps sont stockees localement sur votre appareil. Nous n envoyons pas vos donnees personnelles vers des serveurs externes.'],
-        ['Services tiers', 'Nos apps peuvent utiliser des frameworks Apple, comme StoreKit. Nous n integrons pas de SDK publicitaire ou de suivi tiers.'],
+        ['Services tiers', 'Nos apps peuvent utiliser des frameworks Apple, comme StoreKit. Nous n integrons pas de SDK de suivi tiers.'],
         ['Abonnements', 'Certains apps proposent des abonnements optionnels geres par l App Store. Apple traite les paiements.'],
         ['Confidentialite des enfants', 'Nos apps ne s adressent pas aux enfants de moins de 13 ans.'],
         ['Modifications', 'Nous pouvons mettre cette politique a jour. Les changements seront publies sur cette page.'],
@@ -331,7 +331,7 @@ export const ui = {
       tagline: 'Apps cotidianas, inesperadamente bonitas.',
       organizationDescription: 'Una coleccion cuidada de apps utilitarias premium, disenadas con intencion.',
       supportContactType: 'soporte al cliente',
-      trust: ['Sin anuncios', 'Primero offline', 'Privada por diseno'],
+      trust: ['Hecho con cuidado', 'Primero offline', 'Privada por diseno'],
     },
     appCard: { view: 'Ver app', comingSoon: 'Proximamente' },
     placeholder: {
@@ -365,7 +365,7 @@ export const ui = {
       introBody:
         'Pretty Toolkit es una coleccion de apps utilitarias premium para iPhone. Tomamos herramientas diarias — escaneres, cuentas regresivas, diarios y organizadores — y las reconstruimos con claridad y calidez.',
       introBody2:
-        'Cada app comparte la misma filosofia: sin anuncios, sin ruido, funcionamiento offline y accesibilidad con VoiceOver y Dynamic Type.',
+        'Cada app comparte la misma filosofia: sin ruido, funcionamiento offline y accesibilidad con VoiceOver y Dynamic Type.',
       spotlightFeatures: 'Cuentas regresivas para pantalla de inicio, pantalla bloqueada y StandBy.',
       collectionHeading: 'Nuestra coleccion',
       brandHeading: 'Las herramientas diarias merecen un diseno extraordinario.',
@@ -374,9 +374,9 @@ export const ui = {
       brandCopy2:
         'Cuidamos los detalles para que tu solo abras la app, hagas lo que viniste a hacer y sigas con un poco mas de alegria.',
       values: [
-        { title: 'Privacidad por defecto', copy: 'Tus datos se quedan en tu dispositivo. Sin anuncios, sin cuentas forzadas y sin seguimiento entre apps.' },
+        { title: 'Privacidad por defecto', copy: 'Tus datos se quedan en tu dispositivo. Sin cuentas forzadas y sin seguimiento entre apps.' },
         { title: 'Accesible para todos', copy: 'VoiceOver, Dynamic Type y respuesta haptica estan presentes en cada app.' },
-        { title: 'Nunca anuncios', copy: 'No vendemos tu atencion. Las apps se sostienen con mejoras premium opcionales.' },
+        { title: 'Primero sin conexion', copy: 'Cada app funciona sin conexion. Tu contenido se queda en tu dispositivo, disponible cuando lo necesites.' },
       ],
       websiteSchemaDescription: 'Una coleccion cuidada de apps iOS premium disenadas con intencion.',
       itemListName: 'Coleccion de apps Pretty Toolkit',
@@ -388,7 +388,7 @@ export const ui = {
       story: 'Creamos apps tan bonitas como utiles.',
       body1:
         'Pretty Toolkit es un pequeno estudio independiente que crea apps utilitarias premium para iPhone. Redisenamos herramientas comunes con el cuidado que merecen.',
-      body2: 'Tus apps utilitarias tambien deberian sentirse cuidadas: sin anuncios, sin desorden y sin patrones oscuros.',
+      body2: 'Tus apps utilitarias tambien deberian sentirse cuidadas: sin desorden y sin patrones oscuros.',
       approachHeading: 'Como construimos',
       approach1:
         'Cada app empieza con una pregunta simple: como seria esta herramienta si alguien realmente la cuidara? Pulimos los detalles hasta estar orgullosos de cada pantalla.',
@@ -433,7 +433,7 @@ export const ui = {
         ['Principios generales', 'Las apps Pretty Toolkit estan disenadas con privacidad desde el inicio. Tus datos te pertenecen.'],
         ['Informacion que recopilamos', 'Podemos recopilar analiticas anonimas y agregadas sobre uso de funciones para mejorar las apps.'],
         ['Almacenamiento de datos', 'Los datos de las apps se guardan localmente en tu dispositivo.'],
-        ['Servicios de terceros', 'Nuestras apps pueden usar frameworks de Apple como StoreKit. No integramos SDKs publicitarios ni de seguimiento.'],
+        ['Servicios de terceros', 'Nuestras apps pueden usar frameworks de Apple como StoreKit. No integramos SDKs de seguimiento.'],
         ['Suscripciones', 'Algunas apps ofrecen suscripciones opcionales gestionadas por App Store. Apple procesa los pagos.'],
         ['Privacidad infantil', 'Nuestras apps no estan dirigidas a menores de 13 anos.'],
         ['Cambios en esta politica', 'Podemos actualizar esta politica. Los cambios apareceran en esta pagina.'],
@@ -453,7 +453,7 @@ export const ui = {
       tagline: 'Alltagsapps, unerwartet schoen.',
       organizationDescription: 'Eine kuratierte Sammlung hochwertiger Utility-Apps, bewusst gestaltet.',
       supportContactType: 'Kundensupport',
-      trust: ['Keine Werbung', 'Offline zuerst', 'Privat gestaltet'],
+      trust: ['Mit Sorgfalt gemacht', 'Offline zuerst', 'Privat gestaltet'],
     },
     appCard: { view: 'App ansehen', comingSoon: 'Demnaechst' },
     placeholder: {
@@ -487,7 +487,7 @@ export const ui = {
       introBody:
         'Pretty Toolkit ist eine Sammlung hochwertiger Utility-Apps fuer iPhone. Wir nehmen taegliche Werkzeuge — Scanner, Countdown-Apps, Journale und Organizer — und bauen sie mit Klarheit und Waerme neu.',
       introBody2:
-        'Jede App folgt derselben Idee: keine Werbung, kein Durcheinander, offline nutzbar und mit Accessibility-Unterstuetzung wie VoiceOver und Dynamic Type.',
+        'Jede App folgt derselben Idee: kein Durcheinander, offline nutzbar und mit Accessibility-Unterstuetzung wie VoiceOver und Dynamic Type.',
       spotlightFeatures: 'Countdowns fuer Home Screen, Lock Screen und StandBy.',
       collectionHeading: 'Unsere Sammlung',
       brandHeading: 'Alltagswerkzeuge verdienen aussergewoehnliches Design.',
@@ -496,9 +496,9 @@ export const ui = {
       brandCopy2:
         'Wir kuemmern uns um die Details, damit du einfach oeffnest, erledigst und mit etwas mehr Freude weitermachst.',
       values: [
-        { title: 'Datenschutz von Anfang an', copy: 'Deine Daten bleiben auf deinem Geraet. Keine Werbung, keine erzwungenen Konten, kein app-uebergreifendes Tracking.' },
+        { title: 'Datenschutz von Anfang an', copy: 'Deine Daten bleiben auf deinem Geraet. Keine erzwungenen Konten, kein app-uebergreifendes Tracking.' },
         { title: 'Zugaenglich fuer alle', copy: 'VoiceOver, Dynamic Type und haptisches Feedback gehoeren zu jeder App.' },
-        { title: 'Nie Werbung', copy: 'Wir verkaufen keine Aufmerksamkeit. Unsere Apps werden durch optionale Premium-Funktionen getragen.' },
+        { title: 'Offline zuerst', copy: 'Jede App funktioniert ohne Verbindung. Deine Inhalte bleiben auf deinem Geraet und sind jederzeit verfuegbar.' },
       ],
       websiteSchemaDescription: 'Eine kuratierte Sammlung hochwertiger iOS-Apps, bewusst gestaltet.',
       itemListName: 'Pretty Toolkit App-Sammlung',
@@ -510,7 +510,7 @@ export const ui = {
       story: 'Wir bauen Apps, die so schoen wie nuetzlich sind.',
       body1:
         'Pretty Toolkit ist ein kleines unabhaengiges Studio fuer hochwertige iPhone-Utility-Apps. Wir gestalten Alltagswerkzeuge mit der Sorgfalt, die sie verdienen.',
-      body2: 'Utility-Apps sollten sich genauso durchdacht anfuehlen wie der Rest deines Telefons: ohne Werbung, ohne Ballast, ohne Tricks.',
+      body2: 'Utility-Apps sollten sich genauso durchdacht anfuehlen wie der Rest deines Telefons: ohne Ballast, ohne Tricks.',
       approachHeading: 'Wie wir bauen',
       approach1:
         'Jede App beginnt mit einer einfachen Frage: Wie saehe dieses Werkzeug aus, wenn sich jemand wirklich darum kuemmert? Wir feilen an den Details, bis jeder Screen stimmt.',
@@ -555,7 +555,7 @@ export const ui = {
         ['Grundsaetze', 'Pretty Toolkit Apps werden mit Datenschutz im Mittelpunkt entwickelt. Deine Daten gehoeren dir.'],
         ['Erhobene Informationen', 'Wir koennen anonyme, aggregierte Nutzungsdaten erheben, um Funktionen und Zuverlaessigkeit zu verbessern.'],
         ['Datenspeicherung', 'App-Daten werden lokal auf deinem Geraet gespeichert.'],
-        ['Dienste Dritter', 'Unsere Apps koennen Apple-Frameworks wie StoreKit verwenden. Wir integrieren keine Werbe- oder Tracking-SDKs.'],
+        ['Dienste Dritter', 'Unsere Apps koennen Apple-Frameworks wie StoreKit verwenden. Wir integrieren keine Tracking-SDKs.'],
         ['Abonnements', 'Einige Apps bieten optionale Abos ueber den App Store. Apple verarbeitet die Zahlung.'],
         ['Datenschutz von Kindern', 'Unsere Apps richten sich nicht an Kinder unter 13 Jahren.'],
         ['Aenderungen', 'Wir koennen diese Richtlinie aktualisieren. Aenderungen erscheinen auf dieser Seite.'],
@@ -651,14 +651,14 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Votre journee en contexte', 'Revenez aux jours passes avec un calendrier clair.'],
         ['Retrouvez l essentiel', 'Recherchez et filtrez sans transformer le journal en tableur.'],
         ['Export utile', 'Creez des exports PDF ou CSV quand vous en avez besoin.'],
-        ['Calme par design', 'Pas de calories, pas de pub, pas de jugement.'],
+        ['Calme par design', 'Pas de calories, pas de jugement.'],
       ],
       faqs: [
         ['Qu est-ce que logfd ?', 'logfd est un journal simple pour noter repas, boissons, prises ou activites sur iPhone.'],
         ['Que puis-je noter ?', 'Repas, boissons, supplements, medicaments et exercice, avec categorie optionnelle.'],
         ['logfd compte-t-elle les calories ?', 'Non. logfd est un journal libre, pas un compteur de calories.'],
         ['Puis-je rechercher ou exporter ?', 'Oui. Recherche, historique calendrier et exports PDF/CSV sont prevus.'],
-        ['logfd est-elle privee ?', 'Oui. Le journal est concu pour rester sur votre appareil, sans publicite.'],
+        ['logfd est-elle privee ?', 'Oui. Le journal est concu pour rester sur votre appareil.'],
       ],
     },
     bpivy: {
@@ -754,7 +754,7 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Tu dia en contexto', 'Revisa dias anteriores con calendario.'],
         ['Encuentra lo importante', 'Busca y filtra sin convertir el diario en una hoja de calculo.'],
         ['Exporta cuando haga falta', 'Crea PDF o CSV para ti o para compartir.'],
-        ['Calma por diseno', 'Sin calorias, sin anuncios, sin juicio.'],
+        ['Calma por diseno', 'Sin calorias, sin juicio.'],
       ],
       faqs: [
         ['Que es logfd?', 'logfd es un diario simple para comida e ingesta en iPhone.'],
@@ -857,7 +857,7 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Dein Tag im Kontext', 'Vergangene Tage mit Kalender ansehen.'],
         ['Wichtiges finden', 'Suche und Filter ohne Tabellengefuehl.'],
         ['Export bei Bedarf', 'PDF- oder CSV-Exporte erstellen.'],
-        ['Ruhig gestaltet', 'Keine Kalorien, keine Werbung, kein Urteil.'],
+        ['Ruhig gestaltet', 'Keine Kalorien, kein Urteil.'],
       ],
       faqs: [
         ['Was ist logfd?', 'logfd ist ein einfaches Tagebuch fuer Essen und Einnahmen auf iPhone.'],
