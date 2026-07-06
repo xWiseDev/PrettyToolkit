@@ -34,7 +34,6 @@ const contactSchema = {
     "url": siteUrl,
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "aboyahyadev@icloud.com",
       "contactType": copy.brand.supportContactType,
       "url": supportUrl,
     },
@@ -80,7 +79,16 @@ const breadcrumbSchema = {
       <h2>{copy.support.contactHeading}</h2>
       <p>
         {copy.support.contactCopy}<br />
-        <a href="mailto:aboyahyadev@icloud.com?subject=Pretty%20Toolkit%20Support" class="support-email">aboyahyadev@icloud.com</a>
+        <a
+          href="#"
+          class="support-email"
+          data-user="aboyahyadev"
+          data-domain="icloud.com"
+          data-subject="Pretty Toolkit Support"
+          rel="nofollow"
+        >
+          {copy.support.contactAction}
+        </a>
       </p>
     </section>
 
@@ -128,13 +136,27 @@ const breadcrumbSchema = {
     line-height: 1.7;
   }
   .support-email {
-    color: var(--text-accent);
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: 12px;
+    padding: 0 18px;
+    border-radius: 12px;
+    background: var(--text-accent);
+    box-shadow: var(--shadow-sm);
+    color: var(--off-white);
     text-decoration: none;
     font-weight: 500;
-    transition: color var(--duration-fast) var(--ease-standard);
+    transition:
+      background-color var(--duration-fast) var(--ease-standard),
+      box-shadow var(--duration-fast) var(--ease-standard),
+      transform var(--duration-fast) var(--ease-standard);
   }
   .support-email:hover {
-    color: var(--deeper-rose);
+    background: var(--deeper-rose);
+    color: var(--off-white);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
   }
 
   @media (max-width: 768px) {
@@ -159,3 +181,20 @@ const breadcrumbSchema = {
 
 <script type="application/ld+json" set:html={JSON.stringify(contactSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+<script>
+  document.querySelectorAll('.support-email').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const element = event.currentTarget;
+      if (!(element instanceof HTMLElement)) return;
+
+      const user = element.dataset.user;
+      const domain = element.dataset.domain;
+      const subject = element.dataset.subject || 'Pretty Toolkit Support';
+      if (!user || !domain) return;
+
+      window.location.href = `mailto:${user}@${domain}?subject=${encodeURIComponent(subject)}`;
+    });
+  });
+</script>
