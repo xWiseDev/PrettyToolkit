@@ -692,4 +692,165 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "bpivy",
+    name: "BPIVY",
+    tagline: "Your blood pressure, beautifully logged.",
+    description:
+      "A calm blood-pressure log for readings you take on your own cuff. Track trends, set gentle reminders, and export a clear record for your doctor.",
+    category: "wellness",
+    icon: "/icons/bpivy.png",
+    appStoreUrl: "",
+    accentColor: "#3E8E9C",
+    features: [
+      {
+        icon: "history",
+        title: "Manual BP logging",
+        description:
+          "Enter systolic, diastolic, pulse, time, arm, position, and notes from your own home blood-pressure cuff. BPIVY records; it does not measure.",
+      },
+      {
+        icon: "palette",
+        title: "Clear categories",
+        description:
+          "See calm, readable blood-pressure categories next to each reading, with guideline-aware labels that never rely on color alone.",
+      },
+      {
+        icon: "qr-create",
+        title: "History and calendar",
+        description:
+          "Move through past days, review older readings, and use a calendar view to understand when readings happened.",
+      },
+      {
+        icon: "barcode",
+        title: "Trends without panic",
+        description:
+          "Review averages, category breakdowns, and gentle charts that make patterns visible without turning health tracking into alarm.",
+      },
+      {
+        icon: "share",
+        title: "Doctor-ready export",
+        description:
+          "Create clean PDF or CSV reports from your readings so you can keep a record or share useful context at your next appointment.",
+      },
+      {
+        icon: "scan",
+        title: "Private and careful",
+        description:
+          "Readings stay on your device. Optional reminders are local, subscriptions are handled by Apple, and BPIVY is a log, not medical advice.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 5,
+    faqs: [
+      {
+        question: "What is BPIVY?",
+        answer:
+          "BPIVY is a blood-pressure log and diary for iPhone. You take a reading with your own blood-pressure cuff, type the numbers into BPIVY, and keep a calm history you can review or share with your doctor.",
+      },
+      {
+        question: "Does BPIVY measure blood pressure?",
+        answer:
+          "No. BPIVY does not measure blood pressure, connect to a cuff, or turn your phone into a medical device. It records readings you take yourself on your own monitor.",
+      },
+      {
+        question: "Can BPIVY help me share readings with my doctor?",
+        answer:
+          "Yes. BPIVY is being built with clear PDF and CSV exports, so you can bring a simple record of readings, averages, and notes to an appointment.",
+      },
+      {
+        question: "Does BPIVY include reminders?",
+        answer:
+          "BPIVY can offer optional local reminders to help you remember to log a reading. Reminders are your choice, scheduled on your device, and can be changed or turned off.",
+      },
+      {
+        question: "Is BPIVY private?",
+        answer:
+          "Yes. Your blood-pressure readings, notes, reminders, and exports are designed to stay under your control on your device. BPIVY does not upload reading content to Pretty Toolkit servers.",
+      },
+      {
+        question: "Is BPIVY medical advice?",
+        answer:
+          "No. BPIVY is a personal log, not medical advice, diagnosis, treatment, emergency guidance, or a replacement for a qualified clinician. Always discuss your readings and health concerns with your doctor.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "July 2026",
+      intro:
+        'This privacy policy explains how BPIVY: Blood Pressure Log ("BPIVY", "the app") collects, uses, and protects your information. BPIVY is published by Pretty Toolkit.',
+      sections: [
+        {
+          heading: "Blood Pressure Log Data",
+          content:
+            "<p>When you create a reading in BPIVY, the systolic value, diastolic value, optional pulse, date, time, guideline setting, arm, body position, notes, and related reading details are stored locally on your device using on-device storage. BPIVY does not upload your blood-pressure readings to Pretty Toolkit servers, and we do not have access to the content of your readings.</p>",
+        },
+        {
+          heading: "Categories, Trends, and History",
+          content:
+            "<p>Blood-pressure categories, averages, charts, calendar history, and trend summaries are generated on your device from the readings you enter. We do not send individual readings, categories, notes, dates, or trend results to analytics services.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>BPIVY may request permission to send optional reminders to log a reading. Reminders are scheduled locally on your device, are opt-in, and can be changed or revoked at any time in the app or in iOS Settings. Reminder settings such as enabled state and time are stored on your device using UserDefaults. Reminder content is not uploaded to external servers.</p>",
+        },
+        {
+          heading: "Data Export",
+          content:
+            "<p>BPIVY may let you export readings as PDF or CSV files. Exports are generated locally and shared only through the iOS share sheet or file destination you choose, such as Files, iCloud Drive, email, or AirDrop. Exported files are not uploaded to Pretty Toolkit unless you choose to send them to us.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            '<p>BPIVY does not collect personally identifiable information such as your name, email address, phone number, precise location, Apple ID, or blood-pressure reading content. The app may collect limited anonymous data to help us understand and improve the experience:</p><ul><li><strong>Product Interaction</strong> — Anonymous usage events such as onboarding progress, readings created or edited, reminder settings changed, exports started, paywall screens viewed, and features used. These events contain no reading numbers, notes, dates, categories, or exported file content.</li><li><strong>Device Identifier</strong> — An anonymous identifier used to distinguish unique app installations. This identifier is not linked to your Apple ID, name, email address, or contact information.</li><li><strong>Purchase History</strong> — Subscription status is checked via Apple StoreKit to unlock premium features. We do not see your payment details.</li></ul><p>None of this data is linked to your identity. Your readings, notes, reminders, and exports stay under your control.</p>',
+        },
+        {
+          heading: "Subscriptions & Payments",
+          content:
+            "<p>BPIVY may offer optional premium features through subscriptions managed by the Apple App Store. All payment processing is handled by Apple. We do not have access to your credit card details, payment information, or Apple ID.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>BPIVY uses the following services:</p><ul><li><strong>Apple Frameworks</strong> — SwiftData (on-device storage), UserDefaults (preferences and local state), UserNotifications (local reminders), StoreKit (subscriptions), and system sharing tools, governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>.</li><li><strong>Mixpanel</strong> — An analytics service used to collect the anonymous usage data described above. Mixpanel receives no blood-pressure reading content, notes, categories, dates, exported files, or personal information. For details, see <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel\'s Privacy Policy</a>.</li></ul><p>BPIVY does not integrate data brokers or cross-app tracking tools.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with third parties. Anonymous analytics data is processed by Mixpanel solely on our behalf to improve the app. When you export or share data, it is handled only through the system destination or file you choose.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>BPIVY does not track you across apps and websites owned by other companies. We do not share your data with data brokers, advertising networks, or third parties for tracking purposes. The app's privacy manifest declares that tracking is not used.</p>",
+        },
+        {
+          heading: "Health and Wellness Disclaimer",
+          content:
+            "<p>BPIVY is a personal log for readings you take yourself on your own blood-pressure monitor. It is not a medical device, does not measure blood pressure, and does not provide medical advice, diagnosis, treatment, emergency guidance, or monitoring. Always discuss your readings and health concerns with a qualified clinician. If you believe you may be experiencing a medical emergency, seek urgent medical help immediately.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>BPIVY is not directed at children under 13. We do not knowingly collect personal information from children.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because BPIVY stores your readings locally on your device, deleting the app removes your local reading data from our reach. To request deletion of analytics data tied to your anonymous app identifier, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> with your request, and we will delete the data within 30 days.</p><p>EU residents have additional rights under GDPR, and California residents have rights under the CCPA. Contact us at the same email to exercise these rights.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];

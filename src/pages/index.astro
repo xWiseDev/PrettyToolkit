@@ -24,6 +24,7 @@ const sincefy = apps.find((a) => a.slug === 'sincefy')!;
 const luxira = apps.find((a) => a.slug === 'luxira')!;
 const sopora = apps.find((a) => a.slug === 'sopora')!;
 const logfd = apps.find((a) => a.slug === 'logfd')!;
+const bpivy = apps.find((a) => a.slug === 'bpivy')!;
 const canonicalPath = localizedPath(locale, '/');
 const alternatePaths = localizedAlternates('/');
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
@@ -72,18 +73,17 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytool
         <!-- Row 3: 6 tiles -->
         <div class="m-row">
           <div class="m-t" style="--d: 0.06s; --fd: 5.6s; --bg: linear-gradient(135deg, #E8B4B8, #E8B2AE);"></div>
-          <div class="m-t" style="--d: 0.14s; --fd: 4.3s; --bg: linear-gradient(135deg, #F5DCD0, #F2D0CD);"></div>
+          <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'logfd')} aria-label="Open logfd" style="--d: 0.14s; --fd: 4.3s;"><img src="/icons/logfd.png" alt="" width="96" height="96" /></a>
           <div class="m-t" style="--d: 0.04s; --fd: 5.4s; --bg: linear-gradient(135deg, #F2D0CD, #E8B4B8);"></div>
           <div class="m-t" style="--d: 0.1s; --fd: 4.6s; --bg: linear-gradient(135deg, #E8B2AE, #F5DCD0);"></div>
-          <div class="m-t" style="--d: 0.02s; --fd: 5.8s; --bg: linear-gradient(135deg, #EEC8C4, #E8B4B8);"></div>
+          <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'bpivy')} aria-label="Open BPIVY" style="--d: 0.02s; --fd: 5.8s;"><img src="/icons/bpivy.png" alt="" width="96" height="96" /></a>
           <div class="m-t" style="--d: 0.16s; --fd: 4.4s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
         </div>
-        <!-- Row 4: public app icons, centered. -->
+        <!-- Row 4: featured public app icons, centered. -->
         <div class="m-row m-row-center">
           <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'luxira')} aria-label="Open Luxira" style="--d: 0.08s; --fd: 5.6s;"><img src="/icons/luxira.png" alt="" width="96" height="96" /></a>
           <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'sopora')} aria-label="Open Sopora" style="--d: 0.12s; --fd: 4.7s;"><img src="/icons/sopora.png" alt="" width="96" height="96" /></a>
           <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'sincefy')} aria-label="Open Sincefy" style="--d: 0.16s; --fd: 5.3s;"><img src="/icons/sincefy.png" alt="" width="96" height="96" /></a>
-          <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'logfd')} aria-label="Open logfd" style="--d: 0.2s; --fd: 4.9s;"><img src="/icons/logfd.png" alt="" width="96" height="96" /></a>
         </div>
       </div>
     </div>
@@ -166,6 +166,7 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytool
         <AppCard app={luxira} locale={locale} />
         <AppCard app={sopora} locale={locale} />
         <AppCard app={logfd} locale={locale} />
+        <AppCard app={bpivy} locale={locale} />
         <PlaceholderCard index={1} locale={locale} />
       </div>
     </div>

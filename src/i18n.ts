@@ -100,7 +100,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetic Utility Apps for iPhone',
       description:
-        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy, Luxira, and discover Sopora.',
+        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, and BPIVY.',
       heroSubtitle: 'Your phone deserves better tools.',
       heroCta: 'Explore the apps',
       introHeading: 'What is Pretty Toolkit?',
@@ -233,7 +233,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitaires esthetiques pour iPhone',
       description:
-        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora et logfd.',
+        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd et BPIVY.',
       heroSubtitle: 'Votre iPhone merite de meilleurs outils.',
       heroCta: 'Explorer les apps',
       introHeading: 'Qu est-ce que Pretty Toolkit ?',
@@ -356,7 +356,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitarias esteticas para iPhone',
       description:
-        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Herramientas cotidianas, inesperadamente bonitas.',
+        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd y BPIVY.',
       heroSubtitle: 'Tu iPhone merece mejores herramientas.',
       heroCta: 'Explorar las apps',
       introHeading: 'Que es Pretty Toolkit?',
@@ -477,7 +477,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetische Utility-Apps fuer iPhone',
       description:
-        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Alltagswerkzeuge, unerwartet schoen.',
+        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd und BPIVY.',
       heroSubtitle: 'Dein iPhone verdient bessere Werkzeuge.',
       heroCta: 'Apps entdecken',
       introHeading: 'Was ist Pretty Toolkit?',
@@ -657,6 +657,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['logfd est-elle privee ?', 'Oui. Le journal est concu pour rester sur votre appareil, sans publicite.'],
       ],
     },
+    bpivy: {
+      tagline: 'Votre tension, joliment notee.',
+      description: 'Un journal calme pour les mesures de tension prises avec votre propre tensiometre. Suivez les tendances, les rappels et les exports pour votre medecin.',
+      features: [
+        ['Saisie manuelle', 'Notez systolique, diastolique, pouls, heure, bras, position et notes depuis votre propre tensiometre.'],
+        ['Categories claires', 'Voyez des categories lisibles pour chaque mesure, avec des libelles qui ne reposent jamais sur la couleur seule.'],
+        ['Historique calendrier', 'Revenez aux jours passes et comprenez quand vos mesures ont ete prises.'],
+        ['Tendances calmes', 'Moyennes, repartitions et graphiques doux sans transformer le suivi en alarme.'],
+        ['Export medecin', 'Creez des rapports PDF ou CSV clairs a garder ou partager lors d un rendez-vous.'],
+        ['Prive et prudent', 'Les mesures restent sur votre appareil. BPIVY est un journal, pas un avis medical.'],
+      ],
+      faqs: [
+        ['Qu est-ce que BPIVY ?', 'BPIVY est un journal de tension pour iPhone. Vous prenez la mesure avec votre propre tensiometre, puis vous notez les chiffres dans l app.'],
+        ['BPIVY mesure-t-elle la tension ?', 'Non. BPIVY ne mesure pas la tension et ne transforme pas votre telephone en dispositif medical.'],
+        ['Puis-je partager mes mesures avec mon medecin ?', 'Oui. BPIVY est concue avec des exports PDF et CSV clairs pour les rendez-vous.'],
+        ['BPIVY propose-t-elle des rappels ?', 'Oui, des rappels locaux optionnels peuvent vous aider a penser a noter une mesure.'],
+        ['BPIVY est-elle privee ?', 'Oui. Les mesures, notes, rappels et exports restent sous votre controle sur votre appareil.'],
+        ['BPIVY donne-t-elle un avis medical ?', 'Non. BPIVY est un journal personnel, pas un diagnostic, un traitement ou une aide d urgence. Parlez toujours de vos mesures a un professionnel.'],
+      ],
+    },
   },
   es: {
     sincefy: {
@@ -740,6 +760,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Es privada?', 'Si. El diario esta pensado para quedarse en tu dispositivo.'],
       ],
     },
+    bpivy: {
+      tagline: 'Tu presion, registrada con belleza.',
+      description: 'Un registro tranquilo de presion arterial para lecturas tomadas con tu propio tensiometro. Revisa tendencias, recordatorios y exportes para tu medico.',
+      features: [
+        ['Registro manual', 'Anota sistolica, diastolica, pulso, hora, brazo, posicion y notas desde tu propio tensiometro.'],
+        ['Categorias claras', 'Ve categorias legibles junto a cada lectura, con etiquetas que no dependen solo del color.'],
+        ['Historial y calendario', 'Revisa dias anteriores y entiende cuando se tomaron tus lecturas.'],
+        ['Tendencias tranquilas', 'Promedios, distribuciones y graficas suaves sin convertir el seguimiento en alarma.'],
+        ['Exportar para el medico', 'Crea informes PDF o CSV claros para guardar o compartir en una cita.'],
+        ['Privada y cuidadosa', 'Tus lecturas se quedan en tu dispositivo. BPIVY es un registro, no consejo medico.'],
+      ],
+      faqs: [
+        ['Que es BPIVY?', 'BPIVY es un registro de presion arterial para iPhone. Tomas la lectura con tu propio tensiometro y escribes los numeros en la app.'],
+        ['BPIVY mide la presion arterial?', 'No. BPIVY no mide la presion ni convierte tu telefono en un dispositivo medico.'],
+        ['Puedo compartir lecturas con mi medico?', 'Si. BPIVY esta pensada con exportes PDF y CSV claros para tus citas.'],
+        ['Tiene recordatorios?', 'Si, recordatorios locales opcionales para ayudarte a registrar una lectura.'],
+        ['Es privada?', 'Si. Lecturas, notas, recordatorios y exportes quedan bajo tu control en tu dispositivo.'],
+        ['BPIVY da consejo medico?', 'No. BPIVY es un registro personal, no diagnostico, tratamiento ni guia de emergencia. Habla siempre con un profesional.'],
+      ],
+    },
   },
   de: {
     sincefy: {
@@ -821,6 +861,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Zaehlt logfd Kalorien?', 'Nein. Es ist ein freies Tagebuch, kein Kalorienzaehler.'],
         ['Kann ich suchen oder exportieren?', 'Ja. Suche, Kalenderverlauf und PDF/CSV-Export sind vorgesehen.'],
         ['Ist logfd privat?', 'Ja. Das Tagebuch ist darauf ausgelegt, auf deinem Geraet zu bleiben.'],
+      ],
+    },
+    bpivy: {
+      tagline: 'Dein Blutdruck, schoen notiert.',
+      description: 'Ein ruhiges Blutdrucktagebuch fuer Werte, die du mit deinem eigenen Messgeraet misst. Trends, Erinnerungen und Exporte fuer den Arzt.',
+      features: [
+        ['Manuell eintragen', 'Notiere Systole, Diastole, Puls, Uhrzeit, Arm, Position und Notizen von deinem eigenen Messgeraet.'],
+        ['Klare Kategorien', 'Lesbare Blutdruckkategorien neben jedem Wert, nie nur ueber Farbe vermittelt.'],
+        ['Verlauf und Kalender', 'Gehe zu frueheren Tagen zurueck und sieh, wann Werte erfasst wurden.'],
+        ['Ruhige Trends', 'Durchschnitte, Verteilungen und sanfte Diagramme ohne Alarmgefuehl.'],
+        ['Export fuer den Arzt', 'Erstelle klare PDF- oder CSV-Berichte zum Aufbewahren oder Teilen beim Termin.'],
+        ['Privat und sorgsam', 'Werte bleiben auf deinem Geraet. BPIVY ist ein Tagebuch, keine medizinische Beratung.'],
+      ],
+      faqs: [
+        ['Was ist BPIVY?', 'BPIVY ist ein Blutdrucktagebuch fuer iPhone. Du misst mit deinem eigenen Messgeraet und traegst die Werte in die App ein.'],
+        ['Misst BPIVY Blutdruck?', 'Nein. BPIVY misst keinen Blutdruck und macht dein Telefon nicht zu einem Medizinprodukt.'],
+        ['Kann ich Werte mit meinem Arzt teilen?', 'Ja. BPIVY ist fuer klare PDF- und CSV-Exporte gedacht, die du zum Termin mitnehmen kannst.'],
+        ['Gibt es Erinnerungen?', 'Ja, optionale lokale Erinnerungen koennen dich ans Eintragen erinnern.'],
+        ['Ist BPIVY privat?', 'Ja. Werte, Notizen, Erinnerungen und Exporte bleiben unter deiner Kontrolle auf deinem Geraet.'],
+        ['Ist BPIVY medizinische Beratung?', 'Nein. BPIVY ist ein persoenliches Tagebuch, keine Diagnose, Behandlung oder Notfallhilfe. Besprich Werte immer mit Fachpersonal.'],
       ],
     },
   },

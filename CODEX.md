@@ -6,7 +6,7 @@ This file gives Codex working guidance for this repository. It is adapted from `
 
 Pretty Toolkit (`prettytoolkit.com`) is a static brand website for a portfolio of premium aesthetic iOS utility apps. It is a showcase/storefront that drives App Store installs, not an app.
 
-Two apps are currently live on the App Store: Luxira (QR & Barcode Scanner) and Sincefy (countdown widget). Sopora (sleep journal) is public but still coming soon. The homepage spotlights Sincefy, shows all three public apps as `AppCard`s, and uses one abstract `PlaceholderCard` for future releases. Do not reveal future app names, categories, or details until they ship.
+Three apps are currently live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), and Sopora (sleep journal). logfd (food & intake diary) and BPIVY (blood-pressure log) are public coming-soon apps. The homepage spotlights Sincefy, shows all five public apps as `AppCard`s, and uses one abstract `PlaceholderCard` for future releases. Do not reveal future app names, categories, or details until they ship.
 
 ## Tech Stack
 
@@ -31,7 +31,7 @@ npm run optimize:images  # Optimize screenshots from assets/screenshots/ to publ
 
 ## Architecture
 
-All app data lives in `src/data/apps.ts`. Sincefy and Luxira are live with App Store URLs; Sopora is coming soon with no App Store URL yet. Adding a public app means adding an entry there plus assets in `public/icons/` and `public/screenshots/<slug>/`.
+All app data lives in `src/data/apps.ts`. Sincefy, Luxira, and Sopora are live with App Store URLs; logfd and BPIVY are coming soon with no App Store URL yet. Adding a public app means adding an entry there plus assets in `public/icons/` and `public/screenshots/<slug>/`.
 
 Dynamic app routes are generated from that data:
 
@@ -48,8 +48,12 @@ The homepage is partly hardcoded in `src/pages/index.astro`: decide manually whe
 /luxira/privacy    Luxira privacy policy
 /sincefy           Sincefy landing page
 /sincefy/privacy   Sincefy privacy policy
-/sopora            Sopora coming-soon landing page
+/sopora            Sopora landing page
 /sopora/privacy    Sopora privacy policy
+/logfd             logfd coming-soon landing page
+/logfd/privacy     logfd privacy policy
+/bpivy             BPIVY coming-soon landing page
+/bpivy/privacy     BPIVY privacy policy
 /about             Brand story
 /privacy           General company privacy policy
 /terms             Redirect to Apple Standard EULA
@@ -84,7 +88,7 @@ The blog is external at `blog.prettytoolkit.com`.
 
 The decorative inverted-triangle mosaic appears on the homepage and about page. It is duplicated inline in `src/pages/index.astro` and `src/pages/about.astro`, not a shared component. If modifying it, update both files.
 
-The current bottom row contains `luxira.png`, `sopora.png`, and `sincefy.png`.
+The current bottom row contains `luxira.png`, `sopora.png`, and `sincefy.png`. New public app icons should replace abstract tiles in the rows above so the mosaic keeps its `12 -> 10 -> 6 -> 3` inverted-pyramid structure.
 
 ## Design Rules
 
@@ -135,7 +139,7 @@ Every app page needs a "More from Pretty Toolkit" section. This is data-driven: 
 - App pages include SoftwareApplication, BreadcrumbList, WebPage, and FAQPage schema.
 - App privacy pages include BreadcrumbList schema.
 - Support includes FAQPage, ContactPage, and BreadcrumbList schema.
-- `BaseLayout` references `/og-image.png`; keep `public/og-image.png` at 1200x630 and future-proof rather than tied to only three apps.
+- `BaseLayout` references `/og-image.png`; keep `public/og-image.png` at 1200x630 and future-proof rather than tied to only the current apps.
 - `/terms` redirects to Apple Standard EULA and does not use `BaseLayout`.
 
 ## Performance Expectations
@@ -144,7 +148,7 @@ Every app page needs a "More from Pretty Toolkit" section. This is data-driven: 
 - Prefer static HTML and CSS.
 - Lazy-load below-the-fold images.
 - Use `font-display: swap`.
-- Build should remain fast; current project size is small.
+- Build should remain fast; current project builds 57 static pages in about 1 second.
 
 ## Codex Workflow
 

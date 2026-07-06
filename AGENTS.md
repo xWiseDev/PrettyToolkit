@@ -6,7 +6,7 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 Pretty Toolkit (prettytoolkit.com) is a static brand website for a portfolio of premium aesthetic iOS utility apps. It is NOT an app — it's a showcase/storefront that drives App Store installs. Think Glossier.com for utility apps.
 
-**Currently, two apps are live on the App Store: Luxira (QR & Barcode Scanner) and Sincefy (countdown widget). Sopora (sleep journal) is public but still coming soon.** The homepage spotlights Sincefy, shows all three public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these three remain confidential — names, categories, and details must NOT appear on the site until they ship.
+**Currently, three apps are live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), and Sopora (sleep journal). logfd (food & intake diary) and BPIVY (blood-pressure log) are public coming-soon apps.** The homepage spotlights Sincefy, shows all five public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these five remain confidential — names, categories, and details must NOT appear on the site until they ship.
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Pushing to `main` auto-deploys to GitHub Pages. There are no other CI checks —
 
 All app data lives in `src/data/apps.ts` (types `App`, `Feature`, `Faq`, `PrivacySection`, `Category`). Adding a new app = adding an entry to this file + dropping assets into `public/icons/` and `public/screenshots/<slug>/`. App landing pages and per-app privacy policies are generated dynamically via `src/pages/[slug]/index.astro` and `src/pages/[slug]/privacy.astro` using `getStaticPaths()`.
 
-Currently Sincefy and Luxira are in the `apps` array with `status: "live"` and App Store URLs. Sopora is in the array with `status: "coming-soon"` and no App Store URL yet. When the next app ships, add it (including a `privacy` field) and it automatically gets a landing page, per-app privacy policy, footer icon, and cross-promo presence — the homepage spotlight and grid are hardcoded in `index.astro`, so decide whether the new app becomes the spotlight or joins the grid. Never include subscription pricing, trial length, or freemium limits on the website.
+Currently Sincefy, Luxira, and Sopora are in the `apps` array with `status: "live"` and App Store URLs. logfd and BPIVY are in the array with `status: "coming-soon"` and no App Store URL yet. When the next app ships, add it (including a `privacy` field) and it automatically gets a landing page, per-app privacy policy, footer icon, and cross-promo presence — the homepage spotlight and grid are hardcoded in `index.astro`, so decide whether the new app becomes the spotlight or joins the grid. Never include subscription pricing, trial length, or freemium limits on the website.
 
 ### Routing
 
@@ -46,8 +46,12 @@ Currently Sincefy and Luxira are in the `apps` array with `status: "live"` and A
 /luxira/privacy    → Luxira-specific privacy policy (auto-generated via [slug]/privacy.astro)
 /sincefy           → Sincefy landing page (auto-generated from apps.ts via [slug]/index.astro)
 /sincefy/privacy   → Sincefy-specific privacy policy (auto-generated via [slug]/privacy.astro)
-/sopora            → Sopora coming-soon landing page (auto-generated from apps.ts via [slug]/index.astro)
+/sopora            → Sopora landing page (auto-generated from apps.ts via [slug]/index.astro)
 /sopora/privacy    → Sopora-specific privacy policy (auto-generated via [slug]/privacy.astro)
+/logfd             → logfd coming-soon landing page (auto-generated from apps.ts via [slug]/index.astro)
+/logfd/privacy     → logfd-specific privacy policy (auto-generated via [slug]/privacy.astro)
+/bpivy             → BPIVY coming-soon landing page (auto-generated from apps.ts via [slug]/index.astro)
+/bpivy/privacy     → BPIVY-specific privacy policy (auto-generated via [slug]/privacy.astro)
 /about             → Brand story page (icon mosaic + principles + portfolio)
 /privacy           → General company privacy policy (links to per-app policies)
 /terms             → Redirects to Apple Standard EULA
@@ -70,7 +74,7 @@ Blog is external (blog.prettytoolkit.com on Blogger) — only linked, not part o
 - `src/pages/[slug]/privacy.astro` — Per-app privacy policies generated from `app.privacy` data in `apps.ts`. Only generates for apps that have a `privacy` field defined. Includes `BreadcrumbList` schema.
 - `AppCard` — Renders a single app card with icon placeholder, category badge, name, tagline, CTA.
 - `PlaceholderCard` — Abstract frosted-glass card with "Coming Soon" pill. Used on homepage grid and app page cross-promo for unannounced apps. Props: `index` (varies gradient).
-- `FaqAccordion` — Reusable `<details>`-based accordion. Props: `faqs` array. Used on app pages (`/luxira`, `/sincefy`) and `/support`.
+- `FaqAccordion` — Reusable `<details>`-based accordion. Props: `faqs` array. Used on app pages and `/support`.
 - `AppStoreBadge` — Official Apple "Download on the App Store" badge wrapper. Use for live-app download CTAs; do not restyle or redraw the badge.
 - `Header` — Sticky frosted-glass nav + mobile slide-in menu. Links: Apps, Blog, About, Support.
 - `Footer` — App icon row + nav links + tagline on every page.
@@ -85,7 +89,7 @@ Decorative inverted-triangle pyramid of abstract gradient tiles (inspired by App
 - Mosaic is in normal document flow (not absolute), overflows viewport width via container
 - Bottom row uses `.m-row-center` to disable stagger offset
 - Tiles use brand palette gradients (dusty rose, warm cream, blush variations)
-- Bottom row (3 tiles) currently holds `luxira.png`, `sopora.png`, and `sincefy.png`.
+- Bottom row (3 tiles) currently holds `luxira.png`, `sopora.png`, and `sincefy.png`. New public app icons should replace abstract tiles in the rows above, preserving the inverted-pyramid row counts.
 
 ### Animation System
 
@@ -99,7 +103,7 @@ All animations must respect `prefers-reduced-motion: reduce` (handled in `global
 
 ### Assets
 
-- `public/icons/` — App icons (512x512 PNG). Currently contains `luxira.png`, `sincefy.png`, and `sopora.png`.
+- `public/icons/` — App icons (512x512 PNG). Currently contains `luxira.png`, `sincefy.png`, `sopora.png`, `logfd.png`, and `bpivy.png`.
 - `assets/screenshots/<slug>/` — Source/original screenshots by app slug. Keep high-quality originals here before optimization.
 - `public/screenshots/<slug>/` — Optimized app screenshots by slug. Generated by `npm run optimize:images` as WebP plus PNG fallback.
 - `public/CNAME` — Custom domain file for GitHub Pages (`prettytoolkit.com`)
@@ -145,7 +149,7 @@ These are non-negotiable brand constraints — do not deviate:
 
 ## Confidentiality Rules
 
-- **Do NOT reveal future app ideas.** No app names, categories, or descriptions beyond the apps already in `apps.ts` (currently Luxira, Sincefy, and Sopora).
+- **Do NOT reveal future app ideas.** No app names, categories, or descriptions beyond the apps already in `apps.ts` (currently Luxira, Sincefy, Sopora, logfd, and BPIVY).
 - Placeholder cards are abstract — they hint that more is coming without saying what.
 - Only apps in `apps.ts` with data should have landing pages.
 
@@ -164,7 +168,7 @@ These are non-negotiable brand constraints — do not deviate:
 - LCP: < 1.5s on mobile 3G
 - Font loading: `font-display: swap` + preload both font files
 - All images below the fold: `loading="lazy"`
-- Build time: ~900ms for 11 pages
+- Build time: ~1s for 57 pages
 
 ## What NOT to Build
 
@@ -187,7 +191,7 @@ These are non-negotiable brand constraints — do not deviate:
 - **WebPage schema:** On app pages.
 - **FAQPage schema:** On app pages (Q&As pulled from each app's `faqs` array in `apps.ts`) and the support page.
 - **ContactPage schema:** On `/support`.
-- **Open Graph image:** Every page references `/og-image.png` via BaseLayout. Keep `public/og-image.png` at 1200x630 and avoid visuals that imply only the current three apps or reveal future app categories.
+- **Open Graph image:** Every page references `/og-image.png` via BaseLayout. Keep `public/og-image.png` at 1200x630 and avoid visuals that imply only a subset of current apps or reveal future app categories.
 - **Terms page:** Redirects to Apple Standard EULA via meta refresh + JS fallback (no BaseLayout).
 
 ## Important Implementation Notes

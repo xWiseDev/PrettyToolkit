@@ -14,7 +14,7 @@ export default defineConfig({
       serialize(item) {
         if (item.url === 'https://prettytoolkit.com/') {
           item.priority = 1;
-        } else if (/\/(luxira|sincefy|sopora)\/$/.test(item.url)) {
+        } else if (/\/(luxira|sincefy|sopora|bpivy)\/$/.test(item.url)) {
           item.priority = 0.9;
         } else if (item.url.endsWith('/support/') || item.url.endsWith('/about/')) {
           item.priority = 0.7;
