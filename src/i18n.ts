@@ -100,7 +100,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetic Utility Apps for iPhone',
       description:
-        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, and BPIVY.',
+        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, BPIVY, and Raheva.',
       heroSubtitle: 'Your phone deserves better tools.',
       heroCta: 'Explore the apps',
       introHeading: 'What is Pretty Toolkit?',
@@ -234,7 +234,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitaires esthetiques pour iPhone',
       description:
-        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd et BPIVY.',
+        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd, BPIVY et Raheva.',
       heroSubtitle: 'Votre iPhone merite de meilleurs outils.',
       heroCta: 'Explorer les apps',
       introHeading: 'Qu est-ce que Pretty Toolkit ?',
@@ -358,7 +358,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitarias esteticas para iPhone',
       description:
-        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd y BPIVY.',
+        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd, BPIVY y Raheva.',
       heroSubtitle: 'Tu iPhone merece mejores herramientas.',
       heroCta: 'Explorar las apps',
       introHeading: 'Que es Pretty Toolkit?',
@@ -480,7 +480,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetische Utility-Apps fuer iPhone',
       description:
-        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd und BPIVY.',
+        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd, BPIVY und Raheva.',
       heroSubtitle: 'Dein iPhone verdient bessere Werkzeuge.',
       heroCta: 'Apps entdecken',
       introHeading: 'Was ist Pretty Toolkit?',
@@ -681,6 +681,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['BPIVY donne-t-elle un avis medical ?', 'Non. BPIVY est un journal personnel, pas un diagnostic, un traitement ou une aide d urgence. Parlez toujours de vos mesures a un professionnel.'],
       ],
     },
+    raheva: {
+      tagline: 'Votre cycle, discretement note.',
+      description: 'Un suivi de regles rapide et prive, sans rien qui gene. Ouvrez l app, notez votre journee en quelques secondes et voyez quand vos prochaines regles sont attendues.',
+      features: [
+        ['Saisie en cinq secondes', 'Ouvrez Raheva, marquez le jour et passez a autre chose. Pas de pop-ups, pas de questionnaires.'],
+        ['Savoir ce qui vient', 'Voyez quand vos prochaines regles sont attendues, avec un widget optionnel des jours restants. Les previsions sont calculees sur votre appareil.'],
+        ['Calendrier et historique', 'Parcourez vos cycles passes avec un calendrier clair et retrouvez les details d un jour.'],
+        ['Symptomes a votre facon', 'Notez les symptomes et de courtes notes, et adaptez la liste a votre suivi.'],
+        ['Export pour le medecin', 'Creez un resume clair de vos cycles a garder ou a apporter en rendez-vous.'],
+        ['Discret par design', 'Un look sobre, des mots doux et des rappels vagues sur l ecran verrouille. Votre historique reste sur votre appareil.'],
+      ],
+      faqs: [
+        ['Qu est-ce que Raheva ?', 'Raheva est un suivi de regles rapide et prive pour iPhone. Notez votre journee en quelques secondes et voyez quand vos prochaines regles sont attendues, sans compte ni longue configuration.'],
+        ['Raheva prevoit-elle mes prochaines regles ?', 'Oui. Raheva estime la date attendue a partir de votre historique. Les previsions sont calculees sur votre appareil et s affinent avec le temps.'],
+        ['Puis-je noter symptomes et notes ?', 'Oui. Marquez des symptomes, ajoutez de courtes notes et gardez les details d une journee avec votre cycle.'],
+        ['Raheva est-elle privee ?', 'Oui. Vos donnees de cycle sont concues pour rester sur votre appareil et ne sont pas envoyees aux serveurs de Pretty Toolkit.'],
+        ['Puis-je utiliser Raheva comme contraception ?', 'Non. Les previsions sont des estimations, pas un avis medical ni une methode contraceptive. Parlez toujours a un professionnel de sante.'],
+        ['Raheva a-t-elle un widget ?', 'Oui. Un widget optionnel peut afficher les jours restants avant vos prochaines regles.'],
+      ],
+    },
   },
   es: {
     sincefy: {
@@ -784,6 +804,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['BPIVY da consejo medico?', 'No. BPIVY es un registro personal, no diagnostico, tratamiento ni guia de emergencia. Habla siempre con un profesional.'],
       ],
     },
+    raheva: {
+      tagline: 'Tu ciclo, guardado con discrecion.',
+      description: 'Un registro de periodo rapido y privado, sin nada en medio. Abre la app, anota tu dia en segundos y ve cuando se espera tu proximo periodo.',
+      features: [
+        ['Registro en cinco segundos', 'Abre Raheva, marca el dia y sigue con tu vida. Sin pop-ups ni cuestionarios.'],
+        ['Saber que viene', 'Ve cuando se espera tu proximo periodo, con un widget opcional de dias restantes. Las predicciones se calculan en tu dispositivo.'],
+        ['Calendario e historial', 'Recorre ciclos pasados con un calendario claro y vuelve a los detalles de un dia.'],
+        ['Sintomas a tu manera', 'Anota sintomas y notas cortas, y ajusta la lista a tu forma de registrar.'],
+        ['Exporte para el medico', 'Crea un resumen claro de tus ciclos para guardarlo o llevarlo a una cita.'],
+        ['Discreta por diseno', 'Un look sobrio, palabras suaves y recordatorios vagos en la pantalla bloqueada. Tu historial se queda en tu dispositivo.'],
+      ],
+      faqs: [
+        ['Que es Raheva?', 'Raheva es un registro de periodo rapido y privado para iPhone. Anota tu dia en segundos y ve cuando se espera tu proximo periodo, sin cuenta ni configuracion larga.'],
+        ['Raheva predice mi proximo periodo?', 'Si. Raheva estima la fecha esperada a partir de tu historial. Las predicciones se calculan en tu dispositivo y mejoran con el tiempo.'],
+        ['Puedo anotar sintomas y notas?', 'Si. Marca sintomas, anade notas cortas y guarda los detalles del dia junto a tu ciclo.'],
+        ['Es Raheva privada?', 'Si. Tus datos de ciclo estan disenados para quedarse en tu dispositivo y no se envian a los servidores de Pretty Toolkit.'],
+        ['Puedo usar Raheva como anticonceptivo?', 'No. Las predicciones son estimaciones, no consejo medico ni un metodo anticonceptivo. Habla siempre con un profesional de salud.'],
+        ['Tiene Raheva un widget?', 'Si. Un widget opcional puede mostrar los dias restantes hasta tu proximo periodo.'],
+      ],
+    },
   },
   de: {
     sincefy: {
@@ -885,6 +925,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Gibt es Erinnerungen?', 'Ja, optionale lokale Erinnerungen koennen dich ans Eintragen erinnern.'],
         ['Ist BPIVY privat?', 'Ja. Werte, Notizen, Erinnerungen und Exporte bleiben unter deiner Kontrolle auf deinem Geraet.'],
         ['Ist BPIVY medizinische Beratung?', 'Nein. BPIVY ist ein persoenliches Tagebuch, keine Diagnose, Behandlung oder Notfallhilfe. Besprich Werte immer mit Fachpersonal.'],
+      ],
+    },
+    raheva: {
+      tagline: 'Dein Zyklus, diskret notiert.',
+      description: 'Ein schneller, privater Perioden-Tracker ohne Huerden. App oeffnen, den Tag in Sekunden eintragen und sehen, wann die naechste Periode erwartet wird.',
+      features: [
+        ['Eintrag in fuenf Sekunden', 'Raheva oeffnen, den Tag markieren, fertig. Keine Pop-ups, keine Frageboegen.'],
+        ['Wissen, was kommt', 'Sieh auf einen Blick, wann die naechste Periode erwartet wird, mit optionalem Widget fuer die verbleibenden Tage. Prognosen werden auf deinem Geraet berechnet.'],
+        ['Kalender und Verlauf', 'Blaettere durch vergangene Zyklen mit einem klaren Kalender und finde die Details eines Tages wieder.'],
+        ['Symptome auf deine Art', 'Halte Symptome und kurze Notizen fest und passe die Liste an dein Tracking an.'],
+        ['Export fuer den Arzttermin', 'Erstelle eine klare Uebersicht deiner Zyklen zum Aufbewahren oder Mitnehmen.'],
+        ['Diskret by Design', 'Gedecktes Design, sanfte Worte und vage Erinnerungen auf dem Sperrbildschirm. Dein Verlauf bleibt auf deinem Geraet.'],
+      ],
+      faqs: [
+        ['Was ist Raheva?', 'Raheva ist ein schneller, privater Perioden-Tracker fuer iPhone. Trage deinen Tag in Sekunden ein und sieh, wann die naechste Periode erwartet wird, ohne Konto und ohne lange Einrichtung.'],
+        ['Sagt Raheva meine naechste Periode voraus?', 'Ja. Raheva schaetzt den erwarteten Termin aus deinem Verlauf. Prognosen werden auf deinem Geraet berechnet und werden mit der Zeit stabiler.'],
+        ['Kann ich Symptome und Notizen festhalten?', 'Ja. Markiere Symptome, ergaenze kurze Notizen und behalte die Details eines Tages bei deinem Zyklus.'],
+        ['Ist Raheva privat?', 'Ja. Deine Zyklusdaten bleiben auf deinem Geraet und werden nicht an Pretty Toolkit Server gesendet.'],
+        ['Kann ich Raheva zur Verhuetung nutzen?', 'Nein. Prognosen sind Schaetzungen, keine medizinische Beratung und keine Verhuetungsmethode. Besprich Fragen immer mit Fachpersonal.'],
+        ['Hat Raheva ein Widget?', 'Ja. Ein optionales Widget kann die verbleibenden Tage bis zur naechsten Periode anzeigen.'],
       ],
     },
   },

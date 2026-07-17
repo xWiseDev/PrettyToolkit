@@ -853,4 +853,170 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "raheva",
+    name: "Raheva",
+    tagline: "Your cycle, quietly kept.",
+    description:
+      "A fast, private period tracker with nothing in the way. Open the app, log your day in seconds, and see when your next period is due.",
+    category: "wellness",
+    icon: "/icons/raheva.png",
+    appStoreUrl: "",
+    accentColor: "#8B6FAE",
+    features: [
+      {
+        icon: "history",
+        title: "Five-second logging",
+        description:
+          "Open Raheva, mark the day, and get on with your life. No pop-ups, no questionnaires, and nothing standing between you and the log.",
+      },
+      {
+        icon: "qr-create",
+        title: "Know what's ahead",
+        description:
+          "See when your next period is due at a glance, with an optional widget showing the days left. Predictions are calculated on your device from your own history.",
+      },
+      {
+        icon: "history",
+        title: "Calendar and history",
+        description:
+          "Move through past cycles with a clear calendar and revisit any day's details when you need them.",
+      },
+      {
+        icon: "palette",
+        title: "Symptoms, your way",
+        description:
+          "Note how days feel with symptoms and short notes, and shape the list so it fits how you track.",
+      },
+      {
+        icon: "share",
+        title: "Doctor-ready export",
+        description:
+          "Create a clear summary of your cycles to keep for yourself or bring to an appointment.",
+      },
+      {
+        icon: "barcode",
+        title: "Discreet by design",
+        description:
+          "A muted look, gentle wording, and optional reminders that stay vague on the Lock Screen. Your cycle history stays on your device.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 6,
+    faqs: [
+      {
+        question: "What is Raheva?",
+        answer:
+          "Raheva is a fast, private period tracker for iPhone. You open the app, log your day in a few seconds, and see when your next period is due. There is no account to create and no long setup — just a calm place to keep your cycle.",
+      },
+      {
+        question: "Does Raheva predict my next period?",
+        answer:
+          "Yes. Raheva estimates when your next period is due based on the history you log. Predictions are calculated on your device and become steadier as you log more cycles.",
+      },
+      {
+        question: "Can I track symptoms and notes?",
+        answer:
+          "Yes. You can mark symptoms, add short notes, and keep the small details of a day alongside your cycle history.",
+      },
+      {
+        question: "Is Raheva private?",
+        answer:
+          "Yes. Your cycle data is designed to stay on your device. Raheva does not require an account, and your period days, symptoms, and notes are not uploaded to Pretty Toolkit servers.",
+      },
+      {
+        question: "Can I use Raheva as contraception?",
+        answer:
+          "No. Raheva's predictions are estimates meant for planning ahead, not medical advice. It is not a contraceptive method, a fertility treatment tool, or a replacement for a qualified clinician.",
+      },
+      {
+        question: "Does Raheva have a widget?",
+        answer:
+          "Yes. An optional Home Screen widget can show how many days are left until your next period, so you can check without opening the app.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "July 2026",
+      intro:
+        'This privacy policy explains how Raheva: Period Tracker ("Raheva", "the app") collects, uses, and protects your information. Raheva is published by Pretty Toolkit.',
+      sections: [
+        {
+          heading: "Cycle Data",
+          content:
+            "<p>When you log a day in Raheva, your period days, symptoms, notes, and cycle settings are stored locally on your device using on-device storage. We treat menstrual data as deeply personal: Raheva does not upload your cycle data to Pretty Toolkit servers, we do not have access to it, and there is no account or sign-in.</p>",
+        },
+        {
+          heading: "Predictions, Calendar, and History",
+          content:
+            "<p>Period predictions, the calendar, and your cycle history are generated on your device from the days you log. We do not send period dates, symptoms, notes, predictions, or any other cycle content to analytics services.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>Raheva may request permission to send an optional reminder before your predicted period. Reminders are opt-in, worded discreetly, scheduled locally on your device, and can be changed or revoked at any time in the app or in iOS Settings. Reminder settings such as enabled state and timing are stored on your device using UserDefaults. Reminder content is not uploaded to external servers.</p>",
+        },
+        {
+          heading: "Widget",
+          content:
+            "<p>The optional days-left widget reads a small summary prepared by the app and shared only between Raheva and its widget on your device. Widget data is not uploaded to external servers.</p>",
+        },
+        {
+          heading: "Data Backup and Restore",
+          content:
+            "<p>Raheva may let you create a manual backup file of your cycle data and restore from it later. Backups are generated locally and shared only through the iOS share sheet or file destination you choose, such as Files, email, or AirDrop. Restores are processed on-device and do not upload your cycle data to Pretty Toolkit.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            '<p>Raheva does not collect personally identifiable information such as your name, email address, phone number, precise location, Apple ID, or any cycle content. The app may collect limited anonymous data to help us understand and improve the experience:</p><ul><li><strong>Product Interaction</strong> — Anonymous usage events such as onboarding progress, entries logged or edited, reminder settings changed, backups created, restores completed, paywall screens viewed, and features used. These events contain no period dates, symptoms, notes, predictions, or backup file content.</li><li><strong>Device Identifier</strong> — An anonymous identifier used to distinguish unique app installations. This identifier is not linked to your Apple ID, name, email address, or contact information.</li><li><strong>Purchase History</strong> — Subscription status is checked via Apple StoreKit to unlock premium features. We do not see your payment details.</li></ul><p>None of this data is linked to your identity. Your cycle history, predictions, reminders, and backups stay under your control.</p>',
+        },
+        {
+          heading: "Subscriptions & Payments",
+          content:
+            "<p>Raheva may offer optional premium features through subscriptions managed by the Apple App Store. All payment processing is handled by Apple. We do not have access to your credit card details, payment information, or Apple ID.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Raheva uses the following services:</p><ul><li><strong>Apple Frameworks</strong> — SwiftData (on-device storage), UserDefaults (preferences and local state), UserNotifications (local reminders), WidgetKit (the days-left widget), StoreKit (subscriptions), and system sharing tools, governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>.</li><li><strong>Mixpanel</strong> — An analytics service used to collect the anonymous usage data described above. Mixpanel receives no period dates, symptoms, notes, predictions, backup files, or personal information. For details, see <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel\'s Privacy Policy</a>.</li></ul><p>Raheva does not integrate data brokers or cross-app tracking tools.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with third parties. We never share cycle data with advertisers, data brokers, or any other company. Anonymous analytics data is processed by Mixpanel solely on our behalf to improve the app. When you export or share a backup, it is handled only through the system destination or file you choose.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Raheva does not track you across apps and websites owned by other companies. We do not share your data with data brokers, advertising networks, or third parties for tracking purposes. The app's privacy manifest declares that tracking is not used.</p>",
+        },
+        {
+          heading: "Health and Wellness Disclaimer",
+          content:
+            "<p>Raheva is a personal period tracker, not a medical device. Predictions are estimates based on the history you log and can be affected by many factors. Raheva does not provide medical advice, diagnosis, treatment, or contraception, and must not be used as a birth-control method. Always discuss cycle changes and health concerns with a qualified clinician.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Raheva is not directed at children under 13. We do not knowingly collect personal information from children.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Raheva stores your cycle data locally on your device, you stay in control: the app includes an option to erase all cycle data, and deleting the app removes your local data from our reach. To request deletion of analytics data tied to your anonymous app identifier, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> with your request, and we will delete the data within 30 days.</p><p>EU residents have additional rights under GDPR, and California residents have rights under the CCPA. Contact us at the same email to exercise these rights.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];
