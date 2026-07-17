@@ -901,7 +901,12 @@ export const apps: App[] = [
           "A muted look, gentle wording, and optional reminders that stay vague on the Lock Screen. Your cycle history stays on your device.",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      "/screenshots/raheva/01-period-tracker.png",
+      "/screenshots/raheva/03-cycle-history.png",
+      "/screenshots/raheva/02-cycle-day-log.png",
+      "/screenshots/raheva/04-cycle-insights.png",
+    ],
     status: "coming-soon",
     order: 6,
     faqs: [
