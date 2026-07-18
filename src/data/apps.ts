@@ -544,7 +544,7 @@ export const apps: App[] = [
       "A calm food and intake diary for the everyday details. Write what you ate, drank, or did, and let the rest stay simple.",
     category: "daily-tools",
     icon: "/icons/logfd.png",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/food-diary-journal-logfd/id6782378233",
     accentColor: "#E8A05C",
     features: [
       {
@@ -585,7 +585,7 @@ export const apps: App[] = [
       },
     ],
     screenshots: [],
-    status: "coming-soon",
+    status: "live",
     order: 4,
     faqs: [
       {
@@ -606,12 +606,12 @@ export const apps: App[] = [
       {
         question: "Can I search or export my diary?",
         answer:
-          "Yes. logfd is being built with search, calendar history, and clear PDF and CSV export tools, so you can find past entries or share a record when it is useful.",
+          "Yes. logfd includes search, calendar history, and clear PDF and CSV export tools, so you can find past entries or share a record when it is useful.",
       },
       {
         question: "Is logfd private?",
         answer:
-          "Your diary is designed to stay on your device. logfd does not turn your meals or personal notes into a profile. A full privacy policy will be available before the app launches.",
+          "Your diary is designed to stay on your device. logfd does not turn your meals or personal notes into a profile. You can read the full privacy policy right here on this site.",
       },
     ],
     privacy: {
