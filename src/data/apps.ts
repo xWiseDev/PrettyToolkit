@@ -584,7 +584,14 @@ export const apps: App[] = [
           "No calorie counting and no judgment. Your diary stays focused, private, and easy to return to.",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      "/screenshots/logfd/01-food-diary.png",
+      "/screenshots/logfd/02-meal-log.png",
+      "/screenshots/logfd/03-food-journal.png",
+      "/screenshots/logfd/04-food-tracker.png",
+      "/screenshots/logfd/05-intake-log.png",
+      "/screenshots/logfd/06-food-diary-widget.png",
+    ],
     status: "live",
     order: 4,
     faqs: [
