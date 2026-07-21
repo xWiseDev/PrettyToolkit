@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Pretty Toolkit (prettytoolkit.com) is a static brand website for a portfolio of premium aesthetic iOS utility apps. It is NOT an app — it's a showcase/storefront that drives App Store installs. Think Glossier.com for utility apps.
 
-**Currently, three apps are live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), and Sopora (sleep journal). logfd (food & intake diary), BPIVY (blood-pressure log), and Raheva (period tracker) are public coming-soon apps.** The homepage spotlights Sincefy, shows all six public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these six remain confidential — names, categories, and details must NOT appear on the site until they ship.
+**Currently, five apps are live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), Sopora (sleep journal), logfd (food & intake diary), and BPIVY (blood-pressure log). Raheva (period tracker) is a public coming-soon app.** The homepage spotlights Sincefy, shows all six public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these six remain confidential — names, categories, and details must NOT appear on the site until they ship.
 
 ## Tech Stack
 

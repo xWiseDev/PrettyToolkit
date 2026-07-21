@@ -707,7 +707,7 @@ export const apps: App[] = [
       "A calm blood-pressure log for readings you take on your own cuff. Track trends, set gentle reminders, and export a clear record for your doctor.",
     category: "wellness",
     icon: "/icons/bpivy.png",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/blood-pressure-log-bpivy/id6786703584",
     accentColor: "#3E8E9C",
     features: [
       {
@@ -748,7 +748,7 @@ export const apps: App[] = [
       },
     ],
     screenshots: [],
-    status: "coming-soon",
+    status: "live",
     order: 5,
     faqs: [
       {
@@ -764,7 +764,7 @@ export const apps: App[] = [
       {
         question: "Can BPIVY help me share readings with my doctor?",
         answer:
-          "Yes. BPIVY is being built with clear PDF and CSV exports, so you can bring a simple record of readings, averages, and notes to an appointment.",
+          "Yes. BPIVY includes clear PDF and CSV exports, so you can bring a simple record of readings, averages, and notes to an appointment.",
       },
       {
         question: "Does BPIVY include reminders?",
