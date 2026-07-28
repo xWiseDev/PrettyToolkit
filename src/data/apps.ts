@@ -868,7 +868,7 @@ export const apps: App[] = [
       "A fast, private period tracker with nothing in the way. Open the app, log your day in seconds, and see when your next period is due.",
     category: "wellness",
     icon: "/icons/raheva.png",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/period-tracker-cycle-raheva/id6790180153",
     accentColor: "#8B6FAE",
     features: [
       {
@@ -914,7 +914,7 @@ export const apps: App[] = [
       "/screenshots/raheva/02-cycle-day-log.png",
       "/screenshots/raheva/04-cycle-insights.png",
     ],
-    status: "coming-soon",
+    status: "live",
     order: 6,
     faqs: [
       {
