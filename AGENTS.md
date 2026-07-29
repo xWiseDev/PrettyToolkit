@@ -146,6 +146,7 @@ These are non-negotiable brand constraints — do not deviate:
 - Never say "for women", "girly", or "feminine" anywhere on the site.
 - No stock photos or photos of people. AI-generated bitmap imagery is acceptable only for abstract brand/social assets that do not imply unreleased app names, categories, or features.
 - Premium but approachable — think luxury skincare copy, not enterprise software.
+- **Benefit ladder (standing user rule 2026-07-25).** All copy is user-benefit-centered and climbs the audience's own goal hierarchy: (1) the habit they came to do — the functional job; (2) the tangible outcome they want — for health apps, the body outcome; (3) the emotional need that decides whether they stay (control, confidence, pride, relief). An app's page ladders upward through its sections — hero can start at rung 1, but the copy below must reach rungs 2–3, never repeat the feature/habit rung. Use current high-conversion copywriting practice and words that make the user *feel* the benefit ("you"-framing, sensory/emotional verbs, ownership) rather than describe the feature. Never developer-centered ("support an indie dev" never a headline). Benefit framing yes, fabricated claims never — and the ladder bends to this site's voice: short and punchy, so a rung is often just two words ("Scan beautifully" is rung 1; "Never lose a code" is rung 2; "Effortless, every time" is rung 3).
 
 ## Confidentiality Rules
 

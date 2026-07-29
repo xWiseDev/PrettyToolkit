@@ -121,6 +121,8 @@ Everyday apps, unexpectedly beautiful.
 
 Do not say "for women", "girly", or "feminine". Avoid stock photos and photos of people. AI-generated bitmap imagery is acceptable only for abstract brand/social assets that do not imply unreleased app names, categories, or features. Keep the voice premium but approachable.
 
+**Benefit ladder (standing user rule 2026-07-25).** All copy is user-benefit-centered and climbs the audience's own goal hierarchy: (1) the habit they came to do; (2) the tangible outcome they want (for health apps, the body outcome); (3) the emotional need that decides whether they stay. An app's page ladders upward through its sections — hero can start at rung 1, but copy below must reach rungs 2–3, never repeat the feature/habit rung. Use current high-conversion copywriting practice and words that make the user *feel* the benefit rather than describe the feature. Never developer-centered headlines; benefit framing yes, fabricated claims never.
+
 ## Confidentiality
 
 Do not reveal future app ideas. Only apps already present in `src/data/apps.ts` should appear by name or category on the site. Placeholder cards must remain abstract.
