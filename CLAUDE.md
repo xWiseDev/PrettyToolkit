@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Pretty Toolkit (prettytoolkit.com) is a static brand website for a portfolio of premium aesthetic iOS utility apps. It is NOT an app — it's a showcase/storefront that drives App Store installs. Think Glossier.com for utility apps.
 
-**Currently, five apps are live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), Sopora (sleep journal), logfd (food & intake diary), and BPIVY (blood-pressure log). Raheva (period tracker) is a public coming-soon app.** The homepage spotlights Sincefy, shows all six public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these six remain confidential — names, categories, and details must NOT appear on the site until they ship.
+**Currently, six apps are live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), Sopora (sleep journal), logfd (food & intake diary), BPIVY (blood-pressure log), and Raheva (period tracker). Postivo (intermittent-fasting timer) is a public coming-soon app.** The homepage spotlights Sincefy, shows all seven public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these seven remain confidential — names, categories, and details must NOT appear on the site until they ship.
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Pushing to `main` auto-deploys to GitHub Pages. There are no other CI checks —
 
 All app data lives in `src/data/apps.ts` (types `App`, `Feature`, `Faq`, `PrivacySection`, `Category`). Adding a new app = adding an entry to this file + dropping assets into `public/icons/` and `public/screenshots/<slug>/`. App landing pages and per-app privacy policies are generated dynamically via `src/pages/[slug]/index.astro` and `src/pages/[slug]/privacy.astro` using `getStaticPaths()`.
 
-Currently Sincefy, Luxira, and Sopora are in the `apps` array with `status: "live"` and App Store URLs. logfd, BPIVY, and Raheva are in the array with `status: "coming-soon"` and no App Store URL yet. When the next app ships, add it (including a `privacy` field) and it automatically gets a landing page, per-app privacy policy, footer icon, and cross-promo presence — the homepage spotlight and grid are hardcoded in `index.astro`, so decide whether the new app becomes the spotlight or joins the grid. Never include subscription pricing, trial length, or freemium limits on the website.
+Currently Sincefy, Luxira, Sopora, logfd, BPIVY, and Raheva are in the `apps` array with `status: "live"` and App Store URLs. Postivo is in the array with `status: "coming-soon"` and no App Store URL yet. When the next app ships, add it (including a `privacy` field) and it automatically gets a landing page, per-app privacy policy, footer icon, and cross-promo presence — the homepage spotlight and grid are hardcoded in `index.astro`, so decide whether the new app becomes the spotlight or joins the grid. Never include subscription pricing, trial length, or freemium limits on the website.
 
 ### Routing
 
@@ -54,6 +54,8 @@ Currently Sincefy, Luxira, and Sopora are in the `apps` array with `status: "liv
 /bpivy/privacy     → BPIVY-specific privacy policy (auto-generated via [slug]/privacy.astro)
 /raheva            → Raheva coming-soon landing page (auto-generated from apps.ts via [slug]/index.astro)
 /raheva/privacy    → Raheva-specific privacy policy (auto-generated via [slug]/privacy.astro)
+/postivo           → Postivo coming-soon landing page (auto-generated from apps.ts via [slug]/index.astro)
+/postivo/privacy   → Postivo-specific privacy policy (auto-generated via [slug]/privacy.astro)
 /about             → Brand story page (icon mosaic + principles + portfolio)
 /privacy           → General company privacy policy (links to per-app policies)
 /terms             → Redirects to Apple Standard EULA
@@ -99,7 +101,7 @@ Decorative inverted-triangle pyramid of abstract gradient tiles (inspired by App
 - Mosaic is in normal document flow (not absolute), overflows viewport width via container
 - Bottom row uses `.m-row-center` to disable stagger offset
 - Tiles use brand palette gradients (dusty rose, warm cream, blush variations)
-- Bottom row (3 tiles) currently holds `luxira.png`, `sopora.png`, and `sincefy.png`. `logfd.png` and `bpivy.png` sit in row 3, `raheva.png` in row 2. New public app icons should replace abstract tiles in the rows above the bottom row, preserving the inverted-pyramid row counts.
+- Bottom row (3 tiles) currently holds `luxira.png`, `sopora.png`, and `sincefy.png`. `logfd.png`, `postivo.png`, and `bpivy.png` sit in row 3, `raheva.png` in row 2. New public app icons should replace abstract tiles in the rows above the bottom row, preserving the inverted-pyramid row counts.
 
 ### Animation System
 
@@ -113,7 +115,7 @@ All animations must respect `prefers-reduced-motion: reduce` (handled in `global
 
 ### Assets
 
-- `public/icons/` — App icons (512x512 PNG). Currently contains `luxira.png`, `sincefy.png`, `sopora.png`, `logfd.png`, `bpivy.png`, and `raheva.png`.
+- `public/icons/` — App icons (512x512 PNG). Currently contains `luxira.png`, `sincefy.png`, `sopora.png`, `logfd.png`, `bpivy.png`, `raheva.png`, and `postivo.png`.
 - `assets/screenshots/<slug>/` — Source/original screenshots by app slug. Keep high-quality originals here before optimization.
 - `public/screenshots/<slug>/` — Optimized app screenshots by slug. Generated by `npm run optimize:images` as WebP plus PNG fallback.
 - `public/CNAME` — Custom domain file for GitHub Pages (`prettytoolkit.com`)
@@ -156,10 +158,11 @@ These are non-negotiable brand constraints — do not deviate:
 - Never say "for women", "girly", or "feminine" anywhere on the site.
 - No stock photos or photos of people. AI-generated bitmap imagery is acceptable only for abstract brand/social assets that do not imply unreleased app names, categories, or features.
 - Premium but approachable — think luxury skincare copy, not enterprise software.
+- **Benefit ladder (standing user rule 2026-07-25).** All copy is user-benefit-centered and climbs the audience's own goal hierarchy: (1) the habit they came to do — the functional job; (2) the tangible outcome they want — for health apps, the body outcome; (3) the emotional need that decides whether they stay (control, confidence, pride, relief). An app's page ladders upward through its sections — hero can start at rung 1, but the copy below must reach rungs 2–3, never repeat the feature/habit rung. Use current high-conversion copywriting practice and words that make the user *feel* the benefit ("you"-framing, sensory/emotional verbs, ownership) rather than describe the feature. Never developer-centered ("support an indie dev" never a headline). Benefit framing yes, fabricated claims never — and the ladder bends to this site's voice: short and punchy, so a rung is often just two words ("Scan beautifully" is rung 1; "Never lose a code" is rung 2; "Effortless, every time" is rung 3).
 
 ## Confidentiality Rules
 
-- **Do NOT reveal future app ideas.** No app names, categories, or descriptions beyond the apps already in `apps.ts` (currently Luxira, Sincefy, Sopora, logfd, BPIVY, and Raheva).
+- **Do NOT reveal future app ideas.** No app names, categories, or descriptions beyond the apps already in `apps.ts` (currently Luxira, Sincefy, Sopora, logfd, BPIVY, Raheva, and Postivo).
 - Placeholder cards are abstract — they hint that more is coming without saying what.
 - Only apps in `apps.ts` with data should have landing pages.
 

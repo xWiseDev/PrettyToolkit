@@ -1031,4 +1031,185 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "postivo",
+    name: "Postivo",
+    tagline: "Fasting, kept simple.",
+    description:
+      "A calm intermittent-fasting timer. Start your fast with one tap, see which stage your body is in, and end it without guilt — no account, no ads, works fully offline.",
+    category: "wellness",
+    icon: "/icons/postivo.png",
+    appStoreUrl: "",
+    accentColor: "#C7791B",
+    features: [
+      {
+        icon: "history",
+        title: "One-tap fasting timer",
+        description:
+          "Start and stop your fast with a single tap. Pick a classic window like 16:8 or set your own — even open-ended fasts are fine.",
+      },
+      {
+        icon: "qr-create",
+        title: "Know your stage",
+        description:
+          "A gentle timeline shows the phase your body is likely in as the hours pass, with plain-language explanations and honest caveats.",
+      },
+      {
+        icon: "palette",
+        title: "No guilt, ever",
+        description:
+          "End a fast early and Postivo simply logs what you did. No broken streaks, no shame screens, no punishing language.",
+      },
+      {
+        icon: "history",
+        title: "Weight, water, and trends",
+        description:
+          "Keep an eye on weight, BMI, and daily water alongside your fasts, with clean charts that stay on your device.",
+      },
+      {
+        icon: "share",
+        title: "Backups you control",
+        description:
+          "Your history can back up to your own iCloud Drive or export as a file you keep. Restore any time — nothing lives on our servers.",
+      },
+      {
+        icon: "barcode",
+        title: "Offline and private",
+        description:
+          "The timer never needs the internet. No account, no ads — your fasting history stays on your device, yours alone.",
+      },
+    ],
+    screenshots: [
+      "/screenshots/postivo/01-fasting-tracker.png",
+      "/screenshots/postivo/03-fasting-stages.png",
+      "/screenshots/postivo/05-weight-loss-tracker.png",
+      "/screenshots/postivo/06-ketone-tracker.png",
+    ],
+    status: "coming-soon",
+    order: 7,
+    faqs: [
+      {
+        question: "What is Postivo?",
+        answer:
+          "Postivo is a calm intermittent-fasting timer for iPhone. You start a fast with one tap, watch your progress on a simple ring, and learn which stage your body is likely in as the hours pass. There is no account to create and it works fully offline.",
+      },
+      {
+        question: "Which fasting schedules does Postivo support?",
+        answer:
+          "All the classics — 12:12, 14:10, 16:8, 20:4 — plus fully custom windows, longer fasts, and open-ended fasts. You can change your schedule any time, and Postivo will suggest a starting point based on when you usually eat.",
+      },
+      {
+        question: "What are fasting stages?",
+        answer:
+          "As a fast progresses, your body moves through phases such as digestion winding down and fat-burning ramping up. Postivo shows an approximate timeline with plain-language explanations. Timings vary from person to person, and the stages are educational — not a medical measurement.",
+      },
+      {
+        question: "Is Postivo private?",
+        answer:
+          "Yes. Your fasts, weight, and water logs stay on your device. Postivo has no account and no ads. The app records only anonymous usage statistics (like which screens are used) that are never linked to you and never include your health data. Optional backups go to your own iCloud Drive or a file you choose — never to Pretty Toolkit servers.",
+      },
+      {
+        question: "Does Postivo work with Apple Health?",
+        answer:
+          "Yes, optionally. You can turn on Health sync to save your weight entries and completed fasts to Apple Health. It is off by default, asks for permission first, and can be switched off at any time.",
+      },
+      {
+        question: "Is intermittent fasting right for me?",
+        answer:
+          "Postivo is a timer and learning companion, not medical advice. Fasting is not suitable for everyone — including people who are pregnant, under 18, or managing certain conditions. Talk to a qualified clinician before changing how you eat.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "July 2026",
+      intro:
+        'This privacy policy explains how Postivo ("Postivo", "the app") handles your information. Postivo is published by Pretty Toolkit. The short version: everything you record stays on your device, and the only thing we ever see is anonymous usage statistics that cannot be linked to you.',
+      sections: [
+        {
+          heading: "Fasting and Health Data",
+          content:
+            "<p>Your fasts, fasting schedules, weight entries, water logs, and glucose or ketone readings are stored locally on your device using on-device storage. Postivo does not upload this data to Pretty Toolkit servers, we do not have access to it, and there is no account or sign-in.</p>",
+        },
+        {
+          heading: "Onboarding Answers",
+          content:
+            "<p>During setup, Postivo may ask optional questions — such as your usual meal times, your motivation, or your first name — to suggest a fasting schedule and personalize the app. Answers are optional, stored only on your device, and never uploaded. The name field exists purely for greetings inside the app.</p>",
+        },
+        {
+          heading: "Fasting Stages and Education",
+          content:
+            "<p>The stage timeline and educational content are computed and displayed entirely on your device from the fast you are running. Stage timings are general educational estimates, not medical measurements, and nothing about your fasts is sent to external servers.</p>",
+        },
+        {
+          heading: "Apple Health (HealthKit)",
+          content:
+            "<p>Postivo can optionally sync your weight entries and completed fasts to Apple Health. This sync is off by default, requires your explicit permission through the iOS Health permission sheet, and can be disabled at any time in Settings. Health data is written only to Apple Health on your device, is never sent to Pretty Toolkit or any third party, and is never used for advertising or marketing.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>Postivo can send optional local reminders, such as when a fasting goal is reached or for water intake. Reminders are opt-in, scheduled on your device, respect your quiet hours, and can be changed or revoked at any time in the app or iOS Settings. Reminder content is not uploaded anywhere.</p>",
+        },
+        {
+          heading: "Widget",
+          content:
+            "<p>The optional Home Screen widget reads a small summary prepared by the app and shared only between Postivo and its widget on your device. Widget data is not uploaded to external servers.</p>",
+        },
+        {
+          heading: "Backups and iCloud",
+          content:
+            "<p>Postivo can create backups of your data in two ways, both under your control: an automatic backup to your own iCloud Drive (stored in your personal iCloud account, which Pretty Toolkit cannot access), and a manual backup file shared only through the iOS share sheet or file destination you choose. Restores are processed on-device.</p>",
+        },
+        {
+          heading: "Anonymous Usage Analytics",
+          content:
+            "<p>Postivo uses Mixpanel to understand how the app is used in aggregate — for example which screens are viewed, which features are used, and when a free trial or purchase happens. This data is recorded under a random anonymous identifier: Postivo has no accounts, so it can never be tied to your name, email address, or identity. It never includes your fasts' content, weight, water, glucose or ketone values, your onboarding name, or anything you type — your health data is never part of analytics. Setup answers such as your selected goal or fasting plan may be included in anonymous form to help us improve the experience. There is no advertising SDK and no data broker involved, and analytics data is not used to track you across other apps or websites.</p>",
+        },
+        {
+          heading: "Subscriptions & Payments",
+          content:
+            "<p>Postivo may offer optional premium features through purchases managed by the Apple App Store. All payment processing is handled by Apple. We do not have access to your credit card details, payment information, or Apple ID.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Postivo uses Apple frameworks: SwiftData (on-device storage), UserDefaults (preferences), UserNotifications (local reminders), WidgetKit (the widget), HealthKit (optional Health sync), StoreKit (purchases), and iCloud Drive (optional backups in your own account), governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. The only non-Apple service is <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel</a>, used solely for the anonymous usage analytics described above. Postivo integrates no ad networks, data brokers, or cross-app tracking tools.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with anyone — your fasting history, health entries, and personal details never reach us in the first place. Anonymous usage statistics are processed by Mixpanel on our behalf and are not sold or shared for advertising. When you export a backup or sync to Apple Health, the data goes only to the destination you chose on your own device or account.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Postivo does not track you across apps and websites owned by other companies. The app's privacy manifest declares that tracking is not used.</p>",
+        },
+        {
+          heading: "Health and Wellness Disclaimer",
+          content:
+            "<p>Postivo is a fasting timer and educational companion, not a medical device. Stage timelines and BMI figures are general estimates and do not constitute medical advice, diagnosis, or treatment. Intermittent fasting is not suitable for everyone — including people who are pregnant or breastfeeding, under 18, underweight, living with an eating disorder, or managing conditions such as diabetes. Always consult a qualified clinician before starting or changing a fasting practice.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Postivo is not directed at children under 13, and fasting guidance in the app is intended for adults. We do not knowingly collect personal information from children — or from anyone else.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Postivo stores your data locally on your device, you stay in control: deleting the app deletes your local data, and backups in your iCloud Drive or exported files are yours to keep or remove. Anonymous usage statistics cannot be traced back to you, which also means we cannot look up or delete a specific person's analytics on request — there is no identifier connecting them to you. If you have any privacy question or request, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> and we will respond within 30 days. EU residents have rights under GDPR and California residents under the CCPA; contact us at the same address to exercise them.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];

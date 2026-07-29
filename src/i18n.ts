@@ -100,7 +100,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetic Utility Apps for iPhone',
       description:
-        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, BPIVY, and Raheva.',
+        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, BPIVY, Raheva, and Postivo.',
       heroSubtitle: 'Your phone deserves better tools.',
       heroCta: 'Explore the apps',
       introHeading: 'What is Pretty Toolkit?',
@@ -234,7 +234,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitaires esthetiques pour iPhone',
       description:
-        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd, BPIVY et Raheva.',
+        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva et Postivo.',
       heroSubtitle: 'Votre iPhone merite de meilleurs outils.',
       heroCta: 'Explorer les apps',
       introHeading: 'Qu est-ce que Pretty Toolkit ?',
@@ -358,7 +358,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitarias esteticas para iPhone',
       description:
-        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd, BPIVY y Raheva.',
+        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva y Postivo.',
       heroSubtitle: 'Tu iPhone merece mejores herramientas.',
       heroCta: 'Explorar las apps',
       introHeading: 'Que es Pretty Toolkit?',
@@ -480,7 +480,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetische Utility-Apps fuer iPhone',
       description:
-        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd, BPIVY und Raheva.',
+        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva und Postivo.',
       heroSubtitle: 'Dein iPhone verdient bessere Werkzeuge.',
       heroCta: 'Apps entdecken',
       introHeading: 'Was ist Pretty Toolkit?',
@@ -701,6 +701,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Raheva a-t-elle un widget ?', 'Oui. Un widget optionnel peut afficher les jours restants avant vos prochaines regles.'],
       ],
     },
+    postivo: {
+      tagline: 'Le jeune, en toute simplicite.',
+      description: 'Un minuteur de jeune intermittent tout en calme. Lancez votre jeune d une touche, voyez la phase ou en est votre corps et arretez sans culpabilite : sans compte, sans pub, et entierement hors ligne.',
+      features: [
+        ['Minuteur en une touche', 'Lancez et arretez votre jeune d une seule touche. Choisissez une fenetre classique comme 16:8 ou la votre, meme les jeunes ouverts sont possibles.'],
+        ['Connaitre sa phase', 'Une frise douce montre la phase probable de votre corps au fil des heures, avec des explications simples et des reserves honnetes.'],
+        ['Jamais de culpabilite', 'Arretez un jeune plus tot et Postivo note simplement ce que vous avez fait. Pas de serie brisee, pas d ecran de honte.'],
+        ['Poids, eau et tendances', 'Gardez un oeil sur le poids, l IMC et l eau du jour a cote de vos jeunes, avec des graphiques clairs qui restent sur votre appareil.'],
+        ['Des sauvegardes a vous', 'Votre historique peut etre sauvegarde dans votre propre iCloud Drive ou exporte en fichier. Restaurez quand vous voulez, rien ne vit sur nos serveurs.'],
+        ['Hors ligne et prive', 'Le minuteur n a jamais besoin d internet. Sans compte, sans pub, votre historique de jeune reste sur votre appareil.'],
+      ],
+      faqs: [
+        ['Qu est-ce que Postivo ?', 'Postivo est un minuteur de jeune intermittent tout en calme pour iPhone. Lancez un jeune d une touche, suivez votre progression sur un anneau simple et apprenez la phase probable de votre corps au fil des heures. Aucun compte a creer, et l app fonctionne hors ligne.'],
+        ['Quels programmes de jeune sont pris en charge ?', 'Tous les classiques : 12:12, 14:10, 16:8, 20:4, ainsi que des fenetres personnalisees, des jeunes longs et des jeunes ouverts. Vous pouvez changer de programme quand vous voulez, et Postivo propose un point de depart selon vos horaires de repas habituels.'],
+        ['Que sont les phases de jeune ?', 'Au fil d un jeune, le corps passe par des phases : la digestion se termine, la combustion des graisses monte en puissance. Postivo affiche une frise approximative avec des explications simples. Les durees varient d une personne a l autre, et ces phases sont educatives, pas une mesure medicale.'],
+        ['Postivo est-elle privee ?', 'Oui. Vos jeunes, votre poids et vos apports en eau restent sur votre appareil. Postivo n a ni compte ni pub. L app n enregistre que des statistiques d usage anonymes, jamais liees a vous et sans vos donnees de sante. Les sauvegardes optionnelles vont dans votre propre iCloud Drive ou un fichier de votre choix, jamais sur les serveurs de Pretty Toolkit.'],
+        ['Postivo fonctionne-t-elle avec Sante ?', 'Oui, en option. Vous pouvez activer la synchronisation pour enregistrer votre poids et vos jeunes termines dans Sante. Elle est desactivee par defaut, demande votre autorisation et peut etre coupee a tout moment.'],
+        ['Le jeune intermittent est-il fait pour moi ?', 'Postivo est un minuteur et un compagnon d apprentissage, pas un avis medical. Le jeune ne convient pas a tout le monde, notamment aux personnes enceintes, aux mineurs ou a celles qui gerent certaines pathologies. Parlez a un professionnel de sante avant de changer votre facon de manger.'],
+      ],
+    },
   },
   es: {
     sincefy: {
@@ -824,6 +844,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Tiene Raheva un widget?', 'Si. Un widget opcional puede mostrar los dias restantes hasta tu proximo periodo.'],
       ],
     },
+    postivo: {
+      tagline: 'El ayuno, sin complicaciones.',
+      description: 'Un temporizador de ayuno intermitente sereno. Empieza tu ayuno con un toque, ve en que fase esta tu cuerpo y terminalo sin culpa: sin cuenta, sin anuncios y totalmente sin conexion.',
+      features: [
+        ['Temporizador de un toque', 'Empieza y para tu ayuno con un solo toque. Elige una ventana clasica como 16:8 o crea la tuya, incluso los ayunos abiertos valen.'],
+        ['Conoce tu fase', 'Una linea de tiempo suave muestra la fase en la que probablemente esta tu cuerpo, con explicaciones claras y matices honestos.'],
+        ['Sin culpa, nunca', 'Termina un ayuno antes y Postivo simplemente registra lo que hiciste. Sin rachas rotas, sin pantallas de verguenza.'],
+        ['Peso, agua y tendencias', 'Sigue el peso, el IMC y el agua del dia junto a tus ayunos, con graficos limpios que se quedan en tu dispositivo.'],
+        ['Copias que controlas tu', 'Tu historial puede respaldarse en tu propio iCloud Drive o exportarse como archivo. Restaura cuando quieras, nada vive en nuestros servidores.'],
+        ['Sin conexion y privado', 'El temporizador nunca necesita internet. Sin cuenta y sin anuncios, tu historial de ayunos se queda en tu dispositivo.'],
+      ],
+      faqs: [
+        ['Que es Postivo?', 'Postivo es un temporizador de ayuno intermitente sereno para iPhone. Empiezas un ayuno con un toque, sigues el progreso en un anillo simple y aprendes en que fase esta tu cuerpo segun pasan las horas. No hay cuenta que crear y funciona sin conexion.'],
+        ['Que horarios de ayuno admite Postivo?', 'Todos los clasicos: 12:12, 14:10, 16:8, 20:4, mas ventanas personalizadas, ayunos largos y ayunos abiertos. Puedes cambiar de plan cuando quieras y Postivo sugiere un punto de partida segun cuando sueles comer.'],
+        ['Que son las fases del ayuno?', 'Segun avanza un ayuno, el cuerpo pasa por fases como el fin de la digestion o el aumento de la quema de grasa. Postivo muestra una linea de tiempo aproximada con explicaciones claras. Los tiempos varian de una persona a otra y las fases son educativas, no una medicion medica.'],
+        ['Es Postivo privada?', 'Si. Tus ayunos, tu peso y tus registros de agua se quedan en tu dispositivo. Postivo no tiene cuenta ni anuncios. La app solo registra estadisticas de uso anonimas, nunca ligadas a ti y sin tus datos de salud. Las copias opcionales van a tu propio iCloud Drive o a un archivo que elijas, nunca a servidores de Pretty Toolkit.'],
+        ['Funciona Postivo con Salud?', 'Si, de forma opcional. Puedes activar la sincronizacion para guardar tu peso y tus ayunos completados en Salud. Esta desactivada por defecto, pide permiso primero y se puede desactivar cuando quieras.'],
+        ['Es el ayuno intermitente adecuado para mi?', 'Postivo es un temporizador y un acompanante para aprender, no consejo medico. El ayuno no es adecuado para todo el mundo, incluidas personas embarazadas, menores de 18 anos o con ciertas condiciones. Habla con un profesional sanitario antes de cambiar como comes.'],
+      ],
+    },
   },
   de: {
     sincefy: {
@@ -945,6 +985,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Ist Raheva privat?', 'Ja. Deine Zyklusdaten bleiben auf deinem Geraet und werden nicht an Pretty Toolkit Server gesendet.'],
         ['Kann ich Raheva zur Verhuetung nutzen?', 'Nein. Prognosen sind Schaetzungen, keine medizinische Beratung und keine Verhuetungsmethode. Besprich Fragen immer mit Fachpersonal.'],
         ['Hat Raheva ein Widget?', 'Ja. Ein optionales Widget kann die verbleibenden Tage bis zur naechsten Periode anzeigen.'],
+      ],
+    },
+    postivo: {
+      tagline: 'Fasten, ganz einfach.',
+      description: 'Ein ruhiger Timer fuer intermittierendes Fasten. Starte dein Fasten mit einem Tippen, sieh in welcher Phase dein Koerper ist und beende es ohne schlechtes Gewissen: ohne Konto, ohne Werbung und komplett offline.',
+      features: [
+        ['Timer mit einem Tippen', 'Starte und stoppe dein Fasten mit einem einzigen Tippen. Waehle ein klassisches Fenster wie 16:8 oder dein eigenes, auch offene Fastenzeiten sind moeglich.'],
+        ['Deine Phase kennen', 'Eine ruhige Zeitleiste zeigt, in welcher Phase dein Koerper mit den Stunden wahrscheinlich ist, mit klaren Erklaerungen und ehrlichen Einschraenkungen.'],
+        ['Nie ein schlechtes Gewissen', 'Beende ein Fasten frueher und Postivo notiert einfach, was du gemacht hast. Keine gebrochenen Serien, keine beschaemenden Bildschirme.'],
+        ['Gewicht, Wasser und Trends', 'Behalte Gewicht, BMI und das Wasser des Tages neben deinen Fastenzeiten im Blick, mit klaren Diagrammen, die auf deinem Geraet bleiben.'],
+        ['Backups in deiner Hand', 'Dein Verlauf kann in deinem eigenen iCloud Drive gesichert oder als Datei exportiert werden. Stelle jederzeit wieder her, nichts liegt auf unseren Servern.'],
+        ['Offline und privat', 'Der Timer braucht nie Internet. Ohne Konto und ohne Werbung bleibt dein Fastenverlauf auf deinem Geraet.'],
+      ],
+      faqs: [
+        ['Was ist Postivo?', 'Postivo ist ein ruhiger Timer fuer intermittierendes Fasten fuer iPhone. Du startest mit einem Tippen, verfolgst den Fortschritt auf einem einfachen Ring und erfaehrst, in welcher Phase dein Koerper mit den Stunden wahrscheinlich ist. Es gibt kein Konto und die App funktioniert offline.'],
+        ['Welche Fastenplaene unterstuetzt Postivo?', 'Alle Klassiker: 12:12, 14:10, 16:8, 20:4, dazu eigene Fenster, laengere und offene Fastenzeiten. Du kannst den Plan jederzeit aendern, und Postivo schlaegt einen Startpunkt vor, passend zu deinen ueblichen Essenszeiten.'],
+        ['Was sind Fastenphasen?', 'Waehrend eines Fastens durchlaeuft der Koerper Phasen, etwa das Ende der Verdauung oder die zunehmende Fettverbrennung. Postivo zeigt eine ungefaehre Zeitleiste mit klaren Erklaerungen. Die Zeiten sind von Person zu Person verschieden, und die Phasen sind lehrreich, keine medizinische Messung.'],
+        ['Ist Postivo privat?', 'Ja. Deine Fastenzeiten, dein Gewicht und deine Wassereintraege bleiben auf deinem Geraet. Postivo hat kein Konto und keine Werbung. Die App erfasst nur anonyme Nutzungsstatistiken, die nie mit dir verknuepft sind und nie deine Gesundheitsdaten enthalten. Optionale Backups gehen in dein eigenes iCloud Drive oder in eine Datei deiner Wahl, nie an Pretty Toolkit Server.'],
+        ['Funktioniert Postivo mit Apple Health?', 'Ja, optional. Du kannst die Synchronisierung aktivieren, um Gewicht und abgeschlossene Fastenzeiten in Health zu speichern. Sie ist standardmaessig aus, fragt zuerst um Erlaubnis und laesst sich jederzeit abschalten.'],
+        ['Ist intermittierendes Fasten das Richtige fuer mich?', 'Postivo ist ein Timer und Lernbegleiter, keine medizinische Beratung. Fasten ist nicht fuer alle geeignet, etwa nicht in der Schwangerschaft, unter 18 Jahren oder bei bestimmten Erkrankungen. Sprich mit einer Fachperson, bevor du deine Ernaehrung umstellst.'],
       ],
     },
   },
