@@ -1081,9 +1081,9 @@ export const apps: App[] = [
     ],
     screenshots: [
       "/screenshots/postivo/01-fasting-tracker.png",
+      "/screenshots/postivo/02-intermittent-fasting-timer.png",
       "/screenshots/postivo/03-fasting-stages.png",
       "/screenshots/postivo/05-weight-loss-tracker.png",
-      "/screenshots/postivo/06-ketone-tracker.png",
     ],
     status: "coming-soon",
     order: 7,
