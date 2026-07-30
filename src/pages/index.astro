@@ -214,7 +214,7 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytool
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": copy.home.itemListName,
-  "itemListElement": apps.filter((app) => app.slug !== 'postivo').map((app, index) => ({
+  "itemListElement": apps.filter((app) => app.slug !== 'postivo' && app.slug !== 'balanza').map((app, index) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": app.name,
