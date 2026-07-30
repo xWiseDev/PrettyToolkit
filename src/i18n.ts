@@ -721,6 +721,27 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Le jeune intermittent est-il fait pour moi ?', 'Postivo est un minuteur et un compagnon d apprentissage, pas un avis medical. Le jeune ne convient pas a tout le monde, notamment aux personnes enceintes, aux mineurs ou a celles qui gerent certaines pathologies. Parlez a un professionnel de sante avant de changer votre facon de manger.'],
       ],
     },
+    balanza: {
+      tagline: 'Votre chiffre, en toute serenite.',
+      description: 'Un calculateur d IMC et un suivi de poids concus pour la clarte. Votre chiffre en dix secondes, votre tendance en une ligne et exactement ce qu il reste a parcourir : gratuit, sans compte, et rien de ce que vous notez ne quitte votre iPhone.',
+      features: [
+        ['Votre chiffre en dix secondes', 'Entrez votre taille et votre poids, votre IMC est la. Sans compte, sans inscription, sans questions de demarrage : vous ouvrez l app et vous avez votre reponse, en kilos, en livres ou en stones.'],
+        ['Une lecture, pas un verdict', 'Balanza montre ou vous en etes sans faire la lecon. L etiquette de categorie reste discrete a cote de votre chiffre, et vous pouvez la masquer si vous preferez simplement regarder le chiffre bouger.'],
+        ['Voir la distance se reduire', 'Fixez le poids que vous visez, a la hausse ou a la baisse, et chaque saisie met a jour une seule ligne claire : ce qu il reste a parcourir. Objectif atteint ? Le mode maintien prend le relais, et rester stable devient une victoire.'],
+        ['Des semaines d incertitude deviennent une ligne nette', 'Noter un poids prend quelques secondes, le graphique fait le reste : vous ne vous demandez plus si cela fonctionne, vous le voyez. Un rappel quotidien existe si vous le voulez, desactive tant que vous ne l activez pas, a l heure que vous choisissez.'],
+        ['Votre historique survit a votre prochain iPhone', 'La sauvegarde automatique dans votre propre iCloud ramene chaque saisie sur un nouveau telephone, et un export CSV en une touche vous donne une copie bien a vous, que vous pouvez aussi reimporter.'],
+        ['A vous seul, toujours', 'Balanza ne collecte rien. Pas de compte, pas de statistiques, aucun suivi : votre poids, votre objectif et votre historique restent sur vos appareils et dans votre iCloud.'],
+      ],
+      faqs: [
+        ['Qu est-ce que Balanza ?', 'Balanza est un calculateur d IMC et un suivi de poids gratuits pour iPhone. Entrez votre taille et votre poids et vous obtenez votre chiffre tout de suite, sans compte ni inscription. Continuez et l app devient un carnet de poids discret : un objectif qui se rapproche, une courbe de tendance et un mode maintien pour les periodes ou l objectif est de rester stable.'],
+        ['Comment Balanza calcule-t-elle l IMC, et que veulent dire les categories ?', 'Balanza utilise la formule standard, votre poids divise par le carre de votre taille, et place le resultat sur les plages habituelles. Ces plages sont une reference de depistage large, pas un jugement sur vous : elles ne disent rien de la masse musculaire, de la morphologie ou de l age. Si vous preferez ne pas voir l etiquette, masquez-la et gardez seulement votre chiffre.'],
+        ['Puis-je suivre mon poids dans le temps ?', 'Oui. Noter un poids prend quelques secondes et Balanza garde tout l historique : une courbe de tendance, votre IMC a chaque point et un decompte clair vers le poids que vous visez, a la hausse ou a la baisse. Objectif atteint, le mode maintien surveille votre plage plutot que la distance.'],
+        ['Balanza est-elle privee ?', 'Oui, entierement. Balanza ne collecte rien : aucun compte, aucune statistique d usage, aucun suivi. Votre taille, votre poids, votre objectif et votre historique vivent sur votre appareil et dans votre propre iCloud, auquel vous seul avez acces. Le manifeste de confidentialite de l app declare zero type de donnee collecte.'],
+        ['Puis-je recuperer mes donnees ou les transferer sur un nouveau telephone ?', 'Les deux. La sauvegarde iCloud se fait automatiquement dans votre propre compte : il suffit de vous y connecter sur un nouvel iPhone pour retrouver votre historique. Et quand vous voulez une copie a vous, un export CSV en une touche vous donne un fichier a conserver, a ouvrir dans un tableur ou a reimporter plus tard dans Balanza.'],
+        ['Balanza est-elle gratuite ?', 'Oui. Tout ce qui est decrit ici fonctionne des le premier lancement, il n y a rien a deverrouiller.'],
+        ['Dois-je prendre des decisions de sante a partir de mon IMC ?', 'Non. Balanza est un outil general de depistage et de suivi, pas un dispositif medical, et rien dans l app n est un diagnostic ou un avis medical. L IMC est une mesure large qui ne tient pas compte de la masse musculaire, de la morphologie, de l age ou de votre sante personnelle. Parlez a un professionnel qualifie avant de prendre des decisions concernant votre sante.'],
+      ],
+    },
   },
   es: {
     sincefy: {
@@ -862,6 +883,27 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Es Postivo privada?', 'Si. Tus ayunos, tu peso y tus registros de agua se quedan en tu dispositivo. Postivo no tiene cuenta. La app solo registra estadisticas de uso anonimas, nunca ligadas a ti y sin tus datos de salud. Las copias opcionales van a tu propio iCloud Drive o a un archivo que elijas, nunca a servidores de Pretty Toolkit.'],
         ['Funciona Postivo con Salud?', 'Si, de forma opcional. Puedes activar la sincronizacion para guardar tu peso y tus ayunos completados en Salud. Esta desactivada por defecto, pide permiso primero y se puede desactivar cuando quieras.'],
         ['Es el ayuno intermitente adecuado para mi?', 'Postivo es un temporizador y un acompanante para aprender, no consejo medico. El ayuno no es adecuado para todo el mundo, incluidas personas embarazadas, menores de 18 anos o con ciertas condiciones. Habla con un profesional sanitario antes de cambiar como comes.'],
+      ],
+    },
+    balanza: {
+      tagline: 'Tu numero, con calma.',
+      description: 'Una calculadora de IMC y un registro de peso pensados para la claridad. Tu numero en diez segundos, tu tendencia en una linea y exactamente cuanto falta: gratis, sin cuenta y sin que nada de lo que anotas salga de tu iPhone.',
+      features: [
+        ['Tu numero en diez segundos', 'Escribe tu altura y tu peso y ahi esta tu IMC. Sin cuenta, sin registro, sin preguntas de inicio: abres la app y tienes tu respuesta, en kilos, libras o stones.'],
+        ['Una lectura, no un veredicto', 'Balanza te muestra donde estas sin sermones. La etiqueta de categoria se queda discreta junto a tu numero, y puedes ocultarla del todo si prefieres solo ver como se mueve el numero.'],
+        ['Ve como se acorta la distancia', 'Fija el peso al que te diriges, hacia arriba o hacia abajo, y cada registro actualiza una sola linea clara: cuanto falta. Lo alcanzas y el modo mantenimiento toma el relevo, asi que quedarte donde estas tambien cuenta como ganar.'],
+        ['Semanas de dudas se convierten en una linea clara', 'Anotar un peso lleva segundos y el grafico hace el resto: dejas de preguntarte si funciona y simplemente lo ves. Hay un recordatorio diario si lo quieres, apagado hasta que tu lo enciendas, a la hora que elijas.'],
+        ['Tu historial sobrevive a tu proximo iPhone', 'La copia automatica en tu propio iCloud devuelve cada registro en un telefono nuevo, y una exportacion CSV con un toque te da una copia que es tuya, que ademas puedes volver a importar.'],
+        ['Solo tuyo, siempre', 'Balanza no recopila nada. Sin cuenta, sin analiticas, sin seguimiento: tu peso, tu objetivo y tu historial se quedan en tus dispositivos y en tu propio iCloud.'],
+      ],
+      faqs: [
+        ['Que es Balanza?', 'Balanza es una calculadora de IMC y un registro de peso gratuitos para iPhone. Escribes tu altura y tu peso y tienes tu numero al momento, sin cuenta ni registro. Si sigues, se convierte en un diario de peso tranquilo: un objetivo que se acerca, un grafico de tendencia y un modo mantenimiento para cuando la meta es quedarte donde estas.'],
+        ['Como calcula Balanza el IMC y que significan las categorias?', 'Balanza usa la formula estandar, tu peso dividido por el cuadrado de tu altura, y coloca el resultado en los rangos habituales. Esos rangos son una referencia amplia de cribado, no un juicio sobre ti: no dicen nada de tu musculatura, tu complexion o tu edad. Si prefieres no ver la etiqueta, puedes ocultarla y quedarte solo con tu numero.'],
+        ['Puedo seguir mi peso a lo largo del tiempo?', 'Si. Registrar un peso lleva segundos y Balanza guarda todo el historial: un grafico de tendencia, tu IMC en cada punto y una cuenta atras clara hacia el peso al que te diriges, hacia arriba o hacia abajo. Cuando llegas, el modo mantenimiento vigila tu franja en vez de la distancia.'],
+        ['Es Balanza privada?', 'Si, del todo. Balanza no recopila nada: no hay cuenta, ni analiticas, ni seguimiento de ningun tipo. Tu altura, tu peso, tu objetivo y tu historial viven en tu dispositivo y en tu propio iCloud, al que solo llegas tu. El manifiesto de privacidad de la app declara cero tipos de datos recopilados.'],
+        ['Puedo sacar mis datos o pasarlos a un telefono nuevo?', 'Las dos cosas. La copia de seguridad en iCloud es automatica y va a tu propia cuenta, asi que al iniciar sesion en un iPhone nuevo recuperas tu historial. Y cuando quieras una copia tuya, una exportacion CSV con un toque te da un archivo que puedes guardar, abrir en una hoja de calculo o volver a importar en Balanza.'],
+        ['Es Balanza gratis?', 'Si. Todo lo descrito aqui funciona desde el primer momento, no hay nada que desbloquear.'],
+        ['Deberia tomar decisiones de salud a partir de mi IMC?', 'No. Balanza es una herramienta general de cribado y seguimiento, no un dispositivo medico, y nada en la app es un diagnostico ni consejo medico. El IMC es una medida amplia que no tiene en cuenta la masa muscular, la complexion, la edad ni tu salud individual. Habla con un profesional cualificado antes de tomar decisiones sobre tu salud.'],
       ],
     },
   },
@@ -1007,6 +1049,27 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Ist intermittierendes Fasten das Richtige fuer mich?', 'Postivo ist ein Timer und Lernbegleiter, keine medizinische Beratung. Fasten ist nicht fuer alle geeignet, etwa nicht in der Schwangerschaft, unter 18 Jahren oder bei bestimmten Erkrankungen. Sprich mit einer Fachperson, bevor du deine Ernaehrung umstellst.'],
       ],
     },
+    balanza: {
+      tagline: 'Deine Zahl, ganz ruhig.',
+      description: 'Ein BMI-Rechner und Gewichts-Tracker fuer ruhige Klarheit. Deine Zahl in zehn Sekunden, dein Verlauf in einer Linie und genau, wie weit es noch ist: kostenlos, ohne Konto, und nichts davon verlaesst dein iPhone.',
+      features: [
+        ['Deine Zahl in zehn Sekunden', 'Gib Groesse und Gewicht ein und dein BMI steht da. Ohne Konto, ohne Anmeldung, ohne Einrichtungsfragen: Du oeffnest die App und hast deine Antwort, in Kilogramm, Pfund oder Stones.'],
+        ['Ein Wert, kein Urteil', 'Balanza zeigt, wo du stehst, ganz ohne Belehrung. Die Kategorie steht still neben deiner Zahl, und du kannst sie ganz ausblenden, wenn du lieber nur die Zahl beobachtest.'],
+        ['Sieh den Abstand schrumpfen', 'Lege das Gewicht fest, auf das du zugehst, nach oben oder nach unten, und jeder Eintrag aktualisiert eine klare Zeile: wie viel noch fehlt. Erreicht? Dann uebernimmt der Halten-Modus, und Bleiben zaehlt genauso als Erfolg.'],
+        ['Aus Wochen voller Zweifel wird eine klare Linie', 'Ein Gewicht einzutragen dauert Sekunden, den Rest macht das Diagramm: Du fragst dich nicht mehr, ob es wirkt, du siehst es. Eine taegliche Erinnerung gibt es, wenn du willst, ausgeschaltet bis du sie aktivierst, zu der Zeit, die du waehlst.'],
+        ['Dein Verlauf ueberlebt dein naechstes iPhone', 'Das automatische Backup in deiner eigenen iCloud bringt jeden Eintrag auf ein neues Telefon zurueck, und ein CSV-Export mit einem Tippen gibt dir eine Kopie, die dir gehoert und die du auch wieder importieren kannst.'],
+        ['Nur deins, immer', 'Balanza erhebt nichts. Kein Konto, keine Analysen, kein Tracking: Dein Gewicht, dein Ziel und dein Verlauf bleiben auf deinen Geraeten und in deiner eigenen iCloud.'],
+      ],
+      faqs: [
+        ['Was ist Balanza?', 'Balanza ist ein kostenloser BMI-Rechner und Gewichts-Tracker fuer iPhone. Du gibst Groesse und Gewicht ein und bekommst deine Zahl sofort, ohne Konto und ohne Anmeldung. Wenn du weitermachst, wird daraus ein ruhiges Gewichtstagebuch: ein Ziel, das naeher rueckt, ein Verlaufsdiagramm und ein Halten-Modus fuer die Zeit, in der Bleiben das Ziel ist.'],
+        ['Wie berechnet Balanza den BMI, und was bedeuten die Kategorien?', 'Balanza nutzt die Standardformel, dein Gewicht geteilt durch das Quadrat deiner Groesse, und ordnet das Ergebnis den ueblichen Bereichen zu. Diese Bereiche sind eine grobe Orientierung, kein Urteil ueber dich: Sie sagen nichts ueber Muskelmasse, Koerperbau oder Alter. Wenn du die Kategorie lieber nicht siehst, blende sie aus und behalte nur deine Zahl.'],
+        ['Kann ich mein Gewicht ueber die Zeit verfolgen?', 'Ja. Ein Gewicht einzutragen dauert Sekunden, und Balanza behaelt den ganzen Verlauf: ein Verlaufsdiagramm, deinen BMI zu jedem Zeitpunkt und einen klaren Countdown zu dem Gewicht, auf das du zugehst, nach oben oder nach unten. Ist es erreicht, beobachtet der Halten-Modus deinen Bereich statt der Distanz.'],
+        ['Ist Balanza privat?', 'Ja, vollstaendig. Balanza erhebt nichts: kein Konto, keine Nutzungsstatistiken, kein Tracking. Deine Groesse, dein Gewicht, dein Ziel und dein Verlauf liegen auf deinem Geraet und in deiner eigenen iCloud, auf die nur du zugreifst. Das Datenschutzmanifest der App weist null erhobene Datenarten aus.'],
+        ['Komme ich an meine Daten, und kann ich sie auf ein neues Telefon bringen?', 'Beides. Das iCloud-Backup laeuft automatisch in deinem eigenen Konto, eine Anmeldung auf einem neuen iPhone holt deinen Verlauf zurueck. Und wenn du eine eigene Kopie willst, exportierst du mit einem Tippen alles als CSV-Datei, die du behalten, in einer Tabelle oeffnen oder spaeter wieder in Balanza importieren kannst.'],
+        ['Ist Balanza kostenlos?', 'Ja. Alles hier Beschriebene funktioniert ab dem ersten Start, es gibt nichts freizuschalten.'],
+        ['Soll ich Gesundheitsentscheidungen auf meinen BMI stuetzen?', 'Nein. Balanza ist ein allgemeines Orientierungs- und Tracking-Werkzeug, kein Medizinprodukt, und nichts in der App ist eine Diagnose oder medizinische Beratung. Der BMI ist ein grober Wert, der Muskelmasse, Koerperbau, Alter und deine individuelle Gesundheit nicht beruecksichtigt. Sprich mit einer qualifizierten Fachperson, bevor du Entscheidungen ueber deine Gesundheit triffst.'],
+      ],
+    },
   },
 };
 
@@ -1143,11 +1206,45 @@ function localizePrivacySections(app: App, locale: Locale): PrivacySection[] | u
     return 'default';
   };
 
+  // Per-app corrections where a shared template would be untrue for that app.
+  // Balanza collects nothing at all, so the generic "limited anonymous data /
+  // Mixpanel" wording must never appear on its localized privacy pages.
+  const appTemplateOverrides: Record<string, Record<Exclude<Locale, 'en'>, Record<string, string>>> = {
+    balanza: {
+      fr: {
+        collection: `<p>${app.name} ne collecte rien. Aucun compte, aucune adresse email, aucun identifiant d appareil et aucune statistique d usage. Le manifeste de confidentialite de l app declare zero type de donnee collecte.</p>`,
+        services: `<p>${app.name} n utilise que des frameworks Apple : stockage sur l appareil, preferences, notifications locales et sauvegarde dans votre propre iCloud. Aucun service tiers, aucun SDK d analyse et aucun courtier de donnees.</p>`,
+        rights: `<p>Vos donnees restent sur votre appareil et dans votre propre iCloud : supprimer l app efface les donnees locales, et la sauvegarde iCloud comme les fichiers CSV exportes sont a vous de garder ou d effacer. Il n y a aucun compte a fermer ni copie chez nous, car nous n avons jamais rien recu. Pour toute question, ecrivez a aboyahyadev@icloud.com.</p>`,
+        disclaimer: `<p>${app.name} est un outil general de depistage et de suivi, pas un dispositif medical. L IMC est une mesure large qui ne tient pas compte de la masse musculaire, de la morphologie ou de l age, et rien dans l app n est un diagnostic ou un avis medical. Parlez a un professionnel qualifie avant toute decision concernant votre sante.</p>`,
+        children: `<p>${app.name} est classee 17+ et destinee aux adultes. L app ne s adresse pas aux enfants et ne collecte sciemment aucune information personnelle, d eux comme de quiconque.</p>`,
+      },
+      es: {
+        collection: `<p>${app.name} no recopila nada. Sin cuenta, sin email, sin identificador de dispositivo y sin estadisticas de uso. El manifiesto de privacidad de la app declara cero tipos de datos recopilados.</p>`,
+        services: `<p>${app.name} solo usa frameworks de Apple: almacenamiento en el dispositivo, preferencias, notificaciones locales y copia de seguridad en tu propio iCloud. Ningun servicio de terceros, ningun SDK de analitica y ningun intermediario de datos.</p>`,
+        rights: `<p>Tus datos se quedan en tu dispositivo y en tu propio iCloud: eliminar la app borra los datos locales, y tanto la copia en iCloud como los archivos CSV exportados son tuyos para guardarlos o borrarlos. No hay cuenta que cerrar ni copia en nuestro poder, porque nunca recibimos nada. Si tienes dudas, escribe a aboyahyadev@icloud.com.</p>`,
+        disclaimer: `<p>${app.name} es una herramienta general de cribado y seguimiento, no un dispositivo medico. El IMC es una medida amplia que no tiene en cuenta la masa muscular, la complexion ni la edad, y nada en la app es un diagnostico ni consejo medico. Habla con un profesional cualificado antes de tomar decisiones sobre tu salud.</p>`,
+        children: `<p>${app.name} tiene clasificacion 17+ y esta pensada para adultos. No esta dirigida a menores y no recopila conscientemente informacion personal, ni de ellos ni de nadie.</p>`,
+      },
+      de: {
+        collection: `<p>${app.name} erhebt nichts. Kein Konto, keine E-Mail-Adresse, keine Geraete-ID und keine Nutzungsstatistiken. Das Datenschutzmanifest der App weist null erhobene Datenarten aus.</p>`,
+        services: `<p>${app.name} nutzt ausschliesslich Apple-Frameworks: Speicherung auf dem Geraet, Einstellungen, lokale Mitteilungen und Backup in deiner eigenen iCloud. Keine Drittanbieterdienste, kein Analyse-SDK und keine Datenhaendler.</p>`,
+        rights: `<p>Deine Daten bleiben auf deinem Geraet und in deiner eigenen iCloud: Das Loeschen der App entfernt die lokalen Daten, und das iCloud-Backup wie auch exportierte CSV-Dateien gehoeren dir. Es gibt kein Konto zu schliessen und keine Kopie bei uns, denn wir haben nie etwas erhalten. Bei Fragen schreib an aboyahyadev@icloud.com.</p>`,
+        disclaimer: `<p>${app.name} ist ein allgemeines Orientierungs- und Tracking-Werkzeug, kein Medizinprodukt. Der BMI ist ein grober Wert, der Muskelmasse, Koerperbau und Alter nicht beruecksichtigt, und nichts in der App ist eine Diagnose oder medizinische Beratung. Sprich mit einer qualifizierten Fachperson, bevor du Entscheidungen ueber deine Gesundheit triffst.</p>`,
+        children: `<p>${app.name} ist mit 17+ bewertet und fuer Erwachsene gedacht. Die App richtet sich nicht an Kinder und erhebt wissentlich keine personenbezogenen Daten, weder von ihnen noch von sonst jemandem.</p>`,
+      },
+    },
+  };
+
+  const localeTemplates = {
+    ...templates[locale],
+    ...(appTemplateOverrides[app.slug]?.[locale] ?? {}),
+  };
+
   return app.privacy.sections.map((section) => {
     const key = keyFor(section.heading);
     return {
       heading: headingLabels[locale][key] ?? section.heading,
-      content: templates[locale][key] ?? templates[locale].default,
+      content: localeTemplates[key] ?? localeTemplates.default,
     };
   });
 }

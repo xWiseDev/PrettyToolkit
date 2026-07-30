@@ -1212,4 +1212,161 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "balanza",
+    name: "Balanza",
+    tagline: "Your number, calmly.",
+    description:
+      "A BMI calculator and weight tracker built for calm clarity. Your number in ten seconds, your trend in one line, and exactly how far there is to go — free, no account, and nothing you log ever leaves your iPhone.",
+    category: "wellness",
+    icon: "/icons/balanza.png",
+    appStoreUrl: "",
+    accentColor: "#2E9E5B",
+    features: [
+      {
+        icon: "history",
+        title: "Your number in ten seconds",
+        description:
+          "Enter your height and weight and your BMI is there. No account, no sign-up, no setup questions — you open the app and you have your answer, in kilograms, pounds, or stones.",
+      },
+      {
+        icon: "palette",
+        title: "A reading, not a verdict",
+        description:
+          "Balanza shows where you stand without a lecture. The category label sits quietly beside your number, and you can hide it altogether if you would rather just watch the number move.",
+      },
+      {
+        icon: "qr-create",
+        title: "Watch the distance close",
+        description:
+          "Set the weight you are heading toward, up or down, and every entry updates one plain line: how much is left to go. Reach it and maintain mode takes over, so staying put counts as winning too.",
+      },
+      {
+        icon: "barcode",
+        title: "Weeks of guesswork become one clear line",
+        description:
+          "Logging a weight takes seconds and the chart does the rest, so you stop wondering whether it is working and simply see it. A daily reminder is there if you want one — off until you turn it on, at the time you pick.",
+      },
+      {
+        icon: "share",
+        title: "Your history survives your next iPhone",
+        description:
+          "Automatic backup to your own iCloud brings every entry back on a new phone, and a one-tap CSV export gives you a copy that is yours to keep — or to bring back in later.",
+      },
+      {
+        icon: "history",
+        title: "Yours alone, always",
+        description:
+          "Balanza collects nothing. No account, no analytics, no tracking — your weight, your goal, and your history stay on your devices and in your own iCloud.",
+      },
+    ],
+    // TODO: replace with stage-5 marketing screens at /ship balanza
+    screenshots: [],
+    status: "coming-soon",
+    order: 8,
+    faqs: [
+      {
+        question: "What is Balanza?",
+        answer:
+          "Balanza is a free BMI calculator and weight tracker for iPhone. Enter your height and weight and you get your number straight away — no account, no sign-up, no onboarding. Keep going and it becomes a quiet weight log: a goal that counts down, a trend chart, and a maintain mode for when staying where you are is the goal.",
+      },
+      {
+        question: "How does Balanza calculate BMI, and what do the categories mean?",
+        answer:
+          "Balanza uses the standard formula — your weight divided by the square of your height — and places the result on the usual ranges. Those ranges are a broad screening reference, not a judgement about you: they say nothing about muscle, build, or age. If you would rather not see the label at all, you can hide it and keep only your number.",
+      },
+      {
+        question: "Can I track my weight over time?",
+        answer:
+          "Yes. Log a weight in a few seconds and Balanza keeps the whole history: a trend chart, your BMI at each point, and a plain countdown to the weight you are heading toward, up or down. Reach your goal and maintain mode watches your healthy band instead of the distance.",
+      },
+      {
+        question: "Is Balanza private?",
+        answer:
+          "Yes, completely. Balanza collects nothing: there is no account, no analytics, and no tracking of any kind. Your height, weight, goal, and history live on your device and in your own iCloud, which only you can reach. The app's privacy manifest declares zero collected data types.",
+      },
+      {
+        question: "Can I get my data out, or move it to a new phone?",
+        answer:
+          "Both. iCloud backup happens automatically to your own account, so signing in on a new iPhone restores your history. Whenever you want a copy of your own, one tap exports everything to a CSV file you can keep, open in a spreadsheet, or import back into Balanza later.",
+      },
+      {
+        question: "Is Balanza free?",
+        answer:
+          "Yes. Everything described here works from the first launch — there is nothing to unlock.",
+      },
+      {
+        question: "Should I make health decisions based on my BMI?",
+        answer:
+          "No. Balanza is a general screening and tracking tool, not a medical device, and nothing in it is a diagnosis or medical advice. BMI is a broad measure that does not account for muscle mass, build, age, or your individual health. Talk to a qualified professional before making decisions about your health.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "July 2026",
+      intro:
+        'This privacy policy explains how Balanza ("Balanza", "the app") handles your information. Balanza is published by Pretty Toolkit. The short version: Balanza collects nothing. There is no account, no analytics, and no tracking — everything you enter stays on your device and in your own iCloud, and we never see any of it.',
+      sections: [
+        {
+          heading: "Weight and Body Data",
+          content:
+            "<p>Your height, weight entries, goal weight, unit preference, and every reading Balanza calculates from them are stored locally on your device. Balanza does not upload this data to Pretty Toolkit servers, we do not have access to it, and there is no account or sign-in.</p><p>Your BMI, your category, your trend, and the distance to your goal are all computed on your device from the numbers you entered. Nothing is sent to a server to be calculated, and the app works with no network connection at all.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            "<p>Balanza collects nothing. There is no account, no email address, no name field, no device identifier, and no usage analytics of any kind. We do not know how many times you open the app, which screens you visit, or what you weigh. The app's App Store privacy manifest declares zero collected data types, and that is literal rather than a summary.</p>",
+        },
+        {
+          heading: "Reminders",
+          content:
+            "<p>Balanza can send an optional daily reminder to log your weight. Reminders are off until you turn them on, you choose the time, they are scheduled locally by iOS on your device, and they can be changed or switched off at any time in the app or in iOS Settings. Nothing about them is uploaded.</p>",
+        },
+        {
+          heading: "iCloud Backup and CSV Export",
+          content:
+            "<p>Balanza backs your history up automatically to your own iCloud account, so signing in on a new iPhone restores your entries. That backup lives in your personal iCloud, which Pretty Toolkit cannot access. Separately, you can export your history to a CSV file whenever you like — an export you start yourself, sent only to the destination you choose in the iOS share sheet — and import a CSV file back in. Restores and imports are processed entirely on your device.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Balanza uses Apple frameworks only: SwiftData (on-device storage), UserDefaults (preferences), UserNotifications (the optional reminder), and CloudKit (backup in your own iCloud account), governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. There are no non-Apple services in the app — no analytics SDK, no crash reporter, no data brokers, and no cross-app tracking tools.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with anyone — your weight history and personal details never reach us in the first place. When you export a CSV or restore from iCloud, the data goes only to the destination or account you chose on your own device.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Balanza does not track you across apps and websites owned by other companies. The app's privacy manifest declares that tracking is not used, and the app contains no tracking technology to declare.</p>",
+        },
+        {
+          heading: "BMI and Health Disclaimer",
+          content:
+            "<p>Balanza is a general screening and tracking tool, not a medical device. BMI is a broad screening measure that does not account for muscle mass, body composition, build, age, pregnancy, or your individual health, and nothing shown in the app is a diagnosis, medical advice, or treatment. Always consult a qualified professional before making decisions about your health or your weight.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Balanza is rated 17+ and is intended for adults. It is not directed at children, and we do not knowingly collect personal information from children — or from anyone else, since the app collects nothing at all.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Balanza stores your data on your own device and in your own iCloud, you stay in complete control: deleting the app removes your local data, and you can delete the iCloud backup or any exported CSV yourself. There is no account to close and no server-side copy for us to erase, because we never received anything. If you have a privacy question, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> and we will respond within 30 days. EU residents have rights under GDPR and California residents under the CCPA; contact us at the same address to exercise them.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];
