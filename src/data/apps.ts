@@ -1036,7 +1036,7 @@ export const apps: App[] = [
     name: "Postivo",
     tagline: "Fasting, kept simple.",
     description:
-      "A calm intermittent-fasting timer. Start your fast with one tap, see which stage your body is in, and end it without guilt — no account, no ads, works fully offline.",
+      "A calm intermittent-fasting timer. Start your fast with one tap, see which stage your body is in, and end it without guilt — no account, works fully offline.",
     category: "wellness",
     icon: "/icons/postivo.png",
     appStoreUrl: "",
@@ -1076,7 +1076,7 @@ export const apps: App[] = [
         icon: "barcode",
         title: "Offline and private",
         description:
-          "The timer never needs the internet. No account, no ads — your fasting history stays on your device, yours alone.",
+          "The timer never needs the internet. No account — your fasting history stays on your device, yours alone.",
       },
     ],
     screenshots: [
@@ -1106,7 +1106,7 @@ export const apps: App[] = [
       {
         question: "Is Postivo private?",
         answer:
-          "Yes. Your fasts, weight, and water logs stay on your device. Postivo has no account and no ads. The app records only anonymous usage statistics (like which screens are used) that are never linked to you and never include your health data. Optional backups go to your own iCloud Drive or a file you choose — never to Pretty Toolkit servers.",
+          "Yes. Your fasts, weight, and water logs stay on your device. Postivo has no account. The app records only anonymous usage statistics (like which screens are used) that are never linked to you and never include your health data. Optional backups go to your own iCloud Drive or a file you choose — never to Pretty Toolkit servers.",
       },
       {
         question: "Does Postivo work with Apple Health?",
