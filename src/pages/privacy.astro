@@ -17,7 +17,8 @@ interface Props {
 const { locale = defaultLocale } = Astro.props;
 const copy = ui[locale];
 const localizedApps = getLocalizedApps(locale);
-const appsWithPrivacy = localizedApps.filter((app) => app.privacy);
+// TEMP until Postivo ships (2026-08-02/03): hidden from listings
+const appsWithPrivacy = localizedApps.filter((app) => app.privacy && app.slug !== 'postivo');
 const sections = getGeneralPrivacySections(locale);
 const canonicalPath = localizedPrivacyPath(locale);
 const alternatePaths = localizedAlternates('/privacy');
