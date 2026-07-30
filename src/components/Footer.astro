@@ -16,7 +16,8 @@ interface Props {
 
 const { locale = defaultLocale } = Astro.props;
 const currentYear = new Date().getFullYear();
-const sortedApps = [...apps].sort((a, b) => a.order - b.order);
+// TEMP until Postivo ships (2026-08-02/03): keep it out of listings; direct URLs stay live
+const sortedApps = [...apps].filter((a) => a.slug !== 'postivo').sort((a, b) => a.order - b.order);
 const copy = ui[locale];
 ---
 

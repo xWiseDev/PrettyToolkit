@@ -26,7 +26,6 @@ const sopora = apps.find((a) => a.slug === 'sopora')!;
 const logfd = apps.find((a) => a.slug === 'logfd')!;
 const bpivy = apps.find((a) => a.slug === 'bpivy')!;
 const raheva = apps.find((a) => a.slug === 'raheva')!;
-const postivo = apps.find((a) => a.slug === 'postivo')!;
 const canonicalPath = localizedPath(locale, '/');
 const alternatePaths = localizedAlternates('/');
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
@@ -77,7 +76,7 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytool
           <div class="m-t" style="--d: 0.06s; --fd: 5.6s; --bg: linear-gradient(135deg, #E8B4B8, #E8B2AE);"></div>
           <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'logfd')} aria-label="Open logfd" style="--d: 0.14s; --fd: 4.3s;"><img src="/icons/logfd.png" alt="" width="96" height="96" /></a>
           <div class="m-t" style="--d: 0.04s; --fd: 5.4s; --bg: linear-gradient(135deg, #F2D0CD, #E8B4B8);"></div>
-          <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'postivo')} aria-label="Open Postivo" style="--d: 0.1s; --fd: 4.6s;"><img src="/icons/postivo.png" alt="" width="96" height="96" /></a>
+          <div class="m-t" style="--d: 0.1s; --fd: 4.6s; --bg: linear-gradient(135deg, #E8B2AE, #F5DCD0);"></div>
           <a class="m-t m-t-icon m-t-link" href={localizedAppPath(locale, 'bpivy')} aria-label="Open BPIVY" style="--d: 0.02s; --fd: 5.8s;"><img src="/icons/bpivy.png" alt="" width="96" height="96" /></a>
           <div class="m-t" style="--d: 0.16s; --fd: 4.4s; --bg: linear-gradient(135deg, #F5DCD0, #EEC8C4);"></div>
         </div>
@@ -170,7 +169,6 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytool
         <AppCard app={logfd} locale={locale} />
         <AppCard app={bpivy} locale={locale} />
         <AppCard app={raheva} locale={locale} />
-        <AppCard app={postivo} locale={locale} />
         <PlaceholderCard index={1} locale={locale} />
       </div>
     </div>
@@ -216,7 +214,7 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytool
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": copy.home.itemListName,
-  "itemListElement": apps.map((app, index) => ({
+  "itemListElement": apps.filter((app) => app.slug !== 'postivo').map((app, index) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": app.name,

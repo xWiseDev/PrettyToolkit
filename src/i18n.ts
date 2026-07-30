@@ -100,7 +100,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetic Utility Apps for iPhone',
       description:
-        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, BPIVY, Raheva, and Postivo.',
+        'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, BPIVY, and Raheva.',
       heroSubtitle: 'Your phone deserves better tools.',
       heroCta: 'Explore the apps',
       introHeading: 'What is Pretty Toolkit?',
@@ -234,7 +234,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitaires esthetiques pour iPhone',
       description:
-        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva et Postivo.',
+        'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd, BPIVY et Raheva.',
       heroSubtitle: 'Votre iPhone merite de meilleurs outils.',
       heroCta: 'Explorer les apps',
       introHeading: 'Qu est-ce que Pretty Toolkit ?',
@@ -358,7 +358,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Apps utilitarias esteticas para iPhone',
       description:
-        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva y Postivo.',
+        'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd, BPIVY y Raheva.',
       heroSubtitle: 'Tu iPhone merece mejores herramientas.',
       heroCta: 'Explorar las apps',
       introHeading: 'Que es Pretty Toolkit?',
@@ -480,7 +480,7 @@ export const ui = {
     home: {
       title: 'Pretty Toolkit — Aesthetische Utility-Apps fuer iPhone',
       description:
-        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva und Postivo.',
+        'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd, BPIVY und Raheva.',
       heroSubtitle: 'Dein iPhone verdient bessere Werkzeuge.',
       heroCta: 'Apps entdecken',
       introHeading: 'Was ist Pretty Toolkit?',
