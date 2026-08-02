@@ -16,8 +16,8 @@ interface Props {
 
 const { locale = defaultLocale } = Astro.props;
 const currentYear = new Date().getFullYear();
-// TEMP until Postivo and Balanza ship: keep them out of listings; direct URLs stay live
-const hiddenSlugs = ['postivo', 'balanza'];
+// TEMP until Balanza ships: keep it out of listings; direct URLs stay live
+const hiddenSlugs = ['balanza'];
 const sortedApps = [...apps].filter((a) => !hiddenSlugs.includes(a.slug)).sort((a, b) => a.order - b.order);
 const copy = ui[locale];
 ---

@@ -1162,7 +1162,7 @@ export const apps: App[] = [
         {
           heading: "Anonymous Usage Analytics",
           content:
-            "<p>Postivo uses Mixpanel to understand how the app is used in aggregate — for example which screens are viewed, which features are used, and when a free trial or purchase happens. This data is recorded under a random anonymous identifier: Postivo has no accounts, so it can never be tied to your name, email address, or identity. It never includes your fasts' content, weight, water, glucose or ketone values, your onboarding name, or anything you type — your health data is never part of analytics. Setup answers such as your selected goal or fasting plan may be included in anonymous form to help us improve the experience. There is no advertising SDK and no data broker involved, and analytics data is not used to track you across other apps or websites.</p>",
+            "<p>Postivo uses Mixpanel to understand how the app is used in aggregate — for example which screens are viewed, which features are used, and when a purchase happens. This data is recorded under a random anonymous identifier: Postivo has no accounts, so it can never be tied to your name, email address, or identity. It never includes your fasts' content, weight, water, glucose or ketone values, your onboarding name, or anything you type — your health data is never part of analytics. Setup answers such as your selected goal or fasting plan may be included in anonymous form to help us improve the experience. There is no advertising SDK and no data broker involved, and analytics data is not used to track you across other apps or websites.</p>",
         },
         {
           heading: "Subscriptions & Payments",
