@@ -8,7 +8,8 @@ export default defineConfig({
   output: 'static',
   integrations: [
     sitemap({
-      filter: (page) => !page.endsWith('/terms/') && !page.includes('/balanza/'),
+      filter: (page) =>
+        !page.endsWith('/terms/') && !page.includes('/balanza/') && !page.includes('/esynit/'),
       lastmod: new Date('2026-06-15'),
       changefreq: 'weekly',
       serialize(item) {
