@@ -742,6 +742,27 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Dois-je prendre des decisions de sante a partir de mon IMC ?', 'Non. Balanza est un outil general de depistage et de suivi, pas un dispositif medical, et rien dans l app n est un diagnostic ou un avis medical. L IMC est une mesure large qui ne tient pas compte de la masse musculaire, de la morphologie, de l age ou de votre sante personnelle. Parlez a un professionnel qualifie avant de prendre des decisions concernant votre sante.'],
       ],
     },
+    esynit: {
+      tagline: 'Signe et renvoye, ce soir.',
+      description: 'Signez un PDF sur votre iPhone et renvoyez-le dans la foulee. Dessinez, tapez ou photographiez votre signature, remplissez les dates et les details d une touche, puis partagez un PDF fini et aplati : tout se passe sur votre telephone, sans compte, et rien de ce que vous signez ne quitte l appareil.',
+      features: [
+        ['Signe avant la fin de la journee', 'Le document arrive dans votre boite mail, vous l ouvrez, vous le signez et il repart deja. Sans imprimante, sans scanner, sans attendre d etre a nouveau devant un bureau.'],
+        ['Votre signature, prete a l emploi', 'Dessinez-la, tapez-la dans un style manuscrit ou photographiez celle que vous utilisez deja : Esynit la detache proprement du papier. Enregistree une fois, prete sur chaque document, et vous pouvez la refaire quand vous voulez.'],
+        ['Dates, noms et details d une touche', 'Touchez l endroit ou le formulaire attend une date, un nom, une adresse ou une case, et c est rempli, au format de date de votre langue, avec vos informations enregistrees a portee de touche. Fini le pincement sur une minuscule zone de texte.'],
+        ['Rien de ce que vous signez ne quitte votre iPhone', 'Pas de compte, pas d envoi, pas de serveur. Tout le parcours de signature fonctionne en mode avion, parce que vos documents restent simplement la ou ils sont deja.'],
+        ['La signature fait partie de la page', 'L export aplatit tout dans le document lui-meme : ce que vous avez envoye est exactement ce qu ils ouvrent, votre marque etant dessinee dans la page et non posee dessus.'],
+        ['Une faute de frappe ne vous coute pas le formulaire', 'Chaque modification s enregistre toute seule, l annulation remonte aussi loin qu il faut, et un document deja signe se rouvre entierement modifiable. La paperasse cesse de bloquer votre soiree.'],
+      ],
+      faqs: [
+        ['Qu est-ce qu Esynit ?', 'Esynit est une app de signature de PDF pour iPhone. Ouvrez un document a signer, placez votre signature, remplissez les dates, les noms et les details demandes, puis renvoyez le PDF fini, souvent en moins d une minute. Aucun compte a creer, et le parcours de signature se deroule entierement sur votre telephone.'],
+        ['Comment signer un PDF avec Esynit ?', 'Ouvrez le PDF dans Esynit depuis Fichiers ou depuis une piece jointe, touchez l endroit qui attend votre signature et posez-la. Ajoutez la date, votre nom, une adresse ou une coche de la meme facon, une touche a chaque fois. Quand le formulaire est complet, exportez-le et renvoyez-le par Mail, Messages ou l app que vous utilisez deja.'],
+        ['Puis-je utiliser ma vraie signature ?', 'Oui. Dessinez-la au doigt, tapez-la dans l un des styles manuscrits proposes ou photographiez celle que vous utilisez deja : Esynit retire le papier derriere et ne garde que l encre. Votre signature est conservee pour la prochaine fois et reste modifiable ou remplacable a tout moment ; elle n est jamais verrouillee.'],
+        ['Esynit est-elle privee ?', 'Oui. Vos documents, votre signature et les informations que vous enregistrez restent sur votre iPhone. Il n y a pas de compte, rien n est envoye et Pretty Toolkit ne voit aucun document. L app n enregistre que des statistiques d usage anonymes, par exemple quels ecrans sont ouverts, jamais liees a vous et ne contenant jamais le moindre element de vos documents.'],
+        ['Esynit fonctionne-t-elle hors ligne ?', 'Entierement. Tout le parcours, importer un document, le signer, le remplir et exporter le PDF fini, se deroule sur votre appareil sans aucune connexion. Vous pouvez signer en avion et partager des l atterrissage.'],
+        ['Puis-je corriger une erreur apres avoir signe ?', 'Oui. Tout ce que vous placez peut etre deplace, redimensionne, modifie ou annule, et un document deja exporte se rouvre entierement modifiable : un chiffre errone ne vous oblige jamais a refaire le formulaire. Votre travail s enregistre en continu, meme si vous fermez l app en plein remplissage.'],
+        ['Un document signe dans Esynit a-t-il une valeur juridique ?', 'Esynit place votre signature dans le document et l aplatit dans la page. L app ne delivre pas de certificat et n est pas un service de signature electronique qualifiee ou certifiee. L acceptation d un document signe depend du droit qui vous est applicable et des parties concernees : verifiez ce qu exige votre document avant de vous y fier.'],
+      ],
+    },
   },
   es: {
     sincefy: {
@@ -904,6 +925,27 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Puedo sacar mis datos o pasarlos a un telefono nuevo?', 'Las dos cosas. La copia de seguridad en iCloud es automatica y va a tu propia cuenta, asi que al iniciar sesion en un iPhone nuevo recuperas tu historial. Y cuando quieras una copia tuya, una exportacion CSV con un toque te da un archivo que puedes guardar, abrir en una hoja de calculo o volver a importar en Balanza.'],
         ['Es Balanza gratis?', 'Si. Todo lo descrito aqui funciona desde el primer momento, no hay nada que desbloquear.'],
         ['Deberia tomar decisiones de salud a partir de mi IMC?', 'No. Balanza es una herramienta general de cribado y seguimiento, no un dispositivo medico, y nada en la app es un diagnostico ni consejo medico. El IMC es una medida amplia que no tiene en cuenta la masa muscular, la complexion, la edad ni tu salud individual. Habla con un profesional cualificado antes de tomar decisiones sobre tu salud.'],
+      ],
+    },
+    esynit: {
+      tagline: 'Firmado y devuelto, esta noche.',
+      description: 'Firma un PDF en tu iPhone y devuelvelo esa misma tarde. Dibuja, escribe o fotografia tu firma, rellena fechas y datos con un toque y comparte un PDF terminado y aplanado: todo en tu telefono, sin cuenta, y nada de lo que firmas sale del dispositivo.',
+      features: [
+        ['Firmado antes de que acabe el dia', 'El documento llega a tu correo, lo abres, lo firmas y ya va de vuelta. Sin impresora, sin escaner y sin esperar a estar otra vez delante de un escritorio.'],
+        ['Tu firma, guardada y lista', 'Dibujala, escribela en un estilo manuscrito o fotografia la que ya usas: Esynit la separa limpiamente del papel. Se guarda una vez, esta lista en cada documento y puedes rehacerla cuando quieras.'],
+        ['Fechas, nombres y datos con un toque', 'Toca donde el formulario pide una fecha, un nombre, una direccion o una casilla y queda relleno, con el formato de fecha de tu idioma y tus datos guardados a un toque. Se acabo el pellizcar sobre una casilla diminuta.'],
+        ['Nada de lo que firmas sale de tu iPhone', 'No hay cuenta, ni subida, ni servidor. Todo el proceso de firma funciona en modo avion, porque tus documentos simplemente se quedan donde ya estan.'],
+        ['La firma forma parte de la pagina', 'Al exportar se aplana todo dentro del propio documento: lo que enviaste es lo que abren, con tu firma dibujada en la pagina y no pegada encima.'],
+        ['Una errata no te cuesta el formulario', 'Cada cambio se guarda solo, deshacer retrocede todo lo que haga falta y un documento ya firmado se reabre totalmente editable. El papeleo deja de ser lo que te bloquea la tarde.'],
+      ],
+      faqs: [
+        ['Que es Esynit?', 'Esynit es una app para firmar PDF en el iPhone. Abre el documento que necesita tu firma, colocala, rellena las fechas, los nombres y los datos que pida y devuelve el PDF terminado, normalmente en menos de un minuto. No hay cuenta que crear y el proceso de firma ocurre entero en tu telefono.'],
+        ['Como firmo un PDF con Esynit?', 'Abre el PDF en Esynit desde Archivos o desde un adjunto del correo, toca el punto que pide tu firma y colocala. Anade la fecha, tu nombre, una direccion o una marca de verificacion igual, un toque cada vez. Cuando el formulario este completo, exportalo y devuelvelo por Mail, Mensajes o la app que ya uses.'],
+        ['Puedo usar mi firma real?', 'Si. Dibujala con el dedo, escribela en uno de los estilos manuscritos o fotografia la que ya usas: Esynit quita el papel de detras y deja solo la tinta. Tu firma queda guardada para la proxima vez y puedes rehacerla o sustituirla cuando quieras; nunca se bloquea.'],
+        ['Es Esynit privada?', 'Si. Tus documentos, tu firma y los datos que guardas se quedan en tu iPhone. No hay cuenta, no se sube nada y Pretty Toolkit no ve ningun documento. La app solo registra estadisticas de uso anonimas, por ejemplo que pantallas se abren, que nunca se vinculan contigo ni incluyen nada de tus documentos.'],
+        ['Funciona Esynit sin conexion?', 'Del todo. Todo el proceso, importar un documento, firmarlo, rellenarlo y exportar el PDF terminado, ocurre en tu dispositivo sin ninguna conexion. Puedes firmar en un avion y compartirlo nada mas aterrizar.'],
+        ['Puedo corregir un error despues de firmar?', 'Si. Todo lo que colocas se puede mover, redimensionar, editar o deshacer, y un documento ya exportado se reabre totalmente editable: un digito mal nunca significa repetir el formulario entero. Tu trabajo se guarda de forma continua, aunque cierres la app a medias.'],
+        ['Tiene validez legal un documento firmado en Esynit?', 'Esynit coloca tu firma en el documento y la aplana en la pagina. No emite certificados ni es un servicio de firma electronica cualificada o certificada. Que un documento firmado se acepte depende de la ley que se te aplique y de las partes implicadas: comprueba que exige tu documento antes de confiar en el.'],
       ],
     },
   },
@@ -1070,6 +1112,27 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Soll ich Gesundheitsentscheidungen auf meinen BMI stuetzen?', 'Nein. Balanza ist ein allgemeines Orientierungs- und Tracking-Werkzeug, kein Medizinprodukt, und nichts in der App ist eine Diagnose oder medizinische Beratung. Der BMI ist ein grober Wert, der Muskelmasse, Koerperbau, Alter und deine individuelle Gesundheit nicht beruecksichtigt. Sprich mit einer qualifizierten Fachperson, bevor du Entscheidungen ueber deine Gesundheit triffst.'],
       ],
     },
+    esynit: {
+      tagline: 'Unterschrieben und heute noch zurueck.',
+      description: 'Unterschreibe ein PDF auf deinem iPhone und schicke es noch am selben Abend zurueck. Zeichne, tippe oder fotografiere deine Unterschrift, fuelle Datum und Angaben mit einem Tippen aus und teile ein fertiges, flach gerechnetes PDF: alles auf deinem Telefon, ohne Konto, und nichts davon verlaesst das Geraet.',
+      features: [
+        ['Unterschrieben, bevor der Tag endet', 'Das Dokument landet in deinem Postfach, du oeffnest es, unterschreibst und es ist schon wieder unterwegs. Ohne Drucker, ohne Scanner und ohne zu warten, bis du wieder an einem Schreibtisch sitzt.'],
+        ['Deine Unterschrift, gespeichert und bereit', 'Zeichne sie, tippe sie in einer Handschrift oder fotografiere die, die du ohnehin nutzt: Esynit loest sie sauber vom Papier. Einmal gespeichert, auf jedem Dokument bereit, und jederzeit neu zu machen.'],
+        ['Datum, Namen und Angaben mit einem Tippen', 'Tippe dorthin, wo das Formular ein Datum, einen Namen, eine Adresse oder ein Haekchen will, und es steht da, im Datumsformat deiner Sprache und mit deinen gespeicherten Angaben in Reichweite. Kein Zoomen mehr auf ein winziges Feld.'],
+        ['Nichts, was du unterschreibst, verlaesst dein iPhone', 'Kein Konto, kein Upload, kein Server. Der ganze Weg bis zur Unterschrift funktioniert im Flugmodus, weil deine Dokumente einfach dort bleiben, wo sie schon sind.'],
+        ['Die Unterschrift gehoert zur Seite', 'Beim Export wird alles fest in das Dokument gerechnet: Was du geschickt hast, ist genau das, was geoeffnet wird, deine Unterschrift in die Seite gezeichnet und nicht darauf gelegt.'],
+        ['Ein Tippfehler kostet dich nicht das Formular', 'Jede Aenderung speichert sich von selbst, das Widerrufen reicht so weit zurueck wie noetig, und ein bereits unterschriebenes Dokument oeffnet sich wieder voll bearbeitbar. Papierkram blockiert deinen Abend nicht mehr.'],
+      ],
+      faqs: [
+        ['Was ist Esynit?', 'Esynit ist eine App zum Unterschreiben von PDFs auf dem iPhone. Oeffne das Dokument, das deine Unterschrift braucht, setze sie, fuelle Datum, Namen und Angaben aus und schicke das fertige PDF zurueck, meist in unter einer Minute. Es gibt kein Konto, und der ganze Weg bis zur Unterschrift laeuft auf deinem Telefon.'],
+        ['Wie unterschreibe ich ein PDF mit Esynit?', 'Oeffne das PDF in Esynit aus der Dateien-App oder aus einem Mail-Anhang, tippe auf die Stelle, die deine Unterschrift braucht, und setze sie. Datum, Name, Adresse oder Haekchen kommen genauso dazu, ein Tippen pro Angabe. Ist das Formular fertig, exportierst du es und schickst es ueber Mail, Nachrichten oder die App zurueck, die du ohnehin nutzt.'],
+        ['Kann ich meine echte Unterschrift verwenden?', 'Ja. Zeichne sie mit dem Finger, tippe sie in einer der Handschriften oder fotografiere die, die du ohnehin nutzt: Esynit entfernt das Papier dahinter und behaelt nur die Tinte. Deine Unterschrift bleibt fuer das naechste Mal gespeichert und laesst sich jederzeit neu zeichnen oder ersetzen, sie wird nie gesperrt.'],
+        ['Ist Esynit privat?', 'Ja. Deine Dokumente, deine Unterschrift und die gespeicherten Angaben bleiben auf deinem iPhone. Es gibt kein Konto, nichts wird hochgeladen, und Pretty Toolkit sieht kein einziges Dokument. Die App erfasst nur anonyme Nutzungsstatistiken, etwa welche Bildschirme geoeffnet werden, die nie mit dir verknuepft sind und nie etwas aus deinen Dokumenten enthalten.'],
+        ['Funktioniert Esynit offline?', 'Vollstaendig. Der ganze Ablauf, ein Dokument importieren, unterschreiben, ausfuellen und das fertige PDF exportieren, laeuft auf deinem Geraet ganz ohne Internet. Du kannst im Flugzeug unterschreiben und nach der Landung teilen.'],
+        ['Kann ich einen Fehler nach dem Unterschreiben korrigieren?', 'Ja. Alles, was du setzt, laesst sich verschieben, skalieren, aendern oder widerrufen, und ein bereits exportiertes Dokument oeffnet sich wieder voll bearbeitbar: Eine falsche Ziffer bedeutet nie, das ganze Formular neu auszufuellen. Deine Arbeit speichert sich laufend, auch wenn du die App mittendrin schliesst.'],
+        ['Ist ein in Esynit unterschriebenes Dokument rechtsverbindlich?', 'Esynit setzt deine Unterschrift in das Dokument und rechnet sie fest in die Seite. Die App stellt keine Zertifikate aus und ist kein qualifizierter oder zertifizierter Signaturdienst. Ob ein unterschriebenes Dokument akzeptiert wird, haengt vom geltenden Recht und den beteiligten Parteien ab: Pruefe, was dein Dokument verlangt, bevor du dich darauf verlaesst.'],
+      ],
+    },
   },
 };
 
@@ -1209,7 +1272,32 @@ function localizePrivacySections(app: App, locale: Locale): PrivacySection[] | u
   // Per-app corrections where a shared template would be untrue for that app.
   // Balanza collects nothing at all, so the generic "limited anonymous data /
   // Mixpanel" wording must never appear on its localized privacy pages.
+  // Esynit needs the documents-never-leave-the-phone promise stated plainly, and
+  // its disclaimer is about legal status, not health.
   const appTemplateOverrides: Record<string, Record<Exclude<Locale, 'en'>, Record<string, string>>> = {
+    esynit: {
+      fr: {
+        data: `<p>Les documents que vous importez, votre signature, vos paraphes, tout ce que vous placez sur une page et les informations que vous choisissez d enregistrer sont stockes localement sur votre appareil. ${app.name} ne les envoie pas a nos serveurs, nous n y avons pas acces et il n existe aucun compte. L import, la signature, le remplissage et l export se font sur votre appareil, sans aucune connexion.</p>`,
+        collection: `<p>${app.name} ne collecte pas d informations directement identifiantes comme votre nom, email, numero de telephone ou identifiant Apple. Il n y a ni compte ni connexion. Les seules donnees qui nous parviennent sont des statistiques d usage anonymes, qui n incluent jamais vos documents ni ce que vous y saisissez.</p>`,
+        disclaimer: `<p>${app.name} place votre signature dans le document et l aplatit dans la page. L app ne delivre aucun certificat, ne verifie aucune identite et ne se prononce pas sur la valeur juridique d un document signe avec elle. Ce n est pas un service de signature electronique qualifiee ou certifiee. L acceptation d un document depend du droit applicable et des parties concernees.</p>`,
+        payments: `<p>Les abonnements sont geres par l App Store d Apple, qui traite tous les paiements et renouvellements. Pretty Toolkit ne recoit pas vos informations de paiement ni votre identifiant Apple.</p>`,
+        default: `<p>${app.name} utilise Mixpanel pour comprendre l usage de l app de maniere agregee, par exemple quels ecrans sont ouverts et quelles fonctions sont utilisees. Ces donnees sont enregistrees sous un identifiant anonyme aleatoire : comme l app n a aucun compte, elles ne peuvent jamais etre reliees a votre nom ou a votre identite. Elles n incluent jamais vos documents, leur nom, leur contenu, votre signature ni les informations que vous enregistrez. Aucun SDK publicitaire, aucun courtier de donnees, aucun suivi entre apps.</p>`,
+      },
+      es: {
+        data: `<p>Los documentos que importas, tu firma, tus iniciales, todo lo que colocas en una pagina y los datos que decides guardar se almacenan localmente en tu dispositivo. ${app.name} no los sube a nuestros servidores, no tenemos acceso a ellos y no existe ninguna cuenta. Importar, firmar, rellenar y exportar ocurre en tu dispositivo, sin ninguna conexion.</p>`,
+        collection: `<p>${app.name} no recopila informacion directamente identificable como nombre, email, telefono o Apple ID. No hay cuenta ni inicio de sesion. Los unicos datos que nos llegan son estadisticas de uso anonimas, que nunca incluyen tus documentos ni lo que escribes en ellos.</p>`,
+        disclaimer: `<p>${app.name} coloca tu firma en el documento y la aplana en la pagina. La app no emite certificados, no verifica identidades y no afirma nada sobre la validez legal de un documento firmado con ella. No es un servicio de firma electronica cualificada o certificada. Que un documento se acepte depende de la ley aplicable y de las partes implicadas.</p>`,
+        payments: `<p>Las suscripciones las gestiona la App Store de Apple, que se encarga de todos los pagos y renovaciones. Pretty Toolkit no recibe tu informacion de pago ni tu Apple ID.</p>`,
+        default: `<p>${app.name} usa Mixpanel para entender como se usa la app de forma agregada, por ejemplo que pantallas se abren y que funciones se utilizan. Esos datos se registran bajo un identificador anonimo aleatorio: como la app no tiene cuentas, nunca pueden vincularse con tu nombre ni con tu identidad. Nunca incluyen tus documentos, su nombre, su contenido, tu firma ni los datos que guardas. Sin SDK publicitarios, sin intermediarios de datos y sin seguimiento entre apps.</p>`,
+      },
+      de: {
+        data: `<p>Die Dokumente, die du importierst, deine Unterschrift, deine Initialen, alles, was du auf einer Seite platzierst, und die Angaben, die du speicherst, liegen lokal auf deinem Geraet. ${app.name} laedt nichts davon auf unsere Server, wir haben keinen Zugriff darauf und es gibt kein Konto. Importieren, Unterschreiben, Ausfuellen und Exportieren geschieht auf deinem Geraet, ganz ohne Verbindung.</p>`,
+        collection: `<p>${app.name} erhebt keine direkt identifizierenden Informationen wie Name, E-Mail, Telefonnummer oder Apple-ID. Es gibt kein Konto und keine Anmeldung. Die einzigen Daten, die uns erreichen, sind anonyme Nutzungsstatistiken, die nie deine Dokumente oder das darin Geschriebene enthalten.</p>`,
+        disclaimer: `<p>${app.name} setzt deine Unterschrift in das Dokument und rechnet sie fest in die Seite. Die App stellt keine Zertifikate aus, prueft keine Identitaeten und trifft keine Aussage ueber die Rechtswirkung eines damit unterschriebenen Dokuments. Sie ist kein qualifizierter oder zertifizierter Signaturdienst. Ob ein Dokument akzeptiert wird, haengt vom geltenden Recht und den beteiligten Parteien ab.</p>`,
+        payments: `<p>Abonnements werden ueber den App Store von Apple abgewickelt, der alle Zahlungen und Verlaengerungen uebernimmt. Pretty Toolkit erhaelt weder deine Zahlungsinformationen noch deine Apple-ID.</p>`,
+        default: `<p>${app.name} nutzt Mixpanel, um die Nutzung der App in aggregierter Form zu verstehen, etwa welche Bildschirme geoeffnet und welche Funktionen genutzt werden. Diese Daten werden unter einer zufaelligen anonymen Kennung erfasst: Da die App keine Konten hat, koennen sie nie mit deinem Namen oder deiner Identitaet verknuepft werden. Sie enthalten nie deine Dokumente, deren Namen oder Inhalte, deine Unterschrift oder die von dir gespeicherten Angaben. Kein Werbe-SDK, keine Datenhaendler, kein Tracking ueber Apps hinweg.</p>`,
+      },
+    },
     balanza: {
       fr: {
         collection: `<p>${app.name} ne collecte rien. Aucun compte, aucune adresse email, aucun identifiant d appareil et aucune statistique d usage. Le manifeste de confidentialite de l app declare zero type de donnee collecte.</p>`,
@@ -1235,15 +1323,31 @@ function localizePrivacySections(app: App, locale: Locale): PrivacySection[] | u
     },
   };
 
+  // Headings that must differ per app for the same key. Esynit's disclaimer is
+  // about legal status, not health, and its one `default`-keyed section is the
+  // anonymous-analytics disclosure, and the shared labels would mislabel both.
+  const appHeadingOverrides: Record<string, Record<Exclude<Locale, 'en'>, Record<string, string>>> = {
+    esynit: {
+      fr: { disclaimer: 'Avertissement sur la signature', default: 'Statistiques d usage anonymes' },
+      es: { disclaimer: 'Aviso sobre la firma', default: 'Estadisticas de uso anonimas' },
+      de: { disclaimer: 'Hinweis zur Unterschrift', default: 'Anonyme Nutzungsstatistiken' },
+    },
+  };
+
   const localeTemplates = {
     ...templates[locale],
     ...(appTemplateOverrides[app.slug]?.[locale] ?? {}),
   };
 
+  const localeHeadings = {
+    ...headingLabels[locale],
+    ...(appHeadingOverrides[app.slug]?.[locale] ?? {}),
+  };
+
   return app.privacy.sections.map((section) => {
     const key = keyFor(section.heading);
     return {
-      heading: headingLabels[locale][key] ?? section.heading,
+      heading: localeHeadings[key] ?? section.heading,
       content: localeTemplates[key] ?? localeTemplates.default,
     };
   });

@@ -1369,4 +1369,161 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "esynit",
+    name: "Esynit",
+    tagline: "Signed and sent back, tonight.",
+    description:
+      "Sign a PDF on your iPhone and send it back the same evening. Draw, type, or photograph your signature, fill in the dates and details with a tap, and share a finished, flattened PDF — all on your phone, with no account, and nothing you sign ever leaves the device.",
+    category: "productivity",
+    icon: "/icons/esynit.png",
+    appStoreUrl: "",
+    accentColor: "#A67B32",
+    features: [
+      {
+        icon: "history",
+        title: "Signed before the day ends",
+        description:
+          "The document lands in your inbox, you open it, sign it, and it is already on its way back. No printer, no scanner, no waiting until you are next near a desk.",
+      },
+      {
+        icon: "palette",
+        title: "Your signature, saved and ready",
+        description:
+          "Draw it, type it in a handwriting style, or photograph the signature you already use — Esynit lifts it cleanly off the paper. Saved once, ready on every document, and yours to redo whenever you like.",
+      },
+      {
+        icon: "qr-create",
+        title: "Dates, names and details in a tap",
+        description:
+          "Tap where the form wants a date, a name, an address, or a check, and it is filled — in your own language's date format, with your saved details one tap away. No pinching at a tiny text box.",
+      },
+      {
+        icon: "barcode",
+        title: "Nothing you sign leaves your iPhone",
+        description:
+          "There is no account, no upload, and no server. The whole signing flow works in airplane mode, because your documents simply stay where they already are.",
+      },
+      {
+        icon: "share",
+        title: "The signature is part of the page",
+        description:
+          "Exporting flattens everything into the document itself, so what you sent is what they open — your mark is drawn into the page, not a sticker resting on top of it.",
+      },
+      {
+        icon: "history",
+        title: "A typo never costs you the form",
+        description:
+          "Every change saves itself as you make it, undo goes back as far as you need, and a document you already signed reopens fully editable. Paperwork stops being the thing that blocks your evening.",
+      },
+    ],
+    // TODO: replace with stage-5 marketing screens at /ship esynit
+    screenshots: [],
+    status: "coming-soon",
+    order: 9,
+    faqs: [
+      {
+        question: "What is Esynit?",
+        answer:
+          "Esynit is a PDF signing app for iPhone. Open a document that needs your signature, draw or place your signature on it, fill in the dates, names and details it asks for, and share the finished PDF straight back — usually in under a minute. There is no account to create, and the signing flow works entirely on your phone.",
+      },
+      {
+        question: "How do I sign a PDF with Esynit?",
+        answer:
+          "Open the PDF in Esynit from Files or from an email attachment, tap the spot that needs your signature, and place it. Add the date, your name, an address, or a check mark the same way — one tap each. When the form is complete, export it and share it back through Mail, Messages, or any app you already use.",
+      },
+      {
+        question: "Can I use my own real signature?",
+        answer:
+          "Yes. You can draw it with your finger, type it in one of several handwriting styles, or photograph the signature you already sign with — Esynit removes the paper behind it and keeps just the ink. Your signature is saved for next time and can be redrawn or replaced whenever you want; it is never locked.",
+      },
+      {
+        question: "Is Esynit private?",
+        answer:
+          "Yes. Your documents, your signature, and the details you save stay on your iPhone. There is no account, nothing is uploaded, and Pretty Toolkit never sees a single document. The app records only anonymous usage statistics — which screens are opened, for example — that are never linked to you and never include anything from your documents.",
+      },
+      {
+        question: "Does Esynit work offline?",
+        answer:
+          "Completely. The whole flow — importing a document, signing it, filling it in, and exporting the finished PDF — runs on your device with no internet connection at all. You can sign on a plane and share the moment you land.",
+      },
+      {
+        question: "Can I fix a mistake after I have signed?",
+        answer:
+          "Yes. Everything you place can be moved, resized, edited, or undone, and a document you have already exported reopens fully editable — so one wrong digit never means filling the whole form again. Your work saves itself continuously, even if you close the app mid-form.",
+      },
+      {
+        question: "Is a document signed in Esynit legally binding?",
+        answer:
+          "Esynit places your signature into the document and flattens it into the page — it does not issue certificates, and it is not a qualified or certified electronic signature service. Whether any signed document is accepted depends on the law where you are and on the parties involved, so check what your document requires before you rely on it.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "August 2026",
+      intro:
+        'This privacy policy explains how Esynit ("Esynit", "the app") handles your information. Esynit is published by Pretty Toolkit. The short version: your documents never leave your iPhone, there is no account, and the only thing we ever see is anonymous usage statistics that cannot be linked to you.',
+      sections: [
+        {
+          heading: "Documents and Signature Data",
+          content:
+            "<p>The documents you import, the signature and initials you create, everything you place on a page, and the details you choose to save — such as your name, address, email address, or phone number — are stored locally on your device. Esynit does not upload any of it to Pretty Toolkit servers, we do not have access to it, and there is no account or sign-in.</p><p>Importing, signing, filling, and exporting are all processed on your device. The signing flow makes no network requests at all, and the app works with no internet connection.</p><p>If you photograph a signature or a paper page, the camera and photo access you grant is used only to bring that image into the app on your device. The image is processed locally and is never sent anywhere.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            "<p>Esynit does not collect directly identifying information such as your name, email address, phone number, or Apple ID. There is no account, no sign-in, and no contact form inside the app. The only data that ever reaches us is the anonymous usage statistics described in the next section, which never include your documents or anything you type into them.</p>",
+        },
+        {
+          heading: "Anonymous Usage Analytics",
+          content:
+            "<p>Esynit uses Mixpanel to understand how the app is used in aggregate — for example which screens are opened, which features are used, and when a purchase happens. This data is recorded under a random anonymous identifier: Esynit has no accounts, so it can never be tied to your name, email address, or identity. It never includes your documents, their file names or contents, your signature, or the details you save — none of that is ever part of analytics. There is no advertising SDK and no data broker involved, and analytics data is not used to track you across other apps or websites.</p>",
+        },
+        {
+          heading: "Subscriptions and Payments",
+          content:
+            "<p>Esynit is a subscription app. All purchases and renewals are handled by the Apple App Store, and payment processing belongs entirely to Apple. We do not have access to your credit card details, payment information, or Apple ID. You can view, change, or cancel your subscription at any time in your Apple account settings.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Esynit uses Apple frameworks: PDFKit (rendering and writing documents), the local file system (on-device storage), UserDefaults (preferences), and StoreKit (purchases), governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. The only non-Apple service is <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel</a>, used solely for the anonymous usage analytics described above. Esynit integrates no ad networks, data brokers, or cross-app tracking tools, and no third-party service is involved in opening, signing, or exporting a document.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with anyone — your documents and personal details never reach us in the first place. Anonymous usage statistics are processed by Mixpanel on our behalf and are not sold or shared for advertising. When you export or share a signed document, it goes only to the destination you pick yourself in the iOS share sheet.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Esynit does not track you across apps and websites owned by other companies. The app's privacy manifest declares that tracking is not used.</p>",
+        },
+        {
+          heading: "Signature Disclaimer",
+          content:
+            "<p>Esynit is a tool for placing your signature into a document and sharing it back. It is not a certified or qualified electronic signature service: it issues no certificates, performs no identity verification, and makes no claim about the legal status of any document you sign with it. Whether a signed document is accepted depends on the law that applies to you and on the parties involved. Check what your document requires before relying on it.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Esynit is not directed at children under 13. We do not knowingly collect personal information from children — or from anyone else, since the app has no account and collects nothing beyond anonymous usage statistics.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Esynit stores your documents and details on your own device, you stay in control: deleting a document removes it, and deleting the app removes everything it held. Anonymous usage statistics cannot be traced back to you, which also means we cannot look up or delete a specific person's analytics on request — there is no identifier connecting them to you. If you have any privacy question or request, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> and we will respond within 30 days. EU residents have rights under GDPR and California residents under the CCPA; contact us at the same address to exercise them.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];
