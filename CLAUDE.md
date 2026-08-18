@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Pretty Toolkit (prettytoolkit.com) is a static brand website for a portfolio of premium aesthetic iOS utility apps. It is NOT an app — it's a showcase/storefront that drives App Store installs. Think Glossier.com for utility apps.
 
-**Currently, six apps are live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), Sopora (sleep journal), logfd (food & intake diary), BPIVY (blood-pressure log), and Raheva (period tracker). Postivo (intermittent-fasting timer) is a public coming-soon app.** The homepage spotlights Sincefy, shows all seven public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these seven remain confidential — names, categories, and details must NOT appear on the site until they ship.
+**Currently, seven apps are live on the App Store: Luxira (QR & Barcode Scanner), Sincefy (countdown widget), Sopora (sleep journal), logfd (food & intake diary), BPIVY (blood-pressure log), Raheva (period tracker), and Postivo (intermittent-fasting timer, live since 2026-08-18).** The homepage spotlights Sincefy, shows all seven public apps as `AppCard`s, plus 1 `PlaceholderCard` hinting at "more coming soon." Future apps beyond these seven remain confidential — names, categories, and details must NOT appear on the site until they ship.
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Pushing to `main` auto-deploys to GitHub Pages. There are no other CI checks —
 
 All app data lives in `src/data/apps.ts` (types `App`, `Feature`, `Faq`, `PrivacySection`, `Category`). Adding a new app = adding an entry to this file + dropping assets into `public/icons/` and `public/screenshots/<slug>/`. App landing pages and per-app privacy policies are generated dynamically via `src/pages/[slug]/index.astro` and `src/pages/[slug]/privacy.astro` using `getStaticPaths()`.
 
-Currently Sincefy, Luxira, Sopora, logfd, BPIVY, and Raheva are in the `apps` array with `status: "live"` and App Store URLs. Postivo is in the array with `status: "coming-soon"` and no App Store URL yet. When the next app ships, add it (including a `privacy` field) and it automatically gets a landing page, per-app privacy policy, footer icon, and cross-promo presence — the homepage spotlight and grid are hardcoded in `index.astro`, so decide whether the new app becomes the spotlight or joins the grid. Never include subscription pricing, trial length, or freemium limits on the website.
+Currently Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva, and Postivo are in the `apps` array with `status: "live"` and App Store URLs. When the next app ships, add it (including a `privacy` field) and it automatically gets a landing page, per-app privacy policy, footer icon, and cross-promo presence — the homepage spotlight and grid are hardcoded in `index.astro`, so decide whether the new app becomes the spotlight or joins the grid. Never include subscription pricing, trial length, or freemium limits on the website.
 
 ### Routing
 
@@ -54,7 +54,7 @@ Currently Sincefy, Luxira, Sopora, logfd, BPIVY, and Raheva are in the `apps` ar
 /bpivy/privacy     → BPIVY-specific privacy policy (auto-generated via [slug]/privacy.astro)
 /raheva            → Raheva coming-soon landing page (auto-generated from apps.ts via [slug]/index.astro)
 /raheva/privacy    → Raheva-specific privacy policy (auto-generated via [slug]/privacy.astro)
-/postivo           → Postivo coming-soon landing page (auto-generated from apps.ts via [slug]/index.astro)
+/postivo           → Postivo landing page (auto-generated from apps.ts via [slug]/index.astro)
 /postivo/privacy   → Postivo-specific privacy policy (auto-generated via [slug]/privacy.astro)
 /about             → Brand story page (icon mosaic + principles + portfolio)
 /privacy           → General company privacy policy (links to per-app policies)

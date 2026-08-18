@@ -1039,7 +1039,7 @@ export const apps: App[] = [
       "A calm intermittent-fasting timer. Start your fast with one tap, see which stage your body is in, and end it without guilt — no account, works fully offline.",
     category: "wellness",
     icon: "/icons/postivo.png",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/fasting-tracker-postivo/id6793500931",
     accentColor: "#C7791B",
     features: [
       {
@@ -1085,7 +1085,7 @@ export const apps: App[] = [
       "/screenshots/postivo/03-fasting-stages.png",
       "/screenshots/postivo/05-weight-loss-tracker.png",
     ],
-    status: "coming-soon",
+    status: "live",
     order: 7,
     faqs: [
       {
