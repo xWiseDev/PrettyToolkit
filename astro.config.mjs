@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        !page.endsWith('/terms/') && !page.includes('/balanza/') && !page.includes('/esynit/'),
+        !page.endsWith('/terms/') && !page.includes('/esynit/'),
       lastmod: new Date('2026-06-15'),
       changefreq: 'weekly',
       serialize(item) {

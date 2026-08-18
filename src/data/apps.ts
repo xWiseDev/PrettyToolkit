@@ -1260,8 +1260,13 @@ export const apps: App[] = [
           "Balanza collects nothing. No account, no analytics, no tracking — your weight, your goal, and your history stay on your devices and in your own iCloud.",
       },
     ],
-    // TODO: replace with stage-5 marketing screens at /ship balanza
-    screenshots: [],
+    screenshots: [
+      "/screenshots/balanza/01-bmi-calculator.png",
+      "/screenshots/balanza/02-body-mass-index.png",
+      "/screenshots/balanza/03-weight-tracker.png",
+      "/screenshots/balanza/04-weight-loss-goal.png",
+      "/screenshots/balanza/05-weight-loss-journal.png",
+    ],
     status: "coming-soon",
     order: 8,
     faqs: [
