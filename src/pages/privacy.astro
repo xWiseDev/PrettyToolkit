@@ -17,8 +17,7 @@ interface Props {
 const { locale = defaultLocale } = Astro.props;
 const copy = ui[locale];
 const localizedApps = getLocalizedApps(locale);
-// TEMP until Esynit ships: hidden from listings
-const appsWithPrivacy = localizedApps.filter((app) => app.privacy && app.slug !== 'esynit');
+const appsWithPrivacy = localizedApps.filter((app) => app.privacy);
 const sections = getGeneralPrivacySections(locale);
 const canonicalPath = localizedPrivacyPath(locale);
 const alternatePaths = localizedAlternates('/privacy');

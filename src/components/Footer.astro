@@ -16,9 +16,7 @@ interface Props {
 
 const { locale = defaultLocale } = Astro.props;
 const currentYear = new Date().getFullYear();
-// TEMP until Esynit ships: keep it out of listings; direct URLs stay live
-const hiddenSlugs = ['esynit'];
-const sortedApps = [...apps].filter((a) => !hiddenSlugs.includes(a.slug)).sort((a, b) => a.order - b.order);
+const sortedApps = [...apps].sort((a, b) => a.order - b.order);
 const copy = ui[locale];
 ---
 

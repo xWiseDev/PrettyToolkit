@@ -1382,7 +1382,7 @@ export const apps: App[] = [
       "Sign a PDF on your iPhone and send it back the same evening. Draw, type, or photograph your signature, fill in the dates and details with a tap, and share a finished, flattened PDF — all on your phone, with no account, and nothing you sign ever leaves the device.",
     category: "productivity",
     icon: "/icons/esynit.png",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/esign-pdf-fill-sign-esynit/id6798789130",
     accentColor: "#A67B32",
     features: [
       {
@@ -1422,9 +1422,14 @@ export const apps: App[] = [
           "Every change saves itself as you make it, undo goes back as far as you need, and a document you already signed reopens fully editable. Paperwork stops being the thing that blocks your evening.",
       },
     ],
-    // TODO: replace with stage-5 marketing screens at /ship esynit
-    screenshots: [],
-    status: "coming-soon",
+    screenshots: [
+      "/screenshots/esynit/01-pdf-fill-sign.png",
+      "/screenshots/esynit/02-signature-creator.png",
+      "/screenshots/esynit/03-doc-signer.png",
+      "/screenshots/esynit/04-esign.png",
+      "/screenshots/esynit/05-pdf-signer.png",
+    ],
+    status: "live",
     order: 9,
     faqs: [
       {
