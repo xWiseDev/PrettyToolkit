@@ -27,6 +27,7 @@ const logfd = apps.find((a) => a.slug === 'logfd')!;
 const bpivy = apps.find((a) => a.slug === 'bpivy')!;
 const raheva = apps.find((a) => a.slug === 'raheva')!;
 const postivo = apps.find((a) => a.slug === 'postivo')!;
+const esynit = apps.find((a) => a.slug === 'esynit')!;
 const canonicalPath = localizedPath(locale, '/');
 const alternatePaths = localizedAlternates('/');
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytoolkit.com';
@@ -171,6 +172,7 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://prettytool
         <AppCard app={bpivy} locale={locale} />
         <AppCard app={raheva} locale={locale} />
         <AppCard app={postivo} locale={locale} />
+        <AppCard app={esynit} locale={locale} />
         <PlaceholderCard index={1} locale={locale} />
       </div>
     </div>
