@@ -1536,4 +1536,165 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "skanvo",
+    name: "Skanvo",
+    tagline: "Paper in, PDF out.",
+    description:
+      "A document scanner built for speed and calm. Point your iPhone at any page and get a clean, straight PDF in seconds - ready to share, sign, or search, with every document staying on your device.",
+    category: "scanning",
+    icon: "/icons/skanvo.png",
+    appStoreUrl: "",
+    accentColor: "#C9932F",
+    features: [
+      {
+        icon: "scan",
+        title: "A clean page in seconds",
+        description:
+          "Point the camera at paper and Skanvo finds the edges, straightens the page, and evens out the lighting. What comes out looks cleaner than the sheet you scanned - and it is a real PDF, ready to send.",
+      },
+      {
+        icon: "share",
+        title: "Sent before the printer warms up",
+        description:
+          "Share a document straight from the scan, as PDF, JPG, or plain text. No export maze, no watermark, no app name stamped on your file - your document leaves exactly as you made it.",
+      },
+      {
+        icon: "history",
+        title: "Reads text, even handwriting",
+        description:
+          "One tap recognizes the text on every page, entirely on your device. Your PDF becomes searchable, and the words are yours to copy or save - from printed forms to handwritten notes.",
+      },
+      {
+        icon: "qr-create",
+        title: "Sign it without printing it",
+        description:
+          "Draw or photograph your signature once and place it on any page. The form that used to need a printer, a pen, and a scanner is done on your phone, in the time it takes to read it.",
+      },
+      {
+        icon: "palette",
+        title: "Photos and files become PDFs too",
+        description:
+          "Turn the photos of pages already in your library into proper documents, or merge new scans into one file. Pages reorder, rotate, and crop with a touch.",
+      },
+      {
+        icon: "barcode",
+        title: "Never leaves your iPhone",
+        description:
+          "Scanning, cleanup, text recognition, signing - all of it happens on your device. No account, no upload, no cloud of ours. Airplane mode scans exactly like Wi-Fi does.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 10,
+    faqs: [
+      {
+        question: "What is Skanvo?",
+        answer:
+          "Skanvo is a document scanner for iPhone. Point the camera at any page and it finds the edges, straightens the perspective, and gives you a clean PDF in seconds - ready to share, sign, or search. It also turns photos and images already on your phone into PDFs.",
+      },
+      {
+        question: "Are my documents private?",
+        answer:
+          "Yes. Every document stays on your iPhone: scanning, cleanup, text recognition, and signing all happen on your device, and there is no account and no upload. The app works fully offline - the only data that ever leaves the app is anonymous usage statistics that contain nothing from your documents.",
+      },
+      {
+        question: "Can Skanvo make my PDFs searchable?",
+        answer:
+          "Yes. One tap recognizes the text on every page - printed fonts and handwriting alike - entirely on your device. The PDF you share carries a real text layer that any PDF reader can search, and you can copy the words out or save them as a text file.",
+      },
+      {
+        question: "Can I sign a document in Skanvo?",
+        answer:
+          "Yes. Draw your signature with your finger or photograph the one on paper, then place it on any page. The signed PDF shares like any other - no printer involved. Skanvo places your handwritten mark; it is not a certified electronic-signature service.",
+      },
+      {
+        question: "Does Skanvo watermark or lock my files?",
+        answer:
+          "Never. Your exported documents carry no watermark, no app branding, and no lock - what you scanned is what you share, as PDF, JPG, or plain text.",
+      },
+      {
+        question: "Does Skanvo work offline?",
+        answer:
+          "Completely. Scanning, editing, text recognition, signing, and exporting all run on your device with no connection at all - airplane mode changes nothing.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "August 2026",
+      intro:
+        'This privacy policy explains how Skanvo ("Skanvo", "the app") handles your information. Skanvo is published by Pretty Toolkit. The short version: your documents never leave your iPhone, there is no account, and the only thing we ever see is anonymous usage statistics that cannot be linked to you.',
+      sections: [
+        {
+          heading: "Documents and Scans",
+          content:
+            "<p>The pages you scan, the photos and files you convert, the text Skanvo recognizes, and any signature you draw or photograph are stored locally on your device. Skanvo does not upload any of it to Pretty Toolkit servers, we do not have access to it, and there is no account or sign-in.</p><p>Capturing, cleanup, text recognition, signing, and exporting are all processed on your device. The path from camera to exported document makes no network requests at all - a rule our automated tests enforce on every release - and the app works with no internet connection.</p>",
+        },
+        {
+          heading: "Camera and Photos",
+          content:
+            "<p>Skanvo uses the camera only to scan pages, on your device. Photos you pick to convert are brought into the app locally, and the app's photo-library permission for saving is add-only: Skanvo can save an image you export into your library, and cannot browse the library itself. No image is ever sent anywhere.</p>",
+        },
+        {
+          heading: "Text Recognition (OCR)",
+          content:
+            "<p>Text recognition runs only when you ask for it, using Apple's on-device Vision framework. The recognized words are stored with the document on your device and become the PDF's searchable text layer. Nothing about a recognition run - not the page, not the words, not the language - is uploaded to anyone.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            "<p>Skanvo does not collect directly identifying information such as your name, email address, phone number, or Apple ID. There is no account, no sign-in, and no contact form inside the app. The only data that ever reaches us is the anonymous usage statistics described in the next section, which never include your documents or anything in them.</p>",
+        },
+        {
+          heading: "Anonymous Usage Analytics",
+          content:
+            "<p>Skanvo uses Mixpanel to understand how the app is used in aggregate - for example which screens are opened, which features are used, and when a purchase happens. This data is recorded under a random anonymous identifier: Skanvo has no accounts, so it can never be tied to your name, email address, or identity. It never includes your documents, their names or contents, recognized text, or your signature - none of that is ever part of analytics. There is no advertising SDK and no data broker involved, and analytics data is not used to track you across other apps or websites.</p>",
+        },
+        {
+          heading: "Subscriptions and Payments",
+          content:
+            "<p>Skanvo is a subscription app. All purchases and renewals are handled by the Apple App Store, and payment processing belongs entirely to Apple. We do not have access to your credit card details, payment information, or Apple ID. You can view, change, or cancel your subscription at any time in your Apple account settings.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Skanvo uses Apple frameworks: VisionKit and Vision (scanning and on-device text recognition), Core Graphics and PDFKit (building and rendering PDFs), the local file system (on-device storage), UserDefaults (preferences), and StoreKit (purchases), governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. The only non-Apple service is <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel</a>, used solely for the anonymous usage analytics described above. Skanvo integrates no ad networks, data brokers, or cross-app tracking tools, and no third-party service is involved in scanning, recognizing, signing, or exporting a document.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with anyone - your documents never reach us in the first place. Anonymous usage statistics are processed by Mixpanel on our behalf and are not sold or shared for advertising. When you export or share a document, it goes only to the destination you pick yourself in the iOS share sheet.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Skanvo does not track you across apps and websites owned by other companies. The app's privacy manifest declares that tracking is not used.</p>",
+        },
+        {
+          heading: "Signature Disclaimer",
+          content:
+            "<p>Skanvo is a tool for placing your handwritten signature into a document and sharing it back. It is not a certified or qualified electronic signature service: it issues no certificates, performs no identity verification, and makes no claim about the legal status of any document you sign with it. Whether a signed document is accepted depends on the law that applies to you and on the parties involved. Check what your document requires before relying on it.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Skanvo is not directed at children under 13. We do not knowingly collect personal information from children - or from anyone else, since the app has no account and collects nothing beyond anonymous usage statistics.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Skanvo stores your documents on your own device, you stay in control: deleting a document removes it, and deleting the app removes everything it held. Anonymous usage statistics cannot be traced back to you, which also means we cannot look up or delete a specific person's analytics on request - there is no identifier connecting them to you. If you have any privacy question or request, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> and we will respond within 30 days. EU residents have rights under GDPR and California residents under the CCPA; contact us at the same address to exercise them.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];
