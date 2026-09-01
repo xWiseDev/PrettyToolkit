@@ -1220,7 +1220,7 @@ export const apps: App[] = [
       "A BMI calculator and weight tracker built for calm clarity. Your number in ten seconds, your trend in one line, and exactly how far there is to go — free, no account, and nothing you log ever leaves your iPhone.",
     category: "wellness",
     icon: "/icons/balanza.png",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/bmi-calculator-balanza/id6794432114",
     accentColor: "#2E9E5B",
     features: [
       {
@@ -1267,7 +1267,7 @@ export const apps: App[] = [
       "/screenshots/balanza/04-weight-loss-goal.png",
       "/screenshots/balanza/05-weight-loss-journal.png",
     ],
-    status: "coming-soon",
+    status: "live",
     order: 8,
     faqs: [
       {
