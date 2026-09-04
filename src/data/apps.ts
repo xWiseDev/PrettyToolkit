@@ -206,9 +206,9 @@ export const apps: App[] = [
   {
     slug: "sopora",
     name: "Sopora",
-    tagline: "Sleep, simply logged.",
+    tagline: "Log the night. Learn what helps.",
     description:
-      "A calm sleep journal for the nights you want to understand. Log when you slept, how you felt, and what shaped the night — no microphone, no account, no guessing.",
+      "The sleep diary you keep yourself, in about ten seconds a morning. Write down when you slept, how rested you felt, every time you woke, and what was in play the day before, then let your own nights show you which ones are working. No microphone, no watch, no account.",
     category: "wellness",
     icon: "/icons/sopora.png",
     appStoreUrl: "https://apps.apple.com/us/app/sleep-diary-journal-sopora/id6778006318",
@@ -216,46 +216,49 @@ export const apps: App[] = [
     features: [
       {
         icon: "history",
-        title: "Manual sleep logging",
+        title: "Ten seconds, then your morning",
         description:
-          "Add bedtime, wake time, and a simple rested rating in seconds. Sopora is typed by you, so it never invents sleep stages or guesses what happened overnight.",
-      },
-      {
-        icon: "qr-create",
-        title: "Always editable",
-        description:
-          "Fix a time, add a note, tag yesterday, or delete a night later. Your sleep journal stays flexible because real nights rarely fit a perfect template.",
-      },
-      {
-        icon: "palette",
-        title: "Lifestyle factors",
-        description:
-          "Tag the things that may have shaped your sleep — caffeine, stress, exercise, screens, travel, and more. Keep the context without turning bedtime into homework.",
+          "Bed time, wake time, and how rested you felt is a complete entry. A Home Screen widget opens straight into logging, morning and bedtime reminders keep the habit alive, and the streak forgives one missed morning a week so a rough night never wipes out what you built.",
       },
       {
         icon: "barcode",
-        title: "Gentle patterns",
+        title: "Broken nights finally count",
         description:
-          "See duration, rested ratings, and factor correlations in a clear trends view. Useful enough to notice what helps, quiet enough to avoid fake precision.",
+          "Log how many times you woke and how long you were awake. Interrupted sleep shows up in your history and your trends, so a night that felt fragmented reads as fragmented instead of quietly averaging away.",
       },
       {
-        icon: "share",
-        title: "Your data, yours",
+        icon: "palette",
+        title: "Tag what shaped the night",
         description:
-          "Export your sleep journal as CSV or JSON, and restore from a Sopora JSON backup. Your notes and nights are stored locally on your device.",
+          "Caffeine, alcohol, exercise, stress, screens before bed. Tap the factors that were in play and watch which ones keep turning up beside your worst sleep, so the thing to change stops being a guess.",
+      },
+      {
+        icon: "qr-create",
+        title: "Your own pattern, in plain words",
+        description:
+          "A trends chart, a month calendar, and a weekly sleep report, all built from nights you actually logged. Every line is drawn from your entries, never from a prediction, so what you read is something you can trust and act on.",
       },
       {
         icon: "scan",
-        title: "Private by design",
+        title: "Dreams and notes, kept with the night",
         description:
-          "No microphone recording, no forced account, no sleep-stage guessing. Optional reminders are scheduled locally, and the core journal works offline.",
+          "Catch a dream before it fades and it stays attached to the night it belongs to, alongside notes for anything else worth remembering. Forgot to log yesterday? Back-date it. Got a time wrong? Every night stays editable, forever.",
+      },
+      {
+        icon: "share",
+        title: "Nobody sees your nights but you",
+        description:
+          "No microphone, no account, no upload. Your journal lives on your device and works fully offline, in 34 languages including right-to-left ones, and CSV or JSON export and import means you can take the whole record with you whenever you want.",
       },
     ],
     screenshots: [
       "/screenshots/sopora/01-sleep-diary.png",
       "/screenshots/sopora/02-sleep-log.png",
-      "/screenshots/sopora/03-sleep-notes.png",
-      "/screenshots/sopora/04-sleep-tracker.png",
+      "/screenshots/sopora/03-sleep-trends.png",
+      "/screenshots/sopora/04-interrupted-sleep.png",
+      "/screenshots/sopora/05-dream-diary.png",
+      "/screenshots/sopora/06-sleep-insights.png",
+      "/screenshots/sopora/07-private-sleep-journal.png",
     ],
     status: "live",
     order: 3,
@@ -263,32 +266,32 @@ export const apps: App[] = [
       {
         question: "What is Sopora?",
         answer:
-          "Sopora is a simple sleep journal for iPhone. Instead of recording audio or guessing your sleep stages, it lets you manually log when you went to bed, when you woke up, how rested you felt, and which lifestyle factors may have shaped the night.",
+          "Sopora is a manual sleep journal for iPhone. You write down last night yourself in about ten seconds: bed time, wake time, how rested you felt, any wake-ups, plus factor tags like caffeine or stress and a note or a dream if you want one. Sopora turns those entries into a trends chart, a month calendar, and a weekly sleep report, so you can see which nights work for you and what tends to show up beside the bad ones. Nothing is recorded or predicted. There is no microphone and no account, it works offline, and every night stays editable.",
       },
       {
-        question: "Does Sopora track sleep automatically?",
+        question: "Does Sopora track my sleep automatically?",
         answer:
-          "No. Sopora is deliberately manual. You type the sleep window yourself, which keeps the app private, lightweight, and editable. There is no microphone recording, no snore detection, and no automatic REM or deep-sleep scoring.",
+          "No, and that is the point. You enter the night yourself, so nothing is guessed on your behalf: no microphone, no snore detection, no invented sleep stages. Sopora is a personal journal for your own record-keeping, not a medical device, and it does not diagnose anything or give medical advice.",
       },
       {
-        question: "Can I edit old sleep entries?",
+        question: "Can I log a night I woke up in the middle of?",
         answer:
-          "Yes. Every sleep entry can be edited later. You can correct bed or wake times, change your rested rating, add notes, update factor tags, or remove an entry if it was logged by mistake.",
+          "Yes. Add how many times you woke and how long you were awake, and the interruption is carried through into your history and your trends rather than being smoothed over.",
       },
       {
-        question: "What are lifestyle factors?",
+        question: "What do I get once I have logged a few nights?",
         answer:
-          "Lifestyle factors are simple tags you can add to a night, such as caffeine, alcohol, exercise, stress, screen time, travel, a late meal, or feeling unwell. Sopora uses them to help you notice patterns without asking for medical-level tracking.",
+          "A trends chart and a month calendar in the Stats tab, a bedtime consistency read after a few nights, and your first weekly sleep report at the end of the week. Right after each morning log, a card puts the night you just saved into one plain sentence.",
       },
       {
-        question: "Is Sopora private?",
+        question: "Can I fix a night or add one I missed?",
         answer:
-          "Yes. Your sleep entries, notes, factors, and reminders are stored locally on your device. Sopora has no account system and does not upload your journal content to external servers.",
+          "Yes. Every entry can be edited or deleted later, and you can back-date a night you forgot, so a busy morning never leaves a permanent hole in your record.",
       },
       {
-        question: "Does Sopora offer reminders?",
+        question: "Where does my sleep data live, and can I take it with me?",
         answer:
-          "Sopora can schedule optional local reminders, including a morning nudge to log last night and a bedtime wind-down reminder. Reminders are opt-in and can be changed or turned off at any time in your device settings.",
+          "On your iPhone. Sopora has no account and does not upload your entries, notes, or dreams anywhere. You can export everything to CSV or JSON whenever you like and import it back, so the record stays yours.",
       },
     ],
     privacy: {
