@@ -110,7 +110,7 @@ const breadcrumbSchema = {
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": `${localizedApp.name} — ${localizedApp.tagline}`,
+  "name": `${localizedApp.name} - ${localizedApp.tagline}`,
   "description": localizedApp.description,
   "url": pageUrl,
   "inLanguage": locale,
@@ -130,7 +130,7 @@ const webPageSchema = {
 ---
 
 <BaseLayout
-  title={`${localizedApp.name} — ${localizedApp.tagline} | Pretty Toolkit`}
+  title={`${localizedApp.name} - ${localizedApp.tagline} | Pretty Toolkit`}
   description={localizedApp.description}
   locale={locale}
   canonicalPath={canonicalPath}
