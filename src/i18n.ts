@@ -98,7 +98,7 @@ export const ui = {
       softwareCategory: 'UtilitiesApplication',
     },
     home: {
-      title: 'Pretty Toolkit — Aesthetic Utility Apps for iPhone',
+      title: 'Pretty Toolkit - Aesthetic Utility Apps for iPhone',
       description:
         'Pretty Toolkit is a curated collection of premium iOS utility apps designed with intention. Everyday tools, unexpectedly beautiful. Download Sincefy and Luxira, and discover Sopora, logfd, BPIVY, Raheva, and Postivo.',
       heroSubtitle: 'Your phone deserves better tools.',
@@ -133,9 +133,9 @@ export const ui = {
       itemListName: 'Pretty Toolkit app collection',
     },
     about: {
-      title: 'About — Pretty Toolkit',
+      title: 'About - Pretty Toolkit',
       description:
-        'Pretty Toolkit crafts premium iOS utility apps designed with intention. Beautiful, thoughtful tools for everyday tasks — no clutter, no compromise.',
+        'Pretty Toolkit crafts premium iOS utility apps designed with intention. Beautiful, thoughtful tools for everyday tasks - no clutter, no compromise.',
       heading: 'About Pretty Toolkit',
       story: 'We craft apps that are as beautiful as they are useful.',
       body1:
@@ -157,7 +157,7 @@ export const ui = {
       more: "More apps are on the way. Each one will stay focused, private, and made with care.",
     },
     support: {
-      title: 'Support — Pretty Toolkit',
+      title: 'Support - Pretty Toolkit',
       description: 'Get help with Pretty Toolkit apps. Contact us, manage subscriptions, and find answers to common questions.',
       heading: 'Support',
       subtitle: "We're here to help. Find answers below or reach out directly.",
@@ -175,7 +175,7 @@ export const ui = {
       ],
     },
     privacy: {
-      title: 'Privacy Policy — Pretty Toolkit',
+      title: 'Privacy Policy - Pretty Toolkit',
       description: 'Privacy policy for Pretty Toolkit and all our iOS applications.',
       heading: 'Privacy Policy',
       updated: 'Last updated: March 2026',
@@ -195,7 +195,7 @@ export const ui = {
       ],
       generalLink: 'Pretty Toolkit Privacy Policy',
       appFooter: (name: string) => `This policy applies specifically to ${name}. For our general company privacy policy, see`,
-      appTitle: (name: string) => `Privacy Policy — ${name} | Pretty Toolkit`,
+      appTitle: (name: string) => `Privacy Policy - ${name} | Pretty Toolkit`,
       appDescription: (name: string) => `Privacy policy for ${name} by Pretty Toolkit.`,
       appHeading: (name: string) => `${name} Privacy Policy`,
       lastUpdated: (date: string) => `Last updated: ${date}`,
@@ -232,7 +232,7 @@ export const ui = {
       softwareCategory: 'UtilitiesApplication',
     },
     home: {
-      title: 'Pretty Toolkit — Apps utilitaires esthetiques pour iPhone',
+      title: 'Pretty Toolkit - Apps utilitaires esthetiques pour iPhone',
       description:
         'Pretty Toolkit est une collection d apps iOS premium concues avec soin. Des outils du quotidien, etonnement beaux. Decouvrez Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva et Postivo.',
       heroSubtitle: 'Votre iPhone merite de meilleurs outils.',
@@ -258,7 +258,7 @@ export const ui = {
       itemListName: 'Collection d apps Pretty Toolkit',
     },
     about: {
-      title: 'A propos — Pretty Toolkit',
+      title: 'A propos - Pretty Toolkit',
       description: 'Pretty Toolkit cree des apps utilitaires iOS premium, belles, simples et respectueuses.',
       heading: 'A propos de Pretty Toolkit',
       story: 'Nous creons des apps aussi belles qu utiles.',
@@ -281,7 +281,7 @@ export const ui = {
       more: 'D autres apps arrivent, toujours simples, privees et soigneusement concues.',
     },
     support: {
-      title: 'Support — Pretty Toolkit',
+      title: 'Support - Pretty Toolkit',
       description: 'Obtenez de l aide pour les apps Pretty Toolkit, les abonnements, les remboursements et la confidentialite.',
       heading: 'Support',
       subtitle: 'Nous sommes la pour aider. Consultez les reponses ou contactez-nous directement.',
@@ -299,7 +299,7 @@ export const ui = {
       ],
     },
     privacy: {
-      title: 'Politique de confidentialite — Pretty Toolkit',
+      title: 'Politique de confidentialite - Pretty Toolkit',
       description: 'Politique de confidentialite de Pretty Toolkit et de ses apps iOS.',
       heading: 'Politique de confidentialite',
       updated: 'Derniere mise a jour : mars 2026',
@@ -319,7 +319,7 @@ export const ui = {
       ],
       generalLink: 'Politique de confidentialite Pretty Toolkit',
       appFooter: (name: string) => `Cette politique s applique specifiquement a ${name}. Pour la politique generale, consultez`,
-      appTitle: (name: string) => `Politique de confidentialite — ${name} | Pretty Toolkit`,
+      appTitle: (name: string) => `Politique de confidentialite - ${name} | Pretty Toolkit`,
       appDescription: (name: string) => `Politique de confidentialite de ${name} par Pretty Toolkit.`,
       appHeading: (name: string) => `Politique de confidentialite ${name}`,
       lastUpdated: (date: string) => `Derniere mise a jour : ${date}`,
@@ -356,7 +356,7 @@ export const ui = {
       softwareCategory: 'UtilitiesApplication',
     },
     home: {
-      title: 'Pretty Toolkit — Apps utilitarias esteticas para iPhone',
+      title: 'Pretty Toolkit - Apps utilitarias esteticas para iPhone',
       description:
         'Pretty Toolkit es una coleccion de apps iOS premium disenadas con intencion. Descubre Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva y Postivo.',
       heroSubtitle: 'Tu iPhone merece mejores herramientas.',
@@ -382,7 +382,7 @@ export const ui = {
       itemListName: 'Coleccion de apps Pretty Toolkit',
     },
     about: {
-      title: 'Acerca de — Pretty Toolkit',
+      title: 'Acerca de - Pretty Toolkit',
       description: 'Pretty Toolkit crea apps utilitarias premium para iOS con diseno, claridad y privacidad.',
       heading: 'Acerca de Pretty Toolkit',
       story: 'Creamos apps tan bonitas como utiles.',
@@ -404,7 +404,7 @@ export const ui = {
       more: 'Hay mas apps en camino, siempre simples, privadas y hechas con cuidado.',
     },
     support: {
-      title: 'Soporte — Pretty Toolkit',
+      title: 'Soporte - Pretty Toolkit',
       description: 'Ayuda para apps Pretty Toolkit, suscripciones, reembolsos, privacidad y problemas comunes.',
       heading: 'Soporte',
       subtitle: 'Estamos aqui para ayudar. Revisa las respuestas o escribenos directamente.',
@@ -422,7 +422,7 @@ export const ui = {
       ],
     },
     privacy: {
-      title: 'Politica de privacidad — Pretty Toolkit',
+      title: 'Politica de privacidad - Pretty Toolkit',
       description: 'Politica de privacidad de Pretty Toolkit y sus apps iOS.',
       heading: 'Politica de privacidad',
       updated: 'Ultima actualizacion: marzo de 2026',
@@ -441,7 +441,7 @@ export const ui = {
       ],
       generalLink: 'Politica de privacidad de Pretty Toolkit',
       appFooter: (name: string) => `Esta politica aplica especificamente a ${name}. Para la politica general, consulta`,
-      appTitle: (name: string) => `Politica de privacidad — ${name} | Pretty Toolkit`,
+      appTitle: (name: string) => `Politica de privacidad - ${name} | Pretty Toolkit`,
       appDescription: (name: string) => `Politica de privacidad de ${name} por Pretty Toolkit.`,
       appHeading: (name: string) => `Politica de privacidad de ${name}`,
       lastUpdated: (date: string) => `Ultima actualizacion: ${date}`,
@@ -478,7 +478,7 @@ export const ui = {
       softwareCategory: 'UtilitiesApplication',
     },
     home: {
-      title: 'Pretty Toolkit — Aesthetische Utility-Apps fuer iPhone',
+      title: 'Pretty Toolkit - Aesthetische Utility-Apps fuer iPhone',
       description:
         'Pretty Toolkit ist eine kuratierte Sammlung hochwertiger iOS-Apps. Entdecke Sincefy, Luxira, Sopora, logfd, BPIVY, Raheva und Postivo.',
       heroSubtitle: 'Dein iPhone verdient bessere Werkzeuge.',
@@ -504,7 +504,7 @@ export const ui = {
       itemListName: 'Pretty Toolkit App-Sammlung',
     },
     about: {
-      title: 'Uber uns — Pretty Toolkit',
+      title: 'Uber uns - Pretty Toolkit',
       description: 'Pretty Toolkit entwickelt hochwertige iOS-Utility-Apps mit Design, Ruhe und Datenschutz.',
       heading: 'Uber Pretty Toolkit',
       story: 'Wir bauen Apps, die so schoen wie nuetzlich sind.',
@@ -526,7 +526,7 @@ export const ui = {
       more: 'Weitere Apps sind unterwegs, immer fokussiert, privat und sorgfaeltig gemacht.',
     },
     support: {
-      title: 'Support — Pretty Toolkit',
+      title: 'Support - Pretty Toolkit',
       description: 'Hilfe zu Pretty Toolkit Apps, Abos, Rueckerstattungen, Datenschutz und haeufigen Fragen.',
       heading: 'Support',
       subtitle: 'Wir helfen gern. Lies die Antworten oder schreib uns direkt.',
@@ -544,7 +544,7 @@ export const ui = {
       ],
     },
     privacy: {
-      title: 'Datenschutzerklaerung — Pretty Toolkit',
+      title: 'Datenschutzerklaerung - Pretty Toolkit',
       description: 'Datenschutzerklaerung fuer Pretty Toolkit und unsere iOS-Apps.',
       heading: 'Datenschutzerklaerung',
       updated: 'Zuletzt aktualisiert: Maerz 2026',
@@ -563,7 +563,7 @@ export const ui = {
       ],
       generalLink: 'Pretty Toolkit Datenschutzerklaerung',
       appFooter: (name: string) => `Diese Richtlinie gilt speziell fuer ${name}. Die allgemeine Richtlinie findest du hier:`,
-      appTitle: (name: string) => `Datenschutzerklaerung — ${name} | Pretty Toolkit`,
+      appTitle: (name: string) => `Datenschutzerklaerung - ${name} | Pretty Toolkit`,
       appDescription: (name: string) => `Datenschutzerklaerung fuer ${name} von Pretty Toolkit.`,
       appHeading: (name: string) => `${name} Datenschutzerklaerung`,
       lastUpdated: (date: string) => `Zuletzt aktualisiert: ${date}`,
