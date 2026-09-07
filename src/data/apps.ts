@@ -1700,4 +1700,155 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "swipeve",
+    name: "Swipeve",
+    tagline: "Swipe once, space back.",
+    description:
+      "A photo cleaner that hands your storage back without gambling with your memories. Swipeve finds the near-identical shots, the screenshots and the heavy videos hiding in your library, and lets you clear them a month at a time with a swipe - all on your iPhone, and nothing goes without your word.",
+    category: "daily-tools",
+    icon: "/icons/swipeve.png",
+    appStoreUrl: "",
+    accentColor: "#C42C68",
+    features: [
+      {
+        icon: "scan",
+        title: "See where the space actually went",
+        description:
+          "Swipeve reads your real library and shows the gigabytes sitting in near-identical bursts, exact duplicates, screenshots, your heaviest files and your longest videos. Your own numbers, measured from your own photos, before you decide anything.",
+      },
+      {
+        icon: "history",
+        title: "One month, a couple of minutes",
+        description:
+          "Face a single month instead of eleven years. Keep or let go with a swipe, watch the months get crossed off behind you, and stop whenever you like - your place is still there when you come back.",
+      },
+      {
+        icon: "palette",
+        title: "The keeper is already picked",
+        description:
+          "In every run of near-identical shots the best frame is chosen for you and shown full size, so you keep the good one and lose the near-copies behind it. Disagree and it changes with a tap.",
+      },
+      {
+        icon: "share",
+        title: "Big videos, smaller. Nothing lost.",
+        description:
+          "Shrink the videos eating the most room, with the date and the details carried over exactly. The smaller copy is created and checked before the original is let go, so nothing is traded away on trust.",
+      },
+      {
+        icon: "barcode",
+        title: "Nothing vanishes behind your back",
+        description:
+          "Every deletion goes through Apple's own confirmation, naming exactly how many photos and how much space. Everything then waits in Recently Deleted for 30 days, so a change of heart costs you nothing.",
+      },
+      {
+        icon: "qr-create",
+        title: "Never leaves your iPhone",
+        description:
+          "Scanning, comparing, reviewing and deleting all happen on your device. No account, no sign-in, and not one photo uploaded anywhere. Airplane mode clears a month exactly like Wi-Fi does.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 11,
+    faqs: [
+      {
+        question: "What is Swipeve?",
+        answer:
+          "Swipeve is a photo storage cleaner for iPhone. It scans your real photo library, finds the similar shots, exact duplicates, screenshots, heaviest files and largest videos, and lets you clear them month by month with a swipe. Every deletion goes through Apple's own confirmation and stays recoverable in Recently Deleted for 30 days.",
+      },
+      {
+        question: "How much space will I get back?",
+        answer:
+          "That depends on your own library, and Swipeve will not guess at it. It scans your real photos, shows you the actual gigabytes sitting in each category before you touch anything, and afterwards reports only the space genuinely recovered.",
+      },
+      {
+        question: "Can I get a photo back if I change my mind?",
+        answer:
+          "Yes. Swipeve deletes only through iOS, which moves photos into Recently Deleted in the Photos app. They wait there for 30 days, and you can restore any of them from Photos in that window.",
+      },
+      {
+        question: "Does Swipeve delete anything on its own?",
+        answer:
+          "Never. Nothing goes without a confirmation naming exactly how many items and how much space, and anything you choose to keep is remembered so it is never put in front of you again. Favourites and your named albums are protected before the first scan even runs.",
+      },
+      {
+        question: "Are my photos private?",
+        answer:
+          "Yes. Your photos never leave your iPhone. Scanning, comparing, reviewing and deleting all run on your device, there is no account and no sign-in, and not a single image is uploaded anywhere. The app works with no connection at all.",
+      },
+      {
+        question: "What happens to a video when Swipeve makes it smaller?",
+        answer:
+          "A smaller copy is made with your original's date and details carried over exactly, and it is verified as present before the original is let go. The original then goes to Recently Deleted like anything else, so it is recoverable for 30 days.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "September 2026",
+      intro:
+        'This privacy policy explains how Swipeve ("Swipeve", "the app") handles your information. Swipeve is published by Pretty Toolkit. The short version: your photos never leave your iPhone, there is no account, and the only thing we ever see is anonymous usage statistics that cannot be linked to you.',
+      sections: [
+        {
+          heading: "Your Photos and Videos",
+          content:
+            "<p>Swipeve reads your photo library through Apple's PhotoKit framework so it can find similar shots, exact duplicates, screenshots, and your largest files and videos. Everything it works out - the groups it builds, the sizes it measures, the keep decisions you make - is stored locally on your device. Swipeve does not upload any photo or video to Pretty Toolkit servers, we have no access to your library, and there is no account or sign-in.</p><p>Scanning, comparing, reviewing, making a video smaller and deleting all run on your device. The photo requests the app makes are configured never to fetch over the network, no image or video is sent anywhere, and the app works with no internet connection at all.</p><p>Deleting happens only through Apple's own system confirmation, which routes deleted items into Recently Deleted in the Photos app, where they stay recoverable for 30 days. Swipeve has no other way to remove a photo.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            "<p>Swipeve does not collect directly identifying information such as your name, email address, phone number, or Apple ID. There is no account, no sign-in, and no contact form inside the app. The only data that ever reaches us is the anonymous usage statistics described in the next section, which never include a photo, a video, a file name, an album name, or any identifier from your library.</p>",
+        },
+        {
+          heading: "Anonymous Usage Analytics",
+          content:
+            "<p>Swipeve uses Mixpanel to understand, in aggregate, how people move through the opening walkthrough and the purchase screen. The events are a fixed, enumerated list built only from closed values the app chooses itself: the walkthrough starting and finishing, which photo-library permission you granted, that a first scan finished, the purchase screen appearing, a purchase starting, a purchase completing, and the outcome of a restore. The scan event carries broad ranges rather than your numbers - which band its total fell into and roughly how long it took - never your actual gigabytes or your photo count. Nothing at all is sent while you review or delete.</p><p>No photo, video, file name, album name, or library identifier is ever part of an event. There is no identity attached either: Swipeve never calls Mixpanel's identify or profile features, does not use the advertising identifier, and does not enable the SDK's automatic event collection, so these statistics are recorded under a random identifier the SDK generates for each install and can never be tied to your name, your email address, or you. There is no advertising SDK and no data broker involved, and this data is not used to track you across other apps or websites.</p>",
+        },
+        {
+          heading: "Subscriptions and Payments",
+          content:
+            "<p>Swipeve is a subscription app. All purchases and renewals are handled by the Apple App Store through StoreKit, and payment processing belongs entirely to Apple. We do not have access to your card details, payment information, or Apple ID. You can view, change, or cancel your subscription at any time in your Apple account settings.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>Swipeve sends one optional reminder about your subscription and nothing else. Notification permission is requested only at the moment a subscription purchase is confirmed, so if you never purchase you are never asked. The reminder is scheduled locally on your device, carries nothing from your library, and is cancelled automatically when your subscription status changes. You can turn notifications off for Swipeve at any time in iOS Settings.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Swipeve uses Apple frameworks: Photos and PhotosUI (reading from and deleting in your photo library), Vision and Core ML (comparing images on your device), AVFoundation (making a video smaller), Core Graphics, Core Image and Image I/O (working with images on your device), the local file system and UserDefaults (on-device storage and preferences), UserNotifications (the single reminder above), and StoreKit (purchases), governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. The only non-Apple service is <a href="https://mixpanel.com/legal/privacy-policy/">Mixpanel</a>, used solely for the anonymous usage statistics described above. Swipeve integrates no ad networks, data brokers, or cross-app tracking tools, and no third-party service is ever involved in scanning, reviewing, or deleting a photo.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with anyone - your photos never reach us in the first place. The anonymous usage statistics are processed by Mixpanel on our behalf and are not sold or shared for advertising.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Swipeve does not track you across apps and websites owned by other companies. The app does not link the advertising identifier and shows no App Tracking Transparency prompt, and its privacy manifest declares that tracking is not used.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Swipeve is not directed at children under 13. We do not knowingly collect personal information from children - or from anyone else, since the app has no account and collects nothing beyond the anonymous usage statistics above.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because Swipeve keeps everything on your own device, you stay in control: photos you delete sit in Recently Deleted in the Photos app and are yours to restore for 30 days, and deleting Swipeve removes everything the app held, including its record of what you chose to keep. Anonymous usage statistics cannot be traced back to you, which also means we cannot look up or delete a specific person's statistics on request - there is no identifier connecting them to you. If you have any privacy question or request, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> and we will respond within 30 days. EU residents have rights under GDPR and California residents under the CCPA; contact us at the same address to exercise them.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];
