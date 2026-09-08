@@ -1851,4 +1851,150 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "delayo",
+    name: "Delayo",
+    tagline: "One press buys you time.",
+    description:
+      "The craving hits, you press one button, and a wait begins. At the end you smoke or you let it pass - either answer is fine here. The wait stretches on its own schedule, your own curve shows the control coming back, and everything stays on your phone.",
+    category: "wellness",
+    icon: "/icons/delayo.png",
+    appStoreUrl: "",
+    accentColor: "#E8913C",
+    features: [
+      {
+        icon: "history",
+        title: "One press, the moment it hits",
+        description:
+          "The craving arrives, you press once, and the wait is already running. No question first, no setup, nothing in the way. Cigarettes, vape, snus or pouches - the app talks about your habit the way you do.",
+      },
+      {
+        icon: "palette",
+        title: "The wait stretches itself",
+        description:
+          "You never have to decide how long to hold out. The next wait is set from the last one you actually finished, so the gap between cravings opens a little at a time instead of all at once.",
+      },
+      {
+        icon: "qr-create",
+        title: "Smoke or let it pass. No lecture.",
+        description:
+          "Two answers at the end of a wait, both one tap, both recorded the same calm way. Smoke early if you need to - nothing is scolded, nothing is applauded, and there is no streak sitting there waiting to be broken.",
+      },
+      {
+        icon: "barcode",
+        title: "Watch your control come back",
+        description:
+          "One curve, drawn from your own presses: how long you can wait now, and how many cravings the day brought. Your longest wait is kept as your own best. Nobody else's numbers appear anywhere.",
+      },
+      {
+        icon: "share",
+        title: "Ready to stop? Turn it on.",
+        description:
+          "Quit for good turns the same screen into your smoke-free day count, and every badge that arrives is counted out of your own record rather than handed to you for showing up.",
+      },
+      {
+        icon: "scan",
+        title: "Never leaves your phone",
+        description:
+          "Every answer, every craving and every wait is stored on your device and nowhere else. No account, no sign-in, nothing uploaded. Delayo behaves exactly the same with no connection at all.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 12,
+    faqs: [
+      {
+        question: "What is Delayo?",
+        answer:
+          "Delayo is one button that buys you time. When a craving hits you press it, a wait starts, and at the end you either smoke or log that it passed. The wait grows on its own schedule, and your delay curve shows how much longer you can hold out than you could before. It works for cigarettes, vape, and snus or pouches.",
+      },
+      {
+        question: "How long is the wait?",
+        answer:
+          "It starts short, on purpose. After that each new wait is set from the last one you actually finished, so the schedule follows what you can really do rather than a plan on paper. If you smoke early, the level simply holds where it is.",
+      },
+      {
+        question: "What happens if I smoke before the timer ends?",
+        answer:
+          "You tap once, it is logged, and that is the end of it. Smoking early is always available, it is never treated as a failure, and there is no streak to lose. The next wait picks up from where you are.",
+      },
+      {
+        question: "Does Delayo work for vaping or snus?",
+        answer:
+          "Yes. You choose cigarettes, vape, or snus and pouches when you set the app up, and the wording changes everywhere to match what you actually use.",
+      },
+      {
+        question: "Do I have to quit?",
+        answer:
+          "No. Delayo is built around waiting a little longer than yesterday, and that is a complete way to use it. When you decide you are ready to stop, Quit for good is there and counts your smoke-free days from that moment on.",
+      },
+      {
+        question: "Is my information private?",
+        answer:
+          "Yes. Your answers, your cravings and your waits stay on your phone, in the app's own storage. There is no account, no sign-in, and nothing is sent to us or to anyone else.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "September 8, 2026",
+      intro:
+        'This privacy policy explains how Delayo ("Delayo", "the app") handles your information, and is effective from September 8, 2026. Delayo is published by Pretty Toolkit. The short version: Delayo collects nothing and sends nothing. Everything you enter stays on your phone.',
+      sections: [
+        {
+          heading: "Your Data",
+          content:
+            "<p>Your setup answers, every craving you press, every wait and every outcome are stored on your device, in Delayo's own storage. Pretty Toolkit has no access to any of it, none of it is uploaded to our servers, and there is no account or sign-in. If you back up your iPhone, this data is included in that backup, which stays between you and Apple.</p><p>Deleting Delayo removes everything the app held on your device.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            "<p>Delayo collects nothing. We do not receive your name, email address, phone number, or Apple ID, and we do not receive your cravings, waits, or answers either. Version 1.0 contains no analytics SDK of any kind, so no usage statistics leave your device - not even anonymous ones.</p>",
+        },
+        {
+          heading: "Subscriptions and Payments",
+          content:
+            "<p>Purchases in Delayo are handled entirely by the Apple App Store through StoreKit. Apple processes the payment; we receive no card details and no payment information at all. You can view or change a purchase at any time in your Apple account settings.</p>",
+        },
+        {
+          heading: "Notifications",
+          content:
+            "<p>Delayo sends two local notifications and nothing else: one when a wait you started comes to an end, and one reminder about your trial. Both are scheduled on your device, neither carries anything beyond the app itself, and nothing is ever pushed from a server. You can turn notifications off for Delayo at any time in iOS Settings.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Delayo uses Apple frameworks only, including UserNotifications for the two reminders above and StoreKit for purchases, governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. There is no third-party SDK in the app: no analytics, no advertising, no crash reporting, no data brokers.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with anyone. There is nothing to share - your information never reaches us in the first place.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Delayo does not track you across apps and websites owned by other companies. The app does not use the advertising identifier and shows no App Tracking Transparency prompt.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Delayo is intended for adults and is not directed at children under 13. We do not knowingly collect personal information from children - or from anyone else, since the app collects nothing at all.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because everything stays on your own device, you are already in control: deleting Delayo removes every answer, craving and wait it held. We hold no data about you, so there is nothing for us to look up, export, or delete on request. If you have a privacy question, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> and we will respond within 30 days. EU residents have rights under GDPR and California residents under the CCPA; contact us at the same address to exercise them.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];

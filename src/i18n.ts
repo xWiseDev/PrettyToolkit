@@ -784,6 +784,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
       ],
     },
   },
+    delayo: {
+      tagline: 'Une pression, du temps gagne.',
+      description: 'L envie arrive, vous appuyez sur un bouton et une attente commence. A la fin, vous fumez ou vous laissez passer : les deux reponses sont acceptees ici. L attente s allonge a son rythme, votre courbe montre le controle qui revient, et tout reste sur votre telephone.',
+      features: [
+        ['Une pression, des l instant ou ca vient', 'L envie arrive, vous appuyez une fois et l attente tourne deja. Aucune question d abord, aucun reglage, rien en travers. Cigarettes, vape, snus ou sachets : l app parle de votre habitude comme vous en parlez.'],
+        ['L attente s allonge toute seule', 'Vous n avez jamais a decider combien de temps tenir. La prochaine attente se cale sur la derniere que vous avez vraiment terminee, donc l ecart entre deux envies s ouvre petit a petit plutot que d un coup.'],
+        ['Fumer ou laisser passer. Sans lecon.', 'Deux reponses a la fin d une attente, une touche chacune, enregistrees avec le meme calme. Fumez plus tot si vous en avez besoin : rien n est gronde, rien n est applaudi, et aucune serie n attend d etre brisee.'],
+        ['Voyez le controle revenir', 'Une courbe, tracee a partir de vos propres pressions : combien de temps vous tenez maintenant, et combien d envies la journee a apportees. Votre plus longue attente reste votre record. Les chiffres des autres n apparaissent nulle part.'],
+        ['Pret a arreter ? Activez-le.', 'Le mode arret definitif transforme le meme ecran en compteur de jours sans fumer, et chaque badge qui arrive est compte a partir de votre propre historique, pas offert pour votre simple presence.'],
+        ['Ne quitte jamais votre telephone', 'Chaque reponse, chaque envie et chaque attente est stockee sur votre appareil et nulle part ailleurs. Pas de compte, pas de connexion, rien d envoye. Delayo fonctionne exactement pareil sans aucune connexion.'],
+      ],
+      faqs: [
+        ['Qu est-ce que Delayo ?', 'Delayo, c est un bouton qui vous fait gagner du temps. Quand l envie arrive, vous appuyez, une attente demarre, et a la fin vous fumez ou vous notez qu elle est passee. L attente grandit a son rythme et votre courbe montre combien de temps vous tenez de plus qu avant. Cigarettes, vape, snus et sachets sont pris en charge.'],
+        ['Combien de temps dure l attente ?', 'Elle commence courte, volontairement. Ensuite chaque nouvelle attente se cale sur la derniere que vous avez reellement terminee, donc le rythme suit ce que vous pouvez vraiment faire et non un plan sur le papier. Si vous fumez plus tot, le niveau reste simplement ou il est.'],
+        ['Que se passe-t-il si je fume avant la fin ?', 'Vous appuyez une fois, c est enregistre, et voila. Fumer plus tot est toujours possible, ce n est jamais traite comme un echec, et il n y a aucune serie a perdre. L attente suivante repart d ou vous en etes.'],
+        ['Delayo fonctionne-t-il pour la vape ou le snus ?', 'Oui. Vous choisissez cigarettes, vape, ou snus et sachets a la configuration, et les formulations changent partout pour correspondre a ce que vous utilisez vraiment.'],
+        ['Suis-je oblige d arreter ?', 'Non. Delayo est construit autour de l idee d attendre un peu plus longtemps qu hier, et c est une facon complete de s en servir. Le jour ou vous decidez d arreter, le mode arret definitif est la et compte vos jours sans fumer a partir de ce moment.'],
+        ['Mes informations sont-elles privees ?', 'Oui. Vos reponses, vos envies et vos attentes restent sur votre telephone, dans l espace de stockage de l app. Il n y a ni compte ni connexion, et rien n est envoye ni a nous ni a personne d autre.'],
+      ],
+    },
   es: {
     sincefy: {
       tagline: 'Cuenta los dias, con belleza.',
@@ -989,6 +1009,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
       ],
     },
   },
+    delayo: {
+      tagline: 'Una pulsacion y ganas tiempo.',
+      description: 'Llega el antojo, pulsas un boton y empieza una espera. Al final fumas o lo dejas pasar: las dos respuestas valen aqui. La espera se alarga a su propio ritmo, tu curva ensena el control que vuelve, y todo se queda en tu telefono.',
+      features: [
+        ['Una pulsacion, en el momento justo', 'Llega el antojo, pulsas una vez y la espera ya corre. Sin preguntas antes, sin ajustes, sin nada por medio. Cigarrillos, vapeo, snus o bolsitas: la app habla de tu habito como lo haces tu.'],
+        ['La espera se alarga sola', 'Nunca tienes que decidir cuanto aguantar. La siguiente espera se ajusta a la ultima que terminaste de verdad, asi que el hueco entre antojos se abre poco a poco en vez de todo de golpe.'],
+        ['Fumar o dejarlo pasar. Sin sermones.', 'Dos respuestas al final de una espera, un toque cada una, registradas con la misma calma. Fuma antes si lo necesitas: nada se rine, nada se aplaude, y no hay ninguna racha esperando a romperse.'],
+        ['Mira como vuelve tu control', 'Una curva dibujada con tus propias pulsaciones: cuanto aguantas ahora y cuantos antojos trajo el dia. Tu espera mas larga queda como tu record. Los numeros de otros no aparecen por ningun lado.'],
+        ['Listo para dejarlo? Activalo.', 'El modo dejarlo del todo convierte la misma pantalla en tu contador de dias sin fumar, y cada insignia que llega sale de tu propio historial, no se regala por aparecer.'],
+        ['Nunca sale de tu telefono', 'Cada respuesta, cada antojo y cada espera se guarda en tu dispositivo y en ningun otro sitio. Sin cuenta, sin inicio de sesion, sin subir nada. Delayo funciona igual sin ninguna conexion.'],
+      ],
+      faqs: [
+        ['Que es Delayo?', 'Delayo es un boton que te hace ganar tiempo. Cuando llega el antojo lo pulsas, empieza una espera y al final fumas o registras que paso. La espera crece a su propio ritmo y tu curva ensena cuanto mas aguantas que antes. Sirve para cigarrillos, vapeo y snus o bolsitas.'],
+        ['Cuanto dura la espera?', 'Empieza corta, a proposito. A partir de ahi cada nueva espera se ajusta a la ultima que terminaste de verdad, asi que el ritmo sigue lo que puedes hacer y no un plan sobre el papel. Si fumas antes, el nivel simplemente se queda donde esta.'],
+        ['Que pasa si fumo antes de que acabe?', 'Pulsas una vez, queda registrado y ya esta. Fumar antes siempre esta disponible, nunca se trata como un fracaso y no hay ninguna racha que perder. La siguiente espera arranca desde donde estas.'],
+        ['Delayo sirve para vapeo o snus?', 'Si. Eliges cigarrillos, vapeo, o snus y bolsitas al configurar la app, y el texto cambia en todas partes para encajar con lo que usas de verdad.'],
+        ['Tengo que dejarlo?', 'No. Delayo esta construido alrededor de esperar un poco mas que ayer, y esa es una forma completa de usarlo. El dia que decidas dejarlo, el modo dejarlo del todo esta ahi y cuenta tus dias sin fumar desde ese momento.'],
+        ['Es privada mi informacion?', 'Si. Tus respuestas, tus antojos y tus esperas se quedan en tu telefono, en el almacenamiento propio de la app. No hay cuenta ni inicio de sesion, y no se envia nada ni a nosotros ni a nadie mas.'],
+      ],
+    },
   de: {
     sincefy: {
       tagline: 'Countdowns, schoen gemacht.',
@@ -1191,6 +1231,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Loescht Swipeve etwas von selbst?', 'Nie. Nichts geht ohne eine Bestaetigung, die genau nennt, wie viele Objekte und wie viel Platz, und alles, was du behalten willst, wird gemerkt und dir nie wieder vorgelegt. Favoriten und deine benannten Alben sind schon vor dem ersten Scan geschuetzt.'],
         ['Sind meine Fotos privat?', 'Ja. Deine Fotos verlassen dein iPhone nie. Scannen, Vergleichen, Durchsehen und Loeschen laufen auf deinem Geraet, es gibt kein Konto und keine Anmeldung, und kein einziges Bild wird irgendwohin geladen. Die App funktioniert ganz ohne Verbindung.'],
         ['Was passiert mit einem Video, das Swipeve kleiner macht?', 'Es entsteht eine kleinere Kopie, mit Datum und Details des Originals exakt uebernommen, und ihr Vorhandensein wird geprueft, bevor das Original geht. Das Original wandert dann wie alles andere in Zuletzt geloescht und bleibt 30 Tage wiederherstellbar.'],
+      ],
+    },
+    delayo: {
+      tagline: 'Einmal druecken, Zeit gewonnen.',
+      description: 'Das Verlangen kommt, du drueckst einen Knopf, und eine Wartezeit beginnt. Am Ende rauchst du oder laesst es vorbeiziehen: Beide Antworten sind hier in Ordnung. Die Wartezeit waechst in ihrem eigenen Tempo, deine Kurve zeigt die Kontrolle, die zurueckkommt, und alles bleibt auf deinem Telefon.',
+      features: [
+        ['Ein Druck, im selben Moment', 'Das Verlangen kommt, du drueckst einmal, und die Wartezeit laeuft schon. Keine Frage vorweg, keine Einstellung, nichts im Weg. Zigaretten, Vape, Snus oder Beutel: Die App spricht ueber deine Gewohnheit so, wie du es tust.'],
+        ['Die Wartezeit dehnt sich von selbst', 'Du musst nie entscheiden, wie lange du durchhaeltst. Die naechste Wartezeit richtet sich nach der letzten, die du wirklich zu Ende gebracht hast, so oeffnet sich der Abstand Stueck fuer Stueck statt auf einmal.'],
+        ['Rauchen oder vorbeiziehen lassen. Ohne Predigt.', 'Zwei Antworten am Ende einer Wartezeit, je ein Tippen, beide gleich ruhig festgehalten. Rauch frueher, wenn es sein muss: Nichts wird getadelt, nichts beklatscht, und keine Serie wartet darauf, zu reissen.'],
+        ['Sieh deine Kontrolle zurueckkommen', 'Eine Kurve, gezeichnet aus deinen eigenen Druecken: wie lange du jetzt wartest und wie viele Verlangen der Tag gebracht hat. Deine laengste Wartezeit bleibt dein Rekord. Die Zahlen anderer tauchen nirgends auf.'],
+        ['Bereit aufzuhoeren? Schalt es ein.', 'Der Modus ganz aufhoeren macht aus demselben Bildschirm deine Zaehlung rauchfreier Tage, und jedes Abzeichen kommt aus deinem eigenen Verlauf, nicht dafuer, dass du da warst.'],
+        ['Verlaesst nie dein Telefon', 'Jede Antwort, jedes Verlangen und jede Wartezeit liegt auf deinem Geraet und sonst nirgends. Kein Konto, keine Anmeldung, nichts hochgeladen. Delayo verhaelt sich ganz ohne Verbindung genauso.'],
+      ],
+      faqs: [
+        ['Was ist Delayo?', 'Delayo ist ein Knopf, der dir Zeit verschafft. Wenn das Verlangen kommt, drueckst du ihn, eine Wartezeit startet, und am Ende rauchst du oder haeltst fest, dass sie vorbei ist. Die Wartezeit waechst in ihrem eigenen Tempo, und deine Kurve zeigt, wie viel laenger du jetzt durchhaeltst als vorher. Zigaretten, Vape sowie Snus und Beutel werden unterstuetzt.'],
+        ['Wie lang ist die Wartezeit?', 'Sie faengt absichtlich kurz an. Danach richtet sich jede neue Wartezeit nach der letzten, die du wirklich zu Ende gebracht hast, das Tempo folgt also dem, was du tatsaechlich kannst, und keinem Plan auf dem Papier. Rauchst du frueher, bleibt die Stufe einfach, wo sie ist.'],
+        ['Was passiert, wenn ich vor dem Ende rauche?', 'Du tippst einmal, es wird festgehalten, und das war es. Frueher zu rauchen ist immer moeglich, es gilt nie als Versagen, und es gibt keine Serie zu verlieren. Die naechste Wartezeit macht dort weiter, wo du bist.'],
+        ['Funktioniert Delayo fuer Vape oder Snus?', 'Ja. Beim Einrichten waehlst du Zigaretten, Vape, oder Snus und Beutel, und die Formulierungen aendern sich ueberall passend zu dem, was du wirklich nutzt.'],
+        ['Muss ich aufhoeren?', 'Nein. Delayo ist darauf gebaut, ein wenig laenger zu warten als gestern, und das ist eine vollstaendige Art, es zu nutzen. Wenn du entscheidest aufzuhoeren, ist der Modus ganz aufhoeren da und zaehlt deine rauchfreien Tage ab diesem Moment.'],
+        ['Sind meine Daten privat?', 'Ja. Deine Antworten, dein Verlangen und deine Wartezeiten bleiben auf deinem Telefon, im eigenen Speicher der App. Es gibt kein Konto und keine Anmeldung, und nichts wird an uns oder an sonst jemanden gesendet.'],
       ],
     },
   },
@@ -1402,6 +1462,29 @@ function localizePrivacySections(app: App, locale: Locale): PrivacySection[] | u
         default: `<p>${app.name} nutzt Mixpanel, um in aggregierter Form zu verstehen, wie der Einstieg und der Kaufbildschirm genutzt werden. Die Ereignisse sind eine feste Liste aus geschlossenen Werten, die die App selbst waehlt: Start und Ende des Einstiegs, die erteilte Fotoberechtigung, dass ein erster Scan fertig war, das Erscheinen des Kaufbildschirms, ein begonnener Kauf, ein abgeschlossener Kauf und das Ergebnis einer Wiederherstellung. Das Scan-Ereignis sendet nur breite Spannen, nie deine Gigabyte und nie die Anzahl deiner Fotos, und waehrend des Durchsehens oder Loeschens wird gar nichts gesendet.</p><p>Kein Foto, kein Video, kein Dateiname, kein Albumname und keine Mediathek-Kennung ist jemals Teil eines Ereignisses. Auch keine Identitaet: ${app.name} ruft weder identify noch die Profile von Mixpanel auf, nutzt die Werbekennung nicht und schaltet die automatischen Ereignisse des SDK ab. Diese Statistiken werden unter einer zufaelligen, pro Installation erzeugten Kennung erfasst und koennen nie mit dir verknuepft werden. Kein Werbe-SDK, keine Datenhaendler, kein Tracking ueber Apps hinweg.</p>`,
         notifications: `<p>${app.name} sendet genau eine optionale Mitteilung zu deinem Abo und sonst nichts. Die Berechtigung wird nur in dem Moment angefragt, in dem ein Abokauf bestaetigt wird: Ohne Kauf wirst du nie gefragt. Die Erinnerung wird lokal auf deinem Geraet geplant, enthaelt nichts aus deiner Mediathek und wird automatisch abgebrochen, wenn sich dein Abostatus aendert. Du kannst Mitteilungen fuer die App jederzeit in den iOS-Einstellungen abschalten.</p>`,
         rights: `<p>Alles bleibt auf deinem Geraet, du behaeltst also die Kontrolle: Geloeschte Fotos warten 30 Tage in Zuletzt geloescht und lassen sich aus Fotos wiederherstellen, und das Loeschen der App entfernt alles, was sie gespeichert hatte, samt der Erinnerung an deine Entscheidungen. Anonyme Statistiken lassen sich nicht zu dir zurueckverfolgen, was auch bedeutet, dass wir die einer bestimmten Person weder finden noch loeschen koennen: Es gibt keine Kennung, die sie mit dir verbindet. Bei Fragen schreib an aboyahyadev@icloud.com, wir antworten innerhalb von 30 Tagen.</p>`,
+      },
+    },
+    delayo: {
+      fr: {
+        data: `<p>Vos reponses de configuration, chaque envie que vous enregistrez, chaque attente et chaque issue sont stockees sur votre appareil, dans l espace de stockage de ${app.name}. Pretty Toolkit n y a aucun acces, rien n est envoye a nos serveurs et il n existe aucun compte. Si vous sauvegardez votre iPhone, ces donnees font partie de cette sauvegarde, qui reste entre vous et Apple. Supprimer l app efface tout ce qu elle conservait.</p>`,
+        collection: `<p>${app.name} ne collecte rien. Nous ne recevons ni votre nom, ni votre email, ni votre numero de telephone, ni votre identifiant Apple, et pas davantage vos envies, vos attentes ou vos reponses. La version 1.0 ne contient aucun SDK d analyse : aucune statistique d usage ne quitte votre appareil, pas meme anonyme.</p>`,
+        notifications: `<p>${app.name} envoie deux notifications locales et rien d autre : une a la fin d une attente que vous avez lancee, et un rappel au sujet de votre essai. Les deux sont planifiees sur votre appareil, aucune ne transporte autre chose, et rien n arrive depuis un serveur. Vous pouvez desactiver les notifications de l app a tout moment dans les reglages iOS.</p>`,
+        services: `<p>${app.name} n utilise que des frameworks Apple, dont UserNotifications pour les deux rappels ci-dessus et StoreKit pour les achats, regis par la politique de confidentialite d Apple. L app ne contient aucun SDK tiers : ni analyse, ni publicite, ni rapport de plantage, ni courtier de donnees.</p>`,
+        rights: `<p>Tout reste sur votre appareil, vous gardez donc la main : supprimer ${app.name} efface chaque reponse, chaque envie et chaque attente qu elle conservait. Nous ne detenons aucune donnee vous concernant, il n y a donc rien a retrouver, exporter ou supprimer sur demande. Pour toute question, ecrivez a aboyahyadev@icloud.com, nous repondons sous 30 jours.</p>`,
+      },
+      es: {
+        data: `<p>Tus respuestas de configuracion, cada antojo que registras, cada espera y cada resultado se guardan en tu dispositivo, en el almacenamiento propio de ${app.name}. Pretty Toolkit no tiene acceso a nada de eso, nada se sube a nuestros servidores y no existe ninguna cuenta. Si haces copia de seguridad de tu iPhone, estos datos van en esa copia, que queda entre tu y Apple. Eliminar la app borra todo lo que guardaba.</p>`,
+        collection: `<p>${app.name} no recopila nada. No recibimos tu nombre, email, telefono ni Apple ID, y tampoco tus antojos, tus esperas o tus respuestas. La version 1.0 no incluye ningun SDK de analitica: no sale ninguna estadistica de uso de tu dispositivo, ni siquiera anonima.</p>`,
+        notifications: `<p>${app.name} envia dos notificaciones locales y nada mas: una cuando termina una espera que iniciaste y un recordatorio sobre tu prueba. Las dos se programan en tu dispositivo, ninguna lleva nada mas y nada llega desde un servidor. Puedes desactivar las notificaciones de la app cuando quieras en Ajustes de iOS.</p>`,
+        services: `<p>${app.name} usa solo frameworks de Apple, entre ellos UserNotifications para los dos recordatorios anteriores y StoreKit para las compras, regidos por la politica de privacidad de Apple. La app no incluye ningun SDK de terceros: ni analitica, ni publicidad, ni informes de fallos, ni intermediarios de datos.</p>`,
+        rights: `<p>Todo se queda en tu dispositivo, asi que mantienes el control: eliminar ${app.name} borra cada respuesta, cada antojo y cada espera que guardaba. No tenemos ningun dato tuyo, asi que no hay nada que buscar, exportar ni borrar a peticion. Si tienes cualquier duda, escribe a aboyahyadev@icloud.com y responderemos en 30 dias.</p>`,
+      },
+      de: {
+        data: `<p>Deine Antworten aus der Einrichtung, jedes festgehaltene Verlangen, jede Wartezeit und jeder Ausgang liegen auf deinem Geraet, im eigenen Speicher von ${app.name}. Pretty Toolkit hat darauf keinen Zugriff, nichts wird auf unsere Server geladen, und es gibt kein Konto. Wenn du dein iPhone sicherst, sind diese Daten Teil dieser Sicherung, die zwischen dir und Apple bleibt. Das Loeschen der App entfernt alles, was sie gespeichert hatte.</p>`,
+        collection: `<p>${app.name} erhebt nichts. Wir erhalten weder deinen Namen, deine E-Mail, deine Telefonnummer noch deine Apple-ID, und auch nicht dein Verlangen, deine Wartezeiten oder deine Antworten. Version 1.0 enthaelt kein Analyse-SDK: Es verlaesst keine Nutzungsstatistik dein Geraet, auch keine anonyme.</p>`,
+        notifications: `<p>${app.name} sendet zwei lokale Mitteilungen und sonst nichts: eine, wenn eine von dir gestartete Wartezeit endet, und eine Erinnerung zu deiner Testphase. Beide werden auf deinem Geraet geplant, keine traegt darueber hinaus etwas mit sich, und nichts kommt von einem Server. Du kannst Mitteilungen fuer die App jederzeit in den iOS-Einstellungen abschalten.</p>`,
+        services: `<p>${app.name} nutzt ausschliesslich Apple-Frameworks, darunter UserNotifications fuer die beiden Erinnerungen oben und StoreKit fuer Kaeufe, geregelt durch Apples Datenschutzrichtlinie. In der App steckt kein SDK von Dritten: keine Analyse, keine Werbung, keine Absturzberichte, keine Datenhaendler.</p>`,
+        rights: `<p>Alles bleibt auf deinem Geraet, du behaeltst also die Kontrolle: Das Loeschen von ${app.name} entfernt jede Antwort, jedes Verlangen und jede Wartezeit, die sie gespeichert hatte. Wir halten keine Daten ueber dich, es gibt also nichts nachzuschlagen, zu exportieren oder auf Anfrage zu loeschen. Bei Fragen schreib an aboyahyadev@icloud.com, wir antworten innerhalb von 30 Tagen.</p>`,
       },
     },
   };
