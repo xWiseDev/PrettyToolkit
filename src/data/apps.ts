@@ -1975,6 +1975,11 @@ export const apps: App[] = [
             "<p>Delayo does not track you across apps and websites owned by other companies. The app does not use the advertising identifier and shows no App Tracking Transparency prompt.</p>",
         },
         {
+          heading: "Health and Wellness Disclaimer",
+          content:
+            "<p>Delayo is a personal tool for delaying and recording your own cravings. It is not a medical device, it does not give medical advice, and it makes no promise about whether or when you stop. For help with tobacco or nicotine dependence, consult a qualified professional.</p>",
+        },
+        {
           heading: "Children's Privacy",
           content:
             "<p>Delayo is intended for adults and is not directed at children under 13. We do not knowingly collect personal information from children - or from anyone else, since the app collects nothing at all.</p>",
