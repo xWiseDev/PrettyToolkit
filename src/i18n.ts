@@ -804,6 +804,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Mes informations sont-elles privees ?', 'Oui. Vos reponses, vos envies et vos attentes restent sur votre telephone, dans l espace de stockage de l app. Il n y a ni compte ni connexion, et rien n est envoye ni a nous ni a personne d autre.'],
       ],
     },
+    kantevo: {
+      tagline: 'Une seule visite. Le rapport en main.',
+      description: 'La salle de bain a trois defauts et une seule photo ne peut pas les montrer. Vous en prenez quatre, vous tracez une fleche sur le carrelage fendu, vous nommez la piece et vous passez a la suite. En arrivant a la camionnette, la liste s est numerotee toute seule et le rapport est pret. Faites le tour une fois, remettez-le avant de partir, et soyez celui dont la liste est vraiment traitee.',
+      features: [
+        ['Autant de photos que le defaut en demande', 'Enchainez plusieurs prises sans quitter l element, ou importez n importe quel nombre de photos depuis votre pellicule en une seule fois. Rien d un defaut ne reste hors du dossier faute de place.'],
+        ['Annotez sur la photo, la ou vous etes', 'Le canevas d annotation s ouvre avec le declencheur, pas trois taps plus tard. Fleche, cercle, trait a main levee et texte se posent directement sur l image, en plusieurs epaisseurs, et restent modifiables ensuite.'],
+        ['Une liste qui se tient en ordre toute seule', 'Les elements se numerotent d eux-memes. Supprimez-en un et les autres se renumerotent. Deplacez-en un et son numero suit. Recherche, tri, selection multiple et suppression groupee restent rapides a 300 elements avec photos, sans reseau.'],
+        ['Le rapport que vous alliez ecrire ce soir', 'Fabrique sur le telephone, sans reseau, en vrai PDF dont le texte se selectionne au lieu d une image de page : votre en-tete et votre pied de page, les numeros de page, et des sauts de page qui ne coupent jamais un element en deux. Des photos assez grandes pour faire preuve. Vous lisez chaque page avant tout le monde.'],
+        ['Votre nom sur le document', 'Votre logo a sa propre forme, le nom de votre societe, une couleur d accent et une photo de couverture. Signez une fois dans les reglages et votre signature figure sur chaque rapport, et la personne qui le recoit peut signer a la remise, pour que ce qui arrive entre ses mains ait l air de sortir d un bureau et non d un telephone.'],
+        ['Ne quitte jamais votre telephone', 'Enregistre au fil de la frappe, sans compte a creer et sans rien envoyer chez nous. Vos photos et vos rapports restent sur votre appareil et dans votre propre iCloud Drive, et la position est retiree de chaque photo tant que vous ne l activez pas vous-meme.'],
+      ],
+      faqs: [
+        ['Qu est-ce que Kantevo ?', 'Kantevo est une app de liste de reserves et d audit de chantier pour la personne qui fait le tour. Vous photographiez un defaut autant de fois qu il le faut, vous annotez la photo la ou vous etes, vous nommez la piece, et la liste numerotee devient un rapport PDF que vous pouvez remettre avant de partir. Tout se fait sur le telephone, sans reseau et sans compte.'],
+        ['Combien de photos par element ?', 'Autant que le defaut en demande. Vous pouvez enchainer plusieurs prises sans quitter l element, ou importer n importe quel nombre de photos depuis la pellicule en une seule fois. Il n y a pas de limite par element, ni par import.'],
+        ['Kantevo fonctionne-t-il sans reseau ?', 'Oui, entierement. La prise de vue, l annotation, la liste et le rapport PDF final sont fabriques sur l appareil. Rien n attend une connexion, puisque rien n est envoye nulle part.'],
+        ['Puis-je mettre ma propre identite sur le rapport ?', 'Oui. Votre logo a sa propre forme, le nom de votre societe, une couleur d accent et une photo de couverture, plus une signature tracee une fois dans les reglages et reutilisee sur chaque rapport. La personne qui recoit le rapport peut signer a la remise. Un champ laisse vide n imprime rien, la couverture n affiche donc jamais de texte de remplacement.'],
+        ['Chaque corps de metier peut-il ne recevoir que ses elements ?', 'Oui. Attribuez un corps de metier a un element et exportez sa liste seule, pour que l electricien lise l electricite et le platrier le platre. Quand un element est repare, vous le cochez et joignez la photo apres travaux, et le rapport separe ce qui est fait de ce qui reste a faire.'],
+        ['Mes informations sont-elles privees ?', 'Oui. Vos photos et vos rapports restent sur votre appareil et dans votre propre iCloud Drive, et rien n est envoye chez nous. Il n y a ni compte ni connexion, la position est retiree de chaque photo tant que vous ne l activez pas vous-meme, et l etiquette de confidentialite de l App Store indique qu aucune donnee n est collectee.'],
+      ],
+    },
   es: {
     sincefy: {
       tagline: 'Cuenta los dias, con belleza.',
@@ -1029,6 +1049,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Es privada mi informacion?', 'Si. Tus respuestas, tus antojos y tus esperas se quedan en tu telefono, en el almacenamiento propio de la app. No hay cuenta ni inicio de sesion, y no se envia nada ni a nosotros ni a nadie mas.'],
       ],
     },
+    kantevo: {
+      tagline: 'Una sola vuelta. El informe en mano.',
+      description: 'El bano tiene tres cosas mal y una sola foto no puede ensenarlas. Haces cuatro, dibujas una flecha sobre el azulejo agrietado, pones el nombre de la estancia y sigues. Cuando llegas a la furgoneta la lista se ha numerado sola y el informe esta listo. Da la vuelta una vez, entregalo antes de irte y se tu quien entrega la lista que de verdad se atiende.',
+      features: [
+        ['Tantas fotos como pida el defecto', 'Haz varias seguidas sin salir del elemento, o trae cuantas quieras del carrete en una sola importacion. Nada de un defecto se queda sin registrar por falta de sitio.'],
+        ['Marcalo en la foto, alli mismo', 'El lienzo de anotacion se abre con el disparador, no tres toques despues. Flecha, circulo, trazo a mano alzada y texto van directos sobre la imagen, en varios grosores, y puedes cambiarlos mas tarde.'],
+        ['Una lista que se mantiene en orden sola', 'Los elementos se numeran solos. Borra uno y el resto se renumera. Arrastra uno y su numero le sigue. Busqueda, orden, seleccion multiple y borrado en bloque siguen rapidos con 300 elementos con fotos, sin cobertura.'],
+        ['El informe que ibas a escribir esta noche', 'Hecho en el telefono, sin cobertura, como un PDF de verdad cuyo texto se puede seleccionar en lugar de una foto de una pagina: tu encabezado y tu pie, los numeros de pagina y saltos que nunca parten un elemento en dos. Fotos lo bastante grandes para servir de prueba. Lees cada pagina antes que nadie.'],
+        ['Tu nombre en el documento', 'Tu logo con su propia forma, el nombre de tu empresa, un color de acento y una foto de portada. Firma una vez en Ajustes y tu firma va en cada informe, y quien lo recibe puede firmar en la entrega, para que lo que llega a sus manos parezca salido de una oficina y no de un telefono.'],
+        ['Nunca sale de tu telefono', 'Se guarda mientras escribes, sin cuenta que crear y sin subir nada a nosotros. Tus fotos y tus informes se quedan en tu dispositivo y en tu propio iCloud Drive, y la ubicacion se quita de cada foto mientras no la actives tu mismo.'],
+      ],
+      faqs: [
+        ['Que es Kantevo?', 'Kantevo es una app de lista de repasos y auditoria de obra para quien recorre la obra. Fotografias un defecto tantas veces como haga falta, lo marcas sobre la foto alli mismo, pones el nombre de la estancia, y la lista numerada se convierte en un informe PDF que puedes entregar antes de irte. Se hace en el telefono, sin cobertura y sin cuenta.'],
+        ['Cuantas fotos admite un elemento?', 'Tantas como pida el defecto. Puedes hacer varias seguidas sin salir del elemento, o traer cuantas quieras del carrete en una sola importacion. No hay limite por elemento ni por importacion.'],
+        ['Funciona Kantevo sin cobertura?', 'Si, del todo. La captura, la anotacion, la lista y el informe PDF final se hacen en el dispositivo. Nada espera a una conexion, porque nada se envia a ningun sitio.'],
+        ['Puedo poner mi propia marca en el informe?', 'Si. Tu logo con su propia forma, el nombre de tu empresa, un color de acento y una foto de portada, mas una firma que dibujas una vez en Ajustes y se reutiliza en cada informe. Quien recibe el informe puede firmar en la entrega. Un campo que dejas vacio no imprime nada, asi que la portada nunca ensena un texto de relleno.'],
+        ['Puede cada gremio recibir solo sus elementos?', 'Si. Pon un gremio en un elemento y exporta su lista por separado, para que el electricista lea electricidad y el yesero lea yeso. Cuando un elemento queda arreglado lo marcas y adjuntas la foto de despues, y el informe separa lo hecho de lo que sigue pendiente.'],
+        ['Es privada mi informacion?', 'Si. Tus fotos y tus informes se quedan en tu dispositivo y en tu propio iCloud Drive, y no se sube nada a nosotros. No hay cuenta ni inicio de sesion, la ubicacion se quita de cada foto mientras no la actives tu mismo, y la etiqueta de privacidad de la App Store indica que no se recopilan datos.'],
+      ],
+    },
   de: {
     sincefy: {
       tagline: 'Countdowns, schoen gemacht.',
@@ -1251,6 +1291,26 @@ const appCopy: Record<Exclude<Locale, 'en'>, Record<string, AppCopy>> = {
         ['Funktioniert Delayo fuer Vape oder Snus?', 'Ja. Beim Einrichten waehlst du Zigaretten, Vape, oder Snus und Beutel, und die Formulierungen aendern sich ueberall passend zu dem, was du wirklich nutzt.'],
         ['Muss ich aufhoeren?', 'Nein. Delayo ist darauf gebaut, ein wenig laenger zu warten als gestern, und das ist eine vollstaendige Art, es zu nutzen. Wenn du entscheidest aufzuhoeren, ist der Modus ganz aufhoeren da und zaehlt deine rauchfreien Tage ab diesem Moment.'],
         ['Sind meine Daten privat?', 'Ja. Deine Antworten, dein Verlangen und deine Wartezeiten bleiben auf deinem Telefon, im eigenen Speicher der App. Es gibt kein Konto und keine Anmeldung, und nichts wird an uns oder an sonst jemanden gesendet.'],
+      ],
+    },
+    kantevo: {
+      tagline: 'Einmal durchgehen. Bericht uebergeben.',
+      description: 'Das Bad hat drei Maengel, und ein einzelnes Foto kann sie nicht zeigen. Du machst vier, ziehst einen Pfeil auf die gerissene Fliese, benennst den Raum und gehst weiter. Bis du am Transporter bist, hat sich die Liste selbst nummeriert und der Bericht steht. Geh einmal durch, uebergib ihn, bevor du faehrst, und sei der, dessen Liste wirklich abgearbeitet wird.',
+      features: [
+        ['So viele Fotos, wie der Mangel braucht', 'Mach mehrere hintereinander, ohne den Eintrag zu verlassen, oder hol beliebig viele in einem Zug aus deiner Mediathek. Nichts an einem Mangel bleibt unerfasst, weil der Platz ausgegangen ist.'],
+        ['Markiere es auf dem Foto, direkt vor Ort', 'Die Markierflaeche oeffnet sich mit dem Ausloeser, nicht drei Taps spaeter. Pfeil, Kreis, freie Linie und getippter Text liegen direkt auf dem Bild, in mehreren Stiftstaerken, und lassen sich spaeter wieder aendern.'],
+        ['Eine Liste, die sich selbst in Ordnung haelt', 'Eintraege nummerieren sich selbst. Loesch einen und der Rest nummeriert sich neu. Zieh einen und seine Nummer geht mit. Suche, Sortierung, Mehrfachauswahl und Sammelloeschen bleiben bei 300 Eintraegen mit Fotos fluessig, ganz ohne Empfang.'],
+        ['Der Bericht, den du heute Abend schreiben wolltest', 'Auf dem Telefon erstellt, ohne Empfang, als echtes PDF, dessen Text sich markieren laesst statt als Bild einer Seite: deine Kopf- und Fusszeile, Seitenzahlen und Umbrueche, die nie einen Eintrag ueber zwei Seiten reissen. Fotos gross genug, um als Beleg zu taugen. Du liest jede Seite, bevor sie jemand anders sieht.'],
+        ['Dein Name auf dem Dokument', 'Dein Logo in seiner eigenen Form, dein Firmenname, eine Akzentfarbe und ein Titelfoto. Unterschreib einmal in den Einstellungen, und deine Unterschrift steht auf jedem Bericht, und wer ihn bekommt, kann bei der Uebergabe unterschreiben, damit das, was in seinen Haenden landet, nach Buero aussieht und nicht nach Telefon.'],
+        ['Verlaesst nie dein Telefon', 'Gespeichert, waehrend du tippst, ohne Konto und ohne dass etwas zu uns hochgeladen wird. Deine Fotos und Berichte bleiben auf deinem Geraet und in deinem eigenen iCloud Drive, und der Standort wird aus jedem Foto entfernt, solange du ihn nicht selbst einschaltest.'],
+      ],
+      faqs: [
+        ['Was ist Kantevo?', 'Kantevo ist eine App fuer Maengellisten und Baubegehungen, fuer die Person, die den Rundgang macht. Du fotografierst einen Mangel so oft wie noetig, markierst ihn direkt vor Ort auf dem Foto, benennst den Raum, und die nummerierte Liste wird zu einem PDF-Bericht, den du vor dem Gehen uebergeben kannst. Alles entsteht auf dem Telefon, ohne Empfang und ohne Konto.'],
+        ['Wie viele Fotos passen zu einem Eintrag?', 'So viele, wie der Mangel braucht. Du kannst mehrere hintereinander machen, ohne den Eintrag zu verlassen, oder beliebig viele in einem einzigen Import aus der Mediathek holen. Es gibt keine Grenze je Eintrag und keine je Import.'],
+        ['Funktioniert Kantevo ohne Empfang?', 'Ja, vollstaendig. Aufnahme, Markierung, Liste und der fertige PDF-Bericht entstehen auf dem Geraet. Nichts wartet auf eine Verbindung, weil nichts irgendwohin gesendet wird.'],
+        ['Kann ich meine eigene Marke auf den Bericht setzen?', 'Ja. Dein Logo in seiner eigenen Form, dein Firmenname, eine Akzentfarbe und ein Titelfoto, dazu eine Unterschrift, die du einmal in den Einstellungen zeichnest und auf jedem Bericht wiederverwendest. Wer den Bericht bekommt, kann bei der Uebergabe unterschreiben. Ein Feld, das du leer laesst, druckt nichts, auf dem Deckblatt steht also nie ein Platzhalter.'],
+        ['Bekommt jedes Gewerk nur seine eigenen Eintraege?', 'Ja. Setz ein Gewerk auf einen Eintrag und exportiere dessen Liste allein, damit der Elektriker Elektrik liest und der Verputzer Putz. Ist ein Eintrag behoben, hakst du ihn ab und haengst das Nachher-Foto an, und der Bericht trennt Erledigtes von noch Offenem.'],
+        ['Sind meine Daten privat?', 'Ja. Deine Fotos und Berichte bleiben auf deinem Geraet und in deinem eigenen iCloud Drive, und nichts wird zu uns hochgeladen. Es gibt kein Konto und keine Anmeldung, der Standort wird aus jedem Foto entfernt, solange du ihn nicht selbst einschaltest, und das Datenschutzlabel im App Store weist keine Datenerfassung aus.'],
       ],
     },
   },
@@ -1487,6 +1547,29 @@ function localizePrivacySections(app: App, locale: Locale): PrivacySection[] | u
         rights: `<p>Alles bleibt auf deinem Geraet, du behaeltst also die Kontrolle: Das Loeschen von ${app.name} entfernt jede Antwort, jedes Verlangen und jede Wartezeit, die sie gespeichert hatte. Wir halten keine Daten ueber dich, es gibt also nichts nachzuschlagen, zu exportieren oder auf Anfrage zu loeschen. Bei Fragen schreib an aboyahyadev@icloud.com, wir antworten innerhalb von 30 Tagen.</p>`,
       },
     },
+    kantevo: {
+      fr: {
+        data: `<p>Chaque photo que vous prenez ou importez, chaque annotation que vous tracez dessus, chaque element, piece, etage, corps de metier et note que vous saisissez, votre identite visuelle, votre signature et chaque rapport PDF produit par ${app.name} sont stockes sur votre appareil, dans l espace de stockage de l app. Pretty Toolkit n y a aucun acces, rien n est envoye a nos serveurs et il n existe aucun compte. La sauvegarde va dans votre propre iCloud Drive, sur votre compte iCloud, et Export et Import dans les reglages vous permettent de deplacer cette copie vous-meme. Supprimer l app efface tout ce qu elle conservait sur l appareil.</p>`,
+        collection: `<p>${app.name} ne collecte rien. Nous ne recevons ni votre nom, ni votre email, ni votre numero de telephone, ni votre identifiant Apple, et pas davantage vos photos, vos rapports ou ce que vous saisissez dans un element. La version 1.0 ne contient aucun SDK d analyse : aucune statistique d usage ne quitte votre appareil, pas meme anonyme, et l etiquette de confidentialite de l App Store indique qu aucune donnee n est collectee. L app n effectue aucun appel reseau en dehors de StoreKit d Apple, qui gere les achats.</p>`,
+        services: `<p>${app.name} n utilise que des frameworks Apple : StoreKit pour les achats, le moteur de reconnaissance vocale d Apple pour la dictee, qui fonctionne sur l appareil, et iCloud Drive pour la sauvegarde conservee sur votre propre compte iCloud, le tout regi par la politique de confidentialite d Apple. L app ne contient aucun SDK tiers : ni analyse, ni publicite, ni rapport de plantage, ni courtier de donnees.</p>`,
+        rights: `<p>Tout reste sur votre appareil, vous gardez donc la main : supprimer ${app.name} efface chaque photo, chaque element et chaque rapport qu elle conservait, et une sauvegarde placee dans votre propre iCloud Drive vous appartient et se supprime quand vous le decidez. Nous ne detenons aucune donnee vous concernant, il n y a donc rien a retrouver, exporter ou supprimer sur demande. Pour toute question, ecrivez a aboyahyadev@icloud.com, nous repondons sous 30 jours.</p>`,
+        default: `<p>${app.name} retire par defaut les donnees GPS de chaque photo : les coordonnees qu un appareil photo inscrit habituellement dans l image sont supprimees avant que la photo soit enregistree dans l app ou placee dans un rapport. Enregistrer un lieu est un choix explicite : le reglage est desactive au premier lancement, et l activer enregistre le lieu dans l app, sur votre appareil, et nulle part ailleurs. Active ou non, rien de votre position ne nous est jamais transmis.</p>`,
+      },
+      es: {
+        data: `<p>Cada foto que haces o importas, cada anotacion que dibujas encima, cada elemento, estancia, planta, gremio y nota que escribes, tu marca, tu firma y cada informe PDF que ${app.name} genera se guardan en tu dispositivo, en el almacenamiento propio de la app. Pretty Toolkit no tiene acceso a nada de eso, nada se sube a nuestros servidores y no existe ninguna cuenta. La copia de seguridad va a tu propio iCloud Drive, en tu cuenta de iCloud, y Exportar e Importar en Ajustes te dejan mover esa copia tu mismo. Eliminar la app borra todo lo que guardaba en el dispositivo.</p>`,
+        collection: `<p>${app.name} no recopila nada. No recibimos tu nombre, email, telefono ni Apple ID, y tampoco tus fotos, tus informes ni lo que escribes en un elemento. La version 1.0 no incluye ningun SDK de analitica: no sale ninguna estadistica de uso de tu dispositivo, ni siquiera anonima, y la etiqueta de privacidad de la App Store indica que no se recopilan datos. La app no hace ninguna llamada de red salvo a StoreKit de Apple, que gestiona las compras.</p>`,
+        services: `<p>${app.name} usa solo frameworks de Apple: StoreKit para las compras, el reconocedor de voz de Apple para el dictado, que funciona en el dispositivo, e iCloud Drive para la copia que se queda en tu propia cuenta de iCloud, todo ello regido por la politica de privacidad de Apple. La app no incluye ningun SDK de terceros: ni analitica, ni publicidad, ni informes de fallos, ni intermediarios de datos.</p>`,
+        rights: `<p>Todo se queda en tu dispositivo, asi que mantienes el control: eliminar ${app.name} borra cada foto, cada elemento y cada informe que guardaba, y una copia de seguridad en tu propio iCloud Drive es tuya y la borras cuando quieras. No tenemos ningun dato tuyo, asi que no hay nada que buscar, exportar ni borrar a peticion. Si tienes cualquier duda, escribe a aboyahyadev@icloud.com y responderemos en 30 dias.</p>`,
+        default: `<p>${app.name} quita por defecto los datos de GPS de cada foto: las coordenadas que una camara suele escribir dentro de la imagen se eliminan antes de que la foto se guarde en la app o se coloque en un informe. Registrar una ubicacion es una decision explicita: el ajuste esta desactivado la primera vez que abres la app, y activarlo guarda la ubicacion dentro de la app, en tu dispositivo, y en ningun otro sitio. Este activado o no, nada sobre donde estas nos llega jamas.</p>`,
+      },
+      de: {
+        data: `<p>Jedes Foto, das du aufnimmst oder importierst, jede Markierung darauf, jeder Eintrag, jeder Raum, jedes Geschoss, jedes Gewerk und jede Notiz, die du erfasst, deine Marke, deine Unterschrift und jeder PDF-Bericht, den ${app.name} erstellt, liegen auf deinem Geraet, im eigenen Speicher der App. Pretty Toolkit hat darauf keinen Zugriff, nichts wird auf unsere Server geladen, und es gibt kein Konto. Die Sicherung geht in dein eigenes iCloud Drive, in deinen eigenen iCloud-Account, und Export und Import in den Einstellungen lassen dich diese Kopie selbst bewegen. Das Loeschen der App entfernt alles, was sie auf dem Geraet gespeichert hatte.</p>`,
+        collection: `<p>${app.name} erhebt nichts. Wir erhalten weder deinen Namen, deine E-Mail, deine Telefonnummer noch deine Apple-ID, und auch nicht deine Fotos, deine Berichte oder das, was du in einen Eintrag schreibst. Version 1.0 enthaelt kein Analyse-SDK: Es verlaesst keine Nutzungsstatistik dein Geraet, auch keine anonyme, und das Datenschutzlabel im App Store weist keine Datenerfassung aus. Ausser Apples StoreKit, das Kaeufe abwickelt, macht die App keine Netzwerkaufrufe.</p>`,
+        services: `<p>${app.name} nutzt ausschliesslich Apple-Frameworks: StoreKit fuer Kaeufe, Apples Spracherkennung fuer das Diktat, die auf dem Geraet laeuft, und iCloud Drive fuer die Sicherung in deinem eigenen iCloud-Account, alles geregelt durch Apples Datenschutzrichtlinie. In der App steckt kein SDK von Dritten: keine Analyse, keine Werbung, keine Absturzberichte, keine Datenhaendler.</p>`,
+        rights: `<p>Alles bleibt auf deinem Geraet, du behaeltst also die Kontrolle: Das Loeschen von ${app.name} entfernt jedes Foto, jeden Eintrag und jeden Bericht, die sie gespeichert hatte, und eine Sicherung in deinem eigenen iCloud Drive gehoert dir und wird geloescht, wann du willst. Wir halten keine Daten ueber dich, es gibt also nichts nachzuschlagen, zu exportieren oder auf Anfrage zu loeschen. Bei Fragen schreib an aboyahyadev@icloud.com, wir antworten innerhalb von 30 Tagen.</p>`,
+        default: `<p>${app.name} entfernt standardmaessig die GPS-Daten aus jedem Foto: Die Koordinaten, die eine Kamera sonst in das Bild schreibt, werden geloescht, bevor das Foto in der App gespeichert oder in einen Bericht gesetzt wird. Einen Ort festzuhalten ist eine ausdrueckliche Entscheidung: Die Einstellung ist beim ersten Start aus, und wer sie einschaltet, haelt den Ort in der App fest, auf dem Geraet und sonst nirgends. Ob ein- oder ausgeschaltet, nichts ueber deinen Aufenthaltsort erreicht uns jemals.</p>`,
+      },
+    },
   };
 
   // Headings that must differ per app for the same key. Esynit's disclaimer is
@@ -1502,6 +1585,11 @@ function localizePrivacySections(app: App, locale: Locale): PrivacySection[] | u
       fr: { default: 'Statistiques d usage anonymes' },
       es: { default: 'Estadisticas de uso anonimas' },
       de: { default: 'Anonyme Nutzungsstatistiken' },
+    },
+    kantevo: {
+      fr: { default: 'Localisation' },
+      es: { default: 'Ubicacion' },
+      de: { default: 'Standort' },
     },
   };
 

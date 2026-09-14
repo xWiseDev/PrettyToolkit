@@ -2002,4 +2002,150 @@ export const apps: App[] = [
       ],
     },
   },
+  {
+    slug: "kantevo",
+    name: "Kantevo",
+    tagline: "Walk it once. Hand it over.",
+    description:
+      "The bathroom has three things wrong with it and one photograph cannot show them. You shoot four, draw an arrow on the cracked tile, name the room, and move on. By the time you reach the van the list has numbered itself and the report is ready. Walk the site once, hand it over before you leave, and be the one whose list gets acted on.",
+    category: "productivity",
+    icon: "/icons/kantevo.png",
+    appStoreUrl: "",
+    accentColor: "#FFD100",
+    features: [
+      {
+        icon: "scan",
+        title: "As many photos as the defect needs",
+        description:
+          "Shoot several in a row without leaving the item, or bring in any number from your camera roll in one go. Nothing about a defect goes unrecorded because you ran out of room for it.",
+      },
+      {
+        icon: "palette",
+        title: "Mark it while you are standing there",
+        description:
+          "The markup canvas opens with the shutter, not three taps later. An arrow, a circle, a line drawn by hand and typed words go straight onto the photo, in several pen weights, and you can change them again later.",
+      },
+      {
+        icon: "history",
+        title: "A list that keeps itself in order",
+        description:
+          "Items number themselves. Delete one and the rest renumber. Drag one and its number follows. Search, sort, multi-select and bulk delete stay quick at 300 items with photos, with no signal.",
+      },
+      {
+        icon: "share",
+        title: "The report you were going to write tonight",
+        description:
+          "Made on the phone, with no signal, as a real PDF whose text can be selected rather than a picture of a page: your header and footer, page numbers, and page breaks that never split an item across two pages. Photographs large enough to be evidence. You read every page before anyone else does.",
+      },
+      {
+        icon: "barcode",
+        title: "Your name on the document",
+        description:
+          "Your logo at its own shape, your company name, one accent colour and a cover photograph. Sign it once in Settings and your signature is on every report, and the person receiving it can sign at handover, so what lands in their hands reads like it came from an office rather than from a phone.",
+      },
+      {
+        icon: "qr-create",
+        title: "Never leaves your phone",
+        description:
+          "Saved as you type, with no account to create and nothing uploaded to us. Your photos and reports stay on your device and in your own iCloud Drive, and location data is stripped from every photograph unless you switch it on yourself.",
+      },
+    ],
+    screenshots: [],
+    status: "coming-soon",
+    order: 13,
+    faqs: [
+      {
+        question: "What is Kantevo?",
+        answer:
+          "Kantevo is a snag list and site audit app for the person who walks the site. You photograph a defect as many times as it needs, mark it up on the photo where you stand, name the room, and the numbered list becomes a PDF report you can hand over before you leave. It is made on the phone, it needs no signal and no account, and the same list is called a punch list in some countries.",
+      },
+      {
+        question: "How many photos can one item have?",
+        answer:
+          "As many as the defect needs. You can shoot several in a row without leaving the item, or bring in any number from your camera roll in a single import. There is no cap per item and no cap per import.",
+      },
+      {
+        question: "Does Kantevo work with no signal?",
+        answer:
+          "Yes, all of it. Capture, markup, the list and the finished PDF report are all made on the device. Nothing waits on a connection, because nothing is sent anywhere in the first place.",
+      },
+      {
+        question: "Can I put my own branding on the report?",
+        answer:
+          "Yes. Your logo at its own shape, your company name, one accent colour and a cover photograph, plus a signature you draw once in Settings and reuse on every report. The person receiving the report can sign it at handover. A field you leave alone prints nothing, so the cover never shows a placeholder.",
+      },
+      {
+        question: "Can each trade get only its own items?",
+        answer:
+          "Yes. Put a trade on an item and export that trade's list on its own, so the electrician reads electrics and the plasterer reads plaster. When an item is fixed you tick it and attach the after photograph, and the report keeps what is done separate from what is still outstanding.",
+      },
+      {
+        question: "Is my information private?",
+        answer:
+          "Yes. Your photos and reports stay on your device and in your own iCloud Drive, and nothing is uploaded to us. There is no account and no sign-in, location data is stripped from every photograph unless you switch it on yourself, and the App Store privacy label for Kantevo is Data Not Collected.",
+      },
+    ],
+    privacy: {
+      lastUpdated: "September 14, 2026",
+      intro:
+        'This privacy policy explains how Kantevo ("Kantevo", "the app") handles your information, and is effective from September 14, 2026. Kantevo is published by Pretty Toolkit. The short version: your photos and reports stay on your device and in your own iCloud Drive, nothing is uploaded to us, and there is no account.',
+      sections: [
+        {
+          heading: "Your Photos and Reports",
+          content:
+            "<p>Every photograph you take or import, every annotation you draw on it, every item, room, floor, trade and note you enter, your branding and your signature, and every PDF report Kantevo makes are stored on your device, in the app's own storage. Pretty Toolkit has no access to any of it, none of it is uploaded to our servers, and there is no account or sign-in.</p><p>Backup goes to your own iCloud Drive, in your own iCloud account, where it is covered by your arrangement with Apple rather than by us. Export and Import in Settings let you move that copy yourself. If you back up your iPhone, the app's data is included in that backup, which also stays between you and Apple.</p><p>Deleting Kantevo removes everything the app held on your device. A backup sitting in your own iCloud Drive stays there until you delete it.</p>",
+        },
+        {
+          heading: "Data Collection",
+          content:
+            "<p>Kantevo collects nothing. We do not receive your name, email address, phone number, or Apple ID, and we do not receive your photographs, your reports, or anything you type into an item. Version 1.0 contains no analytics SDK of any kind, so no usage statistics leave your device - not even anonymous ones - and the App Store privacy label for Kantevo is Data Not Collected.</p><p>The app makes no network calls at all apart from Apple's StoreKit, which handles purchases.</p>",
+        },
+        {
+          heading: "Location",
+          content:
+            "<p>Kantevo strips GPS metadata from every photograph by default, so the coordinates a camera normally writes into an image are removed before that photograph is stored in the app or placed in a report. Recording a location is an explicit choice: the setting is off when you first open the app, and switching it on records the location inside the app, on your device, and nowhere else. Whether the setting is on or off, nothing about where you are is ever sent to us.</p>",
+        },
+        {
+          heading: "Subscriptions and Payments",
+          content:
+            "<p>Kantevo Pro is an auto-renewing subscription handled entirely by the Apple App Store through StoreKit. Apple processes the payment; we receive no card details and no payment information at all. You can view, change, or cancel a subscription at any time in your Apple account settings.</p>",
+        },
+        {
+          heading: "Third-Party Services",
+          content:
+            '<p>Kantevo uses Apple frameworks only: StoreKit for purchases, Apple\'s speech recognizer for dictation, which runs on the device so what you say is not sent away to be understood, and iCloud Drive for the backup kept in your own iCloud account. These are governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. There is no third-party SDK in the app: no analytics, no advertising, no crash reporting, no data brokers.</p>',
+        },
+        {
+          heading: "Data Sharing",
+          content:
+            "<p>We do not sell, rent, or share your personal data with anyone. There is nothing to share - your photographs, reports, and notes never reach us in the first place. When you send a report it leaves as a PDF attached to whatever you pick in the iOS share sheet, and it goes only where you send it.</p>",
+        },
+        {
+          heading: "Tracking",
+          content:
+            "<p>Kantevo does not track you across apps and websites owned by other companies. The app does not use the advertising identifier and shows no App Tracking Transparency prompt.</p>",
+        },
+        {
+          heading: "Children's Privacy",
+          content:
+            "<p>Kantevo is a working tool intended for adults and is not directed at children under 13. We do not knowingly collect personal information from children - or from anyone else, since the app collects nothing at all.</p>",
+        },
+        {
+          heading: "Your Rights and Data Deletion",
+          content:
+            "<p>Because everything stays on your own device, you are already in control: deleting Kantevo removes every photograph, item and report it held, and a backup in your own iCloud Drive is yours to delete whenever you want. We hold no data about you, so there is nothing for us to look up, export, or delete on request. If you have a privacy question, email <a href=\"mailto:aboyahyadev@icloud.com\">aboyahyadev@icloud.com</a> and we will respond within 30 days. EU residents have rights under GDPR and California residents under the CCPA; contact us at the same address to exercise them.</p>",
+        },
+        {
+          heading: "Changes to This Policy",
+          content:
+            "<p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>",
+        },
+        {
+          heading: "Contact",
+          content:
+            "<p>If you have questions about this privacy policy, please contact us at aboyahyadev@icloud.com or visit our support page.</p>",
+        },
+      ],
+    },
+  },
 ];
