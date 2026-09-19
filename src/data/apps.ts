@@ -2113,7 +2113,7 @@ export const apps: App[] = [
         {
           heading: "Third-Party Services",
           content:
-            '<p>Kantevo uses Apple frameworks only: StoreKit for purchases, Apple\'s speech recognizer for dictation, which runs on the device so what you say is not sent away to be understood, and iCloud Drive for the backup kept in your own iCloud account. These are governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. There is no third-party SDK in the app: no analytics, no advertising, no crash reporting, no data brokers.</p>',
+            '<p>Kantevo uses Apple frameworks only: StoreKit for purchases and iCloud Drive for the backup kept in your own iCloud account. These are governed by <a href="https://www.apple.com/privacy/">Apple\'s Privacy Policy</a>. There is no third-party SDK in the app: no analytics, no advertising, no crash reporting, no data brokers.</p>',
         },
         {
           heading: "Data Sharing",
