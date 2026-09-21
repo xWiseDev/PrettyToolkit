@@ -16,7 +16,10 @@ interface Props {
 
 const { locale = defaultLocale } = Astro.props;
 const currentYear = new Date().getFullYear();
-const sortedApps = [...apps].sort((a, b) => a.order - b.order);
+// Footer shows released apps only; coming-soon apps keep their landing and privacy pages.
+const sortedApps = apps
+  .filter((app) => app.status === 'live')
+  .sort((a, b) => a.order - b.order);
 const copy = ui[locale];
 ---
 

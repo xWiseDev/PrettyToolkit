@@ -91,7 +91,7 @@ The site ships in **4 locales: `en` (default), `fr`, `es`, `de`** — see `src/i
 - `FaqAccordion` — Reusable `<details>`-based accordion. Props: `faqs` array. Used on app pages and `/support`.
 - `AppStoreBadge` — Official Apple "Download on the App Store" badge wrapper. Use for live-app download CTAs; do not restyle or redraw the badge.
 - `Header` — Sticky frosted-glass nav + mobile slide-in menu. Links: Apps, Blog, About, Support.
-- `Footer` — App icon row + nav links + tagline on every page.
+- `Footer` — App icon row (apps with `status: "live"` only; coming-soon apps stay out until approved) + nav links + tagline on every page.
 
 ### Icon Mosaic (Homepage + About)
 
